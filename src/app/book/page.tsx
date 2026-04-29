@@ -6,7 +6,9 @@ import { PageIntro } from "@/components/page-intro";
 import { bookingPage, siteConfig } from "@/content/site-content";
 
 export const metadata: Metadata = {
-  title: "Book",
+  title: "Book a Session",
+  description:
+    "Book a personal AI lesson or a business call with Patrick Hussey. Two routes: one-to-one coaching for individuals, or fractional advisory for teams and organisations.",
 };
 
 export default function BookPage() {

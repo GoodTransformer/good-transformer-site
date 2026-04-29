@@ -7,6 +7,8 @@ import { aboutPage, siteConfig } from "@/content/site-content";
 
 export const metadata: Metadata = {
   title: "About",
+  description:
+    "About Good Transformer — a consultancy built to help individuals and organisations become genuinely AI ready. Named for the Transformer architecture that started the AI boom.",
 };
 
 export default function AboutPage() {

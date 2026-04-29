@@ -7,7 +7,9 @@ import { patrickPage, siteConfig, testimonial } from "@/content/site-content";
 import { publicBasePath } from "@/lib/public-base-path";
 
 export const metadata: Metadata = {
-  title: "Patrick",
+  title: "Patrick Hussey",
+  description:
+    "Patrick Hussey is an AI coach and fractional adviser. He works with individuals to build practical AI confidence, and with organisations to turn AI intent into real working practice.",
 };
 
 const portraitSrc = publicBasePath + patrickPage.portrait.src;

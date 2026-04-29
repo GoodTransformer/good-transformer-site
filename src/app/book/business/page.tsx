@@ -7,6 +7,8 @@ import { bookingPage } from "@/content/site-content";
 
 export const metadata: Metadata = {
   title: "Book a Business Call",
+  description:
+    "Book a business call with Patrick Hussey. Submit a short brief and schedule a call to discuss AI strategy, adoption, and the right engagement for your team.",
 };
 
 export default function BusinessBookPage() {

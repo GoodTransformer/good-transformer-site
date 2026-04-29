@@ -7,6 +7,8 @@ import { bookingPage, lessonPricing } from "@/content/site-content";
 
 export const metadata: Metadata = {
   title: "Book a Personal AI Lesson",
+  description:
+    "Book a one-to-one AI lesson with Patrick Hussey. Sessions from £75 — tailored to your tools, tasks, and confidence level. No experience needed.",
 };
 
 export default function PersonalBookPage() {

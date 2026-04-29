@@ -7,6 +7,8 @@ import { lessonPricing, offers, servicesPage } from "@/content/site-content";
 
 export const metadata: Metadata = {
   title: "Services",
+  description:
+    "Personal AI lessons for individuals and fractional advisory for teams. Three engagement tiers: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
 };
 
 export default function ServicesPage() {

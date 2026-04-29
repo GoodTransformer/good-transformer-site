@@ -23,6 +23,54 @@ const serif = Newsreader({
 const SITE_URL = "https://goodtransformer.ai";
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": SITE_URL,
+      name: "Good Transformer",
+      description:
+        "Personal 1-to-1 AI lessons and fractional AI advisory for teams. Helping individuals build AI confidence and organisations turn AI intent into working practice.",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logos/gt-logo.png`,
+      image: OG_IMAGE,
+      founder: { "@type": "Person", name: "Patrick Hussey" },
+      areaServed: "GB",
+      knowsAbout: ["Artificial Intelligence", "AI adoption", "AI coaching", "Machine learning"],
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Personal AI Lessons",
+          description:
+            "One-to-one AI coaching sessions for individuals — beginners through to improvers.",
+          url: `${SITE_URL}/book/personal/`,
+          priceCurrency: "GBP",
+          price: "75",
+          priceSpecification: { "@type": "UnitPriceSpecification", price: "75", priceCurrency: "GBP" },
+        },
+        {
+          "@type": "Offer",
+          name: "Business AI Advisory",
+          description:
+            "Fractional AI advisory for teams — AI Reality Check Sprint, 90-Day Adoption Build, or ongoing Fractional Retainer.",
+          url: `${SITE_URL}/book/business/`,
+        },
+      ],
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/patrick/`,
+      name: "Patrick Hussey",
+      jobTitle: "AI Coach and Fractional AI Adviser",
+      url: `${SITE_URL}/patrick/`,
+      worksFor: { "@id": SITE_URL },
+      knowsAbout: ["Artificial Intelligence", "AI strategy", "AI adoption", "AI coaching"],
+      sameAs: [],
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: {
     default: `${siteConfig.offerName} | ${siteConfig.descriptor}`,
@@ -68,6 +116,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${sans.variable} ${serif.variable} site-frame`}>
         <a href="#content" className="skip-link">
           Skip to content
