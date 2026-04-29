@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -51,7 +52,15 @@ export function SiteHeader() {
             href="/"
             className="flex items-center gap-2 whitespace-nowrap text-sm font-medium uppercase tracking-[0.18em] transition-[color,opacity] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
           >
-            <img src="/logos/gt-logo.png" alt="" aria-hidden="true" className="h-8 w-auto" style={{filter: 'brightness(0) opacity(0.82)'}} />
+            <Image
+              src="/logos/gt-logo.png"
+              alt=""
+              aria-hidden="true"
+              width={160}
+              height={32}
+              className="h-8 w-auto"
+              style={{ filter: "brightness(0) opacity(0.82)" }}
+            />
             {siteConfig.brand}
           </Link>
 

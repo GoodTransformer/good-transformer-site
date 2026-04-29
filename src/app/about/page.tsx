@@ -2,18 +2,35 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 import { AnimatedReveal } from "@/components/animated-reveal";
+import { JsonLd } from "@/components/json-ld";
 import { PageIntro } from "@/components/page-intro";
-import { aboutPage, siteConfig } from "@/content/site-content";
+import { aboutPage, seoContent, siteConfig } from "@/content/site-content";
+import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "About Good Transformer — a consultancy built to help individuals and organisations become genuinely AI ready. Named for the Transformer architecture that started the AI boom.",
+export const metadata: Metadata = buildPageMetadata(seoContent.pages.about);
+
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${SITE_URL}/about/#webpage`,
+  name: aboutPage.title,
+  url: `${SITE_URL}/about/`,
+  description: aboutPage.intro,
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  about: { "@id": SITE_URL },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about/" },
+]);
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={aboutPageJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+
       <PageIntro title={aboutPage.title} body={aboutPage.intro} />
 
       <section className="section-divider">

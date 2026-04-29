@@ -3,20 +3,45 @@ import type { Metadata } from "next";
 
 import { AnimatedReveal } from "@/components/animated-reveal";
 import { CTAGroup } from "@/components/cta-group";
-import { patrickPage, siteConfig, testimonial } from "@/content/site-content";
+import { JsonLd } from "@/components/json-ld";
+import { patrickPage, seoContent, siteConfig, testimonial } from "@/content/site-content";
 import { publicBasePath } from "@/lib/public-base-path";
+import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Patrick Hussey",
-  description:
-    "Patrick Hussey is an AI coach and fractional adviser. He works with individuals to build practical AI confidence, and with organisations to turn AI intent into real working practice.",
-};
+export const metadata: Metadata = buildPageMetadata(seoContent.pages.patrick);
 
 const portraitSrc = publicBasePath + patrickPage.portrait.src;
+
+const patrickPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${SITE_URL}/patrick/#webpage`,
+  name: patrickPage.title,
+  url: `${SITE_URL}/patrick/`,
+  description: patrickPage.intro,
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/patrick/`,
+    name: seoContent.personName,
+    jobTitle: seoContent.personJobTitle,
+    image: `${SITE_URL}${patrickPage.portrait.src}`,
+    description: patrickPage.intro,
+    worksFor: { "@id": SITE_URL },
+  },
+};
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Patrick Hussey", path: "/patrick/" },
+]);
 
 export default function PatrickPage() {
   return (
     <>
+      <JsonLd data={patrickPageJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+
       {/* ── Unified header — name, intro, and portrait together ────────── */}
       <section className="page-intro">
         <div className="mx-auto max-w-7xl px-6 pb-8 md:px-10 lg:px-12">

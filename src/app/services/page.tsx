@@ -2,18 +2,58 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { AnimatedReveal } from "@/components/animated-reveal";
+import { JsonLd } from "@/components/json-ld";
 import { PageIntro } from "@/components/page-intro";
-import { lessonPricing, offers, servicesPage } from "@/content/site-content";
+import { lessonPricing, offers, seoContent, servicesPage } from "@/content/site-content";
+import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Personal AI lessons for individuals and fractional advisory for teams. Three engagement tiers: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
+export const metadata: Metadata = buildPageMetadata(seoContent.pages.services);
+
+const servicesPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${SITE_URL}/services/#webpage`,
+  name: servicesPage.title,
+  url: `${SITE_URL}/services/`,
+  description: servicesPage.intro,
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  mainEntity: {
+    "@type": "OfferCatalog",
+    name: "Good Transformer services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Personal AI Lessons",
+          description: servicesPage.personalSection.intro,
+          provider: { "@id": SITE_URL },
+        },
+      },
+      ...offers.map((offer) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: offer.name,
+          description: offer.purpose,
+          provider: { "@id": SITE_URL },
+        },
+      })),
+    ],
+  },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services/" },
+]);
 
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd data={servicesPageJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+
       <PageIntro title={servicesPage.title} body={servicesPage.intro} />
 
       {/* ── Personal AI lessons ──────────────────────────────────────────── */}

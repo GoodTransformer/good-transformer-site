@@ -4,9 +4,11 @@ import type { ReactNode } from "react";
 
 import "./globals.css";
 
+import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { siteConfig } from "@/content/site-content";
+import { seoContent, siteConfig } from "@/content/site-content";
+import { OG_IMAGE, SITE_URL } from "@/lib/seo";
 
 const sans = Schibsted_Grotesk({
   subsets: ["latin"],
@@ -20,22 +22,31 @@ const serif = Newsreader({
   display: "swap",
 });
 
-const SITE_URL = "https://goodtransformer.ai";
-const OG_IMAGE = `${SITE_URL}/og-image.png`;
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      name: seoContent.siteName,
+      url: SITE_URL,
+      inLanguage: "en-GB",
+      publisher: { "@id": SITE_URL },
+    },
+    {
       "@type": "ProfessionalService",
       "@id": SITE_URL,
-      name: "Good Transformer",
+      name: seoContent.siteName,
       description:
         "Personal 1-to-1 AI lessons and fractional AI advisory for teams. Helping individuals build AI confidence and organisations turn AI intent into working practice.",
       url: SITE_URL,
       logo: `${SITE_URL}/logos/gt-logo.png`,
       image: OG_IMAGE,
-      founder: { "@type": "Person", name: "Patrick Hussey" },
+      founder: { "@type": "Person", name: seoContent.personName },
+      founderLocation: {
+        "@type": "Country",
+        name: "United Kingdom",
+      },
       areaServed: "GB",
       knowsAbout: ["Artificial Intelligence", "AI adoption", "AI coaching", "Machine learning"],
       offers: [
@@ -61,8 +72,8 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": `${SITE_URL}/patrick/`,
-      name: "Patrick Hussey",
-      jobTitle: "AI Coach and Fractional AI Adviser",
+      name: seoContent.personName,
+      jobTitle: seoContent.personJobTitle,
       url: `${SITE_URL}/patrick/`,
       worksFor: { "@id": SITE_URL },
       knowsAbout: ["Artificial Intelligence", "AI strategy", "AI adoption", "AI coaching"],
@@ -76,21 +87,38 @@ export const metadata: Metadata = {
     default: `${siteConfig.offerName} | ${siteConfig.descriptor}`,
     template: `%s | ${siteConfig.offerName}`,
   },
-  description:
-    "Personal 1-to-1 AI lessons and practical business advisory from Patrick Hussey at Good Transformer.",
+  description: seoContent.defaultDescription,
   metadataBase: new URL(SITE_URL),
+  applicationName: seoContent.siteName,
+  authors: [{ name: seoContent.personName }],
+  creator: seoContent.personName,
+  publisher: seoContent.siteName,
+  category: "AI coaching and advisory",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Good Transformer — Get confident with AI.",
-    description:
-      "Personal AI lessons for individuals and fractional advisory for teams. Patrick Hussey helps people and organisations get genuinely useful with AI.",
+    title: seoContent.openGraphTitle,
+    description: seoContent.openGraphDescription,
     url: SITE_URL,
-    siteName: "Good Transformer",
+    siteName: seoContent.siteName,
     images: [
       {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Good Transformer — Get confident with AI. Personal AI lessons and practical business advisory.",
+        alt: seoContent.ogImageAlt,
       },
     ],
     locale: "en_GB",
@@ -98,9 +126,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Good Transformer — Get confident with AI.",
-    description:
-      "Personal AI lessons for individuals and fractional advisory for teams. Patrick Hussey helps people and organisations get genuinely useful with AI.",
+    title: seoContent.openGraphTitle,
+    description: seoContent.openGraphDescription,
     images: [OG_IMAGE],
   },
   icons: {
@@ -117,10 +144,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={jsonLd} />
       </head>
       <body className={`${sans.variable} ${serif.variable} site-frame`}>
         <a href="#content" className="skip-link">

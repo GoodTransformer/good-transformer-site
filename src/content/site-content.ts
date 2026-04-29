@@ -479,6 +479,49 @@ export const bookingPage = {
   },
 };
 
+export const bookingSuccessPage = {
+  personal: {
+    title: "Success, your lesson is booked",
+    intro:
+      "Your personal AI lesson is in the diary. You should receive a calendar invite and joining link by email shortly.",
+    body:
+      "If the invite does not appear within a few minutes, check spam or promotions, then reply to the booking email if you need help.",
+    steps: [
+      "Look out for the calendar invite and meeting link in your inbox.",
+      "Bring a real task, question, or tool you want help with.",
+      "No prep deck needed — the session is shaped around what you need.",
+    ],
+    primaryCta: {
+      href: "/",
+      label: "Back to home",
+    },
+    secondaryCta: {
+      href: "/patrick",
+      label: "About Patrick",
+    },
+  },
+  business: {
+    title: "Success, your business call is booked",
+    intro:
+      "Your business clarity call is confirmed. You should receive a calendar invite and joining link by email shortly.",
+    body:
+      "If the invite does not appear within a few minutes, check spam or promotions, then reply to the booking email if you need help.",
+    steps: [
+      "Look out for the calendar invite and meeting link in your inbox.",
+      "Bring the real AI questions, blockers, or adoption pressures you are facing.",
+      "The short brief you submitted gives Patrick context before the call starts.",
+    ],
+    primaryCta: {
+      href: "/services",
+      label: "Review services",
+    },
+    secondaryCta: {
+      href: "/patrick",
+      label: "About Patrick",
+    },
+  },
+};
+
 export const bookingForm = {
   orgSizes: [
     "50 to 100 employees",
@@ -504,4 +547,79 @@ export const bookingForm = {
     "Review the summary and delivery.",
     "Continue to scheduling when you are ready.",
   ],
+};
+
+export const seoContent = {
+  siteName: "Good Transformer",
+  siteUrl: "https://goodtransformer.ai",
+  defaultDescription:
+    "Personal 1-to-1 AI lessons and practical business advisory from Patrick Hussey at Good Transformer.",
+  openGraphTitle: "Good Transformer - Get confident with AI.",
+  openGraphDescription:
+    "Personal AI lessons for individuals and fractional advisory for teams. Patrick Hussey helps people and organisations get genuinely useful with AI.",
+  ogImageAlt:
+    "Good Transformer - Get confident with AI. Personal AI lessons and practical business advisory.",
+  personName: "Patrick Hussey",
+  personJobTitle: "AI Coach and Fractional AI Adviser",
+  pages: {
+    home: {
+      path: "/",
+      title: "Good Transformer",
+      description:
+        "Personal 1-to-1 AI lessons and practical business advisory from Patrick Hussey at Good Transformer.",
+    },
+    services: {
+      path: "/services/",
+      title: "Services",
+      description:
+        "Personal AI lessons for individuals and fractional advisory for teams. Three engagement tiers: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
+    },
+    about: {
+      path: "/about/",
+      title: "About",
+      description:
+        "About Good Transformer - a consultancy built to help individuals and organisations become genuinely AI ready. Named for the Transformer architecture that started the AI boom.",
+    },
+    patrick: {
+      path: "/patrick/",
+      title: "Patrick Hussey",
+      description:
+        "Patrick Hussey is an AI coach and fractional adviser. He works with individuals to build practical AI confidence, and with organisations to turn AI intent into real working practice.",
+    },
+    book: {
+      path: "/book/",
+      title: "Book a Session",
+      description:
+        "Book a personal AI lesson or a business call with Patrick Hussey. Two routes: one-to-one coaching for individuals, or fractional advisory for teams and organisations.",
+    },
+    bookPersonal: {
+      path: "/book/personal/",
+      title: "Book a Personal AI Lesson",
+      description:
+        "Book a one-to-one AI lesson with Patrick Hussey. Sessions from GBP 75 - tailored to your tools, tasks, and confidence level. No experience needed.",
+    },
+    bookBusiness: {
+      path: "/book/business/",
+      title: "Book a Business Call",
+      description:
+        "Book a business call with Patrick Hussey. Submit a short brief and schedule a call to discuss AI strategy, adoption, and the right engagement for your team.",
+    },
+    personalSuccess: {
+      path: "/book/personal/success/",
+      title: "Success, Your Lesson Is Booked",
+      description:
+        "Confirmation page for personal AI lessons booked with Patrick Hussey at Good Transformer.",
+    },
+    businessSuccess: {
+      path: "/book/business/success/",
+      title: "Success, Your Business Call Is Booked",
+      description:
+        "Confirmation page for business clarity calls booked with Patrick Hussey at Good Transformer.",
+    },
+    notFound: {
+      title: "Page not found",
+      description:
+        "This page could not be found on Good Transformer. Return to the homepage or book a session with Patrick Hussey.",
+    },
+  },
 };

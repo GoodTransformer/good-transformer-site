@@ -5,6 +5,7 @@ import { ArtefactDeck } from "@/components/artefact-deck";
 import { ClientLogoStrip } from "@/components/client-logo-strip";
 import { FAQList } from "@/components/faq-list";
 import { HomeHero } from "@/components/home-hero";
+import { JsonLd } from "@/components/json-ld";
 import {
   homePage,
   lessonOffers,
@@ -14,12 +15,41 @@ import {
   testimonial,
 } from "@/content/site-content";
 import { publicBasePath } from "@/lib/public-base-path";
+import { SITE_URL } from "@/lib/seo";
 
 const heroImageSrc = publicBasePath + "/hero/hero-coach.png";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: homePage.faqs.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const homePageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${SITE_URL}/#webpage`,
+  name: "Good Transformer",
+  url: SITE_URL,
+  description: homePage.hero.support,
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  about: { "@id": `${SITE_URL}/patrick/` },
+  primaryImageOfPage: `${SITE_URL}/hero/hero-coach.png`,
+};
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={homePageJsonLd} />
+      <JsonLd data={faqJsonLd} />
+
       <HomeHero
         title={homePage.hero.title}
         descriptor={homePage.hero.descriptor}

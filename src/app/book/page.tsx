@@ -2,18 +2,34 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 import { AnimatedReveal } from "@/components/animated-reveal";
+import { JsonLd } from "@/components/json-ld";
 import { PageIntro } from "@/components/page-intro";
-import { bookingPage, siteConfig } from "@/content/site-content";
+import { bookingPage, seoContent, siteConfig } from "@/content/site-content";
+import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Book a Session",
-  description:
-    "Book a personal AI lesson or a business call with Patrick Hussey. Two routes: one-to-one coaching for individuals, or fractional advisory for teams and organisations.",
+export const metadata: Metadata = buildPageMetadata(seoContent.pages.book);
+
+const bookingPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${SITE_URL}/book/#webpage`,
+  name: bookingPage.title,
+  url: `${SITE_URL}/book/`,
+  description: bookingPage.intro,
+  isPartOf: { "@id": `${SITE_URL}/#website` },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Book a session", path: "/book/" },
+]);
 
 export default function BookPage() {
   return (
     <>
+      <JsonLd data={bookingPageJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+
       <PageIntro title={bookingPage.title} body={bookingPage.intro} />
 
       <section className="section-divider">

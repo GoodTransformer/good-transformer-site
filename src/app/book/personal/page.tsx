@@ -1,19 +1,49 @@
 import type { Metadata } from "next";
 
 import { AnimatedReveal } from "@/components/animated-reveal";
+import { JsonLd } from "@/components/json-ld";
 import { PersonalBookingForm } from "@/components/booking-form";
 import { PageIntro } from "@/components/page-intro";
-import { bookingPage, lessonPricing } from "@/content/site-content";
+import { bookingPage, lessonPricing, seoContent } from "@/content/site-content";
+import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Book a Personal AI Lesson",
-  description:
-    "Book a one-to-one AI lesson with Patrick Hussey. Sessions from £75 — tailored to your tools, tasks, and confidence level. No experience needed.",
+export const metadata: Metadata = buildPageMetadata(seoContent.pages.bookPersonal);
+
+function extractNumericPrice(value: string) {
+  const match = value.match(/\d+/);
+  return match?.[0];
+}
+
+const personalBookingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE_URL}/book/personal/#service`,
+  name: "Personal AI Lessons",
+  serviceType: "One-to-one AI coaching",
+  provider: { "@id": SITE_URL },
+  url: `${SITE_URL}/book/personal/`,
+  description: bookingPage.personal.intro,
+  offers: lessonPricing.tiers.map((tier) => ({
+    "@type": "Offer",
+    name: tier.name,
+    price: extractNumericPrice(tier.price),
+    priceCurrency: "GBP",
+    description: tier.body,
+  })),
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Book a session", path: "/book/" },
+  { name: "Book a personal AI lesson", path: "/book/personal/" },
+]);
 
 export default function PersonalBookPage() {
   return (
     <>
+      <JsonLd data={personalBookingJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
+
       <PageIntro title={bookingPage.personal.title} body={bookingPage.personal.intro} />
 
       {/* ── What you get ─────────────────────────────────────────────────── */}

@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { seoContent } from "@/content/site-content";
 
 export const metadata: Metadata = {
-  title: "Page not found",
+  title: seoContent.pages.notFound.title,
+  description: seoContent.pages.notFound.description,
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function NotFound() {
