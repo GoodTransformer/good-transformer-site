@@ -23,7 +23,8 @@
 ├── AGENTS.md                    ← AI agent navigation (start here)
 ├── README.md                    ← Developer quick-start
 ├── COLOURS.md                   ← Brand colour quick reference
-├── knowledge/                   ← Full knowledge base (this folder)
+├── knowledge/                   ← Full knowledge base
+│   └── INDEX.md                 ← Knowledge index / entry point inside knowledge/
 │
 ├── src/
 │   ├── app/                     ← Next.js App Router pages
@@ -85,6 +86,16 @@
 - All pages are pre-rendered at build time to static HTML
 - No `getServerSideProps` or server actions
 - Images use `unoptimized: true` (GitHub Pages can't run Next.js image optimisation)
+
+### Search boundaries
+
+Most repo-level filename duplication comes from generated or vendor folders, not authored project files. Unless the task explicitly targets build output, dependencies, or Git internals, ignore:
+- `node_modules/`
+- `.next/`
+- `out/`
+- `.git/`
+- `GTM research/`
+- `Vision Doc/`
 
 ### Single content source
 

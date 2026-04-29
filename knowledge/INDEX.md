@@ -1,8 +1,19 @@
-# Good Transformer — Knowledge Base
+# Good Transformer — Knowledge Index
 
 This folder is the structured reference for AI agents, developers, and designers working on this project.
 
 Every file here describes one specific area of the project. Start with `AGENTS.md` at the root, then navigate here for detail.
+
+If files disagree, use this priority order:
+
+1. `AGENTS.md` and current user instructions
+2. Live source code for the area you are editing
+3. The relevant `knowledge/` topic file
+4. General references such as `README.md` or `COLOURS.md`
+
+When you find a stale knowledge note, update it as part of the change rather than copying the stale pattern forward.
+
+When searching for files, ignore generated/vendor/local scratch folders unless the task is specifically about them: `node_modules/`, `.next/`, `out/`, `.git/`, `GTM research/`, and `Vision Doc/`.
 
 ---
 

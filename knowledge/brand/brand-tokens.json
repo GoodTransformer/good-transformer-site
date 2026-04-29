@@ -111,7 +111,7 @@
 
     "dark_card": {
       "rgba": "rgba(3, 24, 28, 0.96)",
-      "use": "Dark CTA cards, route cards (business tone), signal strips — near-black with warm dark-teal undertone"
+      "use": "Dark CTA panels and legacy current-hero route/signal elements — near-black with warm dark-teal undertone"
     },
     "dark_bg": {
       "hex": "#08070F",

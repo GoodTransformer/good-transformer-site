@@ -30,13 +30,15 @@ The site deploys automatically to GitHub Pages when code is pushed to the `main`
 
 ## GitHub Secrets
 
-The following secrets must be set in the GitHub repository settings for the build to work correctly:
+The following secrets should be set in the GitHub repository settings. The booking forms and calendar redirects need the required public endpoints; the email fallback is optional.
 
 | Secret name | Description |
 |---|---|
 | `NEXT_PUBLIC_FORMSPREE_PERSONAL_ENDPOINT` | Formspree endpoint for personal lesson booking form |
 | `NEXT_PUBLIC_FORMSPREE_BOOKING_ENDPOINT` | Formspree endpoint for business brief form |
 | `NEXT_PUBLIC_CLARITY_CALL_URL` | Calendar booking URL (e.g. Calendly, Cal.com) |
+| `NEXT_PUBLIC_PERSONAL_LESSON_URL` | Calendar booking URL for personal AI lessons |
+| `NEXT_PUBLIC_BOOKING_BRIEF_EMAIL` | Optional manual fallback email address for intake summaries |
 
 If secrets are not set, `.env.production` provides fallback values (may be empty/placeholder).
 

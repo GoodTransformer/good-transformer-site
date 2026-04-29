@@ -39,6 +39,8 @@ Global footer rendered on every page via `layout.tsx`.
 
 The full-screen hero for the homepage only.
 
+Design intent: the first viewport should read as one branded composition, not a dashboard. For future hero work, keep the budget to brand/product signal, one headline, one short supporting sentence, one CTA group, and one dominant full-bleed image.
+
 **Props:**
 ```ts
 {
@@ -46,14 +48,14 @@ The full-screen hero for the homepage only.
   descriptor: string      // Subtitle paragraph
   support: string         // Supporting paragraph (smaller, muted)
   backgroundImageSrc: string  // Path to hero illustration PNG
-  routes: Array<{         // The two route cards
+  routes: Array<{         // Legacy route CTAs currently consumed by HomeHero
     label: string         // e.g. "For individuals"
     title: string         // e.g. "Book a lesson"
     body: string
     href: string
     tone: "light" | "dark"
   }>
-  signals: Array<{        // Three proof signal chips below the CTAs
+  signals: Array<{        // Legacy proof signals currently consumed by HomeHero
     title: string
     body: string
   }>
@@ -64,7 +66,7 @@ The full-screen hero for the homepage only.
 - Uses `.hero-stage-v2` for background (warm gradient)
 - The word "AI" in the title is automatically highlighted in teal via `HighlightedTitle` (internal component)
 - `leading-[1.0]` on the h1 is important — do not reduce below 1.0 or italic ascenders clip
-- Light/dark route card tones map to `.hero-route-card--light` and `.hero-route-card--dark`
+- The route-card and signal-strip classes are legacy implementation details. Do not copy them into new hero designs; simplify or remove them when redesigning the hero.
 
 ---
 
@@ -117,7 +119,7 @@ Accordion-style FAQ list.
 
 ### `ArtefactDeck` — `artefact-deck.tsx`
 
-Shows a row of document artefact cards (used in the Patrick/proof section to show deliverables).
+Shows a row of document artefact panels (used in the Patrick/proof section to show deliverables).
 
 **Props:**
 ```ts

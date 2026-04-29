@@ -14,6 +14,8 @@ For raw token values see `brand-tokens.json`.
 | Text | Dark ink — never pure black, never mid-grey alone |
 | Accent | Teal only — used for interactive moments, not decoration |
 | Warmth | Small amber details in illustration only — never UI |
+| Landing heroes | One full-bleed composition — not a dashboard, card grid, collage, or stack of promos |
+| Brand | Brand/product name must be a hero-level signal on branded pages |
 
 ---
 
@@ -71,6 +73,17 @@ Never use for buttons, borders, text, or any interactive/UI element.
 
 ## Section patterns
 
+### Landing-page hero budget
+
+The first viewport should usually contain only:
+- Brand or product name as a primary signal
+- One headline
+- One short supporting sentence
+- One CTA group
+- One dominant full-bleed image or atmospheric visual plane
+
+Do not place stats, schedules, event listings, metadata rows, promos, proof strips, route cards, badges, or extra marketing blocks in the first viewport. If an older component still contains those patterns, treat them as legacy implementation details rather than design guidance.
+
 ### Standard content section
 ```jsx
 <section className="section-divider">
@@ -97,21 +110,25 @@ Never use for buttons, borders, text, or any interactive/UI element.
 
 ---
 
-## Cards and panels
+## Panels and interactive containers
+
+Default to no cards. Use borders, shadows, backgrounds, and radii only when they clarify interaction or meaning. Never use decorative cards in the hero.
 
 ### Offer panel (light surface)
 ```jsx
 <article className="offer-panel">
 ```
-This is a pre-built CSS class. Produces a warm paper card with line border.
+This is a pre-built CSS class. Produces a warm paper panel with line border.
 
-### Dark route card (hero)
+### Legacy route card classes
+
+These classes still exist for the current home hero implementation, but they are not the preferred pattern for new hero work.
+
 ```jsx
 <div className="hero-route-card hero-route-card--dark">
 ```
 Near-black background (`rgba(3,24,28,0.96)`) with paper text and teal borders.
 
-### Light route card (hero)
 ```jsx
 <div className="hero-route-card hero-route-card--light">
 ```

@@ -1,6 +1,6 @@
 # Good Transformer — Brand Colour Guide
 
-This document is the single source of truth for all brand colours. Use it when creating marketing assets, social graphics, illustrations, presentations, or any visual output that should look like Good Transformer.
+This document is the human quick reference for brand colours. The canonical machine-readable token source is `knowledge/brand/brand-tokens.json`. Use this guide when creating marketing assets, social graphics, illustrations, presentations, or any visual output that should look like Good Transformer.
 
 ---
 
@@ -134,7 +134,7 @@ Used **only** for illustrative warmth. Never use as a UI accent.
 
 | Name | Hex / RGBA | Use |
 |---|---|---|
-| Dark card | `rgba(3, 24, 28, 0.96)` | Dark CTA cards, route cards (business), signal strips — near-black with a warm dark-teal undertone |
+| Dark panel | `rgba(3, 24, 28, 0.96)` | Dark CTA panels and legacy current-hero route/signal elements — near-black with a warm dark-teal undertone |
 | Dark bg | `#08070F` | Full dark backgrounds if ever needed |
 
 ### Rules for dark surfaces

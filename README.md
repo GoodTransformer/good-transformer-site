@@ -4,6 +4,8 @@ Personal AI lessons and fractional AI advisory — [goodtransformer.ai](https://
 
 > **AI agents and developers:** Start with [`AGENTS.md`](./AGENTS.md) for navigation, then see the [`knowledge/`](./knowledge/) folder for detailed reference on brand, components, content, and deployment.
 
+When scanning the repo, ignore generated/vendor/local scratch folders unless a task explicitly mentions them: `node_modules/`, `.next/`, `out/`, `.git/`, `GTM research/`, and `Vision Doc/`.
+
 ## Stack
 
 - Next.js 15 (static export)
@@ -24,6 +26,8 @@ npm install
 NEXT_PUBLIC_FORMSPREE_PERSONAL_ENDPOINT=https://formspree.io/f/your-personal-form-id
 NEXT_PUBLIC_FORMSPREE_BOOKING_ENDPOINT=https://formspree.io/f/your-booking-form-id
 NEXT_PUBLIC_CLARITY_CALL_URL=https://your-calendar-link
+NEXT_PUBLIC_PERSONAL_LESSON_URL=https://your-personal-lesson-calendar-link
+NEXT_PUBLIC_BOOKING_BRIEF_EMAIL=hello@example.com
 ```
 
 3. Start the development server:
@@ -48,7 +52,7 @@ npm run build
 
 ## Brand colours
 
-All variables are defined in `src/app/globals.css` and mapped to Tailwind utilities in `tailwind.config.ts`.
+Canonical brand tokens live in `knowledge/brand/brand-tokens.json`. The variables are defined in `src/app/globals.css` and mapped to Tailwind utilities in `tailwind.config.ts`.
 
 | Variable | Value | Use |
 |---|---|---|
@@ -70,6 +74,6 @@ All variables are defined in `src/app/globals.css` and mapped to Tailwind utilit
 
 Deploys automatically to GitHub Pages on push to `main` via [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml).
 
-Environment variables are injected at build time from GitHub Secrets (`NEXT_PUBLIC_FORMSPREE_PERSONAL_ENDPOINT`, `NEXT_PUBLIC_FORMSPREE_BOOKING_ENDPOINT`, `NEXT_PUBLIC_CLARITY_CALL_URL`). The `.env.production` file provides fallback values if secrets are not set.
+Environment variables are injected at build time from GitHub Secrets. See [`knowledge/ops/env-vars.md`](knowledge/ops/env-vars.md) for the full list. The `.env.production` file provides fallback values if secrets are not set.
 
 The site uses a custom domain (`goodtransformer.ai`) — no `basePath` or `assetPrefix` is needed.

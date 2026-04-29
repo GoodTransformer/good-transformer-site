@@ -2,7 +2,9 @@
 
 **File:** `src/content/site-content.ts`
 
-This is the **single source of truth** for all website copy. Every string rendered on the site lives here. Components receive content as props — they do not contain hardcoded text.
+This is the intended **single source of truth** for editable website copy. Components should receive content as props and should not gain new hardcoded marketing text.
+
+Important caveat: a few legacy strings may still exist in page components, structured data, or utility files. If you are editing one of those strings, move it into this file as part of the change instead of adding another hardcoded string.
 
 ---
 
@@ -11,6 +13,7 @@ This is the **single source of truth** for all website copy. Every string render
 - AI agents, developers, and copywriters can update all text without touching component logic
 - Consistent vocabulary across pages
 - Easy to audit what the site says
+- Easier to keep SEO, visible page copy, and booking flows aligned
 
 ---
 
@@ -34,7 +37,7 @@ Currently: Services, Patrick, About.
 ### `homePage`
 All copy for the home page organised by section:
 ```ts
-homePage.hero       // title, descriptor, support, routes[], signals[]
+homePage.hero       // brand, title, descriptor, support, routes[], signals[]
 homePage.role       // heading, support
 homePage.services   // heading, intro, note
 homePage.patrick    // heading, body, frame: { label, heading, body, kicker }
@@ -42,8 +45,10 @@ homePage.faqs       // Array<{ question, answer }>
 homePage.finalCta   // heading, body
 ```
 
+`homePage.hero.routes` and `homePage.hero.signals` are currently consumed by the legacy home hero implementation. Do not treat them as permission to add more hero cards, stats, chips, or signal strips. For new landing-page hero work, follow the lean hero budget in `AGENTS.md`.
+
 ### `lessonOffers`
-Array of two cards for the personal/business offer comparison:
+Array of two panels for the personal/business offer comparison:
 ```ts
 [
   { name: "Personal AI Lessons", label, purpose, points[], href },
@@ -114,8 +119,9 @@ Three operating model rows (Lead / Embed / Enable) for the services page.
 
 1. Open `src/content/site-content.ts`
 2. Find the export that corresponds to the page/section
-3. Edit the string value
-4. Save — the change appears immediately in dev server
+3. Search the codebase for the exact old string to check whether it is hardcoded anywhere else
+4. Edit the string value, or move the legacy hardcoded string into this file if needed
+5. Save — the change appears immediately in dev server
 
 **Example:** To change the hero headline:
 ```ts

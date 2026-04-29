@@ -70,6 +70,8 @@ Used for: Patrick bio section, testimonial area.
 
 ## Hero classes
 
+Hero CSS includes some legacy route-card and signal-strip classes because the current home hero still renders them. They are implementation details, not a pattern to copy into new hero work. New landing heroes should stay lean: one branded composition, one headline, short support, CTA group, and one dominant full-bleed image.
+
 ### `.hero-stage-v2`
 Full-screen hero container with warm gradient background and `isolation: isolate`.
 
@@ -96,7 +98,7 @@ rgba(243,238,230,0.45) at 0% → rgba(243,238,230,0.12) at 38% → transparent a
 Subtle radial glow overlay positioned at top-left.
 
 ### `.hero-route-card`
-Base class for the two CTA cards in the hero.
+Legacy base class for the two CTA cards in the current hero.
 
 ### `.hero-route-card--light`
 Near-white card: `rgba(255,253,249,0.97)` background with ink text.
@@ -104,15 +106,18 @@ Near-white card: `rgba(255,253,249,0.97)` background with ink text.
 ### `.hero-route-card--dark`
 Dark card: `rgba(3,24,28,0.96)` background with paper text and teal borders.
 
+### `.hero-signal-strip`
+Legacy proof strip in the current hero. Do not add new hero proof strips, stats, badges, or chips unless a redesign explicitly calls for them outside the first viewport.
+
 ### `.hero-v2-copy`
 Container for the hero text block — positions copy on top of the image.
 
 ---
 
-## Content cards
+## Content panels
 
 ### `.offer-panel`
-Light paper card with border and padding. Used in the "two routes" section:
+Light paper panel with border and padding. Used in the "two routes" section:
 ```css
 background: paper/warm-paper surface
 border: 1px border-line
@@ -120,7 +125,7 @@ padding: p-6 lg:p-8
 ```
 
 ### `.roadmap-step`
-Card used in the "Learn → Explore → Practice → Adopt → Scale" roadmap:
+Panel used in the "Learn → Explore → Practice → Adopt → Scale" roadmap:
 - Numbered label, heading, and one-line description
 - Warm paper background with teal left-border accent on hover
 

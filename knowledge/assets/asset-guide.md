@@ -13,8 +13,10 @@ All public assets live in `/public`. Next.js serves them from the root path.
 **Replacing the hero image:**
 - Keep the filename `hero-coach.png` so no code changes are needed
 - PNG format preferred (transparent or white background — white is handled by `.hero-paper-plane` overlay)
-- Composition: subject should sit in the right half, leaving the left clear for text overlay
+- Composition: use it as a dominant full-bleed visual plane, not an inset image/card/collage
+- Subject should sit in the right half, leaving the left clear for text overlay
 - Colour mood: warm, not cool
+- Do not add badges, labels, stickers, or callout boxes on top of the hero media
 
 ---
 

@@ -49,9 +49,4 @@ These are referenced as `siteConfig.personalCta` and `siteConfig.businessCta` in
 
 ## Unused / archived routes
 
-The following directories exist in `src/app/` but may be stub or redirect pages:
-- `engagements/` — possibly archived or in progress
-- `how-it-works/` — possibly archived or in progress
-- `proof/` — possibly archived or in progress
-
-Check actual file contents before linking to these routes.
+No archived route directories are currently present in `src/app/`. Before linking to a route, confirm that the matching directory and `page.tsx` exist.

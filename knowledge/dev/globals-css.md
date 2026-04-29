@@ -86,14 +86,14 @@ Both are cosmetic and pointer-events: none.
 - `.hero-illustration` — cover image with filter and drift animation
 - `.hero-paper-plane` — left-to-right fade overlay over image
 - `.hero-atmosphere` — atmospheric radial glow
-- `.hero-route-card` — base card class
-- `.hero-route-card--light` — near-white card
-- `.hero-route-card--dark` — dark teal-black card
+- `.hero-route-card` — legacy current-hero CTA card class; do not copy into new hero work
+- `.hero-route-card--light` — legacy near-white variant
+- `.hero-route-card--dark` — legacy dark teal-black variant
 - `.hero-v2-copy` — text block container
 
-### Cards
-- `.offer-panel` — light paper card
-- `.roadmap-step` — numbered roadmap card
+### Panels
+- `.offer-panel` — light paper panel
+- `.roadmap-step` — numbered roadmap panel
 
 ### Typography
 - `.text-link` — underline hover link
