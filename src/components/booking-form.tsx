@@ -34,9 +34,7 @@ function getSafeHttpUrl(value: string) {
   try {
     const url = new URL(trimmed);
 
-    return url.protocol === "https:" || url.protocol === "http:"
-      ? url.toString()
-      : "";
+    return url.protocol === "https:" ? url.toString() : "";
   } catch {
     return "";
   }
@@ -70,6 +68,8 @@ function getMailtoHref(email: string, subject: string, body: string) {
   return `mailto:${trimmed}?${search.toString()}`;
 }
 
+const MIN_SUBMIT_DELAY_MS = 1500;
+
 export function BookingForm() {
   const [form, setForm] = useState<FormState>(defaultState);
   const [submitted, setSubmitted] = useState(false);
@@ -77,6 +77,8 @@ export function BookingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [deliveryMode, setDeliveryMode] = useState<DeliveryMode>("manual");
+  const [startedAt] = useState(() => Date.now());
+  const [trapField, setTrapField] = useState("");
   const calendarUrl = getSafeHttpUrl(
     process.env.NEXT_PUBLIC_CLARITY_CALL_URL ?? "",
   );
@@ -139,6 +141,15 @@ export function BookingForm() {
       return;
     }
 
+    if (trapField.trim()) {
+      return;
+    }
+
+    if (Date.now() - startedAt < MIN_SUBMIT_DELAY_MS) {
+      setSubmitError("Please take a moment to review your brief, then submit again.");
+      return;
+    }
+
     setSubmitError("");
     setCopied(false);
     setIsSubmitting(true);
@@ -155,6 +166,7 @@ export function BookingForm() {
       outcome: form.outcome.trim(),
       summary,
       _subject: "New AI Clarity Call brief",
+      _gotcha: trapField,
     };
 
     try {
@@ -206,6 +218,26 @@ export function BookingForm() {
         className="rounded-[2rem] border border-line bg-paper/82 p-6 shadow-glow backdrop-blur md:p-8"
       >
         <div className="grid gap-8">
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              left: "-9999px",
+              width: "1px",
+              height: "1px",
+              overflow: "hidden",
+            }}
+          >
+            <label htmlFor="business-website">Website</label>
+            <input
+              id="business-website"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              value={trapField}
+              onChange={(event) => setTrapField(event.target.value)}
+            />
+          </div>
           <div className="grid gap-6 md:grid-cols-2">
             <label className="grid gap-3 text-sm text-ink md:col-span-2">
               <span className="font-medium">Work email</span>
@@ -384,6 +416,7 @@ export function BookingForm() {
                   href={buildCalUrl(calendarUrl, { email: form.workEmail.trim() })}
                   target="_blank"
                   rel="noreferrer"
+                  referrerPolicy="no-referrer"
                   className="inline-flex min-h-11 items-center justify-center rounded-full bg-copper px-5 text-sm font-medium text-paper transition hover:bg-copper/90"
                 >
                   Continue to scheduling
@@ -450,6 +483,8 @@ export function PersonalBookingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [deliveryMode, setDeliveryMode] = useState<DeliveryMode>("manual");
+  const [startedAt] = useState(() => Date.now());
+  const [trapField, setTrapField] = useState("");
   const calendarUrl = getSafeHttpUrl(
     process.env.NEXT_PUBLIC_PERSONAL_LESSON_URL ?? "",
   );
@@ -511,6 +546,15 @@ export function PersonalBookingForm() {
       return;
     }
 
+    if (trapField.trim()) {
+      return;
+    }
+
+    if (Date.now() - startedAt < MIN_SUBMIT_DELAY_MS) {
+      setSubmitError("Please take a moment to review your lesson brief, then submit again.");
+      return;
+    }
+
     setSubmitError("");
     setCopied(false);
     setIsSubmitting(true);
@@ -527,6 +571,7 @@ export function PersonalBookingForm() {
       availability: form.availability.trim(),
       summary,
       _subject: "New Personal AI Lesson brief",
+      _gotcha: trapField,
     };
 
     try {
@@ -559,7 +604,9 @@ export function PersonalBookingForm() {
 
       if (nextMode === "endpoint" && calendarUrl) {
         window.setTimeout(() => {
-          window.location.assign(buildCalUrl(calendarUrl, { name: form.name.trim(), email: form.email.trim() }));
+          window.location.assign(
+            buildCalUrl(calendarUrl, { name: form.name.trim(), email: form.email.trim() }),
+          );
         }, 120);
       }
     } catch {
@@ -578,6 +625,26 @@ export function PersonalBookingForm() {
         className="rounded-[1.25rem] border border-line bg-paper/82 p-6 shadow-glow backdrop-blur md:p-8"
       >
         <div className="grid gap-8">
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              left: "-9999px",
+              width: "1px",
+              height: "1px",
+              overflow: "hidden",
+            }}
+          >
+            <label htmlFor="personal-website">Website</label>
+            <input
+              id="personal-website"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              value={trapField}
+              onChange={(event) => setTrapField(event.target.value)}
+            />
+          </div>
           <div className="grid gap-6 md:grid-cols-2">
             <label className="grid gap-3 text-sm text-ink">
               <span className="font-medium">Name</span>
@@ -746,6 +813,7 @@ export function PersonalBookingForm() {
                   href={buildCalUrl(calendarUrl, { name: form.name.trim(), email: form.email.trim() })}
                   target="_blank"
                   rel="noreferrer"
+                  referrerPolicy="no-referrer"
                   className="inline-flex min-h-11 items-center justify-center rounded-full bg-brass px-5 text-sm font-medium text-paper transition hover:bg-brass/90"
                 >
                   Continue to scheduling
