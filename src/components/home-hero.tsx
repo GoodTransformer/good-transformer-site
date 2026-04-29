@@ -217,7 +217,7 @@ export function HomeHero({
           {/* Heading */}
           <h1
             id="home-hero-title"
-            className="font-serif text-[clamp(2.8rem,5.2vw,5.4rem)] leading-[0.94] tracking-[-0.018em] text-ink"
+            className="font-serif text-[clamp(2.8rem,5.2vw,5.4rem)] leading-[1.0] tracking-[-0.018em] text-ink"
           >
             <HighlightedTitle title={title} />
           </h1>

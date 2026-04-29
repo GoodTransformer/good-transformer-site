@@ -2,6 +2,8 @@
 
 Personal AI lessons and fractional AI advisory — [goodtransformer.ai](https://goodtransformer.ai)
 
+> **AI agents and developers:** Start with [`AGENTS.md`](./AGENTS.md) for navigation, then see the [`knowledge/`](./knowledge/) folder for detailed reference on brand, components, content, and deployment.
+
 ## Stack
 
 - Next.js 15 (static export)
