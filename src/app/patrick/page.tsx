@@ -91,14 +91,14 @@ export default function PatrickPage() {
               ))}
             </div>
 
-            <AnimatedReveal className="border-t border-line pt-6">
-              <p className="font-serif text-3xl leading-tight text-ink md:text-[2.1rem]">
+            <AnimatedReveal className="patrick-testimonial border-t border-line">
+              <p className="patrick-testimonial__quote font-serif text-ink">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
-              <p className="mt-4 text-sm leading-6 text-slate">
+              <p className="patrick-testimonial__attribution text-sm leading-6 text-slate">
                 {testimonial.attribution}
               </p>
-              <div className="mt-10">
+              <div className="patrick-testimonial__cta">
                 <CTAGroup primary={siteConfig.primaryCta} tone="dark" />
               </div>
             </AnimatedReveal>

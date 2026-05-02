@@ -335,7 +335,7 @@ export function BookingForm() {
             <button
               type="submit"
               disabled={!canSubmit || isSubmitting}
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-6 text-sm font-medium text-paper transition enabled:hover:bg-ink/90 disabled:cursor-not-allowed disabled:bg-ink/35"
+              className="inline-flex min-h-12 items-center justify-center rounded-[0.45rem] bg-ink px-6 text-sm font-medium text-paper transition enabled:hover:bg-ink/90 disabled:cursor-not-allowed disabled:bg-ink/35"
             >
               {isSubmitting
                 ? autoRedirectsToCalendar
@@ -398,7 +398,7 @@ export function BookingForm() {
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-medium text-ink transition hover:bg-sand/80"
+                  className="inline-flex min-h-11 items-center justify-center rounded-[0.45rem] border border-line px-5 text-sm font-medium text-ink transition hover:bg-sand/80"
                 >
                   {copied ? "Brief copied" : "Copy brief"}
                 </button>
@@ -406,7 +406,7 @@ export function BookingForm() {
               {deliveryMode === "email" && briefEmailHref ? (
                 <a
                   href={briefEmailHref}
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-medium text-ink transition hover:bg-sand/80"
+                  className="inline-flex min-h-11 items-center justify-center rounded-[0.45rem] border border-line px-5 text-sm font-medium text-ink transition hover:bg-sand/80"
                 >
                   Open draft email again
                 </a>
@@ -417,7 +417,7 @@ export function BookingForm() {
                   target="_blank"
                   rel="noreferrer"
                   referrerPolicy="no-referrer"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full bg-copper px-5 text-sm font-medium text-paper transition hover:bg-copper/90"
+                  className="inline-flex min-h-11 items-center justify-center rounded-[0.45rem] bg-copper px-5 text-sm font-medium text-paper transition hover:bg-copper/90"
                 >
                   Continue to scheduling
                 </a>
@@ -740,7 +740,7 @@ export function PersonalBookingForm() {
             <button
               type="submit"
               disabled={!canSubmit || isSubmitting}
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-6 text-sm font-medium text-paper transition enabled:hover:bg-ink/90 disabled:cursor-not-allowed disabled:bg-ink/35"
+              className="inline-flex min-h-12 items-center justify-center rounded-[0.45rem] bg-ink px-6 text-sm font-medium text-paper transition enabled:hover:bg-ink/90 disabled:cursor-not-allowed disabled:bg-ink/35"
             >
               {isSubmitting
                 ? autoRedirectsToCalendar
@@ -803,7 +803,7 @@ export function PersonalBookingForm() {
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-medium text-ink transition hover:bg-sand/80"
+                  className="inline-flex min-h-11 items-center justify-center rounded-[0.45rem] border border-line px-5 text-sm font-medium text-ink transition hover:bg-sand/80"
                 >
                   {copied ? "Brief copied" : "Copy brief"}
                 </button>
@@ -814,7 +814,7 @@ export function PersonalBookingForm() {
                   target="_blank"
                   rel="noreferrer"
                   referrerPolicy="no-referrer"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full bg-brass px-5 text-sm font-medium text-paper transition hover:bg-brass/90"
+                  className="inline-flex min-h-11 items-center justify-center rounded-[0.45rem] bg-brass px-5 text-sm font-medium text-paper transition hover:bg-brass/90"
                 >
                   Continue to scheduling
                 </a>
