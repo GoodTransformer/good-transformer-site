@@ -6,51 +6,51 @@
     "_note": "All hex values are the canonical references. RGB triplets are used in CSS custom properties for alpha compositing. The Tailwind alias is the class prefix used in the codebase.",
 
     "ink": {
-      "hex": "#121B22",
-      "rgb": "18 27 34",
+      "hex": "#041F25",
+      "rgb": "4 31 37",
       "tailwind": "ink",
       "css_var": "--color-ink",
       "use": "Main headlines, body copy, primary text — the default text colour on light surfaces"
     },
     "slate": {
-      "hex": "#49535C",
-      "rgb": "73 83 92",
+      "hex": "#5A6166",
+      "rgb": "90 97 102",
       "tailwind": "slate",
       "css_var": "--color-slate",
       "use": "Secondary text, captions, supporting copy"
     },
     "line": {
-      "hex": "#11202B",
-      "rgb": "17 32 43",
+      "hex": "#041F25",
+      "rgb": "4 31 37",
       "tailwind": "line",
       "css_var": "--color-line",
       "use": "Dividers, hairlines, subtle borders. Applied at 14% opacity via Tailwind (border-line)"
     },
 
     "paper": {
-      "hex": "#F1ECE4",
-      "rgb": "241 236 228",
+      "hex": "#FAF3EA",
+      "rgb": "250 243 234",
       "tailwind": "paper",
       "css_var": "--color-paper",
       "use": "Primary light surface, cards, section backgrounds"
     },
     "sand": {
-      "hex": "#E9E2D6",
-      "rgb": "233 226 214",
+      "hex": "#FBF8F4",
+      "rgb": "251 248 244",
       "tailwind": "sand",
       "css_var": "--color-sand",
       "use": "Alternate light surface, slightly deeper than paper"
     },
     "mist": {
-      "hex": "#CFC7BA",
-      "rgb": "207 199 186",
+      "hex": "#D8D1C7",
+      "rgb": "216 209 199",
       "tailwind": "mist",
       "css_var": "--color-mist",
       "use": "Subtle borders, muted dividers, faint overlays"
     },
     "glow": {
-      "hex": "#F8EDE0",
-      "rgb": "248 237 224",
+      "hex": "#FBF8F4",
+      "rgb": "251 248 244",
       "tailwind": "glow",
       "css_var": "--color-glow",
       "use": "Warm highlight, near-white surfaces that need warmth. Applied at 70% opacity via Tailwind"
@@ -110,8 +110,9 @@
     },
 
     "dark_card": {
-      "rgba": "rgba(3, 24, 28, 0.96)",
-      "use": "Dark CTA panels and legacy current-hero route/signal elements — near-black with warm dark-teal undertone"
+      "hex": "#041F25",
+      "rgba": "rgba(4, 31, 37, 1)",
+      "use": "Dark CTA panels and current dark hero route card — near-black with warm dark-teal undertone"
     },
     "dark_bg": {
       "hex": "#08070F",
@@ -128,14 +129,14 @@
 
   "gradient": {
     "body_background": {
-      "css": "linear-gradient(180deg, #F3EEE6 0%, #F0EADF 54%, #ECE5DB 100%)",
-      "stops": ["#F3EEE6", "#F0EADF", "#ECE5DB"],
-      "use": "Site body background (applied with radial copper glow overlay)"
+      "css": "#FAF3EA with subtle site-frame radial/grid texture",
+      "stops": ["#FAF3EA"],
+      "use": "Primary site body and homepage header/hero surface"
     },
     "hero_background": {
-      "css": "linear-gradient(180deg, #F3EEE6 0%, #F1ECE4 45%, #ECE5DB 100%)",
-      "stops": ["#F3EEE6", "#F1ECE4", "#ECE5DB"],
-      "use": "Homepage hero section background"
+      "css": "#FAF3EA",
+      "stops": ["#FAF3EA"],
+      "use": "Homepage hero and header background; must match the hero stack asset background exactly"
     },
     "warm_paper_section": {
       "css": "linear-gradient(180deg, #F3EEE2 0%, #EBE1D0 100%)",
@@ -180,12 +181,12 @@
 
   "accessibility": {
     "pairings": [
-      { "fg": "#121B22", "bg": "#F1ECE4", "ratio": "~14:1", "grade": "AAA" },
-      { "fg": "#121B22", "bg": "#F8EDE0", "ratio": "~13:1", "grade": "AAA" },
-      { "fg": "#008C95", "bg": "#F1ECE4", "ratio": "~3.8:1", "grade": "AA large text / UI" },
-      { "fg": "#006F7A", "bg": "#F1ECE4", "ratio": "~5.1:1", "grade": "AA body text" },
-      { "fg": "#F1ECE4", "bg": "rgba(3,24,28,0.96)", "ratio": "~13:1", "grade": "AAA" },
-      { "fg": "#00A6B2", "bg": "rgba(3,24,28,0.96)", "ratio": "~4.6:1", "grade": "AA" }
+      { "fg": "#041F25", "bg": "#FAF3EA", "ratio": "AAA", "grade": "AAA" },
+      { "fg": "#041F25", "bg": "#FBF8F4", "ratio": "AAA", "grade": "AAA" },
+      { "fg": "#008C95", "bg": "#FAF3EA", "ratio": "AA large text / UI", "grade": "AA large text / UI" },
+      { "fg": "#006F7A", "bg": "#FAF3EA", "ratio": "AA", "grade": "AA body text" },
+      { "fg": "#FBF8F4", "bg": "#041F25", "ratio": "AAA", "grade": "AAA" },
+      { "fg": "#00A6B2", "bg": "#041F25", "ratio": "AA", "grade": "AA" }
     ],
     "rule": "Use #008C95 for teal accents at 18px+ or bold. Use #006F7A for teal body text or small labels"
   }

@@ -14,21 +14,21 @@ Two `:root` blocks. The second block (`/* Good Transformer 2026 direction */`) i
 
 ```css
 :root {
-  --color-bg-dark: 8 12 16;
-  --color-text-primary: 245 241 236;
-  --color-text-secondary: 210 217 223;
-  --color-accent: 112 130 141;
-  --color-button-fill: 245 241 236;
-  --color-button-border: 218 225 230;
-  --color-paper: 241 236 228;       /* #F1ECE4 */
-  --color-sand: 233 226 214;        /* #E9E2D6 */
-  --color-mist: 207 199 186;        /* #CFC7BA */
-  --color-ink: 18 27 34;            /* #121B22 */
-  --color-slate: 73 83 92;          /* #49535C */
-  --color-copper: 112 130 141;      /* #70828D */
-  --color-moss: 95 108 99;
-  --color-line: 17 32 43;           /* #11202B */
-  --color-glow: 248 237 224;        /* #F8EDE0 */
+  --color-bg-dark: 4 31 37;         /* #041F25 */
+  --color-text-primary: 251 248 244;/* #FBF8F4 */
+  --color-text-secondary: 218 221 220;
+  --color-accent: 0 140 149;        /* #008C95 */
+  --color-button-fill: 251 248 244; /* #FBF8F4 */
+  --color-button-border: 216 209 199;/* #D8D1C7 */
+  --color-paper: 250 243 234;       /* #FAF3EA */
+  --color-sand: 251 248 244;        /* #FBF8F4 */
+  --color-mist: 216 209 199;        /* #D8D1C7 */
+  --color-ink: 4 31 37;             /* #041F25 */
+  --color-slate: 90 97 102;         /* #5A6166 */
+  --color-copper: 0 140 149;        /* #008C95 */
+  --color-moss: 0 111 122;          /* #006F7A */
+  --color-line: 4 31 37;            /* #041F25 */
+  --color-glow: 251 248 244;        /* #FBF8F4 */
 }
 ```
 
@@ -54,9 +54,7 @@ All values are **RGB triplets** (space-separated, no commas). This allows Tailwi
 ### Body
 ```css
 body {
-  background:
-    radial-gradient(circle at top, rgba(112,130,141,0.08), transparent 26%),
-    linear-gradient(180deg, #f3eee6 0%, #f0eadf 54%, #ece5db 100%);
+  background: #FAF3EA;
   color: rgb(var(--color-ink));
   font-family: var(--font-sans), sans-serif;
 }
@@ -81,14 +79,14 @@ Both are cosmetic and pointer-events: none.
 - `.bg-warm-paper` — warm paper gradient (Patrick/testimonial section)
 
 ### Hero
-- `.hero-stage-v2` — full hero background
-- `.hero-illustration-wrap` — image container with inset and scale
-- `.hero-illustration` — cover image with filter and drift animation
-- `.hero-paper-plane` — left-to-right fade overlay over image
-- `.hero-atmosphere` — atmospheric radial glow
-- `.hero-route-card` — legacy current-hero CTA card class; do not copy into new hero work
-- `.hero-route-card--light` — legacy near-white variant
-- `.hero-route-card--dark` — legacy dark teal-black variant
+- `.hero-stage-v2` — homepage hero background, exact `#FAF3EA`
+- `.home-hero__layout` — two-column desktop hero grid
+- `.home-hero__content` — left hero copy/cards/proof column
+- `.home-hero__visual` — right hero visual column
+- `.ai-stack-visual` — desktop-only wrapper for the stack image
+- `.hero-route-card` — current homepage CTA card class; do not copy into new hero work
+- `.hero-route-card--light` — near-white variant
+- `.hero-route-card--dark` — dark teal-black variant
 - `.hero-v2-copy` — text block container
 
 ### Panels
@@ -99,6 +97,8 @@ Both are cosmetic and pointer-events: none.
 - `.text-link` — underline hover link
 - `.button-light` — light surface button
 - `.button-ghost-light` — ghost button for dark surfaces
+
+Non-hero buttons use an editorial oblong radius (`0.45rem`), not pills. The homepage hero route cards and top nav CTA have their own established styling.
 
 ### Artefact / document cards
 - `.artifact-sheet` — document sheet base

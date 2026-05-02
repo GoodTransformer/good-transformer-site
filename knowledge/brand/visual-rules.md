@@ -14,7 +14,7 @@ For raw token values see `brand-tokens.json`.
 | Text | Dark ink — never pure black, never mid-grey alone |
 | Accent | Teal only — used for interactive moments, not decoration |
 | Warmth | Small amber details in illustration only — never UI |
-| Landing heroes | One full-bleed composition — not a dashboard, card grid, collage, or stack of promos |
+| Landing heroes | One coherent first-viewport composition — not a dashboard, collage, or stack of unrelated promos |
 | Brand | Brand/product name must be a hero-level signal on branded pages |
 
 ---
@@ -25,8 +25,8 @@ For raw token values see `brand-tokens.json`.
 
 | Surface | Class / CSS | When to use |
 |---|---|---|
-| Page body | `body` gradient (`#F3EEE6 → #ECE5DB`) | Default — applied by `body` in `globals.css` |
-| Hero section | `.hero-stage-v2` | Homepage hero panel |
+| Page body | `#FAF3EA` plus subtle `site-frame` texture | Default — applied by `body` in `globals.css` |
+| Hero section | `.hero-stage-v2` | Homepage hero panel; exact `#FAF3EA` to match the stack asset |
 | Light section | default (inherits body gradient) | Most content sections |
 | Blue-neutral band | `.bg-soft-blue` | Role/services intro section — one per page max |
 | Warm paper band | `.bg-warm-paper` | Editorial sections, Patrick bio, testimonial area |
@@ -75,14 +75,16 @@ Never use for buttons, borders, text, or any interactive/UI element.
 
 ### Landing-page hero budget
 
-The first viewport should usually contain only:
+The first viewport should usually contain:
 - Brand or product name as a primary signal
 - One headline
 - One short supporting sentence
 - One CTA group
-- One dominant full-bleed image or atmospheric visual plane
+- One dominant visual or atmospheric visual plane
 
-Do not place stats, schedules, event listings, metadata rows, promos, proof strips, route cards, badges, or extra marketing blocks in the first viewport. If an older component still contains those patterns, treat them as legacy implementation details rather than design guidance.
+Do not place stats, schedules, event listings, metadata rows, promos, badges, or extra marketing blocks in the first viewport.
+
+**Current homepage exception:** the approved homepage hero deliberately includes two route cards, a compact proof strip, and the right-side AI confidence stack. Preserve that structure unless the homepage hero is explicitly being redesigned. Do not copy those route-card/proof-strip patterns into unrelated landing pages.
 
 ### Standard content section
 ```jsx
@@ -122,17 +124,17 @@ This is a pre-built CSS class. Produces a warm paper panel with line border.
 
 ### Legacy route card classes
 
-These classes still exist for the current home hero implementation, but they are not the preferred pattern for new hero work.
+These classes exist for the approved current home hero implementation. They are not the preferred pattern for new hero work.
 
 ```jsx
 <div className="hero-route-card hero-route-card--dark">
 ```
-Near-black background (`rgba(3,24,28,0.96)`) with paper text and teal borders.
+Near-black background (`#041F25`) with paper text and teal borders.
 
 ```jsx
 <div className="hero-route-card hero-route-card--light">
 ```
-Near-white (`rgba(255,253,249,0.97)`) with ink text.
+Near-white (`#FBF8F4`) with ink text.
 
 ---
 
@@ -148,7 +150,7 @@ Near-white (`rgba(255,253,249,0.97)`) with ink text.
 
 ## Dark surface rules
 
-- Text: `#F1ECE4` (paper) or white — never ink
+- Text: `#FBF8F4` or `#FAF3EA` — never ink
 - Accent: teal for icon rings, arrows, borders, active highlights only — no large teal fills
 - Do not use warm amber on dark surfaces
 
@@ -167,7 +169,7 @@ See `knowledge/brand/logo-usage.md` for full guidance.
 
 | ❌ Don't | ✅ Do instead |
 |---|---|
-| Pure white backgrounds | Use `#F1ECE4` (paper) or body gradient |
+| Pure white backgrounds | Use `#FAF3EA` (paper) or `#FBF8F4` (sand) |
 | Cool grey sections | Use body gradient or `.bg-warm-paper` |
 | Old brass `#A5701E` | Use teal `#008C95` |
 | Solid large teal fills | Use teal for borders, text, small icons |

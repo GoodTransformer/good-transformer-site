@@ -19,6 +19,26 @@ All public assets live in `/public`. Next.js serves them from the root path.
 
 ---
 
+## Social preview / Open Graph image
+
+| File | Path | Description |
+|---|---|---|
+| Social preview | `public/og-image.png` | 1200×630 Open Graph image for LinkedIn, WhatsApp, X/Twitter and other link previews. |
+
+**Current composition:**
+- Exact paper background: `#FAF3EA`
+- Left side: brand mark/name, "Get confident with AI.", short service descriptor, Patrick line and URL
+- Right side: the current AI confidence stack visual, scaled and right-biased so it does not collide with the text field
+
+**How to regenerate:**
+- Edit `scripts/generate-assets.mjs`
+- Run `npm run generate:assets`
+- This also regenerates `public/favicon.png` and `public/apple-touch-icon.png`
+
+Do not hand-edit `public/og-image.png` without updating the generator, otherwise the next build or asset generation can overwrite the change.
+
+---
+
 ## Brand mark
 
 | File | Path | Description |

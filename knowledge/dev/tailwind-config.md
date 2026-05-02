@@ -82,7 +82,7 @@ Used for dark background haze effect.
 
 ```ts
 keyframes: {
-  drift: {
+  drift: { // legacy; avoid for new homepage hero work
     "0%, 100%": { transform: "scale(1.02) translate3d(0, 0, 0)" },
     "50%": { transform: "scale(1.08) translate3d(-1.5%, 1%, 0)" }
   },
@@ -97,7 +97,7 @@ keyframes: {
 }
 
 animation: {
-  drift:  "drift 22s ease-in-out infinite",
+  drift:  "drift 22s ease-in-out infinite", // legacy
   rise:   "rise 0.8s ease forwards",
   line:   "lineSweep 1.1s ease forwards"
 }

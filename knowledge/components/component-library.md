@@ -13,7 +13,8 @@ Global navigation bar rendered on every page via `layout.tsx`.
 **Features:**
 - Brand logo (circuit tree PNG) + wordmark
 - Navigation links from `navigation` in `site-content.ts`
-- Scroll-aware opacity behaviour
+- Desktop top-right "Book a lesson" CTA
+- Mobile menu button and slide-down mobile nav
 - No props — reads directly from `siteConfig` and `navigation`
 
 **Usage:** Added once in `layout.tsx`. Do not add to pages directly.
@@ -39,7 +40,7 @@ Global footer rendered on every page via `layout.tsx`.
 
 The full-screen hero for the homepage only.
 
-Design intent: the first viewport should read as one branded composition, not a dashboard. For future hero work, keep the budget to brand/product signal, one headline, one short supporting sentence, one CTA group, and one dominant full-bleed image.
+Design intent: the first viewport should read as one branded composition, not a dashboard. The current approved homepage hero contains one headline, intro/support copy, two route cards, a compact proof strip, and the right-side AI confidence stack. Preserve this structure unless the homepage hero is explicitly being redesigned.
 
 **Props:**
 ```ts
@@ -47,15 +48,14 @@ Design intent: the first viewport should read as one branded composition, not a 
   title: string           // Main headline (e.g. "Get confident with AI")
   descriptor: string      // Subtitle paragraph
   support: string         // Supporting paragraph (smaller, muted)
-  backgroundImageSrc: string  // Path to hero illustration PNG
-  routes: Array<{         // Legacy route CTAs currently consumed by HomeHero
+  routes: Array<{         // Current route CTAs consumed by HomeHero
     label: string         // e.g. "For individuals"
     title: string         // e.g. "Book a lesson"
     body: string
     href: string
     tone: "light" | "dark"
   }>
-  signals: Array<{        // Legacy proof signals currently consumed by HomeHero
+  signals: Array<{        // Current compact proof strip items
     title: string
     body: string
   }>
@@ -63,10 +63,11 @@ Design intent: the first viewport should read as one branded composition, not a 
 ```
 
 **Key details:**
-- Uses `.hero-stage-v2` for background (warm gradient)
+- Uses `.hero-stage-v2` for exact paper background (`#FAF3EA`)
+- Uses `public/hero/attention-flow-the-path-to-ai-mastery-web.webp` for the desktop-only right-side stack visual
 - The word "AI" in the title is automatically highlighted in teal via `HighlightedTitle` (internal component)
 - `leading-[1.0]` on the h1 is important — do not reduce below 1.0 or italic ascenders clip
-- The route-card and signal-strip classes are legacy implementation details. Do not copy them into new hero designs; simplify or remove them when redesigning the hero.
+- The route-card and signal-strip classes are approved homepage-specific implementation details. Do not copy them into new hero designs.
 
 ---
 

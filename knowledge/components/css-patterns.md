@@ -10,15 +10,15 @@ These are defined in `tailwind.config.ts` and backed by CSS custom properties in
 
 | Tailwind utility | CSS var | Hex |
 |---|---|---|
-| `text-ink` / `bg-ink` | `--color-ink` | `#121B22` |
-| `text-slate` / `bg-slate` | `--color-slate` | `#49535C` |
-| `text-paper` / `bg-paper` | `--color-paper` | `#F1ECE4` |
-| `text-sand` / `bg-sand` | `--color-sand` | `#E9E2D6` |
-| `text-mist` / `bg-mist` | `--color-mist` | `#CFC7BA` |
-| `text-glow` / `bg-glow` | `--color-glow` | `#F8EDE0` |
+| `text-ink` / `bg-ink` | `--color-ink` | `#041F25` |
+| `text-slate` / `bg-slate` | `--color-slate` | `#5A6166` |
+| `text-paper` / `bg-paper` | `--color-paper` | `#FAF3EA` |
+| `text-sand` / `bg-sand` | `--color-sand` | `#FBF8F4` |
+| `text-mist` / `bg-mist` | `--color-mist` | `#D8D1C7` |
+| `text-glow` / `bg-glow` | `--color-glow` | `#FBF8F4` |
 | `text-brass` / `bg-brass` / `border-brass` | `--color-brass` | `#008C95` (teal) |
-| `text-copper` / `bg-copper` | `--color-copper` | `#70828D` |
-| `border-line` | `--color-line` | `#11202B` at 14% opacity |
+| `text-copper` / `bg-copper` | `--color-copper` | `#008C95` |
+| `border-line` | `--color-line` | `#041F25` at low opacity |
 | `shadow-glow` | — | `0 28px 80px rgba(10,20,26,0.18)` |
 
 **Alpha modifier syntax** — supported on all brand colours:
@@ -121,10 +121,10 @@ Panel used in the "Learn → Explore → Practice → Adopt → Scale" roadmap:
 Underline-on-hover link style. Used for in-body navigation links.
 
 ### `.button-light`
-Light surface button (ink text, paper background, line border).
+Light surface button used on dark CTA sections. Current shape is editorial oblong (`border-radius: 0.45rem`), not pill.
 
 ### `.button-ghost-light`
-Ghost button on dark surface (paper border, transparent background, paper text).
+Ghost button on dark surface. Current shape is editorial oblong (`border-radius: 0.45rem`), not pill.
 
 ---
 
@@ -132,10 +132,10 @@ Ghost button on dark surface (paper border, transparent background, paper text).
 
 | Name | Trigger | Effect |
 |---|---|---|
-| `drift` | Auto / infinite | Slow scale + translate on hero image |
+| `drift` | Legacy / avoid for new work | Old slow scale + translate image motion; not part of the current homepage stack hero |
 | `rise` | On mount / reveal | Fade-up from `translate3d(0,30px,0)` |
 | `lineSweep` | On mount | Scale from 0→1 on X axis (left origin) |
-| `heroPresence` | Auto / infinite | Defined in globals.css — slow parallax effect on hero illustration |
+| `heroPresence` | Legacy / avoid for new work | Old hero illustration motion; not part of the current homepage stack hero |
 
 ---
 

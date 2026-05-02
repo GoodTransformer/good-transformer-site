@@ -21,7 +21,7 @@ The PNG is rendered as a single-colour flat mark using CSS filters. **Do not use
 ```css
 filter: brightness(0) opacity(0.82);
 ```
-Renders the mark in ink (`#121B22` at ~82% opacity).
+Renders the mark in ink (`#041F25` at ~82% opacity).
 
 ```jsx
 <img src="/logos/gt-logo.png" alt="" aria-hidden="true" className="h-8 w-auto" style={{filter: 'brightness(0) opacity(0.82)'}} />
@@ -76,7 +76,6 @@ The `img` carries `alt=""` and `aria-hidden="true"` because the visible wordmark
 | Location | Component | Treatment |
 |---|---|---|
 | Site header | `src/components/site-header.tsx` | ink, `opacity(0.82)` |
-| Home hero nav | `src/components/home-hero.tsx` | ink, `opacity(0.82)` |
 | Site footer | `src/components/site-footer.tsx` | ink, `opacity(0.72)` |
 
 ---

@@ -22,14 +22,18 @@ const __dir = dirname(fileURLToPath(import.meta.url))
 const ROOT  = join(__dir, '..')
 const PUB   = join(ROOT, 'public')
 const LOGO  = join(PUB, 'logos', 'gt-logo.png')
+const STACK = join(PUB, 'hero', 'attention-flow-the-path-to-ai-mastery-web.webp')
 
 // ── Brand tokens ──────────────────────────────────────────────────────────────
-const INK    = { r: 18,  g: 27,  b: 34  }   // #121B22
-const PAPER  = { r: 241, g: 236, b: 228 }   // #F1ECE4
-const SLATE  = { r: 73,  g: 83,  b: 92  }   // #49535C
+const INK    = { r: 4,   g: 31,  b: 37  }   // #041F25
+const PAPER  = { r: 250, g: 243, b: 234 }   // #FAF3EA
+const SLATE  = { r: 90,  g: 97,  b: 102 }   // #5A6166
 const TEAL   = { r: 0,   g: 140, b: 149 }   // #008C95
-const GRAD_T = '#F3EEE6'                      // gradient top
-const GRAD_B = '#ECE5DB'                      // gradient bottom
+const AMBER  = { r: 196, g: 135, b: 58  }   // #C4873A
+
+function rgb({ r, g, b }) {
+  return `rgb(${r} ${g} ${b})`
+}
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -60,21 +64,6 @@ async function colourize(r, g, b, w, h) {
     .toBuffer()
 }
 
-/**
- * Fade: uniformly reduce the alpha channel of an RGBA PNG buffer.
- * fraction: 0.0 (transparent) → 1.0 (unchanged)
- */
-async function fade(buffer, fraction) {
-  const { data, info } = await sharp(buffer)
-    .ensureAlpha()
-    .raw()
-    .toBuffer({ resolveWithObject: true })
-  for (let i = 3; i < data.length; i += 4) {
-    data[i] = Math.round(data[i] * fraction)
-  }
-  return sharp(Buffer.from(data), { raw: info }).png().toBuffer()
-}
-
 // ═════════════════════════════════════════════════════════════════════════════
 // OG IMAGE  1200 × 630
 // ═════════════════════════════════════════════════════════════════════════════
@@ -83,29 +72,30 @@ console.log('⏳  Generating og-image.png…')
 const OW = 1200
 const OH = 630
 
-// ── 1. Warm gradient background ───────────────────────────────────────────────
+// ── 1. Exact warm paper background ────────────────────────────────────────────
+// Match the stack asset background exactly so social previews do not show a
+// visible block around the right-side visual.
 const bgSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="${GRAD_T}"/>
-      <stop offset="100%" stop-color="${GRAD_B}"/>
-    </linearGradient>
-  </defs>
-  <rect width="${OW}" height="${OH}" fill="url(#bg)"/>
+  <rect width="${OW}" height="${OH}" fill="${rgb(PAPER)}"/>
+  <circle cx="940" cy="145" r="220" fill="${rgb(TEAL)}" opacity="0.025"/>
+  <circle cx="1015" cy="480" r="190" fill="${rgb(AMBER)}" opacity="0.018"/>
 </svg>`)
 const bg = await sharp(bgSvg).png().toBuffer()
 
-// ── 2. Logo layers ────────────────────────────────────────────────────────────
-// Small ink logo for top-left brand mark  (90 × 90)
-const inkLogo90  = await colourize(INK.r,  INK.g,  INK.b,  90,  90)
-// Large ink logo for faded decorative panel (480 × 480)
-const inkLogo480 = await colourize(INK.r,  INK.g,  INK.b,  480, 480)
-const fadedLogo  = await fade(inkLogo480, 0.065)   // ~6.5% opacity ghost
+// ── 2. Visual layers ──────────────────────────────────────────────────────────
+// Small ink logo for top-left brand mark.
+const inkLogo78 = await colourize(INK.r, INK.g, INK.b, 78, 78)
+
+// Homepage stack visual for right-side social card continuity.
+const stackVisual = await sharp(STACK)
+  .resize(510, 510, { fit: 'contain', background: { ...PAPER, alpha: 0 } })
+  .png()
+  .toBuffer()
 
 // ── 3. Teal accent bars (SVG overlay) ─────────────────────────────────────────
 const barsSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0"       width="7"    height="${OH}" fill="#008C95"/>
-  <rect x="0" y="${OH-4}" width="${OW}" height="4"    fill="#008C95"/>
+  <rect x="0" y="0"       width="7"    height="${OH}" fill="${rgb(TEAL)}"/>
+  <rect x="0" y="${OH-4}" width="${OW}" height="4"    fill="${rgb(TEAL)}"/>
 </svg>`)
 
 // ── 4. Typography layer ───────────────────────────────────────────────────────
@@ -118,54 +108,54 @@ const textSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www
   <text x="191" y="114"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
     font-size="12" letter-spacing="3.2"
-    fill="#008C95">GOOD TRANSFORMER</text>
+    fill="${rgb(TEAL)}">GOOD TRANSFORMER</text>
 
   <!-- Headline line 1 -->
-  <text x="80" y="286"
+  <text x="80" y="278"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="80" font-weight="normal"
-    letter-spacing="-1.5"
-    fill="#121B22">Get confident</text>
+    letter-spacing="0"
+    fill="${rgb(INK)}">Get confident</text>
 
   <!-- Headline line 2 — "with " ink, "AI." teal -->
-  <text x="80" y="378"
+  <text x="80" y="370"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="80" font-weight="normal"
-    letter-spacing="-1.5"
-    fill="#121B22">with <tspan fill="#008C95">AI.</tspan></text>
+    letter-spacing="0"
+    fill="${rgb(INK)}">with <tspan fill="${rgb(TEAL)}" font-style="italic">AI.</tspan></text>
 
   <!-- Tagline -->
-  <text x="80" y="438"
+  <text x="80" y="434"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-    font-size="26.5"
-    fill="#49535C">Personal AI lessons and practical business advisory</text>
+    font-size="24.5"
+    fill="${rgb(SLATE)}">Personal AI lessons and practical business advisory</text>
 
   <!-- Hairline rule -->
-  <rect x="80" y="490" width="530" height="1" fill="#121B22" opacity="0.16"/>
+  <rect x="80" y="486" width="500" height="1" fill="${rgb(INK)}" opacity="0.16"/>
 
   <!-- Patrick descriptor -->
-  <text x="80" y="528"
+  <text x="80" y="524"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
     font-size="20.5"
-    fill="#49535C">Patrick Hussey — AI coach and fractional adviser</text>
+    fill="${rgb(SLATE)}">Patrick Hussey — AI coach and fractional adviser</text>
 
   <!-- Site URL in teal -->
-  <text x="80" y="566"
+  <text x="80" y="562"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
     font-size="20.5"
-    fill="#008C95">goodtransformer.ai</text>
+    fill="${rgb(TEAL)}">goodtransformer.ai</text>
 
 </svg>`)
 
 // ── 5. Composite all layers ───────────────────────────────────────────────────
 await sharp(bg)
   .composite([
-    // Ghost circuit tree — decorative right-side panel
-    { input: fadedLogo,  left: 678, top: 75 },
+    // Homepage AI confidence stack — right-side social visual.
+    { input: stackVisual, left: 672, top: 60 },
     // Teal bars (left edge + bottom edge)
     { input: barsSvg,    left: 0,   top: 0  },
     // Brand mark top-left
-    { input: inkLogo90,  left: 80,  top: 68 },
+    { input: inkLogo78,  left: 80,  top: 70 },
     // All text
     { input: textSvg,    left: 0,   top: 0  },
   ])
@@ -194,7 +184,7 @@ async function makeFavicon(size, radius) {
   // Teal rounded-square background
   const bgSvgFav = Buffer.from(
     `<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
-      <rect width="${size}" height="${size}" rx="${radius}" ry="${radius}" fill="#008C95"/>
+      <rect width="${size}" height="${size}" rx="${radius}" ry="${radius}" fill="${rgb(TEAL)}"/>
     </svg>`
   )
   const bgFav = await sharp(bgSvgFav).png().toBuffer()
