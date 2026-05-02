@@ -541,6 +541,10 @@ img {
   border-bottom: 0;
 }
 
+.patrick-intro-grid {
+  max-width: 68rem;
+}
+
 details > summary {
   list-style: none;
 }

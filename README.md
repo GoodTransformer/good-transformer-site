@@ -47,7 +47,7 @@ npm run build
 - `src/app` — pages: Home, Services, Patrick, About, Book
 - `src/content/site-content.ts` — all copy and structured content
 - `src/components` — layout, motion, CTA, FAQ, booking, and artefact components
-- `public/hero/hero-coach.png` — home page hero illustration (woman + coach robot)
+- `public/hero/attention-flow-the-path-to-ai-mastery-web.webp` — current home page AI confidence stack illustration
 - `public/logos/gt-logo.png` — brand mark (circuit tree, transparent PNG)
 
 ## Brand colours

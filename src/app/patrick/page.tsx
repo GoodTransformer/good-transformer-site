@@ -45,7 +45,7 @@ export default function PatrickPage() {
       {/* ── Unified header — name, intro, and portrait together ────────── */}
       <section className="page-intro page-intro--patrick">
         <div className="mx-auto max-w-7xl px-6 pb-8 md:px-10 lg:px-12">
-          <div className="grid items-end gap-10 md:grid-cols-[minmax(0,1fr)_200px] md:gap-14 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-16">
+          <div className="patrick-intro-grid grid items-end gap-10 md:grid-cols-[minmax(0,1fr)_200px] md:gap-12 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-12">
             <div className="max-w-2xl">
               <h1 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
                 {patrickPage.title}
@@ -58,7 +58,7 @@ export default function PatrickPage() {
               </p>
             </div>
 
-            <div className="patrick-portrait-frame self-end md:self-center">
+            <div className="patrick-portrait-frame self-end md:self-center md:justify-self-start">
               <Image
                 src={portraitSrc}
                 alt={patrickPage.portrait.alt}
