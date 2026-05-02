@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Personal AI lessons and practical business advisory",
     start_url: "/",
     display: "standalone",
-    background_color: "#F1ECE4",
+    background_color: "#FAF3EA",
     theme_color: "#008C95",
     icons: [
       {

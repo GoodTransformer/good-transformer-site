@@ -58,7 +58,7 @@ When searching the repo, focus on authored source and docs. Ignore generated, ve
 6. **Fonts**: `font-serif` = Newsreader (editorial), `font-sans` = Schibsted Grotesk (UI)
 7. **Logo** = `public/logos/gt-logo.png` rendered with `filter: brightness(0) opacity(0.82)` for ink colour on light, `filter: brightness(0) invert(1) opacity(0.82)` on dark
 8. **Static export** — no server-side features (no API routes, no `getServerSideProps`)
-9. **Landing-page heroes are one composition** — brand, one headline, one short support sentence, CTA group, and one dominant full-bleed image. Do not add hero stats, badges, signal strips, route cards, schedules, or extra promo blocks.
+9. **Landing-page heroes are one composition** — brand, one headline, one short support sentence, CTA group, and one dominant visual. Do not add new hero stats, badges, schedules, or extra promo blocks. The current Good Transformer homepage is a deliberate exception with two route cards, a compact proof strip, and the right-side AI confidence stack; preserve that approved structure unless the hero is explicitly being redesigned.
 10. **Brand must be hero-level** — on branded pages, "Good Transformer" or the relevant product/service name must be a primary signal, not only nav text or a small eyebrow.
 
 ---
@@ -73,7 +73,7 @@ When searching the repo, focus on authored source and docs. Ignore generated, ve
 | Change page layout | `src/app/[page]/page.tsx` |
 | Change global styles | `src/app/globals.css` |
 | Add a new Tailwind colour | `tailwind.config.ts` + `src/app/globals.css` |
-| Change the hero image | `public/hero/hero-coach.png` (replace file, keep same name) |
+| Change the homepage hero | `src/components/home-hero.tsx` + `src/app/globals.css`; current stack asset is `public/hero/attention-flow-the-path-to-ai-mastery-web.webp` |
 | Change the logo | `public/logos/gt-logo.png` (replace file, keep same name) |
 
 ---

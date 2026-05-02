@@ -59,7 +59,7 @@
 │
 ├── public/
 │   ├── hero/
-│   │   └── hero-coach.png       ← Home hero illustration (woman + AI coach)
+│   │   └── attention-flow-the-path-to-ai-mastery-web.webp ← Current home hero stack visual
 │   ├── logos/
 │   │   ├── gt-logo.png          ← Brand mark (circuit tree, alpha PNG)
 │   │   ├── google.svg

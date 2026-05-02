@@ -21,14 +21,14 @@ const config: Config = {
         serif: ["var(--font-serif)"],
       },
       boxShadow: {
-        glow: "0 28px 80px rgba(10, 20, 26, 0.18)",
+        glow: "0 28px 80px rgba(4, 31, 37, 0.14)",
       },
       letterSpacing: {
         display: "0.22em",
       },
       backgroundImage: {
         haze:
-          "radial-gradient(circle at top, rgba(197, 94, 50, 0.12), transparent 32%), radial-gradient(circle at 82% 8%, rgba(104, 118, 104, 0.1), transparent 26%), linear-gradient(180deg, rgba(12, 24, 32, 0.04), rgba(12, 24, 32, 0))",
+          "radial-gradient(circle at top, rgba(0, 140, 149, 0.08), transparent 32%), radial-gradient(circle at 82% 8%, rgba(196, 135, 58, 0.05), transparent 26%), linear-gradient(180deg, rgba(4, 31, 37, 0.025), rgba(4, 31, 37, 0))",
       },
       keyframes: {
         drift: {

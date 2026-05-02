@@ -70,35 +70,19 @@ Used for: Patrick bio section, testimonial area.
 
 ## Hero classes
 
-Hero CSS includes some legacy route-card and signal-strip classes because the current home hero still renders them. They are implementation details, not a pattern to copy into new hero work. New landing heroes should stay lean: one branded composition, one headline, short support, CTA group, and one dominant full-bleed image.
+Hero CSS includes current homepage route-card and signal-strip classes because the approved Good Transformer hero still renders two route cards and a compact proof strip. Treat these as homepage-specific implementation details, not generic patterns to copy into unrelated landing pages.
 
 ### `.hero-stage-v2`
-Full-screen hero container with warm gradient background and `isolation: isolate`.
+Full-viewport homepage hero container with exact warm paper background `#FAF3EA`, `100dvh` height, and `isolation: isolate`.
 
-### `.hero-illustration-wrap`
-Positions and slightly zooms out the hero background image:
-```css
-position: absolute;
-inset: -5%;
-z-index: 0;
-transform: scale(0.92);
-```
-The `-5%` inset + `scale(0.92)` means the image is zoomed out with no visible edges.
+### `.home-hero__layout`
+Two-column desktop hero layout. The left column holds the headline, intro copy, CTA cards, and proof strip. The right column holds the AI confidence stack visual.
 
-### `.hero-illustration`
-Applied to the `<img>` inside `.hero-illustration-wrap`. Uses `object-fit: cover`, `object-position: center 38%`, with subtle filter and continuous slow drift animation.
-
-### `.hero-paper-plane`
-Left-side gradient overlay that fades the hero image behind the text copy:
-```
-rgba(243,238,230,0.45) at 0% → rgba(243,238,230,0.12) at 38% → transparent at 56%
-```
-
-### `.hero-atmosphere`
-Subtle radial glow overlay positioned at top-left.
+### `.ai-stack-visual`
+Desktop-only wrapper for the current stack image, `public/hero/attention-flow-the-path-to-ai-mastery-web.webp`. Its outer background must match the page paper exactly (`#FAF3EA`) so the visual reads as part of the hero surface.
 
 ### `.hero-route-card`
-Legacy base class for the two CTA cards in the current hero.
+Base class for the two CTA cards in the current homepage hero.
 
 ### `.hero-route-card--light`
 Near-white card: `rgba(255,253,249,0.97)` background with ink text.

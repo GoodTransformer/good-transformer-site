@@ -43,7 +43,7 @@ export default function PatrickPage() {
       <JsonLd data={breadcrumbJsonLd} />
 
       {/* ── Unified header — name, intro, and portrait together ────────── */}
-      <section className="page-intro">
+      <section className="page-intro page-intro--patrick">
         <div className="mx-auto max-w-7xl px-6 pb-8 md:px-10 lg:px-12">
           <div className="grid items-end gap-10 md:grid-cols-[minmax(0,1fr)_200px] md:gap-14 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-16">
             <div className="max-w-2xl">
@@ -74,7 +74,7 @@ export default function PatrickPage() {
       </section>
 
       {/* ── Sections + testimonial ──────────────────────────────────────── */}
-      <section className="section-divider">
+      <section className="patrick-detail-section">
         <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12 lg:py-16">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
             <div className="border-t border-line">

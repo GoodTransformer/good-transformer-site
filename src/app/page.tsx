@@ -15,9 +15,7 @@ import {
   testimonial,
 } from "@/content/site-content";
 import { publicBasePath } from "@/lib/public-base-path";
-import { SITE_URL } from "@/lib/seo";
-
-const heroImageSrc = publicBasePath + "/hero/hero-coach.png";
+import { OG_IMAGE, SITE_URL } from "@/lib/seo";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -41,7 +39,7 @@ const homePageJsonLd = {
   description: homePage.hero.support,
   isPartOf: { "@id": `${SITE_URL}/#website` },
   about: { "@id": `${SITE_URL}/patrick/` },
-  primaryImageOfPage: `${SITE_URL}/hero/hero-coach.png`,
+  primaryImageOfPage: OG_IMAGE,
 };
 
 export default function HomePage() {
@@ -54,7 +52,6 @@ export default function HomePage() {
         title={homePage.hero.title}
         descriptor={homePage.hero.descriptor}
         support={homePage.hero.support}
-        backgroundImageSrc={heroImageSrc}
         routes={homePage.hero.routes}
         signals={homePage.hero.signals}
       />
@@ -62,7 +59,7 @@ export default function HomePage() {
       <section className="section-divider bg-soft-blue">
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-24">
           <div className="grid gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
-            <AnimatedReveal>
+            <AnimatedReveal className="lg:pt-[3.55rem]">
               <h2 className="max-w-2xl font-serif text-4xl leading-tight text-ink md:text-5xl">
                 {homePage.role.heading}
               </h2>

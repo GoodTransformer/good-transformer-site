@@ -18,7 +18,7 @@ export function CTAGroup({
 }: CTAGroupProps) {
   const primaryClass =
     tone === "light"
-      ? "bg-paper text-ink hover:bg-white"
+      ? "bg-sand text-ink hover:bg-paper"
       : "bg-ink text-paper hover:bg-ink/90";
   const secondaryClass =
     tone === "light" ? "text-paper/84 hover:text-paper" : "text-ink/76 hover:text-ink";

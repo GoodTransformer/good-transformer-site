@@ -233,21 +233,21 @@ export const homePage = {
     brand: siteConfig.brand,
     title: "Get confident with AI",
     descriptor:
-      "Personal 1-to-1 AI lessons for individuals, plus fractional advisory for teams and businesses.",
+      "Practical 1-to-1 AI lessons for individuals, plus AI advisory for teams and businesses.",
     support:
-      "Whether you are just getting started or want to sharpen your skills, Patrick Hussey offers practical AI guidance you can actually use. He also works with organisations on AI strategy, adoption, and workflow change.",
+      "Learn how to use AI with confidence, judgement and practical skill. Patrick Hussey helps individuals get started and helps organisations apply AI to real workflows, adoption and change.",
     routes: [
       {
         label: "For individuals",
         title: "Book a lesson",
-        body: "1-to-1 help for beginners and improvers",
+        body: "1-to-1 help for beginners and improvers.",
         href: "/book/personal",
         tone: "light",
       },
       {
         label: "For businesses",
         title: "Book a business call",
-        body: "Fractional AI adviser for teams and businesses",
+        body: "AI advisory for teams and businesses.",
         href: "/book/business",
         tone: "dark",
       },
@@ -263,7 +263,7 @@ export const homePage = {
       },
       {
         title: "Trusted adviser",
-        body: "Strategic, adoption, and lasting impact",
+        body: "Strategic, adoption and lasting impact.",
       },
     ],
   },

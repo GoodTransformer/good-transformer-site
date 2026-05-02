@@ -8,15 +8,14 @@ All public assets live in `/public`. Next.js serves them from the root path.
 
 | File | Path | Description |
 |---|---|---|
-| Hero image | `public/hero/hero-coach.png` | Home page hero — woman + AI coach at desk scene. Warm illustration, right-aligned composition. |
+| Homepage stack image | `public/hero/attention-flow-the-path-to-ai-mastery-web.webp` | Current desktop homepage hero visual: AI confidence stack on exact paper background. |
 
 **Replacing the hero image:**
-- Keep the filename `hero-coach.png` so no code changes are needed
-- PNG format preferred (transparent or white background — white is handled by `.hero-paper-plane` overlay)
-- Composition: use it as a dominant full-bleed visual plane, not an inset image/card/collage
-- Subject should sit in the right half, leaving the left clear for text overlay
-- Colour mood: warm, not cool
-- Do not add badges, labels, stickers, or callout boxes on top of the hero media
+- Keep the filename `attention-flow-the-path-to-ai-mastery-web.webp` unless code is updated at the same time
+- The outer asset background must match the homepage paper exactly: `#FAF3EA`
+- Composition: right-side stack visual, balanced with the left copy, cards, and proof strip
+- Do not add people, robots, stickers, badges, or extra callout boxes to the hero visual
+- Old coach hero files (`hero-coach*`, `hero-main*`) are obsolete and should not be reintroduced without a deliberate redesign
 
 ---
 

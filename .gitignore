@@ -3,6 +3,8 @@ node_modules
 out
 dist
 coverage
+screenshots/
+.claude/
 .DS_Store
 *.log
 .env.local

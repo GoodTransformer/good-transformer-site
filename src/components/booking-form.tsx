@@ -247,7 +247,7 @@ export function BookingForm() {
                 required
                 value={form.workEmail}
                 onChange={(event) => updateField("workEmail", event.target.value)}
-                className="min-h-12 rounded-[1.25rem] border border-line bg-white/70 px-4 text-base text-ink outline-none transition focus:border-copper"
+                className="min-h-12 rounded-[1.25rem] border border-line bg-sand/80 px-4 text-base text-ink outline-none transition focus:border-copper"
                 placeholder="name@organisation.com"
               />
             </label>
@@ -257,7 +257,7 @@ export function BookingForm() {
               <select
                 value={form.organisationSize}
                 onChange={(event) => updateField("organisationSize", event.target.value)}
-                className="min-h-12 rounded-[1.25rem] border border-line bg-white/70 px-4 text-base text-ink outline-none transition focus:border-copper"
+                className="min-h-12 rounded-[1.25rem] border border-line bg-sand/80 px-4 text-base text-ink outline-none transition focus:border-copper"
               >
                 <option value="">Select one</option>
                 {bookingForm.orgSizes.map((item) => (
@@ -273,7 +273,7 @@ export function BookingForm() {
               <select
                 value={form.sector}
                 onChange={(event) => updateField("sector", event.target.value)}
-                className="min-h-12 rounded-[1.25rem] border border-line bg-white/70 px-4 text-base text-ink outline-none transition focus:border-copper"
+                className="min-h-12 rounded-[1.25rem] border border-line bg-sand/80 px-4 text-base text-ink outline-none transition focus:border-copper"
               >
                 <option value="">Select one</option>
                 {bookingForm.sectors.map((item) => (
@@ -287,7 +287,7 @@ export function BookingForm() {
 
           <fieldset className="grid gap-8">
             <legend className="text-sm font-medium text-ink">What is happening now?</legend>
-            <div className="grid gap-3">
+            <div className="mt-4 grid gap-3">
               {bookingForm.currentState.map((item) => {
                 const checked = form.currentState.includes(item);
 
@@ -315,7 +315,7 @@ export function BookingForm() {
               rows={4}
               value={form.tools}
               onChange={(event) => updateField("tools", event.target.value)}
-              className="rounded-[1.5rem] border border-line bg-white/70 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-copper"
+              className="rounded-[1.5rem] border border-line bg-sand/80 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-copper"
               placeholder="For example: ChatGPT, Microsoft Copilot, Claude, Gemini, mixed personal accounts, or internal tools."
             />
           </label>
@@ -326,7 +326,7 @@ export function BookingForm() {
               rows={4}
               value={form.outcome}
               onChange={(event) => updateField("outcome", event.target.value)}
-              className="rounded-[1.5rem] border border-line bg-white/70 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-copper"
+              className="rounded-[1.5rem] border border-line bg-sand/80 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-copper"
               placeholder="Describe the change you want in plain language."
             />
           </label>
@@ -398,7 +398,7 @@ export function BookingForm() {
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-medium text-ink transition hover:bg-white/50"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-medium text-ink transition hover:bg-sand/80"
                 >
                   {copied ? "Brief copied" : "Copy brief"}
                 </button>
@@ -406,7 +406,7 @@ export function BookingForm() {
               {deliveryMode === "email" && briefEmailHref ? (
                 <a
                   href={briefEmailHref}
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-medium text-ink transition hover:bg-white/50"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-medium text-ink transition hover:bg-sand/80"
                 >
                   Open draft email again
                 </a>
@@ -654,7 +654,7 @@ export function PersonalBookingForm() {
                 required
                 value={form.name}
                 onChange={(event) => updateField("name", event.target.value)}
-                className="min-h-12 rounded-[0.8rem] border border-line bg-white/70 px-4 text-base text-ink outline-none transition focus:border-brass"
+                className="min-h-12 rounded-[0.8rem] border border-line bg-sand/80 px-4 text-base text-ink outline-none transition focus:border-brass"
                 placeholder="Your name"
               />
             </label>
@@ -667,7 +667,7 @@ export function PersonalBookingForm() {
                 required
                 value={form.email}
                 onChange={(event) => updateField("email", event.target.value)}
-                className="min-h-12 rounded-[0.8rem] border border-line bg-white/70 px-4 text-base text-ink outline-none transition focus:border-brass"
+                className="min-h-12 rounded-[0.8rem] border border-line bg-sand/80 px-4 text-base text-ink outline-none transition focus:border-brass"
                 placeholder="name@email.com"
               />
             </label>
@@ -678,7 +678,7 @@ export function PersonalBookingForm() {
             <select
               value={form.confidence}
               onChange={(event) => updateField("confidence", event.target.value)}
-              className="min-h-12 rounded-[0.8rem] border border-line bg-white/70 px-4 text-base text-ink outline-none transition focus:border-brass"
+              className="min-h-12 rounded-[0.8rem] border border-line bg-sand/80 px-4 text-base text-ink outline-none transition focus:border-brass"
             >
               <option value="">Select one</option>
               {confidenceLevels.map((item) => (
@@ -691,7 +691,7 @@ export function PersonalBookingForm() {
 
           <fieldset className="grid gap-8">
             <legend className="text-sm font-medium text-ink">Tools you want help with</legend>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {personalTools.map((item) => {
                 const checked = form.tools.includes(item);
 
@@ -720,7 +720,7 @@ export function PersonalBookingForm() {
               required
               value={form.goal}
               onChange={(event) => updateField("goal", event.target.value)}
-              className="rounded-[1rem] border border-line bg-white/70 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-brass"
+              className="rounded-[1rem] border border-line bg-sand/80 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-brass"
               placeholder="For example: use ChatGPT for work, organise research, write better prompts, build a weekly workflow, or understand what AI can and cannot do."
             />
           </label>
@@ -731,7 +731,7 @@ export function PersonalBookingForm() {
               rows={3}
               value={form.availability}
               onChange={(event) => updateField("availability", event.target.value)}
-              className="rounded-[1rem] border border-line bg-white/70 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-brass"
+              className="rounded-[1rem] border border-line bg-sand/80 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-brass"
               placeholder="Useful times, accessibility needs, or anything else Patrick should know."
             />
           </label>
@@ -803,7 +803,7 @@ export function PersonalBookingForm() {
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-medium text-ink transition hover:bg-white/50"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-line px-5 text-sm font-medium text-ink transition hover:bg-sand/80"
                 >
                   {copied ? "Brief copied" : "Copy brief"}
                 </button>

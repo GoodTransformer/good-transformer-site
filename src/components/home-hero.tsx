@@ -2,9 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-
-import { navigation, siteConfig } from "@/content/site-content";
 
 export type HeroRoute = {
   href: string;
@@ -23,7 +20,6 @@ type HomeHeroProps = {
   title: string;
   descriptor: string;
   support: string;
-  backgroundImageSrc: string;
   routes: HeroRoute[];
   signals: HeroSignal[];
 };
@@ -49,20 +45,25 @@ function BuildingIcon({ size = 20 }: { size?: number }) {
   );
 }
 
-function PeopleIcon() {
+function BranchIcon() {
   return (
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <circle cx="8" cy="7" r="3.5" />
-      <path d="M1 21c0-3.8 3.1-6.5 7-6.5s7 2.7 7 6.5" />
-      <circle cx="17" cy="7" r="3" opacity="0.55" />
-      <path d="M21 21c0-3.2-2.2-5.5-5.5-5.5" opacity="0.55" />
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 3.5v17" />
+      <path d="M12 8.25H8.1" />
+      <path d="M12 15.75H8.1" />
+      <path d="M12 12h15.9" />
+      <circle cx="12" cy="3.5" r="1.75" fill="currentColor" stroke="none" />
+      <circle cx="8.1" cy="8.25" r="1.15" />
+      <circle cx="8.1" cy="15.75" r="1.15" />
+      <circle cx="15.9" cy="12" r="1.15" />
+      <circle cx="12" cy="20.5" r="1.15" />
     </svg>
   );
 }
 
 function TargetIcon() {
   return (
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <circle cx="12" cy="12" r="9" />
       <circle cx="12" cy="12" r="4" />
       <path d="M15.5 8.5 21 3M21 3h-4.5M21 3v4.5" />
@@ -72,14 +73,15 @@ function TargetIcon() {
 
 function ShieldCheckIcon() {
   return (
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M12 2 4 6v6c0 5.5 3.6 10.7 8 12 4.4-1.3 8-6.5 8-12V6L12 2z" />
-      <path d="m9 12 2 2 4-4" />
+      <path d="M12 8.2a3.6 3.6 0 1 0 3.6 3.6" />
+      <path d="m13.8 9.5 1.65 1.65 2.8-2.8" />
     </svg>
   );
 }
 
-const SIGNAL_ICONS = [PeopleIcon, TargetIcon, ShieldCheckIcon];
+const SIGNAL_ICONS = [BranchIcon, TargetIcon, ShieldCheckIcon];
 
 /* ─── Heading with "AI" highlighted in brass ─────────────────────────────── */
 function HighlightedTitle({ title }: { title: string }) {
@@ -99,200 +101,110 @@ function HighlightedTitle({ title }: { title: string }) {
   );
 }
 
+function AIStackVisual() {
+  return (
+    <div className="ai-stack-visual" aria-hidden="true">
+      <Image
+        src="/hero/attention-flow-the-path-to-ai-mastery-web.webp"
+        alt=""
+        width={1254}
+        height={1254}
+        className="ai-stack-visual__image"
+        sizes="(max-width: 1023px) 0px, (max-width: 1280px) 36rem, 44rem"
+        priority
+      />
+    </div>
+  );
+}
+
 /* ─── component ──────────────────────────────────────────────────────────── */
 
 export function HomeHero({
   title,
   descriptor,
   support,
-  backgroundImageSrc,
   routes,
   signals,
 }: HomeHeroProps) {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   const lightRoute = routes.find((r) => r.tone === "light") ?? routes[0];
   const darkRoute = routes.find((r) => r.tone === "dark") ?? routes[1];
 
   return (
     <section
-      className="hero-stage-v2 relative overflow-hidden"
+      className="home-hero hero-stage-v2 relative overflow-x-hidden"
       aria-labelledby="home-hero-title"
     >
-      {/* Background illustration — wrapper overflows hero bounds so scale-down animation never exposes background */}
-      <div className="hero-illustration-wrap">
-        <Image
-          src={backgroundImageSrc}
-          alt=""
-          fill
-          priority
-          sizes="110vw"
-          className="hero-illustration"
-        />
-      </div>
-
-      {/* Left-panel gradient that bleeds the painting into the copy zone */}
       <div className="hero-paper-plane" aria-hidden="true" />
 
       {/* Subtle depth / vignette */}
       <div className="hero-atmosphere" aria-hidden="true" />
 
-      {/* ── Full-height flex column ──────────────────────────────────────── */}
+      {/* ── Hero composition ─────────────────────────────────────────────── */}
       <div
-        className="hero-composition relative z-[2] flex min-h-[100svh] flex-col px-6 md:px-10 lg:px-12"
-        style={{ alignItems: "flex-start" }}
+        className="hero-composition relative z-[2] flex flex-col px-6 md:px-10 lg:px-12"
       >
-        {/* ── Navigation ────────────────────────────────────────────────── */}
-        <div className="flex w-full items-center gap-6 py-4">
-          <Link
-            href="/"
-            className="flex items-center gap-2 whitespace-nowrap text-sm font-bold uppercase tracking-[0.22em] text-ink transition-opacity hover:opacity-70"
-          >
-            <Image
-              src="/logos/gt-logo.png"
-              alt=""
-              aria-hidden="true"
-              width={160}
-              height={32}
-              className="h-8 w-auto"
-              style={{ filter: "brightness(0) opacity(0.82)" }}
-            />
-            {siteConfig.brand}
-          </Link>
+        <div className="home-hero__layout">
+          {/* ── Hero copy ─────────────────────────────────────────────────── */}
+          <div className="home-hero__content hero-v2-copy">
 
-          <nav
-            className="ml-6 hidden items-center gap-7 lg:flex"
-            aria-label="Primary navigation"
-          >
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm text-ink/65 transition-colors hover:text-ink"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+            {/* Heading */}
+            <h1
+              id="home-hero-title"
+              className="hero-title font-serif text-[clamp(2.8rem,5.2vw,5.4rem)] leading-[1.0]"
+            >
+              <HighlightedTitle title={title} />
+            </h1>
 
-          {/* Mobile hamburger */}
-          <button
-            type="button"
-            onClick={() => setMenuOpen((v) => !v)}
-            className="ml-auto inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/20 bg-paper/40 backdrop-blur-sm transition lg:hidden"
-            aria-expanded={menuOpen}
-            aria-label="Toggle navigation"
-          >
-            <span className="sr-only">Menu</span>
-            <div className="flex flex-col gap-[5px]">
-              <span className="block h-px w-5 bg-ink" />
-              <span className="block h-px w-5 bg-ink" />
-            </div>
-          </button>
-        </div>
+            {/* Descriptor */}
+            <p className="hero-copy hero-intro mt-5 max-w-[30rem] text-base leading-7 md:text-lg">
+              {descriptor}
+            </p>
 
-        {/* Mobile drop-down */}
-        {menuOpen && (
-          <div className="w-full border-t border-ink/10 bg-paper/90 px-2 pb-5 pt-4 backdrop-blur-md lg:hidden">
-            <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
-              {navigation.map((item) => (
+            {/* Support paragraph */}
+            <p className="hero-copy hero-support mt-3 max-w-[30rem] text-sm leading-7">
+              {support}
+            </p>
+
+            {/* Route cards */}
+            <div className="hero-cta-grid hero-route-cards">
+              {[lightRoute, darkRoute].map((route) => (
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm text-ink"
-                  onClick={() => setMenuOpen(false)}
+                  key={route.href}
+                  href={route.href}
+                  className={`hero-card hero-route-card hero-route-card--${route.tone} ${route.tone === "dark" ? "hero-business-card" : ""}`}
                 >
-                  {item.label}
+                  <span className="hero-route-label">{route.label}</span>
+                  <div className="hero-route-title">
+                    <span className="hero-card-title hero-route-title__text">{route.title}</span>
+                    <span className="hero-route-arrow" aria-hidden="true">→</span>
+                  </div>
+                  <p className="hero-card-body hero-route-body">{route.body}</p>
+                  <div className="hero-route-icon">
+                    {route.tone === "light" ? <PersonIcon /> : <BuildingIcon />}
+                  </div>
                 </Link>
               ))}
-              <Link
-                href={siteConfig.primaryCta.href}
-                className="mt-2 inline-flex w-fit items-center gap-2 rounded-[0.35rem] bg-ink px-4 py-2 text-sm font-medium text-paper"
-                onClick={() => setMenuOpen(false)}
-              >
-                {siteConfig.primaryCta.label} →
-              </Link>
-            </nav>
-          </div>
-        )}
+            </div>
 
-        {/* ── Spacer — desktop only, pushes copy into lower half ──────────── */}
-        <div className="hidden lg:block lg:flex-1" aria-hidden="true" />
-
-        {/* ── Hero copy ─────────────────────────────────────────────────── */}
-        <div className="hero-v2-copy" style={{ width: "100%" }}>
-
-          {/* Heading */}
-          <h1
-            id="home-hero-title"
-            className="font-serif text-[clamp(2.8rem,5.2vw,5.4rem)] leading-[1.0] tracking-[-0.018em] text-ink"
-          >
-            <HighlightedTitle title={title} />
-          </h1>
-
-          {/* Descriptor */}
-          <p className="mt-5 max-w-[30rem] text-base leading-7 text-ink md:text-lg">
-            {descriptor}
-          </p>
-
-          {/* Support paragraph */}
-          <p className="mt-3 max-w-[30rem] text-sm leading-7 text-ink/65">
-            {support}
-          </p>
-
-          {/* Route labels — "For individuals / For businesses" */}
-          <div className="mt-6 grid grid-cols-2 gap-3">
-            {[lightRoute, darkRoute].map((route) => (
-              <div
-                key={route.href}
-                className="flex items-center gap-2 text-sm text-ink/65"
-              >
-                <span className="text-ink/50">
-                  {route.tone === "light" ? (
-                    <PersonIcon size={15} />
-                  ) : (
-                    <BuildingIcon size={15} />
-                  )}
-                </span>
-                {route.label}
-              </div>
-            ))}
-          </div>
-
-          {/* Route cards */}
-          <div className="mt-3 hero-route-cards">
-            {[lightRoute, darkRoute].map((route) => (
-              <Link
-                key={route.href}
-                href={route.href}
-                className={`hero-route-card hero-route-card--${route.tone}`}
-              >
-                <div className="hero-route-icon">
-                  {route.tone === "light" ? <PersonIcon /> : <BuildingIcon />}
-                </div>
-                <div className="hero-route-title">
-                  {route.title}
-                  <span aria-hidden="true">→</span>
-                </div>
-                <p className="hero-route-body">{route.body}</p>
-              </Link>
-            ))}
-          </div>
-
-          {/* Signal strip */}
-          <div className="hero-signal-strip mt-3 flex">
-            {signals.map((signal, i) => {
-              const Icon = SIGNAL_ICONS[i];
-              return (
-                <div key={signal.title} className="hero-signal-item flex-1">
-                  <div className="hero-signal-mark grid place-items-center">
-                    {Icon && <Icon />}
+            {/* Signal strip */}
+            <div className="hero-proof-strip hero-signal-strip flex">
+              {signals.map((signal, i) => {
+                const Icon = SIGNAL_ICONS[i];
+                return (
+                  <div key={signal.title} className="hero-signal-item flex-1">
+                    <div className="hero-signal-mark grid place-items-center">
+                      {Icon && <Icon />}
+                    </div>
+                    <span className="font-medium">{signal.title}</span>
+                    <p className="hero-proof-copy">{signal.body}</p>
                   </div>
-                  <span className="font-medium">{signal.title}</span>
-                  <p>{signal.body}</p>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="home-hero__visual hero-asset-wrap hero-visual-wrap">
+            <AIStackVisual />
           </div>
         </div>
       </div>
