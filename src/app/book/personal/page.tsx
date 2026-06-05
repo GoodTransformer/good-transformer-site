@@ -4,15 +4,10 @@ import { AnimatedReveal } from "@/components/animated-reveal";
 import { JsonLd } from "@/components/json-ld";
 import { PersonalBookingForm } from "@/components/booking-form";
 import { PageIntro } from "@/components/page-intro";
-import { bookingPage, lessonPricing, seoContent } from "@/content/site-content";
+import { bookingPage, lessonFormats, seoContent } from "@/content/site-content";
 import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata(seoContent.pages.bookPersonal);
-
-function extractNumericPrice(value: string) {
-  const match = value.match(/\d+/);
-  return match?.[0];
-}
 
 const personalBookingJsonLd = {
   "@context": "https://schema.org",
@@ -23,13 +18,19 @@ const personalBookingJsonLd = {
   provider: { "@id": SITE_URL },
   url: `${SITE_URL}/book/personal/`,
   description: bookingPage.personal.intro,
-  offers: lessonPricing.tiers.map((tier) => ({
-    "@type": "Offer",
-    name: tier.name,
-    price: extractNumericPrice(tier.price),
-    priceCurrency: "GBP",
-    description: tier.body,
-  })),
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Personal AI lesson formats",
+    itemListElement: lessonFormats.formats.map((format) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: format.name,
+        description: format.body,
+        provider: { "@id": SITE_URL },
+      },
+    })),
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -51,27 +52,24 @@ export default function PersonalBookPage() {
         <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12 lg:py-16">
           <AnimatedReveal className="max-w-2xl">
             <h2 className="font-serif text-3xl leading-tight text-ink md:text-4xl">
-              {lessonPricing.heading}
+              {lessonFormats.heading}
             </h2>
           </AnimatedReveal>
 
           <AnimatedReveal className="mt-8 grid gap-5 md:grid-cols-3">
-            {lessonPricing.tiers.map((tier) => (
-              <div key={tier.name} className="border-t border-line pt-5">
-                <p className="page-eyebrow">{tier.duration}</p>
-                <div className="mt-3 flex items-baseline gap-3">
-                  <span className="font-serif text-[2rem] leading-none text-ink">
-                    {tier.price}
-                  </span>
-                  <span className="text-sm text-ink/60">{tier.name}</span>
-                </div>
-                <p className="mt-4 text-base leading-7 text-slate">{tier.body}</p>
+            {lessonFormats.formats.map((format) => (
+              <div key={format.name} className="border-t border-line pt-5">
+                <p className="page-eyebrow">{format.duration}</p>
+                <h3 className="mt-3 font-serif text-[2rem] leading-tight text-ink">
+                  {format.name}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-slate">{format.body}</p>
               </div>
             ))}
           </AnimatedReveal>
 
           <AnimatedReveal className="mt-8">
-            <p className="text-sm leading-6 text-slate/70">{lessonPricing.delivery}</p>
+            <p className="text-sm leading-6 text-slate/70">{lessonFormats.delivery}</p>
           </AnimatedReveal>
         </div>
       </section>

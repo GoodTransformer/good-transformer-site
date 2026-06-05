@@ -3,9 +3,8 @@ export type LinkItem = {
   label: string;
 };
 
-export type LessonTier = {
+export type LessonFormat = {
   name: string;
-  price: string;
   duration: string;
   body: string;
 };
@@ -359,32 +358,29 @@ export const lessonOffers = [
   },
 ];
 
-export const lessonPricing: {
+export const lessonFormats: {
   heading: string;
   delivery: string;
-  tiers: LessonTier[];
+  formats: LessonFormat[];
 } = {
-  heading: "What you get",
+  heading: "Choose the support that fits",
   delivery:
     "Sessions can be held online or at a co-working space — venue to be agreed at booking.",
-  tiers: [
+  formats: [
     {
       name: "Intro lesson",
-      price: "£75",
       duration: "1 hr",
       body:
         "A single session tailored to your skill level, your tools, and the tasks that matter to you. Leave with something you can use straight away.",
     },
     {
       name: "Starter pack",
-      price: "£375",
       duration: "3 × 1 hr",
       body:
         "Three sessions that build in sequence. Go deeper on the tools that suit your work, form habits that stick, and develop a workflow you can keep running.",
     },
     {
       name: "Ongoing rhythm",
-      price: "£250 / month",
       duration: "2 × 1 hr + async support",
       body:
         "Two sessions per month plus support between them. For people who want to keep moving — new tools, new challenges, accountability, and someone to think with.",
@@ -476,6 +472,8 @@ export const bookingPage = {
       "Tell Patrick what you want to feel more confident doing. The lesson can cover ChatGPT basics, everyday workflows, writing, research, planning, or sharper use of the AI tools you already have.",
     body:
       "For individuals: beginners, improvers, freelancers, job-seekers, founders, and professionals who want practical help without hype.",
+    routeSummary:
+      "Tailored one-to-one sessions shaped around your confidence, tools, and real tasks.",
   },
   business: {
     title: "Book a business call",
@@ -483,6 +481,8 @@ export const bookingPage = {
       "Start with a short intake so the call can deal with the real situation, not a generic AI conversation.",
     body:
       "You will be asked for a work email, organisation size, sector, current AI use, tools in play, and what success should look like in 90 days. The brief is handed over before scheduling so the call starts with the real context.",
+    routeSummary:
+      "Fractional AI advisory for teams ready to move from intention to working practice.",
   },
 };
 

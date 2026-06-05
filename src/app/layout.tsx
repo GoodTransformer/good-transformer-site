@@ -56,9 +56,6 @@ const jsonLd = {
           description:
             "One-to-one AI coaching sessions for individuals — beginners through to improvers.",
           url: `${SITE_URL}/book/personal/`,
-          priceCurrency: "GBP",
-          price: "75",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "75", priceCurrency: "GBP" },
         },
         {
           "@type": "Offer",

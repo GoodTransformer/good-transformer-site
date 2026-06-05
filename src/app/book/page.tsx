@@ -46,12 +46,12 @@ export default function BookPage() {
             <Link href="/book/personal" className="booking-choice booking-choice--light">
               <span>For individuals</span>
               <strong>{siteConfig.personalCta.label}</strong>
-              <small>Tailored 1-to-1 sessions for beginners and improvers. Starts at £75.</small>
+              <small>{bookingPage.personal.routeSummary}</small>
             </Link>
             <Link href="/book/business" className="booking-choice booking-choice--dark">
               <span>For businesses</span>
               <strong>{siteConfig.businessCta.label}</strong>
-              <small>Fractional AI advisory for teams and organisations ready to move from intention to practice.</small>
+              <small>{bookingPage.business.routeSummary}</small>
             </Link>
           </AnimatedReveal>
         </div>
