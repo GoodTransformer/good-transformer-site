@@ -60,6 +60,13 @@ export const siteConfig = {
   briefEmailEnvName: "NEXT_PUBLIC_BOOKING_BRIEF_EMAIL",
 };
 
+export const serviceContact = {
+  prompt: "Need a quick chat about our services first?",
+  action: "Email us at",
+  email: "hello@goodtransformer.ai",
+  subject: "A quick question about Good Transformer services",
+};
+
 export const navigation: LinkItem[] = [
   { href: "/services", label: "Services" },
   { href: "/patrick", label: "Patrick" },

@@ -251,6 +251,37 @@ img {
   transform: scaleX(1);
 }
 
+.service-contact-prompt {
+  display: flex;
+  max-width: 42rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.4rem;
+  color: rgb(var(--color-slate));
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.service-contact-prompt__question {
+  color: rgb(var(--color-ink));
+  font-weight: 600;
+}
+
+.service-contact-prompt__link {
+  color: rgb(var(--color-brass));
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: rgb(var(--color-brass) / 0.36);
+  text-underline-offset: 0.24em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.service-contact-prompt__link:hover,
+.service-contact-prompt__link:focus-visible {
+  color: rgb(var(--color-moss));
+  text-decoration-color: currentColor;
+}
+
 .client-logo-strip {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, max-content));

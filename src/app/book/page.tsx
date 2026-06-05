@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { AnimatedReveal } from "@/components/animated-reveal";
 import { JsonLd } from "@/components/json-ld";
 import { PageIntro } from "@/components/page-intro";
+import { ServiceContactPrompt } from "@/components/service-contact-prompt";
 import { bookingPage, seoContent, siteConfig } from "@/content/site-content";
 import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
 
@@ -38,6 +39,7 @@ export default function BookPage() {
             <p className="text-base leading-7 text-slate md:text-lg">
               {bookingPage.body}
             </p>
+            <ServiceContactPrompt className="mt-6" />
           </AnimatedReveal>
 
           <AnimatedReveal className="mt-10 grid gap-5 md:grid-cols-2">
