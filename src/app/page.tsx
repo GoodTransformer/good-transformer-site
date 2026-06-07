@@ -100,10 +100,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-24">
           <AnimatedReveal className="max-w-3xl">
             <h2 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
-              Leader lessons that turn curiosity into useful habits.
+              Understand AI without losing weeks to figuring it out.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate md:text-lg">
-              Sessions move from confidence to application: learn the basics, explore the right tools, practise on real tasks, adopt repeatable workflows, then scale what works into your week.
+              You don’t have time to learn AI from scratch. A coach does it with you — building the practical skills and the judgement to see what AI means for your business, one step at a time.
             </p>
           </AnimatedReveal>
 
@@ -131,10 +131,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-24">
           <AnimatedReveal className="max-w-3xl">
             <h2 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
-              Fractional AI advisory for teams that need more than a workshop.
+              In around 90 days, turn scattered AI into how your team works.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-7 text-slate md:text-lg">
-              I work alongside your team as a part-time AI adviser — helping you move from scattered experiments to a coherent working practice. One engagement, or ongoing.
+              I join your team as a part-time AI adviser. The core is a 90-day build that turns scattered AI into real working practice. Start with a sprint, or stay on a retainer.
             </p>
           </AnimatedReveal>
 

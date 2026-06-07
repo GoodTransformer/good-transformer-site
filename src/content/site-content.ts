@@ -110,7 +110,7 @@ export const offers: Offer[] = [
   {
     name: "AI Reality Check Sprint",
     duration: "2 weeks",
-    purpose: "Fast clarity on where AI fits, and a plan to act on it.",
+    purpose: "A focused two-week start: where AI fits, and a plan to act on it.",
     outputs: [
       "AI direction brief",
       "Use-case scorecard",
@@ -126,13 +126,13 @@ export const offers: Offer[] = [
   {
     name: "90-Day Adoption Build",
     duration: "12 weeks",
-    purpose: "Embedded advisory to turn AI intent into real team habits.",
+    purpose: "The core build — 90 days to make AI part of how the team works.",
     outputs: [
-      "Two lighthouse workflow pilots",
+      "Two real workflow pilots",
       "Team playbooks",
       "Simple governance pack",
     ],
-    fit: "Best when the direction exists, but working practice still needs to move.",
+    fit: "Best when you know AI matters but it hasn't changed how the team works yet.",
     cadence: [
       "Weekly working session",
       "Team enablement rhythm",
@@ -142,7 +142,7 @@ export const offers: Offer[] = [
   {
     name: "Fractional Retainer",
     duration: "3-month minimum",
-    purpose: "Senior AI advisory alongside your team — no full-time hire.",
+    purpose: "Ongoing senior advisory alongside your team — no full-time hire.",
     outputs: [
       "Monthly executive session",
       "Working cadence across teams",
@@ -329,11 +329,11 @@ export const lessonOffers = [
     name: "AI Lessons for Leaders",
     label: "For leaders",
     purpose:
-      "One-to-one sessions for leaders who want more confidence, sharper judgement, and speed with AI.",
+      "For leaders short on time — the practical AI skills you need, and what AI means for your business.",
     points: [
-      "Learn the right tools for your work",
-      "Build sharp prompting habits",
-      "See what AI means for your business",
+      "Practical skills for the tools you use",
+      "A clear read on AI and your business",
+      "1-to-1 coaching around your schedule",
     ],
     href: "/book/personal",
   },
@@ -341,11 +341,11 @@ export const lessonOffers = [
     name: "Business AI Advisory",
     label: "For teams",
     purpose:
-      "Fractional AI advisory for teams turning scattered experiments into consistent working practice.",
+      "A fractional AI adviser embedded with your team to make AI part of how you work — in about 90 days.",
     points: [
-      "Clarify the highest-value use cases",
-      "Create guardrails and adoption rhythm",
-      "Redesign selected workflows with teams",
+      "Agree where AI actually pays off",
+      "Pilot it inside your real workflows",
+      "Leave the team able to keep it running",
     ],
     href: "/book/business",
   },
@@ -388,31 +388,31 @@ export const servicesPage = {
   personalSection: {
     heading: "AI lessons for leaders",
     intro:
-      "One-to-one sessions tailored to you, your tools, and how AI is changing your business. No jargon, no generic demos.",
+      "For leaders who need to understand AI but lack the time — the practical skills, and what AI means for your business.",
     cta: { label: "Book a 1-to-1 call", href: "/book/personal" },
   },
   businessSection: {
     heading: "Business AI advisory",
     intro:
-      "Three ways to work together as a fractional AI adviser — from a focused sprint to an ongoing embedded retainer.",
+      "Three ways to work together, built around a 90-day adoption build — a sprint to start, a retainer to keep going.",
     cta: { label: "Book a business call", href: "/book/business" },
   },
   sampleArc: [
     {
       phase: "Weeks 1-2",
-      body: "Direction, use-case triage, and a plan the leadership team can actually use.",
+      body: "Agree where AI pays off, and a plan the leadership team can actually act on.",
     },
     {
       phase: "Weeks 3-6",
-      body: "Lighthouse workflows redesigned with clearer ownership, quality checks, and tool choices.",
+      body: "Redesign a couple of real workflows with clear ownership and quality checks.",
     },
     {
       phase: "Weeks 7-10",
-      body: "Team enablement, champion support, and working guidance tied to the real workflow.",
+      body: "Get the team genuinely using it, with champions and guidance for real work.",
     },
     {
       phase: "Weeks 11-12",
-      body: "A sharper operating rhythm, clearer guardrails, and a visible next 30 days.",
+      body: "A steadier operating rhythm, clear guardrails, and a visible next 30 days.",
     },
   ],
   close:
@@ -462,7 +462,7 @@ export const bookingPage = {
   personal: {
     title: "Book a 1-to-1 call",
     intro:
-      "Tell Patrick what you want to get out of the call. It can cover everyday workflows, writing, research, planning, sharper use of the AI tools you already have, and what AI means for your business.",
+      "This first call is short and practical — a chance to talk through where you are with AI and work out the most useful next step. The brief below gives Patrick the context, so you can get straight to it.",
     body:
       "For leaders, founders, and the sole traders and freelancers running their own business — practical help without hype.",
   },
