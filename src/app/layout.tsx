@@ -54,14 +54,14 @@ const jsonLd = {
           "@type": "Offer",
           name: "AI Lessons for Leaders",
           description:
-            "One-to-one AI coaching for leaders — from first steps to sharper workflows.",
+            "One-to-one AI coaching for leaders, from first steps to sharper workflows.",
           url: `${SITE_URL}/book/personal/`,
         },
         {
           "@type": "Offer",
-          name: "Business AI Advisory",
+          name: "AI Advisory for Teams",
           description:
-            "Fractional AI advisory for teams — AI Reality Check Sprint, 90-Day Adoption Build, or ongoing Fractional Retainer.",
+            "Fractional AI advisory for teams: AI Reality Check Sprint, 90-Day Adoption Build, or ongoing Fractional Retainer.",
           url: `${SITE_URL}/book/business/`,
         },
       ],

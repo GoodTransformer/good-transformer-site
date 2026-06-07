@@ -68,16 +68,16 @@ export const navigation: LinkItem[] = [
 export const aboutPage = {
   title: "About",
   intro:
-    "I'm Patrick Hussey, and I started Good Transformer as a new kind of consultancy — one built to help individuals and companies become AI ready. The goal is to make people genuinely better equipped for the changes ahead.",
+    "I'm Patrick Hussey, and I started Good Transformer as a new kind of consultancy, one built to help individuals and companies become AI ready. The goal is to make people genuinely better equipped for the changes ahead.",
   background: {
     heading: "Where I come from",
     body:
-      "My approach is to keep the ethics in view — naming the trade-offs, taking the harder questions seriously, and treating the people who use these tools as the people who matter most. That instinct comes from a career spent translating technology into action: writing for Fast Company and The Guardian, and working with leaders at Google, SAP, Adobe, Microsoft, and Vodafone, alongside startups, charities, and cultural organisations on AI strategy, thought leadership, and the practical business of adoption.",
+      "My approach is to keep the ethics in view: naming the trade-offs, taking the harder questions seriously, and treating the people who use these tools as the people who matter most. That instinct comes from a career spent translating technology into action: writing for Fast Company and The Guardian, and working with leaders at Google, SAP, Adobe, Microsoft, and Vodafone, alongside startups, charities, and cultural organisations on AI strategy, thought leadership, and the practical business of adoption.",
   },
   ethics: {
     heading: "Where I think we are",
     body:
-      "I'll be honest: we are at the beginning of a turbulent transition that will reshape work, organisations, and society faster than most people are prepared for. AI is not a productivity upgrade — it is a structural shift, and the pressure on individuals and businesses to adapt is already real and will only intensify. I am not a booster: faster adoption is not always better. We need people who can think clearly about the trade-offs and pay attention to the ethical questions that come with the technology.",
+      "I'll be honest: we are at the beginning of a turbulent transition that will reshape work, organisations, and society faster than most people are prepared for. AI is not a productivity upgrade; it is a structural shift, and the pressure on individuals and businesses to adapt is already real and will only intensify. I am not a booster: faster adoption is not always better. We need people who can think clearly about the trade-offs and pay attention to the ethical questions that come with the technology.",
   },
   talks: {
     heading: "Talks",
@@ -87,7 +87,7 @@ export const aboutPage = {
   name: {
     heading: "Why Good Transformer?",
     body:
-      "The name comes from the Transformer — the neural network architecture introduced in the 2017 paper \"Attention Is All You Need\" that quietly started the AI boom we are now living through. Every large language model and AI assistant you have heard of is built on it. The \"Good\" is the work: the hope that with careful application and democratic guidance, the transition can go well for more people — not just the few who are already ahead of it.",
+      "The name comes from the Transformer, the neural network architecture introduced in the 2017 paper \"Attention Is All You Need\" that quietly started the AI boom we are now living through. Every large language model and AI assistant you have heard of is built on it. The \"Good\" is the work: the hope that with careful application and democratic guidance, the transition can go well for more people, not just the few who are already ahead of it.",
   },
 };
 
@@ -126,7 +126,7 @@ export const offers: Offer[] = [
   {
     name: "90-Day Adoption Build",
     duration: "12 weeks",
-    purpose: "The core build — 90 days to make AI part of how the team works.",
+    purpose: "The core build: 90 days to make AI part of how the team works.",
     outputs: [
       "Two real workflow pilots",
       "Team playbooks",
@@ -142,7 +142,7 @@ export const offers: Offer[] = [
   {
     name: "Fractional Retainer",
     duration: "3-month minimum",
-    purpose: "Ongoing senior advisory alongside your team — no full-time hire.",
+    purpose: "Ongoing senior advisory alongside your team, no full-time hire.",
     outputs: [
       "Monthly executive session",
       "Working cadence across teams",
@@ -232,21 +232,21 @@ export const homePage = {
     brand: siteConfig.brand,
     title: "Get confident with AI",
     descriptor:
-      "Practical 1-to-1 AI lessons for leaders, plus AI advisory for teams and businesses.",
+      "Practical 1-to-1 AI lessons for leaders, and a part-time AI adviser for teams.",
     support:
       "Learn to use AI with confidence and judgement, and see how it's reshaping your business. Patrick Hussey coaches leaders and founders, and helps organisations turn AI into real working practice.",
     routes: [
       {
         label: "For leaders",
-        title: "Book a 1-to-1 call",
-        body: "1-to-1 coaching to get you confident with AI.",
+        title: "AI Lessons for Leaders",
+        body: "1-to-1 coaching for leaders, founders and solo operators.",
         href: "/book/personal",
         tone: "light",
       },
       {
         label: "For businesses",
-        title: "Book a business call",
-        body: "Fractional advisory to move your whole team.",
+        title: "AI Advisory for Teams",
+        body: "A part-time AI adviser to get your team using AI well.",
         href: "/book/business",
         tone: "dark",
       },
@@ -254,15 +254,15 @@ export const homePage = {
     signals: [
       {
         title: "Leader lessons",
-        body: "Build confidence and business judgement",
+        body: "Build understanding and your own AI vision",
       },
       {
         title: "Practical and relevant",
-        body: "Built on real workflows. Real results.",
+        body: "Built on real workflows, not slideware.",
       },
       {
-        title: "Trusted adviser",
-        body: "Strategic, adoption and lasting impact.",
+        title: "Strategy to adoption",
+        body: "From AI direction to working day-to-day.",
       },
     ],
   },
@@ -292,9 +292,9 @@ export const homePage = {
   },
   faqs: [
     {
-      question: "Do I need any experience to book a 1-to-1 call?",
+      question: "Do I need any experience to take AI lessons?",
       answer:
-        "None at all. The call is shaped around wherever you are — complete beginner, occasional user, or someone who wants to use AI more deliberately. It starts with what you actually need, not a standard syllabus.",
+        "None at all. The lessons are shaped around wherever you are: complete beginner, occasional user, or someone who wants to use AI more deliberately. They start with what you actually need, not a standard syllabus.",
     },
     {
       question: "What does a leader lesson cover?",
@@ -312,7 +312,7 @@ export const homePage = {
         "It is strategy-to-adoption work. Direction matters, but so do workflow redesign, pilots, and team capability. The point is to connect those layers so AI shows up in day-to-day work, not just in decks or workshops.",
     },
     {
-      question: "What happens in the business clarity call?",
+      question: "What happens on the discovery call?",
       answer:
         "It is a short working conversation, not a generic sales chat. Patrick reviews the current reality, pressure points, tools in use, and desired 90-day outcome, then recommends the smallest credible next step.",
     },
@@ -320,7 +320,7 @@ export const homePage = {
   finalCta: {
     heading: "Start with the kind of AI help you actually need.",
     body:
-      "Book a 1-to-1 call if you want personal confidence with AI. Book a business call if the challenge is team adoption, strategy, or workflow change.",
+      "Choose 1-to-1 lessons if you want personal confidence with AI. Choose fractional advisory if the challenge is team adoption, strategy, or workflow change.",
   },
 };
 
@@ -329,7 +329,7 @@ export const lessonOffers = [
     name: "AI Lessons for Leaders",
     label: "For leaders",
     purpose:
-      "For leaders short on time — the practical AI skills you need, and what AI means for your business.",
+      "For leaders short on time: the practical AI skills you need, and what AI means for your business.",
     points: [
       "Practical skills for the tools you use",
       "A clear read on AI and your business",
@@ -338,10 +338,10 @@ export const lessonOffers = [
     href: "/book/personal",
   },
   {
-    name: "Business AI Advisory",
+    name: "AI Advisory for Teams",
     label: "For teams",
     purpose:
-      "A fractional AI adviser embedded with your team to make AI part of how you work — in about 90 days.",
+      "A fractional AI adviser embedded with your team to make AI part of how you work, in about 90 days.",
     points: [
       "Agree where AI actually pays off",
       "Pilot it inside your real workflows",
@@ -358,7 +358,7 @@ export const lessonPricing: {
 } = {
   heading: "Lesson formats",
   delivery:
-    "Sessions run online or at a co-working space. The right format is agreed after your 1-to-1 call.",
+    "Sessions run online or at a co-working space. Format and pricing are agreed on your discovery call.",
   tiers: [
     {
       name: "Intro lesson",
@@ -376,7 +376,7 @@ export const lessonPricing: {
       name: "Ongoing rhythm",
       duration: "2 × 1 hr + async support",
       body:
-        "Two sessions per month plus support between them. For leaders who want to keep moving — new tools, new challenges, accountability, and someone to think with.",
+        "Two sessions per month plus support between them. For leaders who want to keep moving: new tools, new challenges, accountability, and someone to think with.",
     },
   ],
 };
@@ -386,15 +386,15 @@ export const servicesPage = {
   intro:
     "Two ways to work together: AI lessons for leaders, or fractional advisory for teams and businesses.",
   personalSection: {
-    heading: "AI lessons for leaders",
+    heading: "AI Lessons for Leaders",
     intro:
-      "For leaders who need to understand AI but lack the time — the practical skills, and what AI means for your business.",
+      "For leaders who need to understand AI but lack the time: the practical skills, and what AI means for your business.",
     cta: { label: "Book a 1-to-1 call", href: "/book/personal" },
   },
   businessSection: {
-    heading: "Business AI advisory",
+    heading: "AI Advisory for Teams",
     intro:
-      "Three ways to work together, built around a 90-day adoption build — a sprint to start, a retainer to keep going.",
+      "Three ways to work together, built around a 90-day adoption build: a sprint to start, a retainer to keep going.",
     cta: { label: "Book a business call", href: "/book/business" },
   },
   sampleArc: [
@@ -427,7 +427,7 @@ export const patrickPage = {
     src: "/patrick/patrick-portrait.jpg",
     alt: "Patrick Hussey",
     caption:
-      "Every lesson is delivered by me directly. No course platform, no junior coach, no script — just one-to-one time with the person you are hiring.",
+      "Every lesson is delivered by me directly. No course platform, no junior coach, no script. Just one-to-one time with the person you are hiring.",
   },
   sections: [
     {
@@ -460,16 +460,16 @@ export const bookingPage = {
   body:
     "Both routes start with a short intake so the conversation can deal with the real situation, not a generic AI pitch.",
   personal: {
-    title: "Book a 1-to-1 call",
+    title: "AI Lessons for Leaders",
     intro:
-      "This first call is short and practical — a chance to talk through where you are with AI and work out the most useful next step. The brief below gives Patrick the context, so you can get straight to it.",
+      "It starts with a short, practical call: a chance to talk through where you are with AI and work out the most useful next step. The brief below gives Patrick the context, so you can get straight to it.",
     body:
-      "For leaders, founders, and the sole traders and freelancers running their own business — practical help without hype.",
+      "For leaders, founders, and the sole traders and freelancers running their own business: practical help without hype.",
   },
   business: {
-    title: "Book a business call",
+    title: "AI Advisory for Teams",
     intro:
-      "Start with a short intake so the call can deal with the real situation, not a generic AI conversation.",
+      "It starts with a short discovery call: a working conversation about where your team really is, not a generic AI pitch.",
     body:
       "You will be asked for a work email, organisation size, sector, current AI use, tools in play, and what success should look like in 90 days. The brief is handed over before scheduling so the call starts with the real context.",
   },
@@ -485,7 +485,7 @@ export const bookingSuccessPage = {
     steps: [
       "Look out for the calendar invite and meeting link in your inbox.",
       "Bring the questions, goals, or situation you want to talk through.",
-      "No prep needed — the call is shaped around what you need.",
+      "No prep needed. The call is shaped around what you need.",
     ],
     primaryCta: {
       href: "/",
@@ -586,19 +586,19 @@ export const seoContent = {
       path: "/book/",
       title: "Book a Session",
       description:
-        "Book a 1-to-1 call or a business call with Patrick Hussey. Two routes: one-to-one coaching for leaders, or fractional advisory for teams and organisations.",
+        "Two ways to work with Patrick Hussey: 1-to-1 AI lessons for leaders, or fractional advisory for teams. Book a short call to start either.",
     },
     bookPersonal: {
       path: "/book/personal/",
-      title: "Book a 1-to-1 Call",
+      title: "AI Lessons for Leaders",
       description:
-        "Book a one-to-one AI discovery call with Patrick Hussey — a short conversation to work out what you need. No experience required.",
+        "1-to-1 AI lessons for leaders with Patrick Hussey. Start with a short call to work out what you need. No experience required.",
     },
     bookBusiness: {
       path: "/book/business/",
-      title: "Book a Business Call",
+      title: "AI Advisory for Teams",
       description:
-        "Book a business call with Patrick Hussey. Submit a short brief and schedule a call to discuss AI strategy, adoption, and the right engagement for your team.",
+        "Fractional AI advisory for teams with Patrick Hussey. Submit a short brief and book a call to discuss AI strategy, adoption, and the right engagement for your team.",
     },
     personalSuccess: {
       path: "/book/personal/success/",

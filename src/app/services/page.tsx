@@ -56,7 +56,7 @@ export default function ServicesPage() {
 
       <PageIntro title={servicesPage.title} body={servicesPage.intro} />
 
-      {/* ── AI lessons for leaders ───────────────────────────────────────── */}
+      {/* ── AI Lessons for Leaders ───────────────────────────────────────── */}
       <section className="section-divider bg-soft-blue">
         <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12 lg:py-16">
           <AnimatedReveal className="max-w-3xl">
@@ -92,7 +92,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── Business AI advisory ─────────────────────────────────────────── */}
+      {/* ── AI Advisory for Teams ────────────────────────────────────────── */}
       <section className="section-divider">
         <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12 lg:py-16">
           <AnimatedReveal className="max-w-3xl">

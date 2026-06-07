@@ -28,7 +28,7 @@ const personalBookingJsonLd = {
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", path: "/" },
   { name: "Book a session", path: "/book/" },
-  { name: "Book a 1-to-1 call", path: "/book/personal/" },
+  { name: "AI Lessons for Leaders", path: "/book/personal/" },
 ]);
 
 export default function PersonalBookPage() {
