@@ -9,16 +9,11 @@ import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata(seoContent.pages.bookPersonal);
 
-function extractNumericPrice(value: string) {
-  const match = value.match(/\d+/);
-  return match?.[0];
-}
-
 const personalBookingJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${SITE_URL}/book/personal/#service`,
-  name: "Personal AI Lessons",
+  name: "AI Lessons for Leaders",
   serviceType: "One-to-one AI coaching",
   provider: { "@id": SITE_URL },
   url: `${SITE_URL}/book/personal/`,
@@ -26,8 +21,6 @@ const personalBookingJsonLd = {
   offers: lessonPricing.tiers.map((tier) => ({
     "@type": "Offer",
     name: tier.name,
-    price: extractNumericPrice(tier.price),
-    priceCurrency: "GBP",
     description: tier.body,
   })),
 };
@@ -35,7 +28,7 @@ const personalBookingJsonLd = {
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", path: "/" },
   { name: "Book a session", path: "/book/" },
-  { name: "Book a personal AI lesson", path: "/book/personal/" },
+  { name: "Book a 1-to-1 call", path: "/book/personal/" },
 ]);
 
 export default function PersonalBookPage() {
@@ -59,12 +52,9 @@ export default function PersonalBookPage() {
             {lessonPricing.tiers.map((tier) => (
               <div key={tier.name} className="border-t border-line pt-5">
                 <p className="page-eyebrow">{tier.duration}</p>
-                <div className="mt-3 flex items-baseline gap-3">
-                  <span className="font-serif text-[2rem] leading-none text-ink">
-                    {tier.price}
-                  </span>
-                  <span className="text-sm text-ink/60">{tier.name}</span>
-                </div>
+                <h3 className="mt-3 font-serif text-2xl leading-none text-ink">
+                  {tier.name}
+                </h3>
                 <p className="mt-4 text-base leading-7 text-slate">{tier.body}</p>
               </div>
             ))}

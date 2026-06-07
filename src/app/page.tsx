@@ -87,7 +87,7 @@ export default function HomePage() {
                     ))}
                   </ul>
                   <Link href={offer.href} className="text-link mt-7 inline-flex text-sm text-ink">
-                    {offer.name === "Personal AI Lessons" ? "Book a lesson" : "Book a business call"}
+                    {offer.href === "/book/personal" ? "Book a 1-to-1 call" : "Book a business call"}
                   </Link>
                 </article>
               ))}
@@ -100,7 +100,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-24">
           <AnimatedReveal className="max-w-3xl">
             <h2 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
-              Personal lessons that turn curiosity into useful habits.
+              Leader lessons that turn curiosity into useful habits.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate md:text-lg">
               Sessions move from confidence to application: learn the basics, explore the right tools, practise on real tasks, adopt repeatable workflows, then scale what works into your week.

@@ -42,9 +42,9 @@ export default function BookPage() {
 
           <AnimatedReveal className="mt-10 grid gap-5 md:grid-cols-2">
             <Link href="/book/personal" className="booking-choice booking-choice--light">
-              <span>For individuals</span>
+              <span>For leaders</span>
               <strong>{siteConfig.personalCta.label}</strong>
-              <small>Tailored 1-to-1 sessions for beginners and improvers. Starts at £75.</small>
+              <small>A short first call for leaders, founders and solo operators to work out what would help most.</small>
             </Link>
             <Link href="/book/business" className="booking-choice booking-choice--dark">
               <span>For businesses</span>

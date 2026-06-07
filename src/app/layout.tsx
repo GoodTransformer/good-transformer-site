@@ -38,7 +38,7 @@ const jsonLd = {
       "@id": SITE_URL,
       name: seoContent.siteName,
       description:
-        "Personal 1-to-1 AI lessons and fractional AI advisory for teams. Helping individuals build AI confidence and organisations turn AI intent into working practice.",
+        "AI lessons for leaders and fractional AI advisory for teams. Helping leaders build AI confidence and organisations turn AI intent into working practice.",
       url: SITE_URL,
       logo: `${SITE_URL}/logos/gt-logo.png`,
       image: OG_IMAGE,
@@ -52,13 +52,10 @@ const jsonLd = {
       offers: [
         {
           "@type": "Offer",
-          name: "Personal AI Lessons",
+          name: "AI Lessons for Leaders",
           description:
-            "One-to-one AI coaching sessions for individuals — beginners through to improvers.",
+            "One-to-one AI coaching for leaders — from first steps to sharper workflows.",
           url: `${SITE_URL}/book/personal/`,
-          priceCurrency: "GBP",
-          price: "75",
-          priceSpecification: { "@type": "UnitPriceSpecification", price: "75", priceCurrency: "GBP" },
         },
         {
           "@type": "Offer",

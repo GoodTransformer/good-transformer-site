@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Good Transformer",
     short_name: "Good Transformer",
-    description: "Personal AI lessons and practical business advisory",
+    description: "AI lessons for leaders and practical business advisory",
     start_url: "/",
     display: "standalone",
     background_color: "#FAF3EA",

@@ -25,7 +25,7 @@ const servicesPageJsonLd = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Personal AI Lessons",
+          name: "AI Lessons for Leaders",
           description: servicesPage.personalSection.intro,
           provider: { "@id": SITE_URL },
         },
@@ -56,7 +56,7 @@ export default function ServicesPage() {
 
       <PageIntro title={servicesPage.title} body={servicesPage.intro} />
 
-      {/* ── Personal AI lessons ──────────────────────────────────────────── */}
+      {/* ── AI lessons for leaders ───────────────────────────────────────── */}
       <section className="section-divider bg-soft-blue">
         <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12 lg:py-16">
           <AnimatedReveal className="max-w-3xl">
@@ -72,13 +72,9 @@ export default function ServicesPage() {
             {lessonPricing.tiers.map((tier) => (
               <div key={tier.name} className="border-t border-line pt-5">
                 <p className="page-eyebrow">{tier.duration}</p>
-                <div className="mt-3 flex items-baseline gap-3">
-                  <span className="font-serif text-[2rem] leading-none text-ink">
-                    {tier.price}
-                  </span>
-                  <span className="font-serif text-xl leading-none text-ink/50">/</span>
-                  <span className="text-sm text-ink/60">{tier.name}</span>
-                </div>
+                <h3 className="mt-3 font-serif text-2xl leading-none text-ink">
+                  {tier.name}
+                </h3>
                 <p className="mt-4 text-base leading-7 text-slate">{tier.body}</p>
               </div>
             ))}

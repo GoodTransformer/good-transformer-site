@@ -68,12 +68,12 @@ export function SiteHeader() {
         </div>
 
         <Link
-          href={siteConfig.personalCta.href}
+          href={siteConfig.primaryCta.href}
           className={classNames(
             "hero-nav-cta ml-auto hidden items-center gap-3 lg:inline-flex",
           )}
         >
-          Book a lesson
+          {siteConfig.primaryCta.label}
           <span aria-hidden="true">→</span>
         </Link>
 
@@ -101,10 +101,10 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
-              href={siteConfig.personalCta.href}
+              href={siteConfig.primaryCta.href}
               className="mt-2 inline-flex w-fit items-center gap-2 rounded-[0.35rem] bg-ink px-4 py-2 text-sm font-medium text-paper"
             >
-              Book a lesson →
+              {siteConfig.primaryCta.label} →
             </Link>
           </nav>
         </div>

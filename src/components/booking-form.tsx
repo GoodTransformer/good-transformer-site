@@ -447,18 +447,14 @@ type PersonalFormState = {
   name: string;
   email: string;
   confidence: string;
-  tools: string[];
   goal: string;
-  availability: string;
 };
 
 const personalDefaultState: PersonalFormState = {
   name: "",
   email: "",
   confidence: "",
-  tools: [],
   goal: "",
-  availability: "",
 };
 
 const confidenceLevels = [
@@ -466,14 +462,6 @@ const confidenceLevels = [
   "Tried it, but not confident",
   "Using it sometimes",
   "Already using it and want sharper workflows",
-];
-
-const personalTools = [
-  "ChatGPT",
-  "Microsoft Copilot",
-  "Claude",
-  "Gemini",
-  "Not sure yet",
 ];
 
 export function PersonalBookingForm() {
@@ -496,13 +484,11 @@ export function PersonalBookingForm() {
     "Name: " + (form.name.trim() || "Not provided"),
     "Email: " + (form.email.trim() || "Not provided"),
     "AI confidence: " + (form.confidence || "Not provided"),
-    "Tools of interest: " + (form.tools.length > 0 ? form.tools.join("; ") : "Not provided"),
-    "Lesson goal: " + (form.goal.trim() || "Not provided"),
-    "Availability: " + (form.availability.trim() || "Not provided"),
+    "Call goal: " + (form.goal.trim() || "Not provided"),
   ].join("\n");
   const briefEmailHref = getMailtoHref(
     process.env.NEXT_PUBLIC_BOOKING_BRIEF_EMAIL ?? "",
-    "Personal AI lesson intake",
+    "Discovery call intake",
     summary,
   );
   const autoRedirectsToCalendar = Boolean(briefEndpoint && calendarUrl);
@@ -511,16 +497,6 @@ export function PersonalBookingForm() {
     isValidEmail(form.email) &&
     Boolean(form.confidence) &&
     Boolean(form.goal.trim());
-
-  function toggleTool(value: string) {
-    setForm((current) => {
-      const tools = current.tools.includes(value)
-        ? current.tools.filter((item) => item !== value)
-        : [...current.tools, value];
-
-      return { ...current, tools };
-    });
-  }
 
   function updateField<Key extends keyof PersonalFormState>(
     key: Key,
@@ -551,7 +527,7 @@ export function PersonalBookingForm() {
     }
 
     if (Date.now() - startedAt < MIN_SUBMIT_DELAY_MS) {
-      setSubmitError("Please take a moment to review your lesson brief, then submit again.");
+      setSubmitError("Please take a moment to review your brief, then submit again.");
       return;
     }
 
@@ -563,14 +539,12 @@ export function PersonalBookingForm() {
       email: form.email.trim(),
       name: form.name.trim(),
       source: siteConfig.offerName,
-      formType: "Personal AI Lesson",
+      formType: "Discovery call",
       submittedAt: new Date().toISOString(),
       confidence: form.confidence,
-      tools: form.tools,
       goal: form.goal.trim(),
-      availability: form.availability.trim(),
       summary,
-      _subject: "New Personal AI Lesson brief",
+      _subject: "New discovery call brief",
       _gotcha: trapField,
     };
 
@@ -611,7 +585,7 @@ export function PersonalBookingForm() {
       }
     } catch {
       setSubmitError(
-        "The lesson brief could not be handed off from this page. Please try again or use the copy option below.",
+        "The brief could not be handed off from this page. Please try again or use the copy option below.",
       );
     } finally {
       setIsSubmitting(false);
@@ -689,32 +663,8 @@ export function PersonalBookingForm() {
             </select>
           </label>
 
-          <fieldset className="grid gap-8">
-            <legend className="text-sm font-medium text-ink">Tools you want help with</legend>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2">
-              {personalTools.map((item) => {
-                const checked = form.tools.includes(item);
-
-                return (
-                  <label
-                    key={item}
-                    className="flex cursor-pointer items-start gap-3 border-b border-line pb-3 text-sm leading-6 text-slate"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={checked}
-                      onChange={() => toggleTool(item)}
-                      className="mt-1 h-4 w-4 rounded border-line text-brass focus:ring-brass"
-                    />
-                    <span>{item}</span>
-                  </label>
-                );
-              })}
-            </div>
-          </fieldset>
-
           <label className="grid gap-3 text-sm text-ink">
-            <span className="font-medium">What would you like the lesson to help you do?</span>
+            <span className="font-medium">What do you want to get out of the call?</span>
             <textarea
               rows={4}
               required
@@ -722,17 +672,6 @@ export function PersonalBookingForm() {
               onChange={(event) => updateField("goal", event.target.value)}
               className="rounded-[1rem] border border-line bg-sand/80 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-brass"
               placeholder="For example: use ChatGPT for work, organise research, write better prompts, build a weekly workflow, or understand what AI can and cannot do."
-            />
-          </label>
-
-          <label className="grid gap-3 text-sm text-ink">
-            <span className="font-medium">Availability or notes</span>
-            <textarea
-              rows={3}
-              value={form.availability}
-              onChange={(event) => updateField("availability", event.target.value)}
-              className="rounded-[1rem] border border-line bg-sand/80 px-4 py-3 text-base leading-7 text-ink outline-none transition focus:border-brass"
-              placeholder="Useful times, accessibility needs, or anything else Patrick should know."
             />
           </label>
 
@@ -753,7 +692,7 @@ export function PersonalBookingForm() {
             <p className="text-sm text-slate">
               {autoRedirectsToCalendar
                 ? "We will take you straight to booking once the brief is saved."
-                : "Booking follows this short lesson brief."}
+                : "Booking follows this short discovery brief."}
             </p>
           </div>
           {submitError ? (
@@ -769,10 +708,10 @@ export function PersonalBookingForm() {
           <div className="max-w-sm">
             <p className="page-eyebrow">What happens next</p>
             <p className="mt-4 max-w-xs font-serif text-3xl leading-tight text-ink">
-              A little context makes the lesson immediately useful.
+              A little context makes the call immediately useful.
             </p>
             <div className="mt-8 border-t border-line">
-              {["Share what you want help with.", "Patrick reviews the lesson goal.", "Continue to scheduling when you are ready."].map((item) => (
+              {["Share what you want help with.", "Patrick reviews what you want to cover.", "Continue to scheduling when you are ready."].map((item) => (
                 <p key={item} className="border-b border-line py-4 text-sm leading-6 text-slate">
                   {item}
                 </p>

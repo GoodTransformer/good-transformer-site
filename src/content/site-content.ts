@@ -5,7 +5,6 @@ export type LinkItem = {
 
 export type LessonTier = {
   name: string;
-  price: string;
   duration: string;
   body: string;
 };
@@ -37,18 +36,18 @@ export type ProofOrganisation = {
 
 export const siteConfig = {
   offerName: "Good Transformer",
-  descriptor: "Personal AI lessons and practical business advisory",
+  descriptor: "AI lessons for leaders and practical business advisory",
   brand: "Good Transformer",
   primaryCta: {
     label: "Book a call",
     href: "/book",
   },
   heroSecondaryCta: {
-    label: "Book a personal AI lesson",
+    label: "Book a 1-to-1 call",
     href: "/book/personal",
   },
   personalCta: {
-    label: "Book a personal AI lesson",
+    label: "Book a 1-to-1 call",
     href: "/book/personal",
   },
   businessCta: {
@@ -233,33 +232,33 @@ export const homePage = {
     brand: siteConfig.brand,
     title: "Get confident with AI",
     descriptor:
-      "Practical 1-to-1 AI lessons for individuals, plus AI advisory for teams and businesses.",
+      "Practical 1-to-1 AI lessons for leaders, plus AI advisory for teams and businesses.",
     support:
-      "Learn how to use AI with confidence, judgement and practical skill. Patrick Hussey helps individuals get started and helps organisations apply AI to real workflows, adoption and change.",
+      "Learn to use AI with confidence and judgement, and see how it's reshaping your business. Patrick Hussey coaches leaders and founders, and helps organisations turn AI into real working practice.",
     routes: [
       {
-        label: "For individuals",
-        title: "Book a lesson",
-        body: "1-to-1 help for beginners and improvers.",
+        label: "For leaders",
+        title: "Book a 1-to-1 call",
+        body: "1-to-1 coaching to get you confident with AI.",
         href: "/book/personal",
         tone: "light",
       },
       {
         label: "For businesses",
         title: "Book a business call",
-        body: "AI advisory for teams and businesses.",
+        body: "Fractional advisory to move your whole team.",
         href: "/book/business",
         tone: "dark",
       },
     ],
     signals: [
       {
-        title: "Personal lessons",
-        body: "Learn at your pace with expert guidance",
+        title: "Leader lessons",
+        body: "Build confidence and business judgement",
       },
       {
         title: "Practical and relevant",
-        body: "Real workflows. Real results.",
+        body: "Built on real workflows. Real results.",
       },
       {
         title: "Trusted adviser",
@@ -268,14 +267,14 @@ export const homePage = {
     ],
   },
   role: {
-    heading: "AI is easier to learn when the lesson starts with your real life.",
+    heading: "AI is easier to learn when the lesson starts with your real work.",
     support:
-      "Good Transformer is built around calm, practical coaching. For individuals, that means one-to-one lessons shaped around the tools, tasks, and confidence gaps you actually have. For organisations, it means the same practical judgement applied to strategy, adoption, workflows, and guardrails.",
+      "Good Transformer is built around calm, practical coaching. For leaders, that means one-to-one lessons shaped around your tools, your tasks, and how AI is changing your business. For organisations, it means the same practical judgement applied to strategy, adoption, workflows, and guardrails.",
   },
   services: {
     heading: "Two clear routes into better AI use.",
     intro:
-      "Start with the support that fits the moment: personal confidence or business change.",
+      "Start with the support that fits the moment: leader confidence or business change.",
     note: "Most work starts with the smallest engagement that can create real momentum.",
   },
   patrick: {
@@ -293,14 +292,14 @@ export const homePage = {
   },
   faqs: [
     {
-      question: "Do I need any experience to book a personal lesson?",
+      question: "Do I need any experience to book a 1-to-1 call?",
       answer:
-        "None at all. Sessions are designed for wherever you are — complete beginner, occasional user, or someone who wants to use AI more deliberately. The lesson starts with what you actually need, not a standard syllabus.",
+        "None at all. The call is shaped around wherever you are — complete beginner, occasional user, or someone who wants to use AI more deliberately. It starts with what you actually need, not a standard syllabus.",
     },
     {
-      question: "What does a personal lesson cover?",
+      question: "What does a leader lesson cover?",
       answer:
-        "Whatever is most useful to you: ChatGPT basics, writing, research, planning, prompting habits, or getting more from the tools you already have. Sessions are one-to-one, so the focus is entirely on your work and your questions.",
+        "Whatever is most useful to you: everyday workflows, writing, research, planning, prompting habits, sharper use of the tools you already have, and what AI means for your business. Sessions are one-to-one, so the focus is entirely on your work.",
     },
     {
       question: "What does fractional mean in practice?",
@@ -321,20 +320,20 @@ export const homePage = {
   finalCta: {
     heading: "Start with the kind of AI help you actually need.",
     body:
-      "Book a personal lesson if you want confidence with the tools. Book a business call if the challenge is team adoption, strategy, or workflow change.",
+      "Book a 1-to-1 call if you want personal confidence with AI. Book a business call if the challenge is team adoption, strategy, or workflow change.",
   },
 };
 
 export const lessonOffers = [
   {
-    name: "Personal AI Lessons",
-    label: "For individuals",
+    name: "AI Lessons for Leaders",
+    label: "For leaders",
     purpose:
-      "One-to-one sessions for people who want more confidence, judgement, and speed with AI.",
+      "One-to-one sessions for leaders who want more confidence, sharper judgement, and speed with AI.",
     points: [
-      "Learn the right tools for your tasks",
-      "Build better prompting habits",
-      "Leave with repeatable workflows",
+      "Learn the right tools for your work",
+      "Build sharp prompting habits",
+      "See what AI means for your business",
     ],
     href: "/book/personal",
   },
@@ -342,7 +341,7 @@ export const lessonOffers = [
     name: "Business AI Advisory",
     label: "For teams",
     purpose:
-      "Fractional AI advisory for leaders who need to turn scattered experiments into consistent working practice.",
+      "Fractional AI advisory for teams turning scattered experiments into consistent working practice.",
     points: [
       "Clarify the highest-value use cases",
       "Create guardrails and adoption rhythm",
@@ -357,30 +356,27 @@ export const lessonPricing: {
   delivery: string;
   tiers: LessonTier[];
 } = {
-  heading: "What you get",
+  heading: "Lesson formats",
   delivery:
-    "Sessions can be held online or at a co-working space — venue to be agreed at booking.",
+    "Sessions run online or at a co-working space. The right format is agreed after your 1-to-1 call.",
   tiers: [
     {
       name: "Intro lesson",
-      price: "£75",
       duration: "1 hr",
       body:
-        "A single session tailored to your skill level, your tools, and the tasks that matter to you. Leave with something you can use straight away.",
+        "A single session tailored to your skill level, your tools, and the work that matters most to you. You leave with something you can use straight away.",
     },
     {
       name: "Starter pack",
-      price: "£375",
       duration: "3 × 1 hr",
       body:
         "Three sessions that build in sequence. Go deeper on the tools that suit your work, form habits that stick, and develop a workflow you can keep running.",
     },
     {
       name: "Ongoing rhythm",
-      price: "£250 / month",
       duration: "2 × 1 hr + async support",
       body:
-        "Two sessions per month plus support between them. For people who want to keep moving — new tools, new challenges, accountability, and someone to think with.",
+        "Two sessions per month plus support between them. For leaders who want to keep moving — new tools, new challenges, accountability, and someone to think with.",
     },
   ],
 };
@@ -388,12 +384,12 @@ export const lessonPricing: {
 export const servicesPage = {
   title: "Services",
   intro:
-    "Two ways to work together: personal AI lessons for individuals, or fractional advisory for teams and businesses.",
+    "Two ways to work together: AI lessons for leaders, or fractional advisory for teams and businesses.",
   personalSection: {
-    heading: "Personal AI lessons",
+    heading: "AI lessons for leaders",
     intro:
-      "One-to-one sessions tailored to your skill level, your tools, and the work you actually do. No jargon, no generic demos.",
-    cta: { label: "Book a personal lesson", href: "/book/personal" },
+      "One-to-one sessions tailored to you, your tools, and how AI is changing your business. No jargon, no generic demos.",
+    cta: { label: "Book a 1-to-1 call", href: "/book/personal" },
   },
   businessSection: {
     heading: "Business AI advisory",
@@ -426,23 +422,23 @@ export const servicesPage = {
 export const patrickPage = {
   title: "Patrick Hussey",
   intro:
-    "I work with individuals who want to get better at using AI, and with organisations that need to turn AI intention into working practice. Either way, my approach is the same: practical, calm, and not interested in hype.",
+    "I work with leaders who want to get better at using AI, and with organisations that need to turn AI intention into working practice. Either way, my approach is the same: practical, calm, and not interested in hype.",
   portrait: {
     src: "/patrick/patrick-portrait.jpg",
     alt: "Patrick Hussey",
     caption:
-      "Every personal lesson is delivered by me directly. No course platform, no junior coach, no script — just one-to-one time with the person you are hiring.",
+      "Every lesson is delivered by me directly. No course platform, no junior coach, no script — just one-to-one time with the person you are hiring.",
   },
   sections: [
     {
       title: "How I work",
       body:
-        "I try to be honest about what AI can and cannot do. Whether the work is a first personal lesson or a multi-team adoption programme, the job is to meet you where you are and leave you with something that works in the real world.",
+        "I try to be honest about what AI can and cannot do. Whether the work is a first lesson or a multi-team adoption programme, the job is to meet you where you are and leave you with something that works in the real world.",
     },
     {
       title: "Selected experience",
       body:
-        "I have worked with enterprise leaders at Google, SAP, Adobe, Microsoft, and Vodafone, alongside startups, charities, cultural organisations, and individuals at every level of AI fluency.",
+        "I have worked with enterprise leaders at Google, SAP, Adobe, Microsoft, and Vodafone, alongside startups, charities, cultural organisations, and leaders at every level of AI fluency.",
     },
     {
       title: "Writing and judgement",
@@ -452,7 +448,7 @@ export const patrickPage = {
     {
       title: "Boundary line",
       body:
-        "I help individuals build confidence, help leaders shape direction, and help teams adopt AI safely. I am not selling a software platform or a hidden engineering bench.",
+        "I help leaders build personal confidence, shape AI direction, and help teams adopt AI safely. I am not selling a software platform or a hidden engineering bench.",
     },
   ],
 };
@@ -460,15 +456,15 @@ export const patrickPage = {
 export const bookingPage = {
   title: "Book a session",
   intro:
-    "Two routes into better AI: one-to-one personal lessons for individuals, or a business call for teams and organisations.",
+    "Two routes into better AI, both starting with a short discovery call: one-to-one for you, or advisory for your team.",
   body:
     "Both routes start with a short intake so the conversation can deal with the real situation, not a generic AI pitch.",
   personal: {
-    title: "Book a personal AI lesson",
+    title: "Book a 1-to-1 call",
     intro:
-      "Tell Patrick what you want to feel more confident doing. The lesson can cover ChatGPT basics, everyday workflows, writing, research, planning, or sharper use of the AI tools you already have.",
+      "Tell Patrick what you want to get out of the call. It can cover everyday workflows, writing, research, planning, sharper use of the AI tools you already have, and what AI means for your business.",
     body:
-      "For individuals: beginners, improvers, freelancers, job-seekers, founders, and professionals who want practical help without hype.",
+      "For leaders, founders, and the sole traders and freelancers running their own business — practical help without hype.",
   },
   business: {
     title: "Book a business call",
@@ -481,15 +477,15 @@ export const bookingPage = {
 
 export const bookingSuccessPage = {
   personal: {
-    title: "Success, your lesson is booked",
+    title: "Success, your 1-to-1 call is booked",
     intro:
-      "Your personal AI lesson is in the diary. You should receive a calendar invite and joining link by email shortly.",
+      "Your 1-to-1 call is in the diary. You should receive a calendar invite and joining link by email shortly.",
     body:
       "If the invite does not appear within a few minutes, check spam or promotions, then reply to the booking email if you need help.",
     steps: [
       "Look out for the calendar invite and meeting link in your inbox.",
-      "Bring a real task, question, or tool you want help with.",
-      "No prep deck needed — the session is shaped around what you need.",
+      "Bring the questions, goals, or situation you want to talk through.",
+      "No prep needed — the call is shaped around what you need.",
     ],
     primaryCta: {
       href: "/",
@@ -553,12 +549,12 @@ export const seoContent = {
   siteName: "Good Transformer",
   siteUrl: "https://goodtransformer.ai",
   defaultDescription:
-    "Personal 1-to-1 AI lessons and practical business advisory from Patrick Hussey at Good Transformer.",
+    "AI lessons for leaders and practical business advisory from Patrick Hussey at Good Transformer.",
   openGraphTitle: "Good Transformer - Get confident with AI.",
   openGraphDescription:
-    "Personal AI lessons for individuals and fractional advisory for teams. Patrick Hussey helps people and organisations get genuinely useful with AI.",
+    "AI lessons for leaders and fractional advisory for teams. Patrick Hussey helps people and organisations get genuinely useful with AI.",
   ogImageAlt:
-    "Good Transformer - Get confident with AI. Personal AI lessons and practical business advisory.",
+    "Good Transformer - Get confident with AI. AI lessons for leaders and practical business advisory.",
   personName: "Patrick Hussey",
   personJobTitle: "AI Coach and Fractional AI Adviser",
   pages: {
@@ -566,13 +562,13 @@ export const seoContent = {
       path: "/",
       title: "Good Transformer",
       description:
-        "Personal 1-to-1 AI lessons and practical business advisory from Patrick Hussey at Good Transformer.",
+        "AI lessons for leaders and practical business advisory from Patrick Hussey at Good Transformer.",
     },
     services: {
       path: "/services/",
       title: "Services",
       description:
-        "Personal AI lessons for individuals and fractional advisory for teams. Three engagement tiers: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
+        "AI lessons for leaders and fractional advisory for teams. Three engagement tiers: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
     },
     about: {
       path: "/about/",
@@ -584,19 +580,19 @@ export const seoContent = {
       path: "/patrick/",
       title: "Patrick Hussey",
       description:
-        "Patrick Hussey is an AI coach and fractional adviser. He works with individuals to build practical AI confidence, and with organisations to turn AI intent into real working practice.",
+        "Patrick Hussey is an AI coach and fractional adviser. He works with leaders to build practical AI confidence, and with organisations to turn AI intent into real working practice.",
     },
     book: {
       path: "/book/",
       title: "Book a Session",
       description:
-        "Book a personal AI lesson or a business call with Patrick Hussey. Two routes: one-to-one coaching for individuals, or fractional advisory for teams and organisations.",
+        "Book a 1-to-1 call or a business call with Patrick Hussey. Two routes: one-to-one coaching for leaders, or fractional advisory for teams and organisations.",
     },
     bookPersonal: {
       path: "/book/personal/",
-      title: "Book a Personal AI Lesson",
+      title: "Book a 1-to-1 Call",
       description:
-        "Book a one-to-one AI lesson with Patrick Hussey. Sessions from GBP 75 - tailored to your tools, tasks, and confidence level. No experience needed.",
+        "Book a one-to-one AI discovery call with Patrick Hussey — a short conversation to work out what you need. No experience required.",
     },
     bookBusiness: {
       path: "/book/business/",
@@ -606,9 +602,9 @@ export const seoContent = {
     },
     personalSuccess: {
       path: "/book/personal/success/",
-      title: "Success, Your Lesson Is Booked",
+      title: "Success, Your 1-to-1 Call Is Booked",
       description:
-        "Confirmation page for personal AI lessons booked with Patrick Hussey at Good Transformer.",
+        "Confirmation page for 1-to-1 AI calls booked with Patrick Hussey at Good Transformer.",
     },
     businessSuccess: {
       path: "/book/business/success/",
