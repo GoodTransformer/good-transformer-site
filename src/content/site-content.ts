@@ -60,10 +60,10 @@ export const siteConfig = {
 };
 
 export const serviceContact = {
-  prompt: "Need a quick chat about our services first?",
-  action: "Email us at",
+  prompt: "Skip the form?",
+  action: "Email Patrick at",
   email: "hello@goodtransformer.ai",
-  subject: "A quick question about Good Transformer services",
+  subject: "A question for Patrick",
 };
 
 export const navigation: LinkItem[] = [
