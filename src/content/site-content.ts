@@ -365,7 +365,7 @@ export const lessonFormats: {
 } = {
   heading: "Choose the support that fits",
   delivery:
-    "Sessions run online or at a co-working space. Format and pricing are agreed on your discovery call.",
+    "Sessions run online, at your office, or at a co-working space. Format and pricing are agreed on your discovery call.",
   formats: [
     {
       name: "Intro lesson",
