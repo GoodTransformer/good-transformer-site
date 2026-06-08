@@ -336,10 +336,10 @@ export const lessonOffers = [
     name: "AI Lessons for Leaders",
     label: "For leaders",
     purpose:
-      "For leaders short on time: the practical AI skills you need, and what AI means for your business.",
+      "For leaders short on time: the AI skills to use it well, and a vision for what it means for your business.",
     points: [
-      "Practical skills for the tools you use",
-      "A clear read on AI and your business",
+      "AI skills that fit your own work",
+      "A clear view of AI in your business",
       "1-to-1 coaching around your schedule",
     ],
     href: "/book/personal",
@@ -395,13 +395,13 @@ export const servicesPage = {
   personalSection: {
     heading: "AI Lessons for Leaders",
     intro:
-      "For leaders who need to understand AI but lack the time: the practical skills, and what AI means for your business.",
+      "For leaders short on time: build the practical AI skills to use it well, and the clarity to set your own AI direction for the business.",
     cta: { label: "Book a 1-to-1 call", href: "/book/personal" },
   },
   businessSection: {
     heading: "AI Advisory for Teams",
     intro:
-      "Three ways to work together, built around a 90-day adoption build: a sprint to start, a retainer to keep going.",
+      "Three ways to work together: a sprint to scope what's possible, a 90-day build to embed AI in how the team works, then a retainer to keep going.",
     cta: { label: "Book a business call", href: "/book/business" },
   },
   sampleArc: [

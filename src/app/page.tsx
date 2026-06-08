@@ -103,7 +103,7 @@ export default function HomePage() {
               Understand AI without losing weeks to figuring it out.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate md:text-lg">
-              You don’t have time to learn AI from scratch. A coach does it with you, building the practical skills and the judgement to see what AI means for your business, one step at a time.
+              You don’t have time to learn AI from scratch. A coach does it with you, building the practical AI skills to use today, plus the strategic view to lead your business with AI.
             </p>
           </AnimatedReveal>
 
