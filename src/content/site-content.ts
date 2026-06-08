@@ -531,16 +531,18 @@ export const bookingSuccessPage = {
 
 export const bookingForm = {
   orgSizes: [
-    "50 to 100 employees",
-    "101 to 250 employees",
-    "251 to 500 employees",
-    "More than 500 employees",
+    "Fewer than 5 employees",
+    "5 to 50 employees",
+    "51 to 250 employees",
+    "251 to 1,000 employees",
+    "More than 1,000 employees",
   ],
   sectors: [
     "Professional services",
-    "Agency or B2B services",
+    "Technology or SaaS",
+    "Agency, marketing or media",
     "Charity or cultural organisation",
-    "Other knowledge-work business",
+    "Other",
   ],
   currentState: [
     "AI use is already happening, but unevenly",
