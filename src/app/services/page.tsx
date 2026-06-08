@@ -84,9 +84,10 @@ export default function ServicesPage() {
             <p className="text-sm leading-6 text-slate/70">{lessonFormats.delivery}</p>
             <Link
               href={servicesPage.personalSection.cta.href}
-              className="text-link mt-6 inline-flex text-sm text-ink"
+              className="hero-nav-cta mt-8 inline-flex items-center gap-3"
             >
               {servicesPage.personalSection.cta.label}
+              <span aria-hidden="true">→</span>
             </Link>
           </AnimatedReveal>
         </div>
@@ -147,6 +148,16 @@ export default function ServicesPage() {
 
           <AnimatedReveal className="mt-8 text-sm leading-6 text-slate">
             {servicesPage.close}
+          </AnimatedReveal>
+
+          <AnimatedReveal className="mt-8">
+            <Link
+              href={servicesPage.businessSection.cta.href}
+              className="hero-nav-cta inline-flex items-center gap-3"
+            >
+              {servicesPage.businessSection.cta.label}
+              <span aria-hidden="true">→</span>
+            </Link>
           </AnimatedReveal>
         </div>
       </section>
