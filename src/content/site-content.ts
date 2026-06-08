@@ -3,7 +3,7 @@ export type LinkItem = {
   label: string;
 };
 
-export type LessonTier = {
+export type LessonFormat = {
   name: string;
   duration: string;
   body: string;
@@ -57,6 +57,13 @@ export const siteConfig = {
   calendarEnvName: "NEXT_PUBLIC_CLARITY_CALL_URL",
   briefEndpointEnvName: "NEXT_PUBLIC_FORMSPREE_BOOKING_ENDPOINT",
   briefEmailEnvName: "NEXT_PUBLIC_BOOKING_BRIEF_EMAIL",
+};
+
+export const serviceContact = {
+  prompt: "Need a quick chat about our services first?",
+  action: "Email us at",
+  email: "hello@goodtransformer.ai",
+  subject: "A quick question about Good Transformer services",
 };
 
 export const navigation: LinkItem[] = [
@@ -351,15 +358,15 @@ export const lessonOffers = [
   },
 ];
 
-export const lessonPricing: {
+export const lessonFormats: {
   heading: string;
   delivery: string;
-  tiers: LessonTier[];
+  formats: LessonFormat[];
 } = {
-  heading: "Lesson formats",
+  heading: "Choose the support that fits",
   delivery:
     "Sessions run online or at a co-working space. Format and pricing are agreed on your discovery call.",
-  tiers: [
+  formats: [
     {
       name: "Intro lesson",
       duration: "1 hr",
@@ -465,6 +472,8 @@ export const bookingPage = {
       "It starts with a short, practical call: a chance to talk through where you are with AI and work out the most useful next step. The brief below gives Patrick the context, so you can get straight to it.",
     body:
       "For leaders, founders, and the sole traders and freelancers running their own business: practical help without hype.",
+    routeSummary:
+      "A short discovery call for leaders, founders and solo operators to work out what would help.",
   },
   business: {
     title: "AI Advisory for Teams",
@@ -472,6 +481,8 @@ export const bookingPage = {
       "It starts with a short discovery call: a working conversation about where your team really is, not a generic AI pitch.",
     body:
       "You will be asked for a work email, organisation size, sector, current AI use, tools in play, and what success should look like in 90 days. The brief is handed over before scheduling so the call starts with the real context.",
+    routeSummary:
+      "Fractional AI advisory for teams ready to move from intention to working practice.",
   },
 };
 

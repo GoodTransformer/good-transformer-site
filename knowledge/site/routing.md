@@ -9,7 +9,7 @@ All routes are defined by the Next.js App Router directory structure in `src/app
 | Route | File | Title | Purpose |
 |---|---|---|---|
 | `/` | `src/app/page.tsx` | Home | Main landing page — hero, services overview, Patrick intro, testimonial, FAQ, final CTA |
-| `/services` | `src/app/services/page.tsx` | Services | Full breakdown of both service lines with pricing |
+| `/services` | `src/app/services/page.tsx` | Services | Full breakdown of both service lines and ways to work together |
 | `/patrick` | `src/app/patrick/page.tsx` | Patrick Hussey | About Patrick — bio, experience, approach, portrait |
 | `/about` | `src/app/about/page.tsx` | About | About Good Transformer — mission, ethics, background, talks, name origin |
 | `/book` | `src/app/book/page.tsx` | Book a session | Booking hub — two routes (personal / business) |

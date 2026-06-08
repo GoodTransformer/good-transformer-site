@@ -10,13 +10,13 @@
 
 **Booking route:** `/book/personal`
 
-### Pricing tiers
+### Lesson formats
 
-| Name | Price | Duration | Description |
-|---|---|---|---|
-| Intro lesson | £75 | 1 hr | Single session tailored to skill level and real tasks |
-| Starter pack | £375 | 3 × 1 hr | Three building sessions — tools, habits, workflow |
-| Ongoing rhythm | £250 / month | 2 × 1 hr + async | Monthly sessions with support in between |
+| Name | Duration | Description |
+|---|---|---|
+| Intro lesson | 1 hr | Single session tailored to skill level and real tasks |
+| Starter pack | 3 × 1 hr | Three building sessions — tools, habits, workflow |
+| Ongoing rhythm | 2 × 1 hr + async | Monthly sessions with support in between |
 
 ### What sessions cover
 - ChatGPT and LLM basics
@@ -114,8 +114,8 @@ Patrick operates across three layers:
 
 ---
 
-## Pricing note
+## Scoping note
 
-Business engagement pricing is not published on the site. Prospects book a call to discuss scope and fit.
+Business engagements are shaped after an initial call to understand scope and fit.
 
 Patrick's stated philosophy: "Most work starts with the smallest engagement that can create real momentum."

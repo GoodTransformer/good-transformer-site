@@ -66,15 +66,15 @@ Array of three business engagement tiers (used on Services page and home):
 ]
 ```
 
-### `lessonPricing`
-Personal lesson pricing tiers:
+### `lessonFormats`
+Personal lesson formats:
 ```ts
 {
   heading, delivery,
-  tiers: [
-    { name: "Intro lesson", price: "£75", duration: "1 hr", body },
-    { name: "Starter pack", price: "£375", duration: "3 × 1 hr", body },
-    { name: "Ongoing rhythm", price: "£250 / month", duration: "2 × 1 hr + async support", body }
+  formats: [
+    { name: "Intro lesson", duration: "1 hr", body },
+    { name: "Starter pack", duration: "3 × 1 hr", body },
+    { name: "Ongoing rhythm", duration: "2 × 1 hr + async support", body }
   ]
 }
 ```
@@ -135,7 +135,7 @@ title: "Get confident with AI",   // ← edit this string
 
 Types are exported at the top of the file:
 - `LinkItem` — `{ href, label }`
-- `LessonTier` — `{ name, price, duration, body }`
+- `LessonFormat` — `{ name, duration, body }`
 - `Offer` — `{ name, duration, purpose, outputs, fit?, cadence? }`
 - `ProofArtefact` — `{ title, label, subtitle, rows }`
 - `ProofOrganisation` — `{ name, slug, src, width, height, maxWidth }`

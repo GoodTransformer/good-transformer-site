@@ -2,6 +2,7 @@
 
 import { startTransition, useState, type FormEvent } from "react";
 
+import { ServiceContactPrompt } from "@/components/service-contact-prompt";
 import { bookingForm, siteConfig } from "@/content/site-content";
 
 type FormState = {
@@ -218,6 +219,7 @@ export function BookingForm() {
         className="rounded-[2rem] border border-line bg-paper/82 p-6 shadow-glow backdrop-blur md:p-8"
       >
         <div className="grid gap-8">
+          <ServiceContactPrompt />
           <div
             aria-hidden="true"
             style={{
@@ -599,6 +601,7 @@ export function PersonalBookingForm() {
         className="rounded-[1.25rem] border border-line bg-paper/82 p-6 shadow-glow backdrop-blur md:p-8"
       >
         <div className="grid gap-8">
+          <ServiceContactPrompt />
           <div
             aria-hidden="true"
             style={{

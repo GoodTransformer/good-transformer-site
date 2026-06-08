@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AnimatedReveal } from "@/components/animated-reveal";
 import { JsonLd } from "@/components/json-ld";
 import { PageIntro } from "@/components/page-intro";
-import { lessonPricing, offers, seoContent, servicesPage } from "@/content/site-content";
+import { lessonFormats, offers, seoContent, servicesPage } from "@/content/site-content";
 import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata(seoContent.pages.services);
@@ -69,19 +69,19 @@ export default function ServicesPage() {
           </AnimatedReveal>
 
           <AnimatedReveal className="mt-10 grid gap-5 md:grid-cols-3">
-            {lessonPricing.tiers.map((tier) => (
-              <div key={tier.name} className="border-t border-line pt-5">
-                <p className="page-eyebrow">{tier.duration}</p>
-                <h3 className="mt-3 font-serif text-2xl leading-none text-ink">
-                  {tier.name}
+            {lessonFormats.formats.map((format) => (
+              <div key={format.name} className="border-t border-line pt-5">
+                <p className="page-eyebrow">{format.duration}</p>
+                <h3 className="mt-3 font-serif text-[2rem] leading-tight text-ink">
+                  {format.name}
                 </h3>
-                <p className="mt-4 text-base leading-7 text-slate">{tier.body}</p>
+                <p className="mt-4 text-base leading-7 text-slate">{format.body}</p>
               </div>
             ))}
           </AnimatedReveal>
 
           <AnimatedReveal className="mt-8">
-            <p className="text-sm leading-6 text-slate/70">{lessonPricing.delivery}</p>
+            <p className="text-sm leading-6 text-slate/70">{lessonFormats.delivery}</p>
             <Link
               href={servicesPage.personalSection.cta.href}
               className="text-link mt-6 inline-flex text-sm text-ink"

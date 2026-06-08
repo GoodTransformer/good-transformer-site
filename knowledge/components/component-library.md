@@ -172,6 +172,20 @@ No required props — reads from `siteConfig` directly.
 
 ---
 
+### `ServiceContactPrompt` — `service-contact-prompt.tsx`
+
+Renders the compact service enquiry line and linked email address used above booking forms, on the booking chooser, and in the footer. Copy and the email address live in `serviceContact` in `site-content.ts`.
+
+**Props:**
+```ts
+{
+  className?: string
+  compact?: boolean
+}
+```
+
+---
+
 ### `BookingForm` — `booking-form.tsx`
 
 Business brief intake form. Submits to Formspree.

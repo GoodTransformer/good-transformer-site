@@ -38,7 +38,7 @@ When searching the repo, focus on authored source and docs. Ignore generated, ve
 | `knowledge/components/component-library.md` | Every React component — props and usage |
 | `knowledge/components/css-patterns.md` | Tailwind utility classes and custom CSS patterns |
 | `knowledge/content/site-content-guide.md` | How `site-content.ts` works — where to edit copy |
-| `knowledge/services/offers.md` | Both service lines — pricing, structure, audience |
+| `knowledge/services/offers.md` | Both service lines — formats, structure, audience |
 | `knowledge/dev/dev-setup.md` | How to run and build the project locally |
 | `knowledge/dev/tailwind-config.md` | Tailwind theme extensions and custom utilities |
 | `knowledge/dev/globals-css.md` | CSS custom properties, component classes |
@@ -68,7 +68,7 @@ When searching the repo, focus on authored source and docs. Ignore generated, ve
 | Task | File to edit |
 |---|---|
 | Change any page copy | `src/content/site-content.ts` first; if the exact string is still hardcoded, move it there while editing |
-| Change service pricing or names | `src/content/site-content.ts` → `lessonPricing` or `offers` |
+| Change service formats or names | `src/content/site-content.ts` → `lessonFormats` or `offers` |
 | Add or change navigation links | `src/content/site-content.ts` → `navigation` |
 | Change page layout | `src/app/[page]/page.tsx` |
 | Change global styles | `src/app/globals.css` |

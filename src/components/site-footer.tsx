@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ServiceContactPrompt } from "@/components/service-contact-prompt";
 import { navigation, siteConfig } from "@/content/site-content";
 
 export function SiteFooter() {
@@ -23,6 +24,7 @@ export function SiteFooter() {
             </p>
           </div>
           <p className="mt-3 text-sm leading-6 text-slate">{siteConfig.descriptor}</p>
+          <ServiceContactPrompt compact className="mt-4" />
         </div>
 
         <nav className="flex flex-wrap gap-6 text-sm text-ink/72">
