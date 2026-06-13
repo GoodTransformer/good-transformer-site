@@ -112,7 +112,7 @@ export function getAllPosts(): PostMeta[] {
     })
     .filter((entry) => !entry.draft)
     .map((entry) => entry.meta)
-    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.slug.localeCompare(b.slug)));
 }
 
 export function getAllSlugs(): string[] {

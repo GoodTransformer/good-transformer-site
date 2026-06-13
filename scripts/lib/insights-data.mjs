@@ -49,7 +49,7 @@ export function getPosts() {
       }
     })
     .filter((p) => !p.draft && p.type === 'post')
-    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.slug.localeCompare(b.slug)))
 }
 
 /** Posts published on `isoDay` (default: the newest post's day). */

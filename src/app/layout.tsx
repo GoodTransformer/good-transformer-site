@@ -147,6 +147,17 @@ export default function RootLayout({
     <html lang="en-GB">
       <head>
         <JsonLd data={jsonLd} />
+        {/* Progressive-enhancement fallback: reveal animations start at opacity:0
+            and are shown by JS (IntersectionObserver). Without JS, force them
+            visible so body copy never renders blank. */}
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={{
+              __html:
+                ".reveal,.reveal.is-visible,.reveal-stagger>*{opacity:1!important;transform:none!important}",
+            }}
+          />
+        </noscript>
       </head>
       <body className={`${sans.variable} ${serif.variable} site-frame`}>
         <a href="#content" className="skip-link">
