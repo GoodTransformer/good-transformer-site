@@ -39,6 +39,7 @@ The following secrets should be set in the GitHub repository settings. The booki
 | `NEXT_PUBLIC_CLARITY_CALL_URL` | Calendar booking URL (e.g. Calendly, Cal.com) |
 | `NEXT_PUBLIC_PERSONAL_LESSON_URL` | Calendar booking URL for personal AI lessons |
 | `NEXT_PUBLIC_BOOKING_BRIEF_EMAIL` | Optional manual fallback email address for intake summaries |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional Google Analytics 4 measurement ID, e.g. `G-XXXXXXXXXX` |
 
 If secrets are not set, `.env.production` provides fallback values (may be empty/placeholder).
 

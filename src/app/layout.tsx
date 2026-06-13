@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 import { AnalyticsEvents } from "@/components/analytics-events";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -149,6 +150,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <SiteHeader />
+        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         <AnalyticsEvents />
         <main id="content">{children}</main>
         <SiteFooter />

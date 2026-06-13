@@ -62,6 +62,7 @@ NEXT_PUBLIC_FORMSPREE_BOOKING_ENDPOINT=https://formspree.io/f/placeholder
 NEXT_PUBLIC_CLARITY_CALL_URL=https://cal.com/placeholder
 NEXT_PUBLIC_PERSONAL_LESSON_URL=https://cal.com/placeholder-personal
 NEXT_PUBLIC_BOOKING_BRIEF_EMAIL=hello@example.com
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
 ---

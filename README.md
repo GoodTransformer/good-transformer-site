@@ -28,6 +28,7 @@ NEXT_PUBLIC_FORMSPREE_BOOKING_ENDPOINT=https://formspree.io/f/your-booking-form-
 NEXT_PUBLIC_CLARITY_CALL_URL=https://your-calendar-link
 NEXT_PUBLIC_PERSONAL_LESSON_URL=https://your-personal-lesson-calendar-link
 NEXT_PUBLIC_BOOKING_BRIEF_EMAIL=hello@example.com
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
 3. Start the development server:
