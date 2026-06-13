@@ -122,7 +122,7 @@ export default async function InsightPostPage({
       </article>
 
       <section className="section-divider bg-warm-paper">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12 lg:py-16">
+        <div className="mx-auto max-w-[44rem] px-6 py-14 md:px-8 lg:py-16">
           <NewsletterSignup />
         </div>
       </section>

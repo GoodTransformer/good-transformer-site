@@ -161,7 +161,7 @@ export function NewsletterSignup({
               })}
             </fieldset>
 
-            <div className="flex flex-col gap-3 sm:flex-row lg:max-w-xl">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <label className="sr-only" htmlFor="newsletter-email">
                 Email address
               </label>
