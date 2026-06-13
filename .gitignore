@@ -11,3 +11,7 @@ screenshots/
 *.tsbuildinfo
 GTM research\ /
 Vision Doc/
+
+# Local collateral review helpers (not part of the live site)
+public/collateral-preview.html
+public/previews/
