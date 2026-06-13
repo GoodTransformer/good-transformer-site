@@ -49,7 +49,9 @@ export function NewsletterSignup({
   // Primary path: the subscribe Worker (adds the contact to a Resend topic +
   // segment). Public Cloudflare Worker URL; env var can override it.
   const subscribeEndpoint = getSafeHttpUrl(
-    process.env.NEXT_PUBLIC_SUBSCRIBE_ENDPOINT ??
+    // `||` not `??`: the deploy passes this env as "" when the secret is unset,
+    // and we still want the Worker default in that case.
+    process.env.NEXT_PUBLIC_SUBSCRIBE_ENDPOINT ||
       "https://gt-newsletter-subscribe.misty-smoke-81e7.workers.dev",
   );
   // Fallback path: a Formspree form that just collects addresses.
