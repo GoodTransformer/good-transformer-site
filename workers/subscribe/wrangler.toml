@@ -5,6 +5,7 @@
 name = "gt-newsletter-subscribe"
 main = "worker.js"
 compatibility_date = "2026-01-01"
+workers_dev = true
 
 # Public, non-secret config. Topic IDs come from Resend → Audience → Topics;
 # SEGMENT_ID from Resend → Audience → Segments. Set ALLOWED_ORIGIN to your site.

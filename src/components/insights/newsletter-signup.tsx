@@ -46,8 +46,12 @@ export function NewsletterSignup({
   const [email, setEmail] = useState("");
   const [cadence, setCadence] = useState<Cadence>("weekly");
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
-  // Primary path: the subscribe Worker (adds the contact to a Resend audience).
-  const subscribeEndpoint = getSafeHttpUrl(process.env.NEXT_PUBLIC_SUBSCRIBE_ENDPOINT ?? "");
+  // Primary path: the subscribe Worker (adds the contact to a Resend topic +
+  // segment). Public Cloudflare Worker URL; env var can override it.
+  const subscribeEndpoint = getSafeHttpUrl(
+    process.env.NEXT_PUBLIC_SUBSCRIBE_ENDPOINT ??
+      "https://gt-newsletter-subscribe.misty-smoke-81e7.workers.dev",
+  );
   // Fallback path: a Formspree form that just collects addresses.
   const formspreeEndpoint = getSafeHttpUrl(process.env.NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ENDPOINT ?? "");
   const fallbackEmail = process.env.NEXT_PUBLIC_BOOKING_BRIEF_EMAIL ?? "hello@goodtransformer.ai";

@@ -65,10 +65,10 @@ const handler = {
     const body = {
       email,
       unsubscribed: false,
-      topics: [{ id: topicId, status: 'opt_in' }],
+      topics: [{ id: topicId, subscription: 'opt_in' }],
     }
     // Add to the "all subscribers" segment if one is configured (broadcasts send to it).
-    if (env.SEGMENT_ID) body.segments = [env.SEGMENT_ID]
+    if (env.SEGMENT_ID) body.segments = [{ id: env.SEGMENT_ID }]
 
     const res = await fetch('https://api.resend.com/contacts', {
       method: 'POST',
