@@ -9,12 +9,15 @@ type CTAGroupProps = {
   primary: Action;
   secondary?: Action;
   tone?: "light" | "dark";
+  /** Analytics section label identifying where this CTA group is rendered. */
+  section?: string;
 };
 
 export function CTAGroup({
   primary,
   secondary,
   tone = "dark",
+  section = "cta_group",
 }: CTAGroupProps) {
   const primaryClass =
     tone === "light"
@@ -29,6 +32,9 @@ export function CTAGroup({
     <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
       <Link
         href={primary.href}
+        data-analytics-event="cta_click"
+        data-analytics-section={section}
+        data-analytics-label={primary.label}
         className={`inline-flex min-h-12 items-center justify-center rounded-[0.45rem] border px-6 py-3 text-sm font-medium transition-colors ${primaryClass}`}
       >
         {primary.label}
@@ -36,6 +42,9 @@ export function CTAGroup({
       {secondary ? (
         <Link
           href={secondary.href}
+          data-analytics-event="cta_click"
+          data-analytics-section={section}
+          data-analytics-label={secondary.label}
           className={`inline-flex min-h-12 items-center justify-center rounded-[0.45rem] border px-6 py-3 text-sm font-medium transition-colors ${secondaryClass}`}
         >
           {secondary.label}

@@ -99,7 +99,7 @@ export default function PatrickPage() {
                 {testimonial.attribution}
               </p>
               <div className="patrick-testimonial__cta">
-                <CTAGroup primary={siteConfig.primaryCta} tone="dark" />
+                <CTAGroup primary={siteConfig.primaryCta} tone="dark" section="patrick_cta" />
               </div>
             </AnimatedReveal>
           </div>

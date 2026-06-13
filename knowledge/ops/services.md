@@ -39,8 +39,10 @@ lives under. Keep this current when a service is added, moved, or its owner chan
   Cloudflare **subscribe Worker** into the matching Resend audience; the signup form
   (`src/components/insights/newsletter-signup.tsx`) posts to `NEXT_PUBLIC_SUBSCRIBE_ENDPOINT`.
   Full wiring in [`NEWSLETTER-SETUP.md`](../../NEWSLETTER-SETUP.md).
-- **Google Analytics 4** is loaded by `src/components/google-analytics.tsx` and
-  `src/components/analytics-events.tsx`, reading `NEXT_PUBLIC_GA_MEASUREMENT_ID`.
+- **Google Analytics 4** is loaded by `src/components/google-analytics.tsx`
+  (reading `NEXT_PUBLIC_GA_MEASUREMENT_ID`); custom conversion/engagement events
+  are dispatched via `src/lib/analytics.ts` + `src/components/analytics-events.tsx`.
+  Full event list and the one-time GA4 admin setup: [`analytics.md`](analytics.md).
 - **Google Search Console** is verified by a static file served from `public/`.
 
 All config values live in [`env-vars.md`](env-vars.md). This file is the "who owns what" layer

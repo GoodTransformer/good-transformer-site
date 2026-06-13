@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 
 import { siteConfig } from "@/content/site-content";
+import { trackEvent } from "@/lib/analytics";
 
 function getSafeHttpUrl(value: string) {
   const trimmed = value.trim();
@@ -91,6 +92,7 @@ export function NewsletterSignup({
         }),
       });
       if (!response.ok) throw new Error("Subscribe failed.");
+      trackEvent("newsletter_signup", { section: "insights", label: cadence });
       setStatus("done");
     } catch {
       setStatus("error");
@@ -173,9 +175,6 @@ export function NewsletterSignup({
                 type="submit"
                 disabled={!isValidEmail(email) || status === "submitting"}
                 className="inline-flex min-h-12 items-center justify-center rounded-[0.45rem] bg-ink px-6 text-sm font-medium text-paper transition enabled:hover:bg-ink/90 disabled:cursor-not-allowed disabled:bg-ink/35"
-                data-analytics-event="newsletter_signup"
-                data-analytics-section="insights"
-                data-analytics-label={cadence}
               >
                 {status === "submitting" ? "Subscribing…" : "Subscribe"}
               </button>

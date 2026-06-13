@@ -41,6 +41,7 @@ export default function BusinessBookingSuccessPage() {
               primary={content.primaryCta}
               secondary={content.secondaryCta}
               tone="dark"
+              section="book_business_success"
             />
           </AnimatedReveal>
         </div>

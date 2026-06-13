@@ -2,12 +2,7 @@
 
 import { useEffect } from "react";
 
-declare global {
-  interface Window {
-    plausible?: (eventName: string, options?: { props?: Record<string, string> }) => void;
-    gtag?: (command: "event", eventName: string, params?: Record<string, string>) => void;
-  }
-}
+import { trackEvent } from "@/lib/analytics";
 
 export function AnalyticsEvents() {
   useEffect(() => {
@@ -21,19 +16,11 @@ export function AnalyticsEvents() {
       const eventName = target.dataset.analyticsEvent;
       if (!eventName) return;
 
-      const props = {
+      trackEvent(eventName, {
         label: target.dataset.analyticsLabel ?? target.textContent?.trim() ?? "",
         section: target.dataset.analyticsSection ?? "",
         asset: target.dataset.analyticsAsset ?? "",
         href: target instanceof HTMLAnchorElement ? target.href : "",
-      };
-
-      window.plausible?.(eventName, { props });
-      window.gtag?.("event", eventName, {
-        event_category: props.section || "engagement",
-        event_label: props.label,
-        link_url: props.href,
-        asset: props.asset,
       });
     }
 
