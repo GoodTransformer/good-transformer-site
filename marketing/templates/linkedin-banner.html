@@ -5,74 +5,62 @@
 <title>LinkedIn company cover - Good Transformer</title>
 <link rel="stylesheet" href="../brand.css">
 <style>
-  /* LinkedIn Company Page cover: 6:1. Rendered 2100×350 @2× → 4200×700,
-     matching LinkedIn's recommended upload size exactly (no rescaling = crisp). */
+  /* LinkedIn Company Page cover: 6:1, rendered 2100×350 @2× → 4200×700.
+     DARK ground on purpose - cream blended into LinkedIn's white UI; a deep
+     teal field makes the cover pop. Matches the dark "featured" tile system.
+     No edge bars. Single centred headline = the one focal point, kept inside
+     the centre-60% mobile safe zone. */
+  :root { --teal-bright: #2BBCC4; }
+
   html, body { width: 2100px; height: 350px; }
   .stage {
     position: relative;
     width: 2100px;
     height: 350px;
-    background: var(--paper);
+    background: linear-gradient(115deg, #0B3D45 0%, #062A31 52%, #04171C 100%);
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--paper);
   }
-  /* Crisp structural teal edges - the quiet brand signature, never a wash. */
-  .edge-t { position:absolute; top:0;    left:0; right:0; height:5px; background:var(--teal); z-index:2; }
-  .edge-b { position:absolute; bottom:0; left:0; right:0; height:5px; background:var(--teal); z-index:2; }
-
-  /* Bottom-left of the cover is covered by the overlapping page logo - keep clear. */
-  .avatar-gap { width: 340px; flex: none; }
-
-  .main { flex: 1 1 auto; position: relative; z-index: 1; }
-  .main .top { display: flex; align-items: center; gap: 13px; margin-bottom: 20px; }
-  .main .top img { height: 30px; width: auto; }
-  .main .top .wm {
-    font-family: var(--font-sans); font-weight: 700; font-size: 16px;
-    letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink);
+  /* Soft brand glow for depth - never a flat slab, never an edge line.
+     Kept to the corners so the centre stays dark and the headline pops. */
+  .stage::after {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(0,166,178,0.30), transparent 46%),
+      radial-gradient(circle at 8% 94%,  rgba(0,166,178,0.13), transparent 42%);
   }
+  .stage > * { position: relative; z-index: 1; }
+
   .headline {
-    font-family: var(--font-serif); font-weight: 400; font-size: 64px;
-    line-height: 1.0; letter-spacing: -0.015em; color: var(--ink); margin: 0;
+    font-family: var(--font-serif); font-weight: 400; font-size: 76px;
+    line-height: 1.0; letter-spacing: -0.018em; color: var(--paper); margin: 0;
     white-space: nowrap;
   }
-  .headline .accent { color: var(--teal); font-style: italic; }
+  .headline .accent { color: var(--teal-bright); font-style: italic; }
   .sub {
-    font-family: var(--font-sans); font-weight: 400; font-size: 22px;
-    color: var(--slate); margin: 19px 0 0;
+    font-family: var(--font-sans); font-weight: 400; font-size: 23px;
+    letter-spacing: 0.01em; color: rgba(251,248,244,0.95); margin: 20px 0 0;
   }
 
-  .rail {
-    width: 340px; flex: none; position: relative; z-index: 1;
-    border-left: 1px solid var(--line-strong);
-    padding-left: 36px; margin-right: 120px;
-    display: flex; flex-direction: column; gap: 11px;
+  /* Soft anchor / CTA, well inside the safe zone, clear of the bottom-left logo. */
+  .site {
+    position: absolute; left: 0; right: 0; bottom: 30px; z-index: 1;
+    text-align: center;
+    font-family: var(--font-sans); font-weight: 700; font-size: 19px;
+    letter-spacing: 0.03em; color: var(--teal-bright);
   }
-  .rail .site { font-family: var(--font-sans); font-weight: 700; font-size: 25px; letter-spacing: 0.01em; color: var(--teal); }
-  .rail .who  { font-family: var(--font-sans); font-size: 16px; line-height: 1.45; color: var(--slate); }
-  .rail .who b { color: var(--ink); font-weight: 600; }
 </style>
 </head>
 <body>
   <div class="stage">
-    <span class="edge-t"></span>
-    <span class="edge-b"></span>
-
-    <div class="avatar-gap"></div>
-
-    <div class="main">
-      <div class="top">
-        <img class="mark--ink" src="../../public/logos/gt-logo.png" alt="">
-        <span class="wm">Good Transformer</span>
-      </div>
-      <h1 class="headline">Practical AI lessons <span class="accent">for leaders</span></h1>
-      <p class="sub">Calm, practical 1-to-1 coaching &mdash; no hype.</p>
-    </div>
-
-    <div class="rail">
-      <span class="site">goodtransformer.ai</span>
-      <span class="who"><b>Patrick Hussey</b><br>AI coach &amp; fractional adviser</span>
-    </div>
+    <h1 class="headline">Practical AI lessons <span class="accent">for leaders</span></h1>
+    <p class="sub">Calm, practical 1-to-1 coaching &mdash; no hype.</p>
+    <span class="site">goodtransformer.ai</span>
   </div>
 </body>
 </html>

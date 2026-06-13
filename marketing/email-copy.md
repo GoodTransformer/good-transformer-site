@@ -18,7 +18,7 @@ Link these in emails - don't attach the PDFs.
 | Insert - Corporate finance & professional services | `https://goodtransformer.ai/downloads/ai-for-corporate-finance.pdf` |
 | Insert - Agency & marketing leaders | `https://goodtransformer.ai/downloads/ai-for-agency-leaders.pdf` |
 | Insert - Legal & risk-aware professional services | `https://goodtransformer.ai/downloads/ai-for-legal-and-risk-aware-professional-services.pdf` |
-| LinkedIn banner (1584×396) | `https://goodtransformer.ai/social/linkedin-banner.png` |
+| LinkedIn company cover (4200×700) | `https://goodtransformer.ai/social/linkedin-banner.png` |
 | LinkedIn featured tile (1080×1080) | `https://goodtransformer.ai/social/linkedin-featured.png` |
 
 ---

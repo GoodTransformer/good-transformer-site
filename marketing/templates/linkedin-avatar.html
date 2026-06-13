@@ -13,9 +13,14 @@
   }
   /* Mark scales to fit a centred safe area - survives square AND circular crops,
      and preserves the logo's aspect ratio whatever its source dimensions. */
-  .tile img { max-width: 64%; max-height: 64%; width: auto; height: auto; }
+  .tile img { max-width: 68%; max-height: 68%; width: auto; height: auto; }
 
-  #teal  { background: #008C95; }
+  #teal  { background: #008C95; position: relative; }
+  /* Subtle bright-teal keyline so the logo lifts off the dark cover (and white page). */
+  #teal::after {
+    content: ""; position: absolute; inset: 30px;
+    border: 7px solid rgba(43,188,196,0.9); border-radius: 30px;
+  }
   #ink   { background: #041F25; }
   #paper { background: #FBF8F4; box-shadow: inset 0 0 0 5px rgba(0,140,149,.9); }
   #paper img { filter: brightness(0); }   /* solid ink mark on cream */
