@@ -324,7 +324,7 @@ export const homePage = {
     brand: siteConfig.brand,
     title: "Get confident with AI",
     descriptor:
-      "Practical 1-to-1 AI lessons for leaders, and a part-time AI adviser for teams.",
+      "Practical 1-to-1 AI lessons for leaders, and a fractional AI adviser for teams.",
     support:
       "Learn to use AI with confidence and judgement, and see how it's reshaping your business. Patrick Hussey coaches leaders and founders, and helps organisations turn AI into real working practice.",
     routes: [
@@ -338,7 +338,7 @@ export const homePage = {
       {
         label: "For businesses",
         title: "AI Advisory for Teams",
-        body: "A part-time AI adviser to get your team using AI well.",
+        body: "A fractional AI adviser to get your team using AI well.",
         href: "/book/business",
         tone: "dark",
       },
@@ -346,7 +346,7 @@ export const homePage = {
     signals: [
       {
         title: "Leader lessons",
-        body: "Build understanding and your own AI vision",
+        body: "Build clear understanding and AI vision.",
       },
       {
         title: "Practical and relevant",
@@ -354,7 +354,7 @@ export const homePage = {
       },
       {
         title: "Strategy to adoption",
-        body: "From AI direction to working day-to-day.",
+        body: "Turn AI direction into daily adoption.",
       },
     ],
   },

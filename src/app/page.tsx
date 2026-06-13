@@ -134,7 +134,7 @@ export default function HomePage() {
               In around 90 days, turn scattered AI into how your team works.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-7 text-slate md:text-lg">
-              I join your team as a part-time AI adviser. The core is a 90-day build that turns scattered AI into real working practice. Start with a sprint, or stay on a retainer.
+              I join your team as a fractional AI adviser. The core is a 90-day build that turns scattered AI into real working practice. Start with a sprint, or stay on a retainer.
             </p>
           </AnimatedReveal>
 
