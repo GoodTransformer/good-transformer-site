@@ -174,29 +174,41 @@ function buildSvg({ eyebrow, seed, quote }) {
   const glowY = nodes[focus]?.y ?? 280
 
   // Pull-quote: serif italic, vertically centred in the clean left column, set
-  // inside a matched pair of decorative marks that hug the text — the opening
-  // mark sits just above-left of the first line, the closing mark trails the
-  // last word on its baseline. Kept modest in size so they frame, not shout.
+  // inside a matched pair of decorative marks that hug the text. The marks are
+  // ~1.5x the body (brand rule: modest and paired, never a lone oversized
+  // float) and are dropped DOWN into each line's cap band: a curly quote glyph
+  // sits high in the em, so pinning it to the text baseline leaves it hovering
+  // above the line — markDrop seats it against the words instead. The opening
+  // mark hangs a fixed gap left of the column (text-anchor end, so the gap is
+  // glyph-independent); the closing mark trails the final word with the same
+  // drop so the pair reads symmetric.
+  // NB: covers render in the Georgia fallback (no Newsreader on the box), so
+  // the 0.35 drop fraction is tuned for Georgia — re-check it if Newsreader is
+  // ever bundled.
   let quoteSvg = ''
   if (quote) {
     const qLines = wrap(quote, 22, 4)
     const lh = 60
     const blockTop = Math.round((H - qLines.length * lh) / 2) + 24
     const last = qLines.length - 1
+    const bodySize = 46
     const markSize = 68
-    const markOpacity = '0.55'
+    const markOpacity = '0.5'
+    const markDrop = Math.round(markSize * 0.35) // seat the high quote glyph in the line's cap band
+    const hang = 12 // opening mark's glyph ends `hang` px left of the text column
+    const closerDx = 4 // closing mark tucks just past the final punctuation
     const tspans = qLines
       .map((line, i) => {
         const span = `<tspan x="120" y="${blockTop + i * lh}">${escapeXml(line)}</tspan>`
-        // Closing mark trails the final word, sharing its baseline.
+        // Closing mark trails the final word, dropped to match the opener.
         return i === last
-          ? `${span}<tspan dx="6" font-size="${markSize}" fill-opacity="${markOpacity}">&#8221;</tspan>`
+          ? `${span}<tspan dx="${closerDx}" dy="${markDrop}" font-size="${markSize}" fill-opacity="${markOpacity}">&#8221;</tspan>`
           : span
       })
       .join('')
     quoteSvg = `
-  <text x="100" y="${blockTop - 4}" font-family="Newsreader, Georgia, serif" font-style="italic" font-size="${markSize}" fill="${PAPER}" fill-opacity="${markOpacity}">&#8220;</text>
-  <text font-family="Newsreader, Georgia, serif" font-style="italic" font-size="46" fill="${PAPER}" fill-opacity="0.96">${tspans}</text>`
+  <text text-anchor="end" x="${120 - hang}" y="${blockTop + markDrop}" font-family="Newsreader, Georgia, serif" font-style="italic" font-size="${markSize}" fill="${PAPER}" fill-opacity="${markOpacity}">&#8220;</text>
+  <text font-family="Newsreader, Georgia, serif" font-style="italic" font-size="${bodySize}" fill="${PAPER}" fill-opacity="0.96">${tspans}</text>`
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
