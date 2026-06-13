@@ -39,6 +39,8 @@ Patrick is not a hype merchant. He is a trusted adviser who has seen what AI act
 - **Fractional** (the business model - use it, define it once per page)
 - **Champion** (for the internal AI lead role in organisations)
 - **Playbook** (for documented team workflows)
+- **AI Advisory for Teams** (the business offer name)
+- **Scattered AI use** (the problem the team offer starts from)
 
 ### Words to avoid
 
@@ -54,6 +56,8 @@ Patrick is not a hype merchant. He is a trusted adviser who has seen what AI act
 | Next-generation | (just describe the capability) |
 | Cutting-edge | (no) |
 | Journey | Change / shift / transition |
+| Practical business advisory | AI Advisory for Teams / practical team advisory |
+| AI ready | Ready for the change / able to use AI with judgement |
 
 ---
 
@@ -88,6 +92,17 @@ Call-to-action labels are:
 - **Specific** - not "Learn more" or "Get started"
 - **Action-led** - "Book a personal lesson", "Book a business call"
 - **Two distinct routes** - personal (individual) vs. business (teams) are always clearly separated
+
+## Team advisory offer
+
+When describing `AI Advisory for Teams`, use one stable definition: a senior AI adviser working with leaders and teams to turn scattered AI use into safe, useful working practice.
+
+Keep the hierarchy clear:
+- The `AI Reality Check Sprint` chooses the right use cases and next steps.
+- The `90-Day Adoption Build` is the core offer and changes real workflows.
+- The `Fractional Retainer` keeps the rhythm going across teams.
+
+Avoid making the team offer sound like generic training, a workshop, a software rollout, or a big-consultancy transformation programme.
 
 ---
 

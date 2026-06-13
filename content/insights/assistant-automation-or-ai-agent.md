@@ -65,7 +65,7 @@ To make that call in the room, we have built the **AI Delegation Decision Tree**
 
 [Download the AI Delegation Decision Tree (PDF)](/insights/assets/ai-delegation-decision-tree.pdf)
 
-If you are weighing several of these decisions at once across a team, that is the work of an [AI Reality Check and our advisory work with teams](/services/ai-advisory-for-teams): sorting where AI genuinely pays off from where it merely sounds good. It also pairs naturally with [AI literacy for leaders](/insights/ai-literacy-for-leaders/), since judging the level is itself a literacy skill, and with the lesson behind [why so many AI pilots never scale](/insights/why-your-ai-pilot-didnt-scale/).
+If you are weighing several of these decisions at once across a team, that is the work of [AI Advisory for Teams](/services/ai-advisory-for-teams): choosing where AI genuinely pays off, what level of automation is safe, and what guardrails the workflow needs. It also pairs naturally with [AI literacy for leaders](/insights/ai-literacy-for-leaders/), since judging the level is itself a literacy skill, and with the lesson behind [why so many AI pilots never scale](/insights/why-your-ai-pilot-didnt-scale/).
 
 ## Sources and further reading
 

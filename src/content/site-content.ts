@@ -51,7 +51,7 @@ export type ProofOrganisation = {
 
 export const siteConfig = {
   offerName: "Good Transformer",
-  descriptor: "AI lessons for leaders and practical business advisory",
+  descriptor: "AI lessons for leaders and practical team advisory",
   brand: "Good Transformer",
   primaryCta: {
     label: "Book a discovery call",
@@ -66,7 +66,7 @@ export const siteConfig = {
     href: "/book/personal",
   },
   businessCta: {
-    label: "Book a business discovery call",
+    label: "Book a team advisory call",
     href: "/book/business",
   },
   calendarEnvName: "NEXT_PUBLIC_CLARITY_CALL_URL",
@@ -100,6 +100,11 @@ export const insightsPage = {
   title: "Insights",
   intro:
     "Practical writing on using AI with judgement: adoption, leadership, and the ethical questions that come with it, plus useful guides and templates you can take away.",
+  workCta: {
+    eyebrow: "Work with Good Transformer",
+    heading: "Turn this thinking into working practice.",
+    cta: { label: "Explore team advisory", href: "/services/ai-advisory-for-teams" },
+  },
 };
 
 export const newsletterPage = {
@@ -160,7 +165,7 @@ export const newsletterPage = {
 export const aboutPage = {
   title: "About",
   intro:
-    "I'm Patrick Hussey, and I started Good Transformer as a new kind of consultancy, one built to help individuals and companies become AI ready. The goal is to make people genuinely better equipped for the changes ahead.",
+    "I'm Patrick Hussey, and I started Good Transformer as a new kind of consultancy, built to help individuals and companies deal with AI clearly and practically. The goal is to make people genuinely better equipped for the changes ahead.",
   background: {
     heading: "Where I come from",
     body:
@@ -186,15 +191,15 @@ export const aboutPage = {
 export const operatingModel = [
   {
     name: "Lead",
-    line: "Direction, prioritisation, governance judgement.",
+    line: "Use-case choices, priorities, governance judgement.",
   },
   {
     name: "Embed",
-    line: "Workflow redesign, pilots, coordination, tool choices.",
+    line: "Workflow redesign, pilots, measures, tool choices.",
   },
   {
     name: "Enable",
-    line: "Team confidence, champions, habits, safe use.",
+    line: "Champion support, team habits, safe use.",
   },
 ];
 
@@ -202,13 +207,13 @@ export const offers: Offer[] = [
   {
     name: "AI Reality Check Sprint",
     duration: "2 weeks",
-    purpose: "A focused two-week start: where AI fits, and a plan to act on it.",
+    purpose: "Fast clarity on where AI pays off and what to do next.",
     outputs: [
       "AI direction brief",
       "Use-case scorecard",
-      "90-day adoption plan",
+      "90-day practice plan",
     ],
-    fit: "Best when AI use is already happening, but ownership and guardrails are still unclear.",
+    fit: "Best when AI use is uneven and the next safe, useful steps are unclear.",
     cadence: [
       "Leadership and function interviews",
       "Current-use and risk triage",
@@ -218,29 +223,29 @@ export const offers: Offer[] = [
   {
     name: "90-Day Adoption Build",
     duration: "12 weeks",
-    purpose: "The core build: 90 days to make AI part of how the team works.",
+    purpose: "The core offer: turn scattered AI into working practice.",
     outputs: [
-      "Two real workflow pilots",
+      "Two workflow pilots",
       "Team playbooks",
-      "Simple governance pack",
+      "Simple guardrails pack",
     ],
-    fit: "Best when you know AI matters but it hasn't changed how the team works yet.",
+    fit: "Best when AI matters, but real workflows have not changed yet.",
     cadence: [
       "Weekly working session",
-      "Team enablement rhythm",
+      "Champion support rhythm",
       "Monthly sponsor checkpoint",
     ],
   },
   {
     name: "Fractional Retainer",
     duration: "3-month minimum",
-    purpose: "Ongoing senior advisory alongside your team, no full-time hire.",
+    purpose: "Ongoing senior AI advice without hiring a full-time lead.",
     outputs: [
       "Monthly executive session",
-      "Working cadence across teams",
-      "Plain-English progress reporting",
+      "Team operating rhythm",
+      "Plain-English progress note",
     ],
-    fit: "Best when multiple teams need progress, prioritisation, and steadier decision-making.",
+    fit: "Best when several teams need priority, guardrails, and steady follow-through.",
     cadence: [
       "Executive direction and guardrails",
       "Operational blocks with teams",
@@ -324,9 +329,9 @@ export const homePage = {
     brand: siteConfig.brand,
     title: "Get confident with AI",
     descriptor:
-      "Practical 1-to-1 AI lessons for leaders, and a fractional AI adviser for teams.",
+      "Practical 1-to-1 AI lessons for leaders, plus senior AI advisory for teams.",
     support:
-      "Learn to use AI with confidence and judgement, and see how it's reshaping your business. Patrick Hussey coaches leaders and founders, and helps organisations turn AI into real working practice.",
+      "Learn to use AI with confidence and judgement, and see what it means for your work. Patrick Hussey coaches leaders and helps organisations turn scattered AI use into safe, useful working practice.",
     routes: [
       {
         label: "For leaders",
@@ -336,9 +341,9 @@ export const homePage = {
         tone: "light",
       },
       {
-        label: "For businesses",
+        label: "For teams",
         title: "AI Advisory for Teams",
-        body: "A fractional AI adviser to get your team using AI well.",
+        body: "Senior AI advice to make AI part of real work.",
         href: "/book/business",
         tone: "dark",
       },
@@ -353,31 +358,36 @@ export const homePage = {
         body: "Built on real workflows, not slideware.",
       },
       {
-        title: "Strategy to adoption",
-        body: "Turn AI direction into daily adoption.",
+        title: "Pilots to practice",
+        body: "Turn scattered AI into real work.",
       },
     ],
   },
   role: {
     heading: "AI is easier to learn when the lesson starts with your real work.",
     support:
-      "Good Transformer is built around calm, practical coaching. For leaders, that means one-to-one lessons shaped around your tools, your tasks, and how AI is changing your business. For organisations, it means the same practical judgement applied to strategy, adoption, workflows, and guardrails.",
+      "Good Transformer is built around calm, practical coaching. For leaders, that means one-to-one lessons shaped around your tools, tasks and AI questions. For organisations, it means senior advisory that connects use cases, workflows, guardrails and team habits.",
   },
   services: {
     heading: "Two clear routes into better AI use.",
     intro:
-      "Start with the support that fits the moment: leader confidence or business change.",
+      "Start with the support that fits the moment: personal confidence or team working practice.",
     note: "Most work starts with the smallest engagement that can create real momentum.",
+  },
+  teamAdvisory: {
+    heading: "In 90 days, turn scattered AI into working practice.",
+    body:
+      "Patrick works with leadership and teams to choose the right use cases, redesign real workflows, set guardrails, and leave a rhythm the business can keep using.",
   },
   patrick: {
     heading: "Patrick Hussey",
     body:
-      "Patrick works between leadership, operations and teams. The job is to turn AI direction into working practice and leave capability inside the business. Good Transformer is the umbrella brand. The judgement you hire is Patrick’s.",
+      "Patrick works between leadership, operations and teams. The job is to choose the right use cases, redesign real workflows and leave safe, useful AI practice inside the business. Good Transformer is the umbrella brand. The judgement you hire is Patrick's.",
     frame: {
       label: "How the work shows up",
       heading: "Work that becomes part of how the business runs",
       body:
-        "The job is not just to set direction, but to leave working structures behind. These are the documents teams actually use to decide, act, and stay aligned.",
+        "The job is not just to set direction, but to leave working structures behind. These are the documents teams use to decide, act, and stay aligned.",
       kicker:
         "Not a deck. Not a one-off plan. Something the business can run on.",
     },
@@ -396,12 +406,12 @@ export const homePage = {
     {
       question: "What does fractional mean in practice?",
       answer:
-        "It means a defined senior cadence rather than a full-time hire: usually a monthly executive session, a weekly or fortnightly working block, access for short triage, and a clear view of what changes next.",
+        "It means a defined senior cadence rather than a full-time hire: leadership decisions, weekly or fortnightly workflow work, short triage when needed, and a clear next step.",
     },
     {
-      question: "Is the business work strategy or training?",
+      question: "Is the team work strategy or training?",
       answer:
-        "It is strategy-to-adoption work. Direction matters, but so do workflow redesign, pilots, and team capability. The point is to connect those layers so AI shows up in day-to-day work, not just in decks or workshops.",
+        "Neither on its own. It connects strategy to working practice: choose use cases, redesign workflows, set guardrails and support the people expected to keep it going.",
     },
     {
       question: "What happens on the discovery call?",
@@ -412,7 +422,7 @@ export const homePage = {
   finalCta: {
     heading: "Start with the kind of AI help you actually need.",
     body:
-      "Choose 1-to-1 lessons if you want personal confidence with AI. Choose fractional advisory if the challenge is team adoption, strategy, or workflow change.",
+      "Choose 1-to-1 lessons if you want personal confidence with AI. Choose team advisory if the challenge is scattered AI use, workflow change or safe guardrails.",
   },
 };
 
@@ -433,11 +443,11 @@ export const lessonOffers = [
     name: "AI Advisory for Teams",
     label: "For teams",
     purpose:
-      "A fractional AI adviser embedded with your team to make AI part of how you work, in about 90 days.",
+      "Senior AI advice to turn scattered AI use into safe, useful working practice.",
     points: [
-      "Agree where AI actually pays off",
-      "Pilot it inside your real workflows",
-      "Leave the team able to keep it running",
+      "Choose where AI really pays off",
+      "Pilot it in real workflows",
+      "Leave a rhythm the team can keep",
     ],
     href: "/services/ai-advisory-for-teams",
   },
@@ -476,7 +486,7 @@ export const lessonFormats: {
 export const servicesPage = {
   title: "Services",
   intro:
-    "Two ways to work together: AI lessons for leaders, or fractional advisory for teams and businesses.",
+    "Two ways to work together: AI lessons for leaders, or AI Advisory for Teams.",
   personalSection: {
     heading: "AI Lessons for Leaders",
     intro:
@@ -543,29 +553,29 @@ export const servicesPage = {
   businessSection: {
     heading: "AI Advisory for Teams",
     intro:
-      "Three ways to work together: a sprint to scope what's possible, a 90-day build to embed AI in how the team works, then a retainer to keep going.",
+      "Three ways to work together: a sprint to choose the right use cases, a 90-day build to change workflows, and a retainer to keep the rhythm going.",
     cta: { label: "Explore team advisory", href: "/services/ai-advisory-for-teams" },
   },
   sampleArc: [
     {
       phase: "Weeks 1-2",
-      body: "Agree where AI pays off, and a plan the leadership team can actually act on.",
+      body: "Choose where AI pays off and what the leadership team should do next.",
     },
     {
       phase: "Weeks 3-6",
-      body: "Redesign a couple of real workflows with clear ownership and quality checks.",
+      body: "Redesign two real workflows with ownership, measures and guardrails.",
     },
     {
       phase: "Weeks 7-10",
-      body: "Get the team genuinely using it, with champions and guidance for real work.",
+      body: "Support champions, playbooks and the habits that make the work stick.",
     },
     {
       phase: "Weeks 11-12",
-      body: "A steadier operating rhythm, clear guardrails, and a visible next 30 days.",
+      body: "A steadier rhythm, clear guardrails and a visible next 30 days.",
     },
   ],
   close:
-    "If a smaller starting point can create real momentum, that is the recommendation.",
+    "If the sprint is enough to create real momentum, that is the recommendation.",
 };
 
 export const leaderLessonsPage: ServiceDetailPage & {
@@ -691,24 +701,24 @@ export const teamAdvisoryPage: ServiceDetailPage & {
 } = {
   title: "AI Advisory for Teams",
   intro:
-    "Fractional AI advisory for teams that need AI to become part of working practice, not just a leadership ambition or another training session.",
-  heroCta: { label: "Book a business discovery call", href: "/book/business" },
+    "A senior AI adviser working with leaders and teams to turn scattered AI use into safe, useful working practice.",
+  heroCta: siteConfig.businessCta,
   secondaryCta: { label: "View all services", href: "/services" },
   fit: {
-    heading: "For teams that need a steadier way to move",
+    heading: "For teams with scattered AI use",
     intro:
-      "This is for organisations where AI is already being discussed, tested or used unevenly, but the business still needs direction, ownership and practical follow-through.",
+      "This is for organisations where AI is already being discussed, tested or used unevenly, but has not yet become safe, useful working practice.",
     points: [
-      "Leadership wants a clear view of where AI should and should not be used.",
+      "Leadership needs to know where AI should and should not be used.",
       "Teams are experimenting, but habits and guardrails are patchy.",
-      "Useful pilots need to turn into repeatable working practice.",
-      "The business needs senior judgement without hiring a full-time AI lead.",
+      "Promising pilots need to become repeatable working practice.",
+      "The business needs senior judgement without a full-time AI lead.",
     ],
   },
   operating: {
-    heading: "Direction, workflow and confidence in one rhythm",
+    heading: "Use cases, workflows and guardrails",
     intro:
-      "The work connects leadership priorities with the jobs people actually do. That means agreeing the right use cases, redesigning real workflows, and leaving the team able to keep improving after the engagement.",
+      "The work connects leadership priorities with the jobs people actually do: choose the right use cases, redesign real workflows, set guardrails, support champions and leave a cadence the business can keep using.",
   },
   offerSection: {
     heading: "Three ways to work together",
@@ -718,14 +728,14 @@ export const teamAdvisoryPage: ServiceDetailPage & {
   arcSection: {
     heading: "A simple 90-day arc",
     intro:
-      "The core team engagement moves from clarity to working pilots to a practical operating rhythm the business can keep using.",
+      "The core 90-day build moves from clarity to workflow pilots to a practical rhythm the team can keep using.",
   },
 };
 
 export const patrickPage = {
   title: "Patrick Hussey",
   intro:
-    "I work with leaders who want to get better at using AI, and with organisations that need to turn AI intention into working practice. Either way, my approach is the same: practical, calm, and not interested in hype.",
+    "I work with leaders who want personal AI confidence, and with organisations that need scattered AI use to become safe, useful working practice. Either way, my approach is practical, calm and not interested in hype.",
   portrait: {
     src: "/patrick/patrick-portrait.jpg",
     alt: "Patrick Hussey",
@@ -736,7 +746,7 @@ export const patrickPage = {
     {
       title: "How I work",
       body:
-        "I try to be honest about what AI can and cannot do. Whether the work is a first lesson or a multi-team adoption programme, the job is to meet you where you are and leave you with something that works in the real world.",
+        "I try to be honest about what AI can and cannot do. Whether the work is a first lesson or a team advisory engagement, the job is to meet you where you are and leave you with something that works in the real world.",
     },
     {
       title: "Selected experience",
@@ -751,7 +761,7 @@ export const patrickPage = {
     {
       title: "Boundary line",
       body:
-        "I help leaders build personal confidence, shape AI direction, and help teams adopt AI safely. I am not selling a software platform or a hidden engineering bench.",
+        "I help leaders build personal confidence and help teams turn AI into safe working practice. I am not selling a software platform or a hidden engineering bench.",
     },
   ],
 };
@@ -774,11 +784,11 @@ export const bookingPage = {
   business: {
     title: "AI Advisory for Teams",
     intro:
-      "It starts with a short discovery call: a working conversation about where your team really is, not a generic AI pitch.",
+      "It starts with a short discovery call: a working conversation about where AI is scattered, useful or risky inside your team.",
     body:
-      "You will be asked for a work email, organisation size, sector, current AI use, tools in play, and what success should look like in 90 days. The brief is handed over before scheduling so the call starts with the real context.",
+      "You will be asked for a work email, organisation size, sector, current AI use, tools in play, and what should change in 90 days. The brief is handed over before scheduling so the call starts with real context.",
     routeSummary:
-      "Fractional AI advisory for teams ready to move from intention to working practice.",
+      "Team advisory for organisations ready to turn AI use into working practice.",
   },
 };
 
@@ -804,14 +814,14 @@ export const bookingSuccessPage = {
     },
   },
   business: {
-    title: "Success, your business discovery call is booked",
+    title: "Success, your team advisory call is booked",
     intro:
-      "Your business discovery call is confirmed. You should receive a calendar invite and joining link by email shortly.",
+      "Your team advisory call is confirmed. You should receive a calendar invite and joining link by email shortly.",
     body:
       "If the invite does not appear within a few minutes, check spam or promotions, then reply to the booking email if you need help.",
     steps: [
       "Look out for the calendar invite and meeting link in your inbox.",
-      "Bring the real AI questions, blockers, or adoption pressures you are facing.",
+      "Bring the real AI questions, blockers or workflow pressures you are facing.",
       "The short brief you submitted gives Patrick context before the call starts.",
     ],
     primaryCta: {
@@ -841,15 +851,15 @@ export const bookingForm = {
     "Other",
   ],
   currentState: [
-    "AI use is already happening, but unevenly",
-    "Leadership wants direction and guardrails",
-    "Pilots are not scaling",
-    "Training has not changed working habits",
-    "Tool sprawl or shadow AI is becoming a risk",
+    "AI use is happening, but unevenly",
+    "Leadership needs direction and guardrails",
+    "Promising pilots are not becoming practice",
+    "Workshops have not changed team habits",
+    "Tool sprawl or shadow AI is a risk",
   ],
   nextSteps: [
     "Fill in the short brief.",
-    "Review the summary and delivery.",
+    "Review the summary and handoff.",
     "Continue to scheduling when you are ready.",
   ],
 };
@@ -858,12 +868,12 @@ export const seoContent = {
   siteName: "Good Transformer",
   siteUrl: "https://goodtransformer.ai",
   defaultDescription:
-    "AI lessons for leaders and practical business advisory from Patrick Hussey at Good Transformer.",
+    "AI lessons for leaders and AI advisory for teams from Patrick Hussey at Good Transformer.",
   openGraphTitle: "Good Transformer - Get confident with AI.",
   openGraphDescription:
-    "AI lessons for leaders and fractional advisory for teams. Patrick Hussey helps people and organisations get genuinely useful with AI.",
+    "AI lessons for leaders and senior advisory for teams. Patrick Hussey helps organisations turn scattered AI use into safe, useful working practice.",
   ogImageAlt:
-    "Good Transformer - Get confident with AI. AI lessons for leaders and practical business advisory.",
+    "Good Transformer - Get confident with AI. AI lessons for leaders and AI advisory for teams.",
   personName: "Patrick Hussey",
   personJobTitle: "AI Coach and Fractional AI Adviser",
   pages: {
@@ -871,13 +881,13 @@ export const seoContent = {
       path: "/",
       title: "Good Transformer",
       description:
-        "AI lessons for leaders and practical business advisory from Patrick Hussey at Good Transformer.",
+        "AI lessons for leaders and AI advisory for teams from Patrick Hussey at Good Transformer.",
     },
     services: {
       path: "/services/",
       title: "Services",
       description:
-        "AI lessons for leaders and fractional advisory for teams. Three engagement tiers: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
+        "AI lessons for leaders and AI Advisory for Teams. Engagements: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
     },
     insights: {
       path: "/insights/",
@@ -901,25 +911,25 @@ export const seoContent = {
       path: "/services/ai-advisory-for-teams/",
       title: "AI Advisory for Teams",
       description:
-        "Fractional AI advisory for teams. Turn AI intention into working practice with clear direction, workflow pilots, team confidence and practical guardrails.",
+        "AI Advisory for Teams. Turn scattered AI use into safe, useful working practice with clear use cases, workflow pilots and practical guardrails.",
     },
     about: {
       path: "/about/",
       title: "About",
       description:
-        "About Good Transformer - a consultancy built to help individuals and organisations become genuinely AI ready. Named for the Transformer architecture that started the AI boom.",
+        "About Good Transformer - a consultancy built to help individuals and organisations use AI with judgement. Named for the Transformer architecture that started the AI boom.",
     },
     patrick: {
       path: "/patrick/",
       title: "Patrick Hussey",
       description:
-        "Patrick Hussey is an AI coach and fractional adviser. He works with leaders to build practical AI confidence, and with organisations to turn AI intent into real working practice.",
+        "Patrick Hussey is an AI coach and fractional adviser. He helps leaders build AI confidence and helps teams turn scattered AI use into working practice.",
     },
     book: {
       path: "/book/",
       title: "Book a Session",
       description:
-        "Two ways to work with Patrick Hussey: 1-to-1 AI lessons for leaders, or fractional advisory for teams. Book a short discovery call to start either.",
+        "Two ways to work with Patrick Hussey: 1-to-1 AI lessons for leaders, or AI Advisory for Teams. Book a short discovery call to start either.",
     },
     bookPersonal: {
       path: "/book/personal/",
@@ -931,7 +941,7 @@ export const seoContent = {
       path: "/book/business/",
       title: "AI Advisory for Teams",
       description:
-        "Fractional AI advisory for teams with Patrick Hussey. Submit a short brief and book a discovery call to discuss AI strategy, adoption, and the right engagement for your team.",
+        "AI Advisory for Teams with Patrick Hussey. Submit a short brief and book a call to discuss use cases, workflows, guardrails and the right next step.",
     },
     personalSuccess: {
       path: "/book/personal/success/",
@@ -941,9 +951,9 @@ export const seoContent = {
     },
     businessSuccess: {
       path: "/book/business/success/",
-      title: "Success, Your Business Discovery Call Is Booked",
+      title: "Success, Your Team Advisory Call Is Booked",
       description:
-        "Confirmation page for business discovery calls booked with Patrick Hussey at Good Transformer.",
+        "Confirmation page for team advisory calls booked with Patrick Hussey at Good Transformer.",
     },
     notFound: {
       title: "Page not found",

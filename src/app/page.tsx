@@ -87,7 +87,9 @@ export default function HomePage() {
                     ))}
                   </ul>
                   <Link href={offer.href} className="text-link mt-7 inline-flex text-sm text-ink">
-                    {offer.label === "For leaders" ? "Book a 1-to-1 discovery call" : "Book a business discovery call"}
+                    {offer.label === "For leaders"
+                      ? siteConfig.personalCta.label
+                      : siteConfig.businessCta.label}
                   </Link>
                 </article>
               ))}
@@ -131,10 +133,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12 lg:py-24">
           <AnimatedReveal className="max-w-3xl">
             <h2 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
-              In around 90 days, turn scattered AI into how your team works.
+              {homePage.teamAdvisory.heading}
             </h2>
             <p className="mt-5 max-w-xl text-base leading-7 text-slate md:text-lg">
-              I join your team as a fractional AI adviser. The core is a 90-day build that turns scattered AI into real working practice. Start with a sprint, or stay on a retainer.
+              {homePage.teamAdvisory.body}
             </p>
           </AnimatedReveal>
 

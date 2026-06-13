@@ -13,14 +13,14 @@ const businessBookingJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${SITE_URL}/book/business/#service`,
-  name: "AI Advisory for Teams",
-  serviceType: "Fractional AI advisory",
+  name: bookingPage.business.title,
+  serviceType: "Team AI advisory",
   provider: { "@id": SITE_URL },
   url: `${SITE_URL}/book/business/`,
   description: bookingPage.business.intro,
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Business advisory engagements",
+    name: "Team advisory engagements",
     itemListElement: offers.map((offer) => ({
       "@type": "Offer",
       itemOffered: {
@@ -35,7 +35,7 @@ const businessBookingJsonLd = {
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", path: "/" },
   { name: "Book a session", path: "/book/" },
-  { name: "AI Advisory for Teams", path: "/book/business/" },
+  { name: bookingPage.business.title, path: "/book/business/" },
 ]);
 
 export default function BusinessBookPage() {

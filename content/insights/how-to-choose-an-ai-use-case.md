@@ -61,7 +61,7 @@ To make that comparison properly, we have built the **AI Use-Case VALUE Scorecar
 
 [Download the AI Use-Case VALUE Scorecard (PDF)](/insights/assets/ai-use-case-value-scorecard.pdf)
 
-Choosing well is also the heart of an [AI Reality Check, the short engagement we run with teams](/services/ai-advisory-for-teams): sorting the candidate use cases, scoring them honestly, and leaving you with a defensible order to work through. It builds naturally on [knowing what to hand to AI in the first place](/insights/assistant-automation-or-ai-agent/), and on the [durable AI literacy](/insights/ai-literacy-for-leaders/) that lets a leader judge these calls without waiting for a demo.
+Choosing well is also the heart of the [AI Reality Check Sprint](/services/ai-advisory-for-teams): sorting the candidate use cases, scoring them honestly, and leaving the team with a defensible order to work through. It builds naturally on [knowing what to hand to AI in the first place](/insights/assistant-automation-or-ai-agent/), and on the [durable AI literacy](/insights/ai-literacy-for-leaders/) that lets a leader judge these calls without waiting for a demo.
 
 ## Sources and further reading
 

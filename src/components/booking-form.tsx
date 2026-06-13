@@ -167,7 +167,7 @@ export function BookingForm() {
       tools: form.tools.trim(),
       outcome: form.outcome.trim(),
       summary,
-      _subject: "New business discovery call brief",
+      _subject: "New team advisory call brief",
       _gotcha: trapField,
     };
 
@@ -395,7 +395,7 @@ export function BookingForm() {
             </p>
             <p className="mt-4 font-serif text-3xl leading-tight text-ink">
               {deliveryMode === "endpoint"
-                ? "Your context is delivered. Continue to Outlook when you are ready."
+                ? "Your context is delivered. Continue to scheduling when you are ready."
                 : deliveryMode === "email"
                   ? "Send the drafted note, then continue to scheduling."
                   : "Copy the brief, then continue to scheduling."}

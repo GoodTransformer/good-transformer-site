@@ -6,7 +6,7 @@ import { ArticleHeader } from "@/components/insights/article-header";
 import { NewsletterSignup } from "@/components/insights/newsletter-signup";
 import { RelatedPosts } from "@/components/insights/related-posts";
 import { JsonLd } from "@/components/json-ld";
-import { seoContent, siteConfig } from "@/content/site-content";
+import { insightsPage, seoContent } from "@/content/site-content";
 import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/insights";
 import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, OG_IMAGE, SITE_URL } from "@/lib/seo";
 
@@ -107,18 +107,18 @@ export default async function InsightPostPage({
 
         <div className="mx-auto mt-16 max-w-[44rem] px-6 md:px-8">
           <div className="rounded-[1.25rem] border border-line/12 bg-sand/70 p-7 md:p-9">
-            <p className="page-eyebrow text-brass">Work with Good Transformer</p>
+            <p className="page-eyebrow text-brass">{insightsPage.workCta.eyebrow}</p>
             <p className="mt-3 max-w-xl font-serif text-2xl leading-tight text-ink md:text-3xl">
-              Want this kind of thinking applied to your team?
+              {insightsPage.workCta.heading}
             </p>
             <Link
-              href={siteConfig.primaryCta.href}
+              href={insightsPage.workCta.cta.href}
               className="hero-nav-cta mt-6 inline-flex items-center gap-3"
               data-analytics-event="insight_cta_click"
               data-analytics-section="insight_post"
-              data-analytics-label={siteConfig.primaryCta.label}
+              data-analytics-label={insightsPage.workCta.cta.label}
             >
-              {siteConfig.primaryCta.label}
+              {insightsPage.workCta.cta.label}
               <span aria-hidden="true">→</span>
             </Link>
           </div>

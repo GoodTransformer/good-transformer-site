@@ -57,7 +57,7 @@ To make that trace concrete, we have built the **AI Value Conversion Worksheet**
 
 [Download the AI Value Conversion Worksheet (PDF)](/insights/assets/ai-value-conversion-worksheet.pdf)
 
-Converting savings into outcomes is precisely the work of a [90-day adoption build with a team](/services/ai-advisory-for-teams): redesigning the workflow, deciding where capacity goes, and agreeing what to measure. It follows directly from [choosing the right use case in the first place](/insights/how-to-choose-an-ai-use-case/), and it explains a lot about [why so many promising pilots never scale](/insights/why-your-ai-pilot-didnt-scale/).
+Converting savings into outcomes is precisely the work of a [90-Day Adoption Build](/services/ai-advisory-for-teams): redesigning the workflow, deciding where capacity goes, agreeing what to measure, and leaving a rhythm the team can keep using. It follows directly from [choosing the right use case in the first place](/insights/how-to-choose-an-ai-use-case/), and it explains a lot about [why so many promising pilots never scale](/insights/why-your-ai-pilot-didnt-scale/).
 
 ## Sources and further reading
 

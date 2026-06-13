@@ -30,11 +30,11 @@ Online or at a co-working space (venue agreed at booking).
 
 ---
 
-## Service line 2: Business AI Advisory
+## Service line 2: AI Advisory for Teams
 
 **Audience:** Leaders, teams, and organisations - SMEs and mid-market businesses
 
-**Positioning:** Fractional advisory - a defined senior cadence, not a full-time hire. Patrick works alongside teams to turn AI intent into working practice.
+**Positioning:** A senior AI adviser working with leaders and teams to turn scattered AI use into safe, useful working practice. Fractional means a defined senior cadence, not a full-time hire.
 
 **Booking route:** `/book/business`
 
@@ -51,42 +51,42 @@ Patrick operates across three layers:
 ### Engagement tiers
 
 #### AI Reality Check Sprint - 2 weeks
-**Purpose:** Fast clarity on where AI fits, and a plan to act on it.
+**Purpose:** Fast clarity on where AI pays off and what to do next.
 
-**Best for:** AI use is already happening, but ownership and guardrails are still unclear.
+**Best for:** AI use is uneven and the next safe, useful steps are unclear.
 
 **Outputs:**
 - AI direction brief
 - Use-case scorecard
-- 90-day adoption plan
+- 90-day practice plan
 
 **Cadence:** Leadership and function interviews → current-use and risk triage → board-ready decision brief.
 
 ---
 
 #### 90-Day Adoption Build - 12 weeks
-**Purpose:** Embedded advisory to turn AI intent into real team habits.
+**Purpose:** The core offer: turn scattered AI into working practice.
 
-**Best for:** Direction exists, but working practice still needs to move.
+**Best for:** AI matters, but real workflows have not changed yet.
 
 **Outputs:**
-- Two lighthouse workflow pilots
+- Two workflow pilots
 - Team playbooks
-- Simple governance pack
+- Simple guardrails pack
 
-**Cadence:** Weekly working session → team enablement rhythm → monthly sponsor checkpoint.
+**Cadence:** Weekly working session → champion support rhythm → monthly sponsor checkpoint.
 
 ---
 
 #### Fractional Retainer - 3-month minimum
-**Purpose:** Senior AI advisory alongside your team - no full-time hire.
+**Purpose:** Ongoing senior AI advice without hiring a full-time lead.
 
-**Best for:** Multiple teams need progress, prioritisation, and steadier decision-making.
+**Best for:** Several teams need priority, guardrails, and steady follow-through.
 
 **Outputs:**
 - Monthly executive session
-- Working cadence across teams
-- Plain-English progress reporting
+- Team operating rhythm
+- Plain-English progress note
 
 **Cadence:** Executive direction and guardrails → operational blocks with teams → office hours and follow-through.
 
@@ -96,10 +96,10 @@ Patrick operates across three layers:
 
 | Phase | Work |
 |---|---|
-| Weeks 1-2 | Direction, use-case triage, and a plan the leadership team can actually use |
-| Weeks 3-6 | Lighthouse workflows redesigned with clearer ownership, quality checks, and tool choices |
-| Weeks 7-10 | Team enablement, champion support, and working guidance tied to the real workflow |
-| Weeks 11-12 | A sharper operating rhythm, clearer guardrails, and a visible next 30 days |
+| Weeks 1-2 | Choose where AI pays off and what the leadership team should do next |
+| Weeks 3-6 | Redesign two real workflows with ownership, measures and guardrails |
+| Weeks 7-10 | Support champions, playbooks and the habits that make the work stick |
+| Weeks 11-12 | A steadier rhythm, clear guardrails and a visible next 30 days |
 
 ---
 

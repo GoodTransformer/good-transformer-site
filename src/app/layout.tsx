@@ -39,8 +39,7 @@ const jsonLd = {
       "@type": "ProfessionalService",
       "@id": SITE_URL,
       name: seoContent.siteName,
-      description:
-        "AI lessons for leaders and fractional AI advisory for teams. Helping leaders build AI confidence and organisations turn AI intent into working practice.",
+      description: seoContent.openGraphDescription,
       url: SITE_URL,
       logo: `${SITE_URL}/logos/gt-logo.png`,
       image: OG_IMAGE,
@@ -62,8 +61,7 @@ const jsonLd = {
         {
           "@type": "Offer",
           name: "AI Advisory for Teams",
-          description:
-            "Fractional AI advisory for teams: AI Reality Check Sprint, 90-Day Adoption Build, or ongoing Fractional Retainer.",
+          description: seoContent.pages.teamAdvisory.description,
           url: `${SITE_URL}/services/ai-advisory-for-teams/`,
         },
       ],

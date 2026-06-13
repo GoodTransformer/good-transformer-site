@@ -34,12 +34,19 @@ siteConfig.businessCta    // { label, href } - business call CTA
 Array of `{ href, label }` - the links in the site header.
 Currently: Services, Patrick, About.
 
+### `insightsPage`
+All copy for `/insights`, plus the reusable article CTA:
+```ts
+insightsPage.workCta // { eyebrow, heading, cta } points team-shaped readers to AI Advisory for Teams
+```
+
 ### `homePage`
 All copy for the home page organised by section:
 ```ts
 homePage.hero       // brand, title, descriptor, support, routes[], signals[]
 homePage.role       // heading, support
 homePage.services   // heading, intro, note
+homePage.teamAdvisory // heading, body for the team advisory section
 homePage.patrick    // heading, body, frame: { label, heading, body, kicker }
 homePage.faqs       // Array<{ question, answer }>
 homePage.finalCta   // heading, body
@@ -52,7 +59,7 @@ Array of two panels for the personal/business offer comparison:
 ```ts
 [
   { name: "Personal AI Lessons", label, purpose, points[], href },
-  { name: "Business AI Advisory", label, purpose, points[], href }
+  { name: "AI Advisory for Teams", label, purpose, points[], href }
 ]
 ```
 
@@ -65,6 +72,7 @@ Array of three business engagement tiers (used on Services page and home):
   { name: "Fractional Retainer", ... }
 ]
 ```
+Positioning rule: `AI Advisory for Teams` is a senior adviser offer for organisations where AI is already being discussed, tested, or used unevenly, but has not yet become safe, useful working practice. The `90-Day Adoption Build` is the centre of gravity; the sprint is the starting point, and the retainer is continuation.
 
 ### `lessonFormats`
 Personal lesson formats:
