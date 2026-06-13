@@ -1730,12 +1730,22 @@ details > summary::-webkit-details-marker {
   letter-spacing: 0.002em;
 }
 
-.insight-prose > * + * {
-  margin-top: 1.5em;
+/* Reset paragraph margins (including nested ones inside quotes/lists). :where()
+   keeps this at low specificity so the per-element rules and the flow rhythm
+   below both win cleanly over it. */
+.insight-prose :where(p) {
+  margin: 0;
 }
 
-.insight-prose p {
-  margin: 0;
+/* Calm, even vertical rhythm between top-level blocks. Declared after the reset
+   so it wins the specificity tie and actually spaces paragraph-to-paragraph. */
+.insight-prose > * + * {
+  margin-top: 1.7em;
+}
+
+/* Headings hug the text they introduce — tighter below than the space above. */
+.insight-prose > :is(h2, h3, h4) + * {
+  margin-top: 0.9em;
 }
 
 /* Lead paragraph gets a touch more presence. */
