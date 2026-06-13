@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>LinkedIn banner — Good Transformer</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  html, body { width: 1584px; height: 396px; }
+  .stage {
+    position: relative;
+    width: 1584px;
+    height: 396px;
+    background: var(--paper);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .edge-l { position:absolute; top:0; bottom:0; left:0; width:6px; background:var(--teal); z-index:2; }
+  .edge-b { position:absolute; left:0; right:0; bottom:0; height:6px; background:var(--teal); z-index:2; }
+
+  /* Left gap kept clear for the profile photo overlap. */
+  .avatar-gap { width: 392px; flex: none; }
+
+  .main { flex: 1 1 auto; position: relative; z-index: 1; }
+  .main .top { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .main .top img { height: 30px; width: auto; }
+  .main .top .wm {
+    font-family: var(--font-sans); font-weight: 700; font-size: 15px;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink);
+  }
+  .headline {
+    font-family: var(--font-serif); font-weight: 400; font-size: 54px;
+    line-height: 1.02; letter-spacing: -0.015em; color: var(--ink); margin: 0;
+  }
+  .headline .accent { color: var(--teal); font-style: italic; }
+  .sub {
+    font-family: var(--font-sans); font-weight: 400; font-size: 20px;
+    color: var(--slate); margin: 16px 0 0;
+  }
+
+  .rail {
+    width: 330px; flex: none; position: relative; z-index: 1;
+    border-left: 1px solid var(--line-strong);
+    padding-left: 34px; margin-right: 70px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .rail .site { font-family: var(--font-sans); font-weight: 700; font-size: 22px; letter-spacing: 0.01em; color: var(--teal); }
+  .rail .who  { font-family: var(--font-sans); font-size: 14.5px; line-height: 1.45; color: var(--slate); }
+  .rail .who b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <span class="edge-l"></span>
+    <span class="edge-b"></span>
+
+    <div class="avatar-gap"></div>
+
+    <div class="main">
+      <div class="top">
+        <img class="mark--ink" src="../../public/logos/gt-logo.png" alt="">
+        <span class="wm">Good Transformer</span>
+      </div>
+      <h1 class="headline">Practical AI lessons <span class="accent">for leaders</span></h1>
+      <p class="sub">Calm, practical 1-to-1 coaching — no hype.</p>
+    </div>
+
+    <div class="rail">
+      <span class="site">goodtransformer.ai</span>
+      <span class="who"><b>Patrick Hussey</b><br>AI coach &amp; fractional adviser</span>
+    </div>
+  </div>
+</body>
+</html>

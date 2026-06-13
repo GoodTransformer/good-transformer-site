@@ -1,0 +1,329 @@
+/* ============================================================================
+   Good Transformer — collateral brand stylesheet
+   Shared by every template in marketing/templates/.
+   Mirrors the live site: colours from src/app/globals.css,
+   fonts from src/app/layout.tsx (Newsreader + Schibsted Grotesk).
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink:    #041F25;
+  --paper:  #FAF3EA;
+  --sand:   #FBF8F4;
+  --teal:   #008C95;
+  --moss:   #006F7A;
+  --slate:  #5A6166;
+  --mist:   #D8D1C7;
+  --amber:  #C4873A;
+
+  --line-strong: rgba(4, 31, 37, 0.16);
+  --line-soft:   rgba(4, 31, 37, 0.09);
+
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans:  'Schibsted Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--paper);
+}
+
+img { display: block; max-width: 100%; }
+
+/* ── A4 sheet ──────────────────────────────────────────────────────────────
+   Rendered full-bleed to PDF (format A4, margin 0). The sheet supplies its
+   own generous inner padding so the warm paper bleeds to every edge.        */
+@page { size: A4; margin: 0; }
+
+.sheet {
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  padding: 19mm 18mm 15mm;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Cream surfaces are kept clean — no diffuse colour washes (they read sickly). */
+
+/* Slim teal top edge — the quiet brand signature from the OG bars. */
+.sheet > .edge {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--teal);
+  z-index: 2;
+}
+
+.sheet > * { position: relative; z-index: 1; }
+
+/* ── Masthead ──────────────────────────────────────────────────────────── */
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brandmark {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.brandmark img {
+  height: 22px;
+  width: auto;
+}
+
+.mark--ink   { filter: brightness(0) saturate(100%) opacity(0.86); }
+.mark--white { filter: brightness(0) invert(1); }
+
+.wordmark {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.masthead .meta {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+/* ── Type ──────────────────────────────────────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.title .accent { color: var(--teal); font-style: italic; }
+
+.lead {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--slate);
+  margin: 0;
+  max-width: 62ch;
+}
+
+.section-label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.55;
+  margin: 0 0 7px;
+}
+
+.subhead {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 5px;
+}
+
+p.body, .body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 11.8px;
+  line-height: 1.55;
+  color: #2c3a3e;
+  margin: 0;
+}
+
+/* ── Rules ─────────────────────────────────────────────────────────────── */
+.rule        { height: 1px; background: var(--line-strong); border: 0; margin: 0; }
+.rule--soft  { height: 1px; background: var(--line-soft);   border: 0; margin: 0; }
+
+/* ── Lists ─────────────────────────────────────────────────────────────── */
+.ticks { list-style: none; margin: 0; padding: 0; }
+.ticks li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 7px;
+  font-family: var(--font-sans);
+  font-size: 11.8px;
+  line-height: 1.45;
+  color: #2c3a3e;
+}
+.ticks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border: 1.4px solid var(--teal);
+  border-radius: 50%;
+}
+
+/* ── Use-case cards ────────────────────────────────────────────────────── */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; }
+.card {
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  padding: 13px 13px 14px;
+  background: linear-gradient(180deg, rgba(251,248,244,0.7), rgba(250,243,234,0.55));
+}
+.card .n {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--teal);
+  margin: 0 0 6px;
+}
+.card h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 13.5px;
+  line-height: 1.18;
+  color: var(--ink);
+  margin: 0 0 5px;
+}
+.card p {
+  font-family: var(--font-sans);
+  font-size: 10.8px;
+  line-height: 1.42;
+  color: var(--slate);
+  margin: 0;
+}
+
+/* ── Numbered checklist ────────────────────────────────────────────────── */
+.qlist { display: flex; flex-direction: column; gap: 14px; margin: 0; }
+.qitem { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
+.qitem .num {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--teal);
+}
+.qitem .q {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 16.5px;
+  line-height: 1.18;
+  color: var(--ink);
+  margin: 2px 0 5px;
+}
+.qitem .a {
+  font-family: var(--font-sans);
+  font-size: 11.8px;
+  line-height: 1.5;
+  color: #2c3a3e;
+  margin: 0;
+}
+
+/* ── Proof block ───────────────────────────────────────────────────────── */
+.proof { display: flex; flex-direction: column; gap: 9px; }
+.quote {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.34;
+  color: var(--ink);
+  margin: 0;
+}
+.attr {
+  font-family: var(--font-sans);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+  margin: 0;
+}
+.credentials {
+  font-family: var(--font-sans);
+  font-size: 10.8px;
+  line-height: 1.5;
+  color: var(--slate);
+  margin: 0;
+}
+.credentials strong { color: var(--ink); font-weight: 600; }
+
+/* ── CTA + footer ──────────────────────────────────────────────────────── */
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  padding: 11px 19px;
+  border-radius: 7px;
+}
+.cta-aside {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--slate);
+}
+.cta-aside b { color: var(--teal); font-weight: 600; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+}
+.footer .site { color: var(--teal); font-weight: 600; letter-spacing: 0.06em; }
+
+/* Spacing helpers */
+.stack > * + * { margin-top: var(--gap, 14px); }
+.grow { flex: 1 1 auto; }
+
+/* Vertically centre a content block between a top masthead and bottom footer.
+   Used by the shorter sector inserts so whitespace sits evenly, not as a void. */
+.center-fill { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; }

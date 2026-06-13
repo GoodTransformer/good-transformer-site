@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>LinkedIn avatar / company logo — Good Transformer</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  body { margin: 0; background: #fff; display: flex; gap: 40px; padding: 40px; }
+  .tile {
+    width: 600px; height: 600px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  /* Mark scales to fit a centred safe area — survives square AND circular crops,
+     and preserves the logo's aspect ratio whatever its source dimensions. */
+  .tile img { max-width: 60%; max-height: 60%; width: auto; height: auto; }
+
+  #teal  { background: #008C95; }
+  #ink   { background: #041F25; }
+  #paper { background: #FBF8F4; box-shadow: inset 0 0 0 5px rgba(0,140,149,.9); }
+  #paper img { filter: brightness(0); }   /* solid ink mark on cream */
+</style>
+</head>
+<body>
+  <div class="tile" id="teal"><img class="mark--white" src="../../public/logos/gt-logo.png" alt=""></div>
+  <div class="tile" id="ink"><img class="mark--white" src="../../public/logos/gt-logo.png" alt=""></div>
+  <div class="tile" id="paper"><img src="../../public/logos/gt-logo.png" alt=""></div>
+</body>
+</html>
