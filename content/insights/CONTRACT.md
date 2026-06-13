@@ -35,8 +35,9 @@ title: "Headline of the piece"            # REQUIRED
 description: "One–two sentence excerpt."    # REQUIRED: index card + meta description
 date: 2026-06-13                            # REQUIRED: YYYY-MM-DD
 updated: 2026-06-20                         # optional: YYYY-MM-DD
-# author: "Guest name"                      # optional: defaults to the brand (Good Transformer)
+# author: "Patrick Hussey"                  # only when voice: patrick
 type: post                                  # optional: "post" (default) | "asset"
+voice: brand                                # optional: "brand" (default) | "patrick"
 tags: ["ai-adoption", "leadership"]         # recommended: kebab-case topic tags
 cover: /insights/<slug>/cover.jpg           # required for posts (see §3)
 coverAlt: "Describe the cover image."        # REQUIRED whenever cover is set
@@ -57,6 +58,12 @@ assetCta: "Download the guide"              # optional: defaults to "Download"
 - If `type: asset`: `assetFile` is set, starts with `/`, and **exists** under `public/`.
 - Filename is valid kebab-case.
 - `tags` (if present) is a YAML list.
+- `voice` is `brand` or `patrick`; missing means `brand`.
+- Brand-voice posts must not use first-person singular authorial language
+  (`I`, `me`, `my`, `mine`, `myself`).
+- First-person singular is only allowed when the request explicitly asks for a
+  Patrick piece and the frontmatter sets both `voice: patrick` and
+  `author: "Patrick Hussey"`.
 
 Warnings (don't block the build): no tags, no cover on a post, very short body.
 
@@ -87,6 +94,15 @@ styled by `.insight-prose`:
 - tables
 
 The **first paragraph** is automatically emphasised as a lead. Open strong.
+
+Default voice for written posts:
+
+- Write as Good Transformer, not as Patrick personally.
+- Use `we`, `our` and `us` for the authorial voice.
+- Do not use `I`, `me` or `my` unless the brief explicitly asks for a
+  first-person Patrick article.
+- If a Patrick article is explicitly requested, set `voice: patrick` and
+  `author: "Patrick Hussey"` in frontmatter.
 
 ---
 

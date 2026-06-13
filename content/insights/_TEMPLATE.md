@@ -5,8 +5,9 @@ title: "Headline of the piece"
 description: "One or two sentences. Used as the index excerpt and the meta description."
 date: 2026-06-13            # YYYY-MM-DD
 # updated: 2026-06-20       # optional
-# author: "Guest name"     # optional. Posts default to the brand (Good Transformer)
+# author: "Patrick Hussey" # only when voice: patrick
 type: post                  # "post" | "asset"
+voice: brand                # "brand" | "patrick"
 tags: ["ai-adoption", "leadership"]
 cover: /insights/your-slug/cover.jpg
 coverAlt: "Describe the cover image for screen readers and SEO."
@@ -24,8 +25,11 @@ Say the most useful thing first.
 
 ## A section heading
 
-Write in Good Transformer's voice: clear, practical, honest, sceptical in the
-right places. Short paragraphs. Concrete examples over abstraction.
+Write in Good Transformer's brand voice: use we, our and us for the authorial
+voice. Do not use I, me or my unless the brief explicitly asks for a
+first-person Patrick article, in which case set `voice: patrick` and
+`author: "Patrick Hussey"`. Keep the tone clear, practical, honest and
+sceptical in the right places.
 
 > A pull-quote earns its place when it sharpens the argument.
 

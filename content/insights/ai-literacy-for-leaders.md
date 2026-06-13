@@ -11,7 +11,7 @@ featured: false
 draft: false
 ---
 
-Most leaders I talk to can name more AI tools than they can use well. They have heard of ChatGPT, Claude, Gemini and Copilot, sat through a demo or two, and downloaded something a colleague recommended. What they often lack is the thing underneath all of that: a steady way to judge what these systems are for, where they help, and who is answerable when they get it wrong.
+Most leaders we talk to can name more AI tools than they can use well. They have heard of ChatGPT, Claude, Gemini and Copilot, sat through a demo or two, and downloaded something a colleague recommended. What they often lack is the thing underneath all of that: a steady way to judge what these systems are for, where they help, and who is answerable when they get it wrong.
 
 This matters because the tools are a moving target. In 2024, US-based institutions alone released forty notable AI models, and close to ninety per cent of significant models that year came from industry rather than universities, according to Stanford's [2025 AI Index Report](https://hai.stanford.edu/ai-index/2025-ai-index-report). Whatever you learn about a specific product this quarter, a meaningful part of it will be out of date by the next. Build your understanding on product knowledge and you have built it on sand.
 
@@ -25,7 +25,7 @@ The commercial pressure points the same way. The government's [AI Opportunities 
 
 ## The five parts of leadership AI literacy
 
-Here is the framework I use with leaders. It has five parts, and none of them depend on which tool is currently fashionable.
+Here is the framework we use with leaders. It has five parts, and none of them depend on which tool is currently fashionable.
 
 **Capability. What can the technology actually do?** Not what a launch video promises, but what the class of system reliably does and where it tends to fail. Today's large language models are strong at drafting, summarising, restructuring and explaining, and weak at anything requiring verified facts they were not given, current information, or arithmetic they were not walked through. A literate leader holds a rough, updatable map of strengths and failure modes, and treats confident-sounding output as a draft rather than an answer.
 
@@ -51,11 +51,11 @@ Pick one task you do regularly and do it twice, once as usual and once with an A
 
 ## The tool
 
-To make this concrete, I have built a short diagnostic: the **AI Leadership Literacy Self-Assessment**. It scores you across all five parts, capability, application, evaluation, accountability and adaptation, and gives you a plain reading of whether you are at an early, developing or confident stage, plus where your weakest area is. It takes about ten minutes and needs nothing but a pen.
+To make this concrete, we have built a short diagnostic: the **AI Leadership Literacy Self-Assessment**. It scores you across all five parts, capability, application, evaluation, accountability and adaptation, and gives you a plain reading of whether you are at an early, developing or confident stage, plus where your weakest area is. It takes about ten minutes and needs nothing but a pen.
 
 [Download the AI Leadership Literacy Self-Assessment (PDF)](/insights/assets/ai-leadership-literacy-self-assessment.pdf)
 
-If you would rather build this judgement on your own real work, that is exactly what my [AI lessons for leaders](/services/ai-lessons-for-leaders) are for: one-to-one, shaped around the decisions and tasks already on your desk. And if your instinct is that the answer is "use what we have, better," before another tool, the companion checklist on [five questions before another AI tool](/insights/five-questions-before-another-ai-tool/) is a good next read.
+If you would rather build this judgement on your own real work, that is exactly what our [AI lessons for leaders](/services/ai-lessons-for-leaders) are for: one-to-one, shaped around the decisions and tasks already on your desk. And if your instinct is that the answer is "use what we have, better," before another tool, the companion checklist on [five questions before another AI tool](/insights/five-questions-before-another-ai-tool/) is a good next read.
 
 ## Sources and further reading
 

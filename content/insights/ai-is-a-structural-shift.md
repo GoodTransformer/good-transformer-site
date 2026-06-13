@@ -18,7 +18,7 @@ That distinction matters because it changes what good adoption looks like.
 
 If AI is a productivity tool, success is measured in time saved. You roll out a licence, run a training session, and watch for hours clawed back. It's clean, it's reportable, and it tops out fast, because you've only optimised the tasks you already had, in the order you already did them.
 
-The leaders getting real value are asking a different question. Not "how do I do this faster?" but "should I be doing this the same way at all?" Research that used to take a day now takes twenty minutes, so the question becomes what you do with the other seven hours, and which decisions you can now afford to investigate that you previously waved through.
+The leaders getting real value are asking a different question. Not "how do we do this faster?" but "should we be doing this the same way at all?" Research that used to take a day now takes twenty minutes, so the question becomes what you do with the other seven hours, and which decisions you can now afford to investigate that you previously waved through.
 
 > The point of automation is rarely the thing automated. It's what the freed capacity makes possible.
 

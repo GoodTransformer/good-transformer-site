@@ -77,8 +77,8 @@ const frontmatter = flags.asset
 title: "${title}"
 description: "One or two sentences describing the asset and who it is for."
 date: ${date}
-author: "Patrick Hussey"
 type: asset
+voice: brand
 tags: ${yamlTags}
 assetFile: /insights/assets/${slug}.pdf
 assetFormat: "PDF · TODO pages"
@@ -93,8 +93,8 @@ to publish once the asset PDF is in public/insights/assets/${slug}.pdf.
 title: "${title}"
 description: "One or two sentences that work as both the index excerpt and the meta description."
 date: ${date}
-author: "Patrick Hussey"
 type: post
+voice: brand
 tags: ${yamlTags}
 cover: /insights/${slug}/cover.jpg
 coverAlt: "Describe the cover image for screen readers and SEO."
@@ -106,8 +106,10 @@ Open with a strong lead paragraph. This one is set larger automatically.
 
 ## A section heading
 
-Write in Good Transformer's voice: clear, practical, sceptical in the right
-places. Set \`draft: false\` and add public/insights/${slug}/cover.jpg to publish.
+Write in Good Transformer's brand voice: use we, our and us for the authorial
+voice. Do not use I, me or my unless the brief explicitly asks for a first-person
+Patrick piece, in which case set \`voice: patrick\` and \`author: "Patrick Hussey"\`.
+Set \`draft: false\` and add public/insights/${slug}/cover.jpg to publish.
 `
 
 writeFileSync(mdPath, frontmatter)

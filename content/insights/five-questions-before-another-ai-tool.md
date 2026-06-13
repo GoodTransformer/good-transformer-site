@@ -10,7 +10,7 @@ featured: false
 draft: false
 ---
 
-Every team I work with has more AI tools than it can name. Some arrived through a considered decision. Most arrived because someone saw a demo, a competitor mentioned it, or a free trial quietly converted into a line item. The result is a stack nobody fully understands and a budget nobody can defend.
+Every team we work with has more AI tools than it can name. Some arrived through a considered decision. Most arrived because someone saw a demo, a competitor mentioned it, or a free trial quietly converted into a line item. The result is a stack nobody fully understands and a budget nobody can defend.
 
 Before the next one goes in, five questions are usually enough to tell a real need from a reflex.
 

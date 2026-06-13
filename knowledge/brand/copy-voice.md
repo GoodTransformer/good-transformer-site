@@ -99,6 +99,15 @@ Patrick's voice in first person:
 - Not boosterish: "We are at the beginning of a turbulent transition"
 - Values-led: ethics, democratic guardrails, people who matter
 
+## Insights / blog posts
+
+Insights default to Good Transformer's brand voice:
+- Use **we**, **our** and **us** for the authorial voice.
+- Do not use **I**, **me** or **my** in posts unless the brief explicitly asks
+  for a first-person Patrick article.
+- First-person Patrick articles must set `voice: patrick` and
+  `author: "Patrick Hussey"` in frontmatter.
+
 ---
 
 ## What Good Transformer is not

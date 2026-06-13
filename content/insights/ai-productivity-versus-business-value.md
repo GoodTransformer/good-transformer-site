@@ -53,7 +53,7 @@ Take one place where AI is already saving time and trace it up the four rungs. D
 
 ## The tool
 
-To make that trace concrete, I have built the **AI Value Conversion Worksheet**: it walks a claimed time saving up the four levels, asks the two questions that decide whether it becomes value, what happens to the freed time and how the outcome will be measured, and leaves you with a defensible answer rather than a hopeful one.
+To make that trace concrete, we have built the **AI Value Conversion Worksheet**: it walks a claimed time saving up the four levels, asks the two questions that decide whether it becomes value, what happens to the freed time and how the outcome will be measured, and leaves you with a defensible answer rather than a hopeful one.
 
 [Download the AI Value Conversion Worksheet (PDF)](/insights/assets/ai-value-conversion-worksheet.pdf)
 

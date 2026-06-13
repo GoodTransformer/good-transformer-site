@@ -11,7 +11,7 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 
-import type { PostMeta, PostType, TagCount } from "./insights-shared";
+import type { PostMeta, PostType, PostVoice, TagCount } from "./insights-shared";
 
 export type { PostMeta, PostType, TagCount } from "./insights-shared";
 export { formatDate, formatTag } from "./insights-shared";
@@ -73,6 +73,7 @@ function readRaw(slug: string) {
 function buildMeta(slug: string, data: Record<string, unknown>, content: string): PostMeta {
   const stats = readingTime(content);
   const type: PostType = data.type === "asset" ? "asset" : "post";
+  const voice: PostVoice = data.voice === "patrick" ? "patrick" : "brand";
 
   return {
     slug,
@@ -81,6 +82,7 @@ function buildMeta(slug: string, data: Record<string, unknown>, content: string)
     date: toIsoDate(data.date),
     updated: data.updated ? toIsoDate(data.updated) : undefined,
     author: String(data.author ?? DEFAULT_AUTHOR),
+    voice,
     type,
     tags: toTags(data.tags),
     cover: data.cover ? String(data.cover) : undefined,

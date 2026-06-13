@@ -67,14 +67,6 @@ export function SiteHeader() {
                     </Link>
                     <div className="pointer-events-none absolute left-1/2 top-full w-72 -translate-x-1/2 pt-3 opacity-0 transition duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
                       <div className="border border-ink/10 bg-paper p-3 shadow-[0_18px_42px_rgba(4,31,37,0.12)]">
-                        <Link
-                          href={item.href}
-                          className="block border-b border-line/10 px-3 py-3 text-sm text-ink transition-colors hover:text-brass"
-                          data-analytics-event="nav_services_overview"
-                          data-analytics-label={item.label}
-                        >
-                          All services
-                        </Link>
                         {item.children.map((child) => (
                           <Link
                             key={child.href}

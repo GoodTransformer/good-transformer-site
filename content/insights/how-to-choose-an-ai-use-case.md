@@ -25,7 +25,7 @@ The frequency of the task matters too. In a separate study of 5,179 customer-sup
 
 ## The VALUE test
 
-When a leader asks me how to choose, I run candidate tasks through five questions. The first letters spell VALUE, which is the point: you are looking for the use case that converts effort into worth, not the one that converts budget into a press release.
+When a leader asks us how to choose, we run candidate tasks through five questions. The first letters spell VALUE, which is the point: you are looking for the use case that converts effort into worth, not the one that converts budget into a press release.
 
 **Value.** If this works, what is it actually worth? Be concrete: hours returned to fee-earning work, faster turnaround a client would notice, errors avoided. If you cannot describe the prize in a sentence, it is not your first project.
 
@@ -57,11 +57,11 @@ List up to five candidate tasks, drawn from work your team actually does rather 
 
 ## The tool
 
-To make that comparison properly, I have built the **AI Use-Case VALUE Scorecard**: a worksheet that scores up to five candidate use cases across all five criteria, with guidance on what each score means, warning thresholds that flag a brittle choice, and a short recommendation section to capture the decision.
+To make that comparison properly, we have built the **AI Use-Case VALUE Scorecard**: a worksheet that scores up to five candidate use cases across all five criteria, with guidance on what each score means, warning thresholds that flag a brittle choice, and a short recommendation section to capture the decision.
 
 [Download the AI Use-Case VALUE Scorecard (PDF)](/insights/assets/ai-use-case-value-scorecard.pdf)
 
-Choosing well is also the heart of an [AI Reality Check, the short engagement I run with teams](/services/ai-advisory-for-teams): sorting the candidate use cases, scoring them honestly, and leaving you with a defensible order to work through. It builds naturally on [knowing what to hand to AI in the first place](/insights/assistant-automation-or-ai-agent/), and on the [durable AI literacy](/insights/ai-literacy-for-leaders/) that lets a leader judge these calls without waiting for a demo.
+Choosing well is also the heart of an [AI Reality Check, the short engagement we run with teams](/services/ai-advisory-for-teams): sorting the candidate use cases, scoring them honestly, and leaving you with a defensible order to work through. It builds naturally on [knowing what to hand to AI in the first place](/insights/assistant-automation-or-ai-agent/), and on the [durable AI literacy](/insights/ai-literacy-for-leaders/) that lets a leader judge these calls without waiting for a demo.
 
 ## Sources and further reading
 

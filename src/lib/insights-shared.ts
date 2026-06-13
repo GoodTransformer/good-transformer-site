@@ -7,6 +7,7 @@
  */
 
 export type PostType = "post" | "asset";
+export type PostVoice = "brand" | "patrick";
 
 export type PostMeta = {
   slug: string;
@@ -15,6 +16,7 @@ export type PostMeta = {
   date: string; // ISO date string
   updated?: string;
   author: string;
+  voice: PostVoice;
   type: PostType;
   tags: string[];
   cover?: string;

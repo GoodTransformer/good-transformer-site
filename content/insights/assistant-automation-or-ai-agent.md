@@ -19,7 +19,7 @@ It helps to know that even the people building these systems argue for restraint
 
 ## Four levels of AI delegation
 
-I find it clearer to think in four levels rather than three product categories. Each hands over a little more, and each should be earned, not assumed.
+We find it clearer to think in four levels rather than three product categories. Each hands over a little more, and each should be earned, not assumed.
 
 **Answer.** You ask, the model responds, you decide what to do with it. A one-off question, a draft, a summary, an explanation. You are fully in control and nothing happens in the world without you. This is where most useful AI use actually lives, and it is badly underrated because it is not impressive.
 
@@ -29,7 +29,7 @@ I find it clearer to think in four levels rather than three product categories. 
 
 **Act.** Only at this level do you have an agent in the strong sense: a system that, in Anthropic's words, "dynamically directs its own processes and tool usage," deciding the steps itself and taking actions that land in the real world. It might message a candidate, move money, change a record, or reply to a customer on its own initiative. This is genuinely powerful and genuinely the most demanding to govern, because you are delegating not just the work but the judgement about how to do it.
 
-The mistake I see most often is treating these as a ladder you are supposed to climb, with "Act" as the prize. It is not. The goal is the lowest level that does the job well.
+The mistake we see most often is treating these as a ladder you are supposed to climb, with "Act" as the prize. It is not. The goal is the lowest level that does the job well.
 
 > Act is not the goal. The lowest level that does the job is.
 
@@ -61,11 +61,11 @@ Take your most tempting AI idea and name the level it honestly needs, not the le
 
 ## The tool
 
-To make that call in the room, I have built the **AI Delegation Decision Tree**: a single page that walks a task from "Answer" to "Act" through the five tests, so a leader can decide in minutes whether something needs a prompt, a reusable assistant, a fixed automation or a genuine agent, and what oversight each demands.
+To make that call in the room, we have built the **AI Delegation Decision Tree**: a single page that walks a task from "Answer" to "Act" through the five tests, so a leader can decide in minutes whether something needs a prompt, a reusable assistant, a fixed automation or a genuine agent, and what oversight each demands.
 
 [Download the AI Delegation Decision Tree (PDF)](/insights/assets/ai-delegation-decision-tree.pdf)
 
-If you are weighing several of these decisions at once across a team, that is the work of an [AI Reality Check and the advisory I do with teams](/services/ai-advisory-for-teams): sorting where AI genuinely pays off from where it merely sounds good. It also pairs naturally with [AI literacy for leaders](/insights/ai-literacy-for-leaders/), since judging the level is itself a literacy skill, and with the lesson behind [why so many AI pilots never scale](/insights/why-your-ai-pilot-didnt-scale/).
+If you are weighing several of these decisions at once across a team, that is the work of an [AI Reality Check and our advisory work with teams](/services/ai-advisory-for-teams): sorting where AI genuinely pays off from where it merely sounds good. It also pairs naturally with [AI literacy for leaders](/insights/ai-literacy-for-leaders/), since judging the level is itself a literacy skill, and with the lesson behind [why so many AI pilots never scale](/insights/why-your-ai-pilot-didnt-scale/).
 
 ## Sources and further reading
 

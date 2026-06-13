@@ -24,6 +24,8 @@ const PUBLIC_DIR = join(ROOT, 'public')
 
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/
+const PATRICK_AUTHOR = 'Patrick Hussey'
+const FIRST_PERSON_SINGULAR_RE = /\b(?:I|i|I['’](?:m|ll|ve|d)|i['’](?:m|ll|ve|d)|me|my|mine|myself)\b/g
 
 // Docs that live alongside the content but are not posts.
 const IGNORED_FILES = new Set(['CONTRACT.md', 'README.md'])
@@ -42,6 +44,35 @@ function warn(slug, message) {
 /** Resolve a root-relative public path ("/insights/x/cover.jpg") to disk. */
 function publicPath(ref) {
   return join(PUBLIC_DIR, ref.replace(/^\//, ''))
+}
+
+function stripInlineMarkdownNoise(line) {
+  return line
+    .replace(/`[^`]*`/g, ' ')
+    .replace(/\]\([^)]+\)/g, ']')
+}
+
+function findFirstPersonSingular(content) {
+  const matches = []
+  let inFence = false
+
+  content.split('\n').forEach((rawLine, index) => {
+    const trimmed = rawLine.trim()
+    if (trimmed.startsWith('```')) {
+      inFence = !inFence
+      return
+    }
+    if (inFence) return
+
+    const line = stripInlineMarkdownNoise(rawLine)
+    FIRST_PERSON_SINGULAR_RE.lastIndex = 0
+    if (!FIRST_PERSON_SINGULAR_RE.test(line)) return
+
+    const snippet = line.trim().replace(/\s+/g, ' ').slice(0, 120)
+    matches.push(`line ${index + 1}: "${snippet}"`)
+  })
+
+  return matches
 }
 
 let files = []
@@ -101,6 +132,19 @@ for (const file of files) {
     fail(slug, `type must be "post" or "asset" (got "${type}")`)
   }
 
+  const voice = data.voice ?? 'brand'
+  if (voice !== 'brand' && voice !== 'patrick') {
+    fail(slug, `voice must be "brand" or "patrick" (got "${voice}")`)
+  }
+
+  const author = data.author ? String(data.author).trim() : ''
+  if (type === 'post' && voice === 'patrick' && author !== PATRICK_AUTHOR) {
+    fail(slug, 'voice: patrick requires author: "Patrick Hussey"')
+  }
+  if (type === 'post' && voice !== 'patrick' && author === PATRICK_AUTHOR) {
+    fail(slug, 'author: "Patrick Hussey" is only allowed when voice: patrick is explicitly set')
+  }
+
   // Cover image.
   if (data.cover) {
     if (!String(data.cover).startsWith('/')) {
@@ -129,6 +173,19 @@ for (const file of files) {
   // Body present (skip for assets, which may be download-only).
   if (type === 'post' && content.trim().length < 80) {
     warn(slug, 'body is very short (< 80 chars)')
+  }
+
+  // Editorial voice.
+  if (type === 'post' && voice !== 'patrick') {
+    const firstPersonMatches = findFirstPersonSingular(content)
+    if (firstPersonMatches.length > 0) {
+      fail(
+        slug,
+        `brand-voice posts must use Good Transformer we/our/us, not first-person singular (${firstPersonMatches
+          .slice(0, 3)
+          .join('; ')})`,
+      )
+    }
   }
 }
 

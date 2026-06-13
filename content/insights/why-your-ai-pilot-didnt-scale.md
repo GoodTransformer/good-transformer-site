@@ -12,7 +12,7 @@ draft: false
 
 The pilot worked. That's what makes this frustrating. A small group tried AI on a real workflow, the results were good, everyone was encouraged. And then, somehow, nothing changed at scale. Six months later the wider team works exactly as it did before, and the pilot is a slide in an old deck.
 
-This is the single most common pattern I see. It almost never means the technology failed. It means the pilot proved the wrong thing.
+This is the single most common pattern we see. It almost never means the technology failed. It means the pilot proved the wrong thing.
 
 ## A pilot proves feasibility. Scaling needs something else.
 

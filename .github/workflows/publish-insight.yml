@@ -62,6 +62,9 @@ jobs:
       #   • content/insights/<slug>.md   (frontmatter per CONTRACT.md, draft: false)
       #   • public/insights/<slug>/cover.jpg   (~1600×900) for a written post
       #     (or public/insights/assets/<file> for an asset)
+      #   • brand voice by default: use we/our/us as Good Transformer
+      #     unless the source brief explicitly requests voice: patrick and
+      #     author: "Patrick Hussey"
       #
       # The generator receives the topic via:
       #   ${{ github.event.inputs.topic }}            (manual run)

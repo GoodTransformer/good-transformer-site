@@ -60,6 +60,10 @@ export default async function InsightPostPage({
   const { meta, html } = post;
   const related = getRelatedPosts(meta.slug, meta.tags);
   const url = `${SITE_URL}/insights/${meta.slug}/`;
+  const authorJsonLd =
+    meta.voice === "patrick"
+      ? { "@type": "Person", name: meta.author, url: `${SITE_URL}/patrick/` }
+      : { "@type": "Organization", name: meta.author, url: SITE_URL };
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -72,7 +76,7 @@ export default async function InsightPostPage({
     image: meta.cover ? absoluteUrl(meta.cover) : OG_IMAGE,
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    author: { "@type": "Organization", name: meta.author, url: SITE_URL },
+    author: authorJsonLd,
     publisher: {
       "@type": "Organization",
       name: seoContent.siteName,
