@@ -10,6 +10,7 @@
     "generate:assets": "node scripts/generate-assets.mjs",
     "generate:collateral": "node scripts/generate-collateral.mjs",
     "generate:insight-covers": "node scripts/generate-insight-covers.mjs",
+    "generate:insight-assets": "node scripts/generate-insight-assets.mjs",
     "generate:ai-news": "node scripts/generate-ai-news.mjs",
     "new:insight": "node scripts/new-insight.mjs",
     "validate:insights": "node scripts/validate-insights.mjs",

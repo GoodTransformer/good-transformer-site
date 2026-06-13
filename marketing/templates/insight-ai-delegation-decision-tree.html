@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>The AI Delegation Decision Tree</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  .hero { margin-top: 13px; }
+  .hero .title { margin-top: 7px; }
+  .hero .lead { margin-top: 9px; }
+
+  .tree { margin-top: 16px; }
+  .node {
+    font-family: var(--font-sans); border-radius: 9px; padding: 9px 13px;
+    font-size: 11.4px; line-height: 1.32; color: var(--ink);
+  }
+  .start {
+    background: var(--ink); color: var(--paper); font-weight: 600;
+    text-align: center; max-width: 320px; margin: 0 auto;
+  }
+  .q {
+    border: 1.4px solid var(--teal); background: rgba(0,140,149,0.05);
+    text-align: center; font-weight: 600;
+  }
+  .conn { width: 1.6px; height: 13px; background: var(--mist); margin: 0 auto; }
+
+  .branch { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 0; }
+  .col { display: flex; flex-direction: column; align-items: stretch; }
+  .blabel {
+    font-family: var(--font-sans); font-weight: 700; font-size: 9px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--slate); text-align: center; margin: 9px 0 5px;
+  }
+  .blabel b { color: var(--teal); }
+
+  .outs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 11px; }
+  .out {
+    border: 1px solid var(--line-soft); border-radius: 10px; padding: 11px 12px;
+    background: linear-gradient(180deg, rgba(251,248,244,0.7), rgba(250,243,234,0.5));
+  }
+  .out .lv { font-family: var(--font-serif); font-style: italic; font-size: 16px; color: var(--teal); margin: 0 0 4px; }
+  .out p { font-family: var(--font-sans); font-size: 10.4px; line-height: 1.4; color: var(--slate); margin: 0; }
+  .out .yn { font-family: var(--font-sans); font-weight: 700; font-size: 8.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); opacity: 0.5; }
+
+  .grid {
+    margin-top: 8px; display: grid; grid-template-columns: 1.15fr repeat(4, 1fr);
+    border: 1px solid var(--line-soft); border-radius: 10px; overflow: hidden;
+  }
+  .grid > div {
+    padding: 7px 9px; font-family: var(--font-sans); font-size: 9.8px; line-height: 1.28;
+    border-top: 1px solid var(--line-soft); border-left: 1px solid var(--line-soft); color: #2c3a3e;
+  }
+  .grid > div:nth-child(-n+5) { border-top: 0; }
+  .grid > div:nth-child(5n+1) { border-left: 0; }
+  .grid .h { font-weight: 700; color: var(--ink); background: rgba(4,31,37,0.03); }
+  .grid .rh { font-weight: 600; color: var(--ink); }
+  .grid .hi { color: var(--moss); font-weight: 600; }
+
+  .rulebox {
+    margin-top: 13px; border: 1.4px solid var(--teal); border-radius: 10px; padding: 11px 14px;
+    background: rgba(0,140,149,0.05);
+  }
+  .rulebox .k { font-family: var(--font-sans); font-weight: 700; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); }
+  .rulebox p { font-family: var(--font-sans); font-size: 11px; line-height: 1.5; color: #2c3a3e; margin: 5px 0 0; }
+  .rulebox b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <span class="edge"></span>
+
+    <header class="masthead">
+      <div class="brandmark">
+        <img class="mark--ink" src="../../public/logos/gt-logo.png" alt="">
+        <span class="wordmark">Good Transformer</span>
+      </div>
+      <span class="meta">A leader&rsquo;s decision tool</span>
+    </header>
+
+    <div class="rule" style="margin-top:13px"></div>
+
+    <section class="hero">
+      <p class="eyebrow">Decision tool &middot; One page</p>
+      <h1 class="title">The AI Delegation <span class="accent">Decision Tree</span></h1>
+      <p class="lead">Before you decide a task needs an &ldquo;agent,&rdquo; find the lowest level that does the job.
+        Start at the top, follow the answers, and check the result against the five tests below.</p>
+    </section>
+
+    <section class="tree">
+      <div class="node start">A task you are thinking of handing to AI</div>
+      <div class="conn"></div>
+      <div class="node q">Will it act on its own, without a person triggering each run?</div>
+
+      <div class="branch">
+        <div class="col">
+          <p class="blabel"><b>No</b> &middot; a person stays in the loop</p>
+          <div class="node q">Do you reuse it for a recurring task?</div>
+          <div class="outs">
+            <div class="out"><span class="yn">No</span><p class="lv">Answer</p><p>A one-off question, draft or summary. You decide what happens next.</p></div>
+            <div class="out"><span class="yn">Yes</span><p class="lv">Assist</p><p>A reusable assistant with standing instructions. You still drive.</p></div>
+          </div>
+        </div>
+
+        <div class="col">
+          <p class="blabel"><b>Yes</b> &middot; it runs without you</p>
+          <div class="node q">Does it follow a fixed path you designed in advance?</div>
+          <div class="outs">
+            <div class="out"><span class="yn">Yes</span><p class="lv">Automate</p><p>A predefined workflow. Predictable inputs, route and outputs.</p></div>
+            <div class="out"><span class="yn">No</span><p class="lv">Act</p><p>An agent that decides its own steps. The most powerful, the most to govern.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="section-label" style="margin-top:16px">Check your answer against the five tests</p>
+    <div class="grid">
+      <div class="h"></div><div class="h">Answer</div><div class="h">Assist</div><div class="h">Automate</div><div class="h">Act</div>
+
+      <div class="rh">Autonomy</div><div>None</div><div>Low</div><div>Medium</div><div class="hi">High</div>
+      <div class="rh">Access (what it can touch)</div><div>Read only</div><div>Read only</div><div>Read / write</div><div class="hi">Can act</div>
+      <div class="rh">Reversibility</div><div>Full</div><div>Full</div><div>Mostly</div><div class="hi">Often low</div>
+      <div class="rh">Risk of a confident error</div><div>Low</div><div>Low</div><div>Medium</div><div class="hi">High</div>
+      <div class="rh">Human approval</div><div>Inherent</div><div>Inherent</div><div>Design a checkpoint</div><div class="hi">Required by design</div>
+    </div>
+
+    <div class="rulebox">
+      <span class="k">Always require explicit human approval when</span>
+      <p>the action is <b>hard to reverse</b>, the <b>consequence of an error is high</b>, or the decision has a
+        <b>legal or similarly significant effect</b> on a person (a job offer, a loan, a contract). Under UK GDPR
+        Article 22, that human involvement must be active, not a rubber stamp.</p>
+    </div>
+
+    <div class="grow"></div>
+
+    <div class="rule--soft" style="margin:12px 0 11px"></div>
+    <div class="cta-row">
+      <span class="cta">Book an AI Reality Check</span>
+      <span class="cta-aside">goodtransformer.ai/services/ai-advisory-for-teams &nbsp;&middot;&nbsp; <b>hello@goodtransformer.ai</b></span>
+    </div>
+
+    <div class="rule--soft" style="margin:13px 0 9px"></div>
+    <footer class="footer">
+      <span>Good Transformer &middot; v1.0, June 2026 &middot; A guide, not legal advice; AI tools and rules change quickly</span>
+      <span class="site">goodtransformer.ai</span>
+    </footer>
+  </div>
+</body>
+</html>
