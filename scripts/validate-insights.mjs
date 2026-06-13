@@ -50,12 +50,12 @@ try {
     (f) => f.endsWith('.md') && !f.startsWith('_') && !IGNORED_FILES.has(f),
   )
 } catch {
-  console.log('No content/insights directory found — nothing to validate.')
+  console.log('No content/insights directory found. Nothing to validate.')
   process.exit(0)
 }
 
 if (files.length === 0) {
-  console.log('No Insights posts found yet — nothing to validate.')
+  console.log('No Insights posts found yet. Nothing to validate.')
   process.exit(0)
 }
 
@@ -93,7 +93,7 @@ for (const file of files) {
   if (data.tags !== undefined && !Array.isArray(data.tags)) {
     fail(slug, 'tags must be a YAML list, e.g. ["ai-adoption", "leadership"]')
   } else if (!data.tags || data.tags.length === 0) {
-    warn(slug, 'no tags — the post will not appear under any topic filter')
+    warn(slug, 'no tags: the post will not appear under any topic filter')
   }
 
   const type = data.type ?? 'post'
@@ -112,7 +112,7 @@ for (const file of files) {
       fail(slug, 'coverAlt is required when a cover image is set (accessibility + SEO)')
     }
   } else if (type === 'post') {
-    warn(slug, 'no cover image — the card will render text-only')
+    warn(slug, 'no cover image: the card will render text-only')
   }
 
   // Asset payload.
@@ -144,4 +144,4 @@ if (errors.length > 0) {
   process.exit(1)
 }
 
-console.log(`\n✓ Insights validation passed — ${files.length} entr${files.length > 1 ? 'ies' : 'y'} OK.`)
+console.log(`\n✓ Insights validation passed: ${files.length} entr${files.length > 1 ? 'ies' : 'y'} OK.`)

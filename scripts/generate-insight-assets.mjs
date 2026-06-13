@@ -27,7 +27,7 @@ const ROOT = join(__dir, '..')
 const TPL = join(ROOT, 'marketing', 'templates')
 const OUT = join(ROOT, 'public', 'insights', 'assets')
 
-// [template filename, output slug] — slug must match the article's assetFile / link.
+// [template filename, output slug]: slug must match the article's assetFile / link.
 const ASSETS = [
   ['insight-ai-leadership-literacy-self-assessment.html', 'ai-leadership-literacy-self-assessment'],
   ['insight-ai-delegation-decision-tree.html', 'ai-delegation-decision-tree'],

@@ -1,5 +1,5 @@
 /**
- * Good Transformer — newsletter subscribe Worker (Cloudflare).
+ * Good Transformer: newsletter subscribe Worker (Cloudflare).
  *
  * Receives the signup POST from the static site and creates a Resend contact
  * subscribed to the chosen Topic (daily or weekly), and adds them to the
@@ -79,7 +79,7 @@ const handler = {
       body: JSON.stringify(body),
     })
 
-    // 201 on create; a duplicate (409) is fine — treat as success.
+    // 201 on create; a duplicate (409) is fine, treat as success.
     if (!res.ok && res.status !== 409) {
       const detail = await res.text()
       return json({ error: 'Subscribe failed', detail }, 502, headers)

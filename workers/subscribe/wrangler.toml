@@ -15,5 +15,5 @@ TOPIC_DAILY_ID = "9034d02c-63ce-40e0-9f2b-a6e7dddcb421"
 TOPIC_WEEKLY_ID = "bab99185-9d93-4934-933e-a564d8cfa71a"
 SEGMENT_ID = "3c41bcc6-4550-4a22-8367-2ab15cab6041"
 
-# RESEND_API_KEY is a SECRET — do not put it here. Set it with:
+# RESEND_API_KEY is a SECRET. Do not put it here. Set it with:
 #   npx wrangler secret put RESEND_API_KEY

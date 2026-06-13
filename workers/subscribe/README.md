@@ -3,7 +3,7 @@
 A tiny Cloudflare Worker that receives the newsletter signup from the site and
 creates a **Resend contact** subscribed to the chosen **Topic** (daily or weekly)
 and added to the "all subscribers" **Segment**. It exists so the Resend API key
-stays server-side — the static site can't hold it safely.
+stays server-side: the static site can't hold it safely.
 
 Free on Cloudflare's Workers free plan (100k requests/day).
 

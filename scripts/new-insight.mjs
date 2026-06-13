@@ -4,7 +4,7 @@
  *
  * Scaffolds a new Insights entry that satisfies the publishing contract
  * (content/insights/CONTRACT.md). This is the same shape the automation
- * pipeline (Cowork / Codex / another generator) should produce — use it by
+ * pipeline (Cowork / Codex / another generator) should produce. Use it by
  * hand, or as the reference for the generated output.
  *
  *   node scripts/new-insight.mjs "Your Headline Here"

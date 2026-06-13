@@ -6,14 +6,14 @@
  * `cover:` in frontmatter but don't yet have the file on disk. Covers are
  * full-bleed dark-teal editorial art (house rule: teal is crisp/structural, and
  * dark treatments are the right call for full-bleed art): a seeded "attention"
- * node-graph motif — a quiet nod to the Transformer the brand is named for —
+ * node-graph motif, a quiet nod to the Transformer the brand is named for,
  * with the topic eyebrow and wordmark. The title is deliberately NOT drawn, so
  * the cover never duplicates the headline shown beside it.
  *
  *   node scripts/generate-insight-covers.mjs           # fill any missing covers
  *   node scripts/generate-insight-covers.mjs --force    # regenerate all
  *
- * Real cover art (e.g. from the automation generator) always wins — this only
+ * Real cover art (e.g. from the automation generator) always wins. This only
  * fills gaps. Generated files are committed to the repo.
  */
 
@@ -52,7 +52,7 @@ function formatTag(tag) {
   return tag.replace(/-/g, ' ').replace(/\bai\b/gi, 'AI').replace(/^./, (c) => c.toUpperCase())
 }
 
-/** First Markdown blockquote in the body, cleaned up — the article's pull-quote. */
+/** First Markdown blockquote in the body, cleaned up: the article's pull-quote. */
 function firstQuote(content) {
   const lines = content.split('\n')
   const collected = []
@@ -70,7 +70,7 @@ function firstQuote(content) {
     .replace(/[*_`]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
-  // Prefer the first complete sentence — punchier, and never ends mid-thought.
+  // Prefer the first complete sentence: punchier, and never ends mid-thought.
   const sentence = quote.match(/^[^.!?]*[.!?]/)
   if (sentence) {
     const first = sentence[0].trim()
@@ -178,12 +178,12 @@ function buildSvg({ eyebrow, seed, quote }) {
   // ~1.5x the body (brand rule: modest and paired, never a lone oversized
   // float) and are dropped DOWN into each line's cap band: a curly quote glyph
   // sits high in the em, so pinning it to the text baseline leaves it hovering
-  // above the line — markDrop seats it against the words instead. The opening
+  // above the line. markDrop seats it against the words instead. The opening
   // mark hangs a fixed gap left of the column (text-anchor end, so the gap is
   // glyph-independent); the closing mark trails the final word with the same
   // drop so the pair reads symmetric.
   // NB: covers render in the Georgia fallback (no Newsreader on the box), so
-  // the 0.35 drop fraction is tuned for Georgia — re-check it if Newsreader is
+  // the 0.35 drop fraction is tuned for Georgia: re-check it if Newsreader is
   // ever bundled.
   let quoteSvg = ''
   if (quote) {
@@ -249,7 +249,7 @@ let files = []
 try {
   files = readdirSync(CONTENT_DIR).filter((f) => f.endsWith('.md') && !f.startsWith('_'))
 } catch {
-  console.log('No content/insights directory — nothing to do.')
+  console.log('No content/insights directory. Nothing to do.')
   process.exit(0)
 }
 

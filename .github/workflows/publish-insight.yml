@@ -15,7 +15,7 @@ name: Publish Insight (PLACEHOLDER)
 #   • Manual run (workflow_dispatch) with an optional topic
 #   • External trigger (repository_dispatch, event type "new-insight"),
 #     e.g. POST from the generator service
-#   • Daily schedule — commented out until the generator is wired
+#   • Daily schedule: commented out until the generator is wired
 # ─────────────────────────────────────────────────────────────────────────────
 
 on:
@@ -32,7 +32,7 @@ on:
   repository_dispatch:
     types: [new-insight]
   # schedule:
-  #   - cron: "0 7 * * *"   # 07:00 UTC daily — enable once the generator is wired
+  #   - cron: "0 7 * * *"   # 07:00 UTC daily, enable once the generator is wired
 
 permissions:
   contents: write

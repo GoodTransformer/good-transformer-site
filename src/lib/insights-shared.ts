@@ -33,7 +33,7 @@ export type TagCount = {
   count: number;
 };
 
-/** "13 June 2026" — matches the site's en-GB voice. */
+/** "13 June 2026": matches the site's en-GB voice. */
 export function formatDate(iso: string): string {
   if (!iso) return "";
   const date = new Date(`${iso}T00:00:00Z`);

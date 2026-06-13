@@ -1,4 +1,4 @@
-# Good Transformer — Analytics & event tracking
+# Good Transformer: Analytics & event tracking
 
 How the site measures behaviour, the full event taxonomy, and the **one-time GA4
 admin setup** needed before the events show up usefully in reports.
@@ -16,7 +16,7 @@ See [`services.md`](services.md) for the owning Google account and
 - **Custom events** are dispatched through one helper, `src/lib/analytics.ts`
   (`trackEvent`), which fires the **same payload to both GA4 (`gtag`) and
   Plausible** (`window.plausible`, if present). Two callers:
-  - `src/components/analytics-events.tsx` — a document-level capture-phase click
+  - `src/components/analytics-events.tsx`: a document-level capture-phase click
     listener that fires for any element carrying `data-analytics-event` (+
     optional `-section`, `-label`, `-asset`).
   - Direct `trackEvent(...)` calls for events that aren't a simple click
@@ -33,8 +33,8 @@ Every event sends these GA4 parameters: `event_category` (= section, or
 
 | Event | Fires when | Section(s) | Notes |
 |---|---|---|---|
-| `booking_start` | Visitor reaches the Cal.com scheduling handoff — auto-redirect after the brief saves, **or** clicks "Continue to scheduling" | `book_personal`, `book_business` | The Cal URL carries the visitor's name/email; analytics receives the **base** URL only — no PII. The actual booking completes off-site on Cal.com, so this is the closest on-site proxy for a booked call. |
-| `newsletter_signup` | Subscribe request succeeds (`response.ok`) — **not** on button click | `insights` | `label` = cadence (`weekly` / `daily`). |
+| `booking_start` | Visitor reaches the Cal.com scheduling handoff, auto-redirect after the brief saves, **or** clicks "Continue to scheduling" | `book_personal`, `book_business` | The Cal URL carries the visitor's name/email; analytics receives the **base** URL only, no PII. The actual booking completes off-site on Cal.com, so this is the closest on-site proxy for a booked call. |
+| `newsletter_signup` | Subscribe request succeeds (`response.ok`), **not** on button click | `insights` | `label` = cadence (`weekly` / `daily`). |
 | `asset_download` | An Insights downloadable asset is clicked | `insights_index` | `asset` = asset title. |
 
 ### Engagement / intent
@@ -45,11 +45,11 @@ Every event sends these GA4 parameters: `event_category` (= section, or
 | `service_cta_click` | A CTA on a Services page is clicked | `services_overview_leaders`, `services_overview_teams`, `services_roadmap`, `leader_lessons_final_cta`, `team_advisory_final_cta` |
 | `insight_cta_click` | The in-article CTA on an Insight post is clicked | `insight_post` |
 | `insight_open` | An Insight card is opened (index or related) | `insights_index`, `insights_related` |
-| `insight_filter` | A tag filter is clicked on the Insights index | — (`label` = tag) |
+| `insight_filter` | A tag filter is clicked on the Insights index | (`label` = tag) |
 | `pdf_download` | A Services PDF is downloaded | `services_downloads`, `leader_lessons_*_download` |
-| `nav_services_overview`, `nav_service_child` | Header nav items clicked | — |
+| `nav_services_overview`, `nav_service_child` | Header nav items clicked |  |
 
-> `cta_click` is upper-funnel **intent**, not a conversion — don't mark it as a
+> `cta_click` is upper-funnel **intent**, not a conversion. Don't mark it as a
 > Key event (it would inflate conversion counts). Analyse it segmented by
 > `Section` instead.
 
@@ -59,7 +59,7 @@ Every event sends these GA4 parameters: `event_category` (= section, or
 
 Do this in [analytics.google.com](https://analytics.google.com) on property
 **`486698902`** (account `goodtransformer1@gmail.com`). **None of this is
-backfilled** — custom dimensions and key events only apply to data collected
+backfilled.** Custom dimensions and key events only apply to data collected
 *after* you create them, so do it as soon as the events are deployed.
 
 ### 1. Register custom dimensions (so event detail is visible in reports)
@@ -97,13 +97,13 @@ views.
 
 ### 4. Build the reports
 
-- **Booking funnel** — **Explore → Funnel exploration**, steps:
+- **Booking funnel**: **Explore → Funnel exploration**, steps:
   1. `session_start`  2. `cta_click`  3. `booking_start`.
   Shows drop-off from CTA intent → scheduling handoff.
-- **CTA breakdown** — **Explore → Free-form**: dimension **Section** + **Label**,
+- **CTA breakdown**: **Explore → Free-form**: dimension **Section** + **Label**,
   metric Event count, filter `Event name exactly matches cta_click`. Shows which
   CTAs and locations drive clicks.
-- **Insights** — same, filtered to `insight_open` / `asset_download`, broken down
+- **Insights**: same, filtered to `insight_open` / `asset_download`, broken down
   by **Label** / **Asset**.
 
 ### 5. Verify after deploy
@@ -118,5 +118,5 @@ and `booking_start` appear with the expected parameters.
 ## Plausible (optional, future)
 
 `trackEvent` already calls `window.plausible(...)` with the same props, so if a
-Plausible script is ever added there is **no code change** — the custom events
+Plausible script is ever added there is **no code change**: the custom events
 flow automatically. No Plausible account is wired today.

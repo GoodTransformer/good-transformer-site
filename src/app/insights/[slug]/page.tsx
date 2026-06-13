@@ -13,7 +13,7 @@ import { absoluteUrl, buildBreadcrumbJsonLd, buildPageMetadata, OG_IMAGE, SITE_U
 type PageParams = { slug: string };
 
 export function generateStaticParams(): PageParams[] {
-  // Assets are downloads, not articles — only written posts get a page.
+  // Assets are downloads, not articles. Only written posts get a page.
   return getAllPosts()
     .filter((post) => post.type === "post")
     .map((post) => ({ slug: post.slug }));

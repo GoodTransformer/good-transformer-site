@@ -4,7 +4,7 @@ This file defines the **interface** a publisher must satisfy to add an Insight t
 goodtransformer.ai. It is written for both humans and an automated generator
 (Cowork, Codex, or another system). If a generated post matches this contract,
 `scripts/validate-insights.mjs` passes and the existing GitHub Pages deploy ships
-it live — no other change required.
+it live. No other change required.
 
 > **The whole job:** write one Markdown file + (for posts) one cover image,
 > commit, push to `main`. That's it.
@@ -22,7 +22,7 @@ it live — no other change required.
 - **`<slug>`** is lowercase **kebab-case** (`a–z`, `0–9`, hyphens), and the
   Markdown filename **is** the URL: `content/insights/ai-readiness.md` →
   `https://goodtransformer.ai/insights/ai-readiness/`.
-- Slugs must be **unique** and stable (don't rename a published slug — it breaks
+- Slugs must be **unique** and stable (don't rename a published slug: it breaks
   links and the RSS guid).
 
 ---
@@ -32,20 +32,20 @@ it live — no other change required.
 ```yaml
 ---
 title: "Headline of the piece"            # REQUIRED
-description: "One–two sentence excerpt."    # REQUIRED — index card + meta description
-date: 2026-06-13                            # REQUIRED — YYYY-MM-DD
-updated: 2026-06-20                         # optional — YYYY-MM-DD
-# author: "Guest name"                      # optional — defaults to the brand (Good Transformer)
-type: post                                  # optional — "post" (default) | "asset"
-tags: ["ai-adoption", "leadership"]         # recommended — kebab-case topic tags
+description: "One–two sentence excerpt."    # REQUIRED: index card + meta description
+date: 2026-06-13                            # REQUIRED: YYYY-MM-DD
+updated: 2026-06-20                         # optional: YYYY-MM-DD
+# author: "Guest name"                      # optional: defaults to the brand (Good Transformer)
+type: post                                  # optional: "post" (default) | "asset"
+tags: ["ai-adoption", "leadership"]         # recommended: kebab-case topic tags
 cover: /insights/<slug>/cover.jpg           # required for posts (see §3)
 coverAlt: "Describe the cover image."        # REQUIRED whenever cover is set
-featured: false                             # optional — true puts it in the lead slot
-draft: false                                # optional — true hides it from the build
+featured: false                             # optional: true puts it in the lead slot
+draft: false                                # optional: true hides it from the build
 # ── asset-only (type: asset) ──
-assetFile: /insights/assets/<file>.pdf      # REQUIRED for assets — must exist on disk
-assetFormat: "PDF · 12 pages"               # optional — shown on the card
-assetCta: "Download the guide"              # optional — defaults to "Download"
+assetFile: /insights/assets/<file>.pdf      # REQUIRED for assets: must exist on disk
+assetFormat: "PDF · 12 pages"               # optional: shown on the card
+assetCta: "Download the guide"              # optional: defaults to "Download"
 ---
 ```
 
@@ -67,9 +67,9 @@ Warnings (don't block the build): no tags, no cover on a post, very short body.
 - **Dimensions:** ~1600×900 (16:9). Rendered responsively; never upscaled.
 - **Format:** `.jpg`, `.webp`, or `.png` (match the `cover:` path extension).
 - **Path:** `public/insights/<slug>/cover.jpg`.
-- **Alt text is mandatory** (`coverAlt`) — describe the image plainly.
+- **Alt text is mandatory** (`coverAlt`): describe the image plainly.
 - **Brand:** if the cover is a generated/abstract treatment, follow the house
-  rule — teal stays crisp and structural; avoid a soft teal wash on cream
+  rule: teal stays crisp and structural; avoid a soft teal wash on cream
   (it reads "sickly"). Dark teal treatments are fine for full-bleed art.
 
 ---
@@ -86,7 +86,7 @@ styled by `.insight-prose`:
 - inline `code` and fenced code blocks
 - tables
 
-The **first paragraph** is automatically emphasised as a lead — open strong.
+The **first paragraph** is automatically emphasised as a lead. Open strong.
 
 ---
 
@@ -112,8 +112,8 @@ node scripts/new-insight.mjs "AI Readiness Checklist" --asset
 ## 6. Automation hand-off (placeholder)
 
 `.github/workflows/publish-insight.yml` is the orchestration stub. A generator
-step (Codex/Cowork) is expected to produce exactly the artefacts above —
-the `.md` file and the cover image — then the workflow validates, commits, and
+step (Codex/Cowork) is expected to produce exactly the artefacts above,
+the `.md` file and the cover image, then the workflow validates, commits, and
 pushes. See the TODO markers in that file for where the generator plugs in and
 which secret it needs. **Nothing downstream changes when the generator is wired:
 it just writes to this contract.**

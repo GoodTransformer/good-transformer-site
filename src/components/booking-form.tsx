@@ -200,7 +200,7 @@ export function BookingForm() {
       });
 
       if (nextMode === "endpoint" && calendarUrl) {
-        // href is the base calendar URL only — buildCalUrl appends the
+        // href is the base calendar URL only: buildCalUrl appends the
         // visitor's email, which must not be sent to analytics.
         trackEvent("booking_start", {
           section: "book_business",
@@ -594,7 +594,7 @@ export function PersonalBookingForm() {
       });
 
       if (nextMode === "endpoint" && calendarUrl) {
-        // href is the base calendar URL only — buildCalUrl appends the
+        // href is the base calendar URL only: buildCalUrl appends the
         // visitor's name and email, which must not be sent to analytics.
         trackEvent("booking_start", {
           section: "book_personal",
