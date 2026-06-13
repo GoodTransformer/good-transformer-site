@@ -2,7 +2,6 @@
 title: "How to choose your first serious AI use case"
 description: "The best first AI project is rarely the most futuristic. A five-part test, VALUE, for picking a use case that is frequent, worthwhile and safe to get wrong."
 date: 2026-06-11
-author: "Patrick Hussey"
 type: post
 tags: ["ai-adoption", "use-cases", "leadership"]
 cover: /insights/how-to-choose-an-ai-use-case/cover.jpg

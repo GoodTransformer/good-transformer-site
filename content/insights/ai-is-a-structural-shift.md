@@ -2,7 +2,6 @@
 title: "AI is not a productivity upgrade. It's a structural shift."
 description: "Treating AI as a faster way to do today's work misses the point. The harder, more useful question is what the work itself should become."
 date: 2026-06-10
-author: "Patrick Hussey"
 type: post
 tags: ["ai-adoption", "leadership", "ethics"]
 cover: /insights/ai-is-a-structural-shift/cover.jpg

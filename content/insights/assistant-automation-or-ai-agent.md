@@ -2,7 +2,6 @@
 title: "Assistant, automation or agent: what does your business actually need?"
 description: "Assistant, automation or agent? A four-level test — Answer, Assist, Automate, Act — for deciding how much to hand to AI, and how much to keep."
 date: 2026-06-12
-author: "Patrick Hussey"
 type: post
 tags: ["ai-adoption", "ai-agents", "leadership"]
 cover: /insights/assistant-automation-or-ai-agent/cover.jpg

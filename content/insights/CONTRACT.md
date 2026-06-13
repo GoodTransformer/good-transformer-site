@@ -35,7 +35,7 @@ title: "Headline of the piece"            # REQUIRED
 description: "One–two sentence excerpt."    # REQUIRED — index card + meta description
 date: 2026-06-13                            # REQUIRED — YYYY-MM-DD
 updated: 2026-06-20                         # optional — YYYY-MM-DD
-author: "Patrick Hussey"                    # optional — defaults to Patrick Hussey
+# author: "Guest name"                      # optional — defaults to the brand (Good Transformer)
 type: post                                  # optional — "post" (default) | "asset"
 tags: ["ai-adoption", "leadership"]         # recommended — kebab-case topic tags
 cover: /insights/<slug>/cover.jpg           # required for posts (see §3)

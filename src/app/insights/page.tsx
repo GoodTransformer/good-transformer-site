@@ -30,7 +30,7 @@ export default function InsightsPage() {
         description: post.description,
         datePublished: post.date,
         url: `${SITE_URL}/insights/${post.slug}/`,
-        author: { "@type": "Person", name: post.author },
+        author: { "@type": "Organization", name: post.author },
       })),
   };
 

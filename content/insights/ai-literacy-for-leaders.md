@@ -2,7 +2,6 @@
 title: "AI literacy for leaders is not knowing every AI tool"
 description: "The tools change every few months. What leaders actually need to understand barely changes at all. Five durable parts of AI literacy, and how to build them."
 date: 2026-06-13
-author: "Patrick Hussey"
 type: post
 tags: ["ai-literacy", "leadership", "ai-adoption"]
 cover: /insights/ai-literacy-for-leaders/cover.jpg

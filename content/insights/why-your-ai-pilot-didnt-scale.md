@@ -2,7 +2,6 @@
 title: "Why your AI pilot didn't scale (and what to do about it)"
 description: "Successful pilots that quietly die are the most common pattern in AI adoption. The reasons are predictable — and mostly fixable."
 date: 2026-05-28
-author: "Patrick Hussey"
 type: post
 tags: ["ai-adoption", "teams"]
 cover: /insights/why-your-ai-pilot-didnt-scale/cover.jpg

@@ -5,7 +5,7 @@ title: "Headline of the piece"
 description: "One or two sentences. Used as the index excerpt and the meta description."
 date: 2026-06-13            # YYYY-MM-DD
 # updated: 2026-06-20       # optional
-author: "Patrick Hussey"
+# author: "Guest name"     # optional — posts default to the brand (Good Transformer)
 type: post                  # "post" | "asset"
 tags: ["ai-adoption", "leadership"]
 cover: /insights/your-slug/cover.jpg

@@ -72,7 +72,7 @@ export default async function InsightPostPage({
     image: meta.cover ? absoluteUrl(meta.cover) : OG_IMAGE,
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    author: { "@type": "Person", name: meta.author, url: `${SITE_URL}/patrick/` },
+    author: { "@type": "Organization", name: meta.author, url: SITE_URL },
     publisher: {
       "@type": "Organization",
       name: seoContent.siteName,

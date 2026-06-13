@@ -2,7 +2,6 @@
 title: "Five questions to ask before buying another AI tool"
 description: "Tool sprawl is the quiet tax of AI adoption. Five plain questions that separate a useful purchase from another unused licence."
 date: 2026-06-04
-author: "Patrick Hussey"
 type: post
 tags: ["leadership", "ai-adoption"]
 cover: /insights/five-questions-before-another-ai-tool/cover.jpg

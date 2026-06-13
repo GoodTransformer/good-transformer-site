@@ -2,7 +2,6 @@
 title: "AI productivity is not the same as business value"
 description: "Saving ten minutes is not the same as making money. Four levels, from task efficiency to business outcome, for turning AI time savings into something real."
 date: 2026-06-10
-author: "Patrick Hussey"
 type: post
 tags: ["ai-adoption", "business-value", "leadership"]
 cover: /insights/ai-productivity-versus-business-value/cover.jpg

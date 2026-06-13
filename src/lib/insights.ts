@@ -30,7 +30,8 @@ export { formatDate, formatTag } from "./insights-shared";
  */
 
 const CONTENT_DIR = join(process.cwd(), "content", "insights");
-const DEFAULT_AUTHOR = "Patrick Hussey";
+// Posts are published under the brand, not a personal byline.
+const DEFAULT_AUTHOR = "Good Transformer";
 
 // Docs that live alongside the content but are not posts.
 const IGNORED_FILES = new Set(["CONTRACT.md", "README.md"]);

@@ -2,7 +2,6 @@
 title: "The AI Readiness Checklist for Leaders"
 description: "A one-page checklist to gauge where your organisation actually stands on AI — direction, ownership, guardrails and capability — before you invest further."
 date: 2026-05-20
-author: "Patrick Hussey"
 type: asset
 tags: ["leadership", "ai-adoption"]
 assetFile: /insights/assets/ai-readiness-checklist.pdf
