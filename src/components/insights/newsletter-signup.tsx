@@ -26,23 +26,27 @@ const CADENCE_OPTIONS: { value: Cadence; label: string; description: string }[] 
   {
     value: "weekly",
     label: "Weekly",
-    description: "Every week — the week's new Insights plus the 5 biggest AI stories for leaders.",
+    description: "Every week: the week's new Insights plus the 5 biggest AI stories for leaders.",
   },
   {
     value: "daily",
     label: "Daily",
-    description: "Each weekday — the day's new Insight plus the 3 biggest AI stories for leaders.",
+    description: "Each weekday: the day's new Insight plus the 3 biggest AI stories for leaders.",
   },
 ];
 
 type NewsletterSignupProps = {
   heading?: string;
   body?: string;
+  /** Analytics `section` for the newsletter_signup event. Lets the dedicated
+   *  /newsletter page report a distinct conversion source from the inline forms. */
+  analyticsSection?: string;
 };
 
 export function NewsletterSignup({
   heading = "Get new Insights by email",
-  body = "Practical notes on using AI with judgement — and the AI news leaders actually need. No hype, no spam, unsubscribe anytime.",
+  body = "Practical notes on using AI with judgement, and the AI news leaders actually need. No hype, no spam, unsubscribe anytime.",
+  analyticsSection = "insights",
 }: NewsletterSignupProps) {
   const [email, setEmail] = useState("");
   const [cadence, setCadence] = useState<Cadence>("weekly");
@@ -92,7 +96,7 @@ export function NewsletterSignup({
         }),
       });
       if (!response.ok) throw new Error("Subscribe failed.");
-      trackEvent("newsletter_signup", { section: "insights", label: cadence });
+      trackEvent("newsletter_signup", { section: analyticsSection, label: cadence });
       setStatus("done");
     } catch {
       setStatus("error");

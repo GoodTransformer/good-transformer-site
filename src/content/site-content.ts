@@ -91,6 +91,7 @@ export const navigation: LinkItem[] = [
     ],
   },
   { href: "/insights", label: "Insights" },
+  { href: "/newsletter", label: "Newsletter" },
   { href: "/patrick", label: "Patrick" },
   { href: "/about", label: "About" },
 ];
@@ -98,7 +99,62 @@ export const navigation: LinkItem[] = [
 export const insightsPage = {
   title: "Insights",
   intro:
-    "Practical writing on using AI with judgement — adoption, leadership, and the ethical questions that come with it — plus useful guides and templates you can take away.",
+    "Practical writing on using AI with judgement: adoption, leadership, and the ethical questions that come with it, plus useful guides and templates you can take away.",
+};
+
+export const newsletterPage = {
+  eyebrow: "The Good Transformer digest",
+  title: "Stay clear-headed about AI.",
+  intro:
+    "A short, regular briefing for leaders: the newest Insights writing, plus the handful of AI stories that actually matter, read with judgement, not hype. Pick a weekly round-up or a quick note each weekday.",
+  form: {
+    heading: "Get the digest",
+    body: "Choose your rhythm, add your email, done. No spam, and one-click unsubscribe in every issue.",
+  },
+  inside: {
+    eyebrow: "What lands in your inbox",
+    heading: "Less noise. More judgement.",
+    items: [
+      {
+        title: "New Insights, as they publish",
+        body: "Practical writing on using AI with judgement, sent the moment each piece goes live. No need to keep checking the site.",
+      },
+      {
+        title: "The AI stories that matter",
+        body: "A curated read of the biggest developments for leaders: five each week, or three each weekday. A considered shortlist, not a firehose.",
+      },
+      {
+        title: "Calm, never breathless",
+        body: "The same plain, sceptical-where-it-counts voice as the rest of Good Transformer. No engagement-bait, no sponsored filler, no spam.",
+      },
+    ],
+  },
+  recent: {
+    eyebrow: "A taste of recent issues",
+    heading: "The kind of thinking that lands in every digest.",
+  },
+  faqs: [
+    {
+      question: "How often will you email me?",
+      answer:
+        "As often as you choose: a weekly round-up, or a short note each weekday. You pick when you subscribe, and you can switch or stop whenever you like.",
+    },
+    {
+      question: "What's actually in it?",
+      answer:
+        "The newest Insights writing, plus a curated read of the biggest AI stories for leaders. Nothing else: no sponsored filler and no upsells.",
+    },
+    {
+      question: "Will my email be safe?",
+      answer:
+        "Yes. Your address is only ever used to send the digest you asked for. It is never shared or sold, and every email carries a one-click unsubscribe.",
+    },
+    {
+      question: "Can I unsubscribe easily?",
+      answer:
+        "Always. Every issue has a one-click unsubscribe that takes effect immediately. No forms, no friction.",
+    },
+  ],
 };
 
 export const aboutPage = {
@@ -827,7 +883,13 @@ export const seoContent = {
       path: "/insights/",
       title: "Insights",
       description:
-        "Practical writing from Patrick Hussey on using AI with judgement — adoption, leadership and ethics — plus useful guides and templates for leaders and teams.",
+        "Practical writing from Patrick Hussey on using AI with judgement: adoption, leadership and ethics, plus useful guides and templates for leaders and teams.",
+    },
+    newsletter: {
+      path: "/newsletter/",
+      title: "Newsletter",
+      description:
+        "Stay clear-headed about AI. A short digest for leaders from Patrick Hussey: the newest Insights writing plus the AI stories that actually matter, weekly or daily. No hype, no spam.",
     },
     leaderLessons: {
       path: "/services/ai-lessons-for-leaders/",
