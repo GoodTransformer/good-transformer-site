@@ -97,11 +97,11 @@ export default async function InsightPostPage({
         <ArticleHeader post={meta} />
 
         <div
-          className="insight-prose mx-auto mt-12 max-w-3xl px-6 md:px-10 lg:px-12"
+          className="insight-prose mx-auto mt-12 max-w-[44rem] px-6 md:px-8"
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
-        <div className="mx-auto mt-16 max-w-3xl px-6 md:px-10 lg:px-12">
+        <div className="mx-auto mt-16 max-w-[44rem] px-6 md:px-8">
           <div className="rounded-[1.25rem] border border-line/12 bg-sand/70 p-7 md:p-9">
             <p className="page-eyebrow text-brass">Work with Good Transformer</p>
             <p className="mt-3 max-w-xl font-serif text-2xl leading-tight text-ink md:text-3xl">

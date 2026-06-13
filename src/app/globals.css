@@ -1723,11 +1723,17 @@ details > summary::-webkit-details-marker {
 
 /* ── Insights: editorial article body ───────────────────────────────────── */
 .insight-prose {
+  /* One rhythm token drives every block-to-block gap so nothing competes. */
+  --flow-gap: 1.6em;
   font-family: var(--font-serif), Georgia, serif;
-  font-size: 1.1875rem;
-  line-height: 1.75;
+  font-size: clamp(1.0625rem, 0.892rem + 0.758vw, 1.25rem); /* 17 → 20px */
+  line-height: 1.7;
   color: rgb(var(--color-ink) / 0.92);
-  letter-spacing: 0.002em;
+  letter-spacing: 0.001em;
+  font-optical-sizing: auto;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-wrap: pretty;
 }
 
 /* Reset paragraph margins (including nested ones inside quotes/lists). :where()
@@ -1740,19 +1746,38 @@ details > summary::-webkit-details-marker {
 /* Calm, even vertical rhythm between top-level blocks. Declared after the reset
    so it wins the specificity tie and actually spaces paragraph-to-paragraph. */
 .insight-prose > * + * {
-  margin-top: 1.7em;
+  margin-top: var(--flow-gap);
 }
 
-/* Headings hug the text they introduce — tighter below than the space above. */
+/* Set-pieces breathe a little more than running text (1.5× the base gap). */
+.insight-prose > :is(figure, pre, table, blockquote) + *,
+.insight-prose > * + :is(figure, pre, table, blockquote) {
+  margin-top: calc(var(--flow-gap) * 1.5);
+}
+
+/* A horizontal rule is a section break (1.75× the base gap). */
+.insight-prose > * + hr,
+.insight-prose > hr + * {
+  margin-top: calc(var(--flow-gap) * 1.75);
+}
+
+/* Headings: generous space above (a section break), tight below (they hug the
+   text they introduce). Declared after the flow + set-piece rules so they win
+   the equal-specificity tie; all margins are top-only so nothing collapses. */
+.insight-prose > h2 { margin-top: 1.85em; }
+.insight-prose > h3 { margin-top: 1.7em; }
+.insight-prose > h4 { margin-top: 2.3em; }
+
 .insight-prose > :is(h2, h3, h4) + * {
-  margin-top: 0.9em;
+  margin-top: 1em;
 }
 
 /* Lead paragraph gets a touch more presence. */
 .insight-prose > p:first-of-type {
-  font-size: 1.3125rem;
-  line-height: 1.62;
+  font-size: clamp(1.1875rem, 1.045rem + 0.633vw, 1.4375rem); /* 19 → 23px */
+  line-height: 1.55;
   color: rgb(var(--color-ink));
+  text-wrap: pretty;
 }
 
 .insight-prose h2,
@@ -1760,30 +1785,31 @@ details > summary::-webkit-details-marker {
 .insight-prose h4 {
   font-family: var(--font-serif), Georgia, serif;
   color: rgb(var(--color-ink));
-  line-height: 1.2;
   letter-spacing: normal;
   scroll-margin-top: 6rem;
+  text-wrap: balance;
 }
 
 .insight-prose h2 {
-  margin-top: 2.4em;
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 1.247rem + 1.125vw, 1.9375rem); /* 24 → 31px */
+  line-height: 1.2;
   font-weight: 600;
 }
 
 .insight-prose h3 {
-  margin-top: 2em;
-  font-size: 1.3125rem;
+  font-size: clamp(1.3125rem, 1.142rem + 0.758vw, 1.5625rem); /* 21 → 25px */
+  line-height: 1.25;
   font-weight: 600;
 }
 
 .insight-prose h4 {
-  margin-top: 1.8em;
-  font-size: 1.0625rem;
+  font-size: clamp(0.8125rem, 0.78rem + 0.152vw, 0.875rem); /* 13 → 14px label */
   font-weight: 600;
+  line-height: 1.4;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   color: rgb(var(--color-slate));
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 /* Heading anchors (rehype-autolink, behavior: wrap) stay quiet until hover. */
@@ -1800,7 +1826,7 @@ details > summary::-webkit-details-marker {
   color: rgb(var(--color-moss));
   text-decoration: underline;
   text-decoration-color: rgb(var(--color-brass) / 0.5);
-  text-underline-offset: 0.18em;
+  text-underline-offset: 0.16em;
   text-decoration-thickness: 1px;
   transition: text-decoration-color 0.2s ease;
 }
@@ -1818,9 +1844,11 @@ details > summary::-webkit-details-marker {
   font-style: italic;
 }
 
+/* Vertical spacing for lists/quotes/figures/code/tables/hr is handled by the
+   unified flow + set-piece rules above; these rules carry only their own
+   intrinsic styling (padding, borders, type). */
 .insight-prose ul,
 .insight-prose ol {
-  margin: 1.5em 0;
   padding-left: 1.4em;
 }
 
@@ -1839,7 +1867,6 @@ details > summary::-webkit-details-marker {
 }
 
 .insight-prose blockquote {
-  margin: 2em 0;
   padding-left: 1.4rem;
   border-left: 2px solid rgb(var(--color-brass));
   font-style: italic;
@@ -1847,12 +1874,12 @@ details > summary::-webkit-details-marker {
 }
 
 .insight-prose blockquote p {
-  font-size: 1.25rem;
-  line-height: 1.55;
+  font-size: 1.1em;
+  line-height: 1.5;
 }
 
 .insight-prose hr {
-  margin: 3em auto;
+  margin: 0 auto;
   width: 4rem;
   border: 0;
   border-top: 1px solid rgb(var(--color-line) / 0.25);
@@ -1863,14 +1890,10 @@ details > summary::-webkit-details-marker {
   border: 1px solid rgb(var(--color-line) / 0.1);
 }
 
-.insight-prose figure {
-  margin: 2.2em 0;
-}
-
 .insight-prose figcaption {
   margin-top: 0.7em;
   font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   color: rgb(var(--color-slate));
   text-align: center;
@@ -1885,7 +1908,6 @@ details > summary::-webkit-details-marker {
 }
 
 .insight-prose pre {
-  margin: 1.8em 0;
   padding: 1.1rem 1.25rem;
   border-radius: 0.9rem;
   background: rgb(var(--color-ink));
@@ -1903,10 +1925,10 @@ details > summary::-webkit-details-marker {
 
 .insight-prose table {
   width: 100%;
-  margin: 2em 0;
   border-collapse: collapse;
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 0.95rem;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
 .insight-prose th,
@@ -1919,16 +1941,4 @@ details > summary::-webkit-details-marker {
 .insight-prose th {
   font-weight: 600;
   color: rgb(var(--color-ink));
-}
-
-@media (max-width: 640px) {
-  .insight-prose {
-    font-size: 1.0625rem;
-  }
-  .insight-prose > p:first-of-type {
-    font-size: 1.15rem;
-  }
-  .insight-prose h2 {
-    font-size: 1.5rem;
-  }
 }

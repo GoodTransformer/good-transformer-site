@@ -19,7 +19,7 @@ draft: true                 # set to false to publish
 # assetCta: "Download the guide"
 ---
 
-Open with a strong lead paragraph — it is automatically set larger than the rest.
+Open with a strong lead paragraph. It is automatically set larger than the rest.
 Say the most useful thing first.
 
 ## A section heading

@@ -102,7 +102,7 @@ featured: false
 draft: true
 ---
 
-Open with a strong lead paragraph — this one is set larger automatically.
+Open with a strong lead paragraph. This one is set larger automatically.
 
 ## A section heading
 

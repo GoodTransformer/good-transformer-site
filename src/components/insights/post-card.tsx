@@ -52,8 +52,8 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
         <h3
           className={
             isLead
-              ? "mt-4 font-serif text-3xl leading-tight text-ink md:text-[2.6rem]"
-              : "mt-3 font-serif text-2xl leading-tight text-ink"
+              ? "mt-4 font-serif text-3xl leading-tight text-ink text-balance md:text-[2.6rem]"
+              : "mt-3 font-serif text-2xl leading-tight text-ink text-balance"
           }
         >
           <Link
@@ -67,7 +67,7 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
           </Link>
         </h3>
 
-        <p className={isLead ? "mt-4 max-w-xl text-base leading-7 text-slate md:text-lg" : "mt-3 text-sm leading-6 text-slate"}>
+        <p className={isLead ? "mt-4 max-w-xl text-base leading-7 text-slate text-pretty md:text-lg" : "mt-3 text-sm leading-6 text-slate text-pretty"}>
           {post.description}
         </p>
 

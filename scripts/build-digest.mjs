@@ -96,7 +96,7 @@ function sectionLabel(text) {
 }
 
 function buildText({ label, today, intro, posts, stories }) {
-  const out = [`GOOD TRANSFORMER — Insights ${label} — ${formatDate(today)}`, '', intro, '']
+  const out = [`GOOD TRANSFORMER · Insights ${label} · ${formatDate(today)}`, '', intro, '']
   if (posts.length) {
     out.push((label === 'Weekly' ? 'THIS WEEK ON INSIGHTS' : "TODAY'S INSIGHT"))
     posts.forEach((p) => out.push(`• ${p.title}`, `  ${p.url}`))
@@ -119,7 +119,7 @@ export function buildDigest({ cadence = 'weekly', day, window = 7 } = {}) {
   const stories = news ? news.stories.slice(0, isWeekly ? 5 : 3) : []
 
   const label = isWeekly ? 'Weekly' : 'Daily'
-  const subject = `Good Transformer ${label} — ${formatDate(today)}`
+  const subject = `Good Transformer ${label} · ${formatDate(today)}`
   const intro = isWeekly
     ? "This week's Insights, plus the AI news that matters for leaders."
     : "Today's Insight, plus the AI news that matters for leaders."
@@ -129,7 +129,7 @@ export function buildDigest({ cadence = 'weekly', day, window = 7 } = {}) {
       posts.map(postBlock).join('')
     : `<tr><td style="padding:0 0 24px 0;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:${SLATE};">No new Insight ${
         isWeekly ? 'this week' : 'today'
-      } — just the AI news below.</td></tr>`
+      }, just the AI news below.</td></tr>`
 
   const newsSection = stories.length
     ? sectionLabel(`AI news for leaders`) + stories.map(storyBlock).join('')

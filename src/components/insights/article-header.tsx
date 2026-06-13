@@ -4,7 +4,7 @@ import { formatDate, formatTag, type PostMeta } from "@/lib/insights-shared";
 
 export function ArticleHeader({ post }: { post: PostMeta }) {
   return (
-    <header className="mx-auto max-w-3xl px-6 md:px-10 lg:px-12">
+    <header className="mx-auto max-w-[44rem] px-6 md:px-8">
       {post.cover ? (
         <div className="relative aspect-[16/9] overflow-hidden rounded-[1.25rem] border border-line/10 bg-sand">
           <Image
@@ -26,11 +26,13 @@ export function ArticleHeader({ post }: { post: PostMeta }) {
         ))}
       </div>
 
-      <h1 className="mt-5 font-serif text-4xl font-semibold leading-[1.08] text-ink md:text-5xl">
+      <h1 className="mt-5 font-serif text-[clamp(1.875rem,1.41rem+2.07vw,3rem)] font-semibold leading-[1.08] text-ink text-balance">
         {post.title}
       </h1>
 
-      <p className="mt-5 text-lg leading-8 text-slate">{post.description}</p>
+      <p className="mt-5 text-[clamp(1.0625rem,0.99rem+0.33vw,1.1875rem)] leading-[1.6] text-slate text-pretty">
+        {post.description}
+      </p>
 
       <div className="mt-7 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate">
         <span className="font-medium text-ink">{post.author}</span>

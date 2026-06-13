@@ -16,7 +16,7 @@ Before the next one goes in, five questions are usually enough to tell a real ne
 
 ## 1. What specific job does this do that we can't already do?
 
-Not "what can it do" — what *job*, for *whom*, that your existing tools genuinely can't. If the honest answer overlaps 80% with something you already pay for, you're buying overlap, not capability.
+Not "what can it do." What *job*, for *whom*, that your existing tools genuinely can't. If the honest answer overlaps 80% with something you already pay for, you're buying overlap, not capability.
 
 ## 2. Who owns it after the trial ends?
 
@@ -24,16 +24,16 @@ A tool with no owner is a tool that drifts. Someone has to be accountable for wh
 
 ## 3. What does it touch?
 
-Where does your data go, and what would it mean if that vendor had a breach? You don't need a legal review for everything, but you do need to know whether you're feeding client-confidential material into a system you haven't checked. "We're not sure" is an answer — it's just not a reassuring one.
+Where does your data go, and what would it mean if that vendor had a breach? You don't need a legal review for everything, but you do need to know whether you're feeding client-confidential material into a system you haven't checked. "We're not sure" is an answer. It's just not a reassuring one.
 
 ## 4. How will we know if it worked?
 
-Decide the signal before you buy, not after. Adoption rate, time saved on a named task, error reduction — something. A tool you can't evaluate is a tool you'll renew out of inertia.
+Decide the signal before you buy, not after. Adoption rate, time saved on a named task, error reduction. Something. A tool you can't evaluate is a tool you'll renew out of inertia.
 
 ## 5. What does it replace?
 
-New tools should retire old ones, or at least old habits. If nothing comes out when something goes in, you're not adopting AI — you're accumulating it. The stack only stays manageable if buying something is also a decision to stop doing something else.
+New tools should retire old ones, or at least old habits. If nothing comes out when something goes in, you're not adopting AI. You're accumulating it. The stack only stays manageable if buying something is also a decision to stop doing something else.
 
 > The goal isn't fewer tools for its own sake. It's a stack where every item earns its place and someone can say why.
 
-None of this requires a procurement committee. It requires five honest answers before the licence is signed — which is exactly when they're cheapest to get.
+None of this requires a procurement committee. It requires five honest answers before the licence is signed, which is exactly when they're cheapest to get.

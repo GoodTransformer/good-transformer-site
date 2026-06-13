@@ -6,7 +6,7 @@ export function RelatedPosts({ posts }: { posts: PostMeta[] }) {
   if (posts.length === 0) return null;
 
   return (
-    <section className="mx-auto max-w-3xl px-6 md:px-10 lg:px-12">
+    <section className="mx-auto max-w-[44rem] px-6 md:px-8">
       <p className="page-eyebrow">Keep reading</p>
       <div className="mt-6 grid gap-8 border-t border-line/15 pt-8 sm:grid-cols-2">
         {posts.map((post) => (
@@ -16,7 +16,7 @@ export function RelatedPosts({ posts }: { posts: PostMeta[] }) {
               <span aria-hidden="true"> · </span>
               {post.readingLabel}
             </p>
-            <h3 className="mt-3 font-serif text-2xl leading-tight text-ink">
+            <h3 className="mt-3 font-serif text-2xl leading-tight text-ink text-balance">
               <Link
                 href={`/insights/${post.slug}/`}
                 className="insight-card__title-link"
@@ -27,7 +27,7 @@ export function RelatedPosts({ posts }: { posts: PostMeta[] }) {
                 {post.title}
               </Link>
             </h3>
-            <p className="mt-2 text-sm leading-6 text-slate">{post.description}</p>
+            <p className="mt-2 text-sm leading-6 text-slate text-pretty">{post.description}</p>
             <p className="mt-3 text-xs uppercase tracking-[0.14em] text-slate/70">
               {formatDate(post.date)}
             </p>
