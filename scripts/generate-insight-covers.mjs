@@ -173,20 +173,29 @@ function buildSvg({ eyebrow, seed, quote }) {
   const glowX = nodes[focus]?.x ?? 1120
   const glowY = nodes[focus]?.y ?? 280
 
-  // Pull-quote: serif italic, vertically centred in the clean left column.
+  // Pull-quote: serif italic, vertically centred in the clean left column, set
+  // inside a matched pair of decorative marks that hug the text — the opening
+  // mark sits just above-left of the first line, the closing mark trails the
+  // last word on its baseline. Kept modest in size so they frame, not shout.
   let quoteSvg = ''
   if (quote) {
     const qLines = wrap(quote, 22, 4)
     const lh = 60
     const blockTop = Math.round((H - qLines.length * lh) / 2) + 24
+    const last = qLines.length - 1
+    const markSize = 68
+    const markOpacity = '0.55'
     const tspans = qLines
-      .map(
-        (line, i) =>
-          `<tspan x="120" y="${blockTop + i * lh}">${escapeXml(line)}</tspan>`,
-      )
+      .map((line, i) => {
+        const span = `<tspan x="120" y="${blockTop + i * lh}">${escapeXml(line)}</tspan>`
+        // Closing mark trails the final word, sharing its baseline.
+        return i === last
+          ? `${span}<tspan dx="6" font-size="${markSize}" fill-opacity="${markOpacity}">&#8221;</tspan>`
+          : span
+      })
       .join('')
     quoteSvg = `
-  <text x="104" y="${blockTop - 46}" font-family="Newsreader, Georgia, serif" font-size="120" fill="${PAPER}" fill-opacity="0.28">&#8220;</text>
+  <text x="100" y="${blockTop - 4}" font-family="Newsreader, Georgia, serif" font-style="italic" font-size="${markSize}" fill="${PAPER}" fill-opacity="${markOpacity}">&#8220;</text>
   <text font-family="Newsreader, Georgia, serif" font-style="italic" font-size="46" fill="${PAPER}" fill-opacity="0.96">${tspans}</text>`
   }
 
