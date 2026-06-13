@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const BASE = "https://goodtransformer.ai";
-const LAST_MODIFIED = "2026-04-29T00:00:00.000Z";
+const LAST_MODIFIED = "2026-06-13T00:00:00.000Z";
 
 export const dynamic = "force-static";
 
