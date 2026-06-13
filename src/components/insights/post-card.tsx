@@ -6,9 +6,12 @@ import { formatDate, formatTag, type PostMeta } from "@/lib/insights-shared";
 type PostCardProps = {
   post: PostMeta;
   variant?: "default" | "lead";
+  /** Analytics section for the insight_open event. Lets pages that reuse the
+   *  card (e.g. /newsletter) report a distinct source from the Insights index. */
+  section?: string;
 };
 
-export function PostCard({ post, variant = "default" }: PostCardProps) {
+export function PostCard({ post, variant = "default", section = "insights_index" }: PostCardProps) {
   const href = `/insights/${post.slug}/`;
   const isLead = variant === "lead";
   const primaryTag = post.tags[0];
@@ -25,7 +28,7 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
         href={href}
         className="group block focus:outline-none"
         data-analytics-event="insight_open"
-        data-analytics-section="insights_index"
+        data-analytics-section={section}
         data-analytics-label={post.title}
       >
         {post.cover ? (
@@ -60,7 +63,7 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
             href={href}
             className="insight-card__title-link"
             data-analytics-event="insight_open"
-            data-analytics-section="insights_index"
+            data-analytics-section={section}
             data-analytics-label={post.title}
           >
             {post.title}

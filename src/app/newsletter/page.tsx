@@ -92,7 +92,7 @@ export default function NewsletterPage() {
             </div>
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {recentPosts.map((post) => (
-                <PostCard key={post.slug} post={post} />
+                <PostCard key={post.slug} post={post} section="newsletter_page" />
               ))}
             </div>
             <p className="mt-10">
