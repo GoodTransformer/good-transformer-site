@@ -1758,10 +1758,10 @@ details > summary::-webkit-details-marker {
 .insight-prose h2,
 .insight-prose h3,
 .insight-prose h4 {
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-serif), Georgia, serif;
   color: rgb(var(--color-ink));
-  line-height: 1.18;
-  letter-spacing: -0.01em;
+  line-height: 1.2;
+  letter-spacing: normal;
   scroll-margin-top: 6rem;
 }
 
