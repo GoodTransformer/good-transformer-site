@@ -1,4 +1,4 @@
-# Good Transformer — Tailwind Configuration
+# Good Transformer - Tailwind Configuration
 
 **File:** `tailwind.config.ts`
 
@@ -31,7 +31,7 @@ colors: {
 }
 ```
 
-**Key alias:** `brass` = teal (`#008C95`). This naming is a legacy holdover — the colour is teal.
+**Key alias:** `brass` = teal (`#008C95`). This naming is a legacy holdover - the colour is teal.
 
 ---
 

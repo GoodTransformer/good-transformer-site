@@ -1,4 +1,4 @@
-# Good Transformer — Environment Variables
+# Good Transformer - Environment Variables
 
 ---
 
@@ -12,7 +12,7 @@
 | `NEXT_PUBLIC_PERSONAL_LESSON_URL` | Yes | Calendar URL for scheduling a personal AI lesson after the personal intake form |
 | `NEXT_PUBLIC_BOOKING_BRIEF_EMAIL` | Recommended | Email address used for manual `mailto:` fallback if a form endpoint or calendar URL is missing |
 
-These use the `NEXT_PUBLIC_` prefix because they are embedded in client-side JavaScript. They are safe to expose — they are public form endpoints, public booking links, or a contact email, not secret keys.
+These use the `NEXT_PUBLIC_` prefix because they are embedded in client-side JavaScript. They are safe to expose - they are public form endpoints, public booking links, or a contact email, not secret keys.
 
 ---
 
@@ -65,4 +65,4 @@ The GitHub Actions workflow injects these at build time.
 
 ## Fallbacks
 
-`.env.production` contains fallback values used if secrets are not set in GitHub. This file is committed to the repo but should contain only public endpoints, safe placeholders, or empty values — never private secrets.
+`.env.production` contains fallback values used if secrets are not set in GitHub. This file is committed to the repo but should contain only public endpoints, safe placeholders, or empty values - never private secrets.

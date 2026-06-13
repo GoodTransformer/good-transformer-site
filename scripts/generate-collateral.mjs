@@ -4,7 +4,7 @@
  *
  * Renders the branded marketing collateral in marketing/templates/ to:
  *   public/downloads/*.pdf   one-pager, checklist, 3 sector inserts (A4)
- *   public/social/*.png      LinkedIn banner (1584×396) + featured tile (1080×1080)
+ *   public/social/*.png      LinkedIn company cover (4200×700) + featured tile (1080×1080)
  *
  * Uses headless Chromium (Playwright) so the real brand fonts
  * (Newsreader + Schibsted Grotesk, loaded from Google Fonts) render exactly.
@@ -13,7 +13,7 @@
  *   npx playwright install chromium   # one-time
  *   npm run generate:collateral
  *
- * Kept OUT of the build pipeline on purpose — the rendered files are committed,
+ * Kept OUT of the build pipeline on purpose - the rendered files are committed,
  * so the static GitHub Pages deploy never needs a browser.
  */
 
@@ -42,7 +42,7 @@ const PDFS = [
 
 // PNGs (rendered at 2× for crisp retina display) → public/social
 const PNGS = [
-  ['linkedin-banner.html',         'linkedin-banner.png',         1584, 396],
+  ['linkedin-banner.html',         'linkedin-banner.png',         2100, 350],
   ['linkedin-featured.html',       'linkedin-featured.png',       1080, 1080],
   ['linkedin-featured-light.html', 'linkedin-featured-light.png', 1080, 1080],
 ]

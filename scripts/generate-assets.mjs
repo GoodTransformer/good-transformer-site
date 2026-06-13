@@ -117,7 +117,7 @@ const textSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www
     letter-spacing="0"
     fill="${rgb(INK)}">Get confident</text>
 
-  <!-- Headline line 2 — "with " ink, "AI." teal -->
+  <!-- Headline line 2 - "with " ink, "AI." teal -->
   <text x="80" y="370"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="80" font-weight="normal"
@@ -137,7 +137,7 @@ const textSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www
   <text x="80" y="524"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
     font-size="20.5"
-    fill="${rgb(SLATE)}">Patrick Hussey — AI coach and fractional adviser</text>
+    fill="${rgb(SLATE)}">Patrick Hussey - AI coach and fractional adviser</text>
 
   <!-- Site URL in teal -->
   <text x="80" y="562"
@@ -150,7 +150,7 @@ const textSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www
 // ── 5. Composite all layers ───────────────────────────────────────────────────
 await sharp(bg)
   .composite([
-    // Homepage AI confidence stack — right-side social visual.
+    // Homepage AI confidence stack - right-side social visual.
     { input: stackVisual, left: 672, top: 60 },
     // Teal bars (left edge + bottom edge)
     { input: barsSvg,    left: 0,   top: 0  },

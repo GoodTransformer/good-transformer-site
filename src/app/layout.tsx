@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import "./globals.css";
 
+import { AnalyticsEvents } from "@/components/analytics-events";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -55,14 +56,14 @@ const jsonLd = {
           name: "AI Lessons for Leaders",
           description:
             "One-to-one AI coaching for leaders, from first steps to sharper workflows.",
-          url: `${SITE_URL}/book/personal/`,
+          url: `${SITE_URL}/services/ai-lessons-for-leaders/`,
         },
         {
           "@type": "Offer",
           name: "AI Advisory for Teams",
           description:
             "Fractional AI advisory for teams: AI Reality Check Sprint, 90-Day Adoption Build, or ongoing Fractional Retainer.",
-          url: `${SITE_URL}/book/business/`,
+          url: `${SITE_URL}/services/ai-advisory-for-teams/`,
         },
       ],
     },
@@ -148,6 +149,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <SiteHeader />
+        <AnalyticsEvents />
         <main id="content">{children}</main>
         <SiteFooter />
       </body>

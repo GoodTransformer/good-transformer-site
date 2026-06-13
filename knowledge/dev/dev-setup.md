@@ -1,4 +1,4 @@
-# Good Transformer — Development Setup
+# Good Transformer - Development Setup
 
 ---
 
@@ -47,7 +47,7 @@ Dev server runs at `http://localhost:3000`.
 /Users/patrickhussey/Desktop/Websites/Fractional AI champion site /
 ```
 
-The folder name has a trailing space — include it in all paths.
+The folder name has a trailing space - include it in all paths.
 
 ---
 

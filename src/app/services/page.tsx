@@ -85,6 +85,9 @@ export default function ServicesPage() {
             <Link
               href={servicesPage.personalSection.cta.href}
               className="hero-nav-cta mt-8 inline-flex items-center gap-3"
+              data-analytics-event="service_cta_click"
+              data-analytics-section="services_overview_leaders"
+              data-analytics-label={servicesPage.personalSection.cta.label}
             >
               {servicesPage.personalSection.cta.label}
               <span aria-hidden="true">→</span>
@@ -117,6 +120,9 @@ export default function ServicesPage() {
                 <Link
                   href={item.href}
                   className="text-link mt-6 inline-flex text-sm text-ink"
+                  data-analytics-event="pdf_download"
+                  data-analytics-section="services_downloads"
+                  data-analytics-asset={item.title}
                 >
                   Open PDF
                 </Link>
@@ -187,6 +193,9 @@ export default function ServicesPage() {
             <Link
               href={servicesPage.businessSection.cta.href}
               className="hero-nav-cta inline-flex items-center gap-3"
+              data-analytics-event="service_cta_click"
+              data-analytics-section="services_overview_teams"
+              data-analytics-label={servicesPage.businessSection.cta.label}
             >
               {servicesPage.businessSection.cta.label}
               <span aria-hidden="true">→</span>
@@ -220,6 +229,9 @@ export default function ServicesPage() {
             <Link
               href={servicesPage.businessSection.cta.href}
               className="text-link text-sm text-ink"
+              data-analytics-event="service_cta_click"
+              data-analytics-section="services_roadmap"
+              data-analytics-label={servicesPage.businessSection.cta.label}
             >
               {servicesPage.businessSection.cta.label}
             </Link>

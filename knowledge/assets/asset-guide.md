@@ -1,4 +1,4 @@
-# Good Transformer — Asset Guide
+# Good Transformer - Asset Guide
 
 All public assets live in `/public`. Next.js serves them from the root path.
 
@@ -65,10 +65,10 @@ Do not hand-edit `public/og-image.png` without updating the generator, otherwise
 | `sana-commerce.svg` | `public/logos/sana-commerce.svg` | Sana Commerce |
 
 These are referenced in `proofSignals.organisations` in `site-content.ts`. Each entry includes:
-- `name` — display name
-- `src` — path from `/public` root
-- `width`, `height` — intrinsic dimensions
-- `maxWidth` — max display width in `rem` (controls relative size in the logo strip)
+- `name` - display name
+- `src` - path from `/public` root
+- `width`, `height` - intrinsic dimensions
+- `maxWidth` - max display width in `rem` (controls relative size in the logo strip)
 
 **Adding a new client logo:**
 1. Add SVG to `public/logos/[slug].svg`

@@ -1,6 +1,6 @@
 # Good Transformer
 
-Personal AI lessons and fractional AI advisory — [goodtransformer.ai](https://goodtransformer.ai)
+Personal AI lessons and fractional AI advisory - [goodtransformer.ai](https://goodtransformer.ai)
 
 > **AI agents and developers:** Start with [`AGENTS.md`](./AGENTS.md) for navigation, then see the [`knowledge/`](./knowledge/) folder for detailed reference on brand, components, content, and deployment.
 
@@ -44,11 +44,11 @@ npm run build
 
 ## Project structure
 
-- `src/app` — pages: Home, Services, Patrick, About, Book
-- `src/content/site-content.ts` — all copy and structured content
-- `src/components` — layout, motion, CTA, FAQ, booking, and artefact components
-- `public/hero/attention-flow-the-path-to-ai-mastery-web.webp` — current home page AI confidence stack illustration
-- `public/logos/gt-logo.png` — brand mark (circuit tree, transparent PNG)
+- `src/app` - pages: Home, Services, Patrick, About, Book
+- `src/content/site-content.ts` - all copy and structured content
+- `src/components` - layout, motion, CTA, FAQ, booking, and artefact components
+- `public/hero/attention-flow-the-path-to-ai-mastery-web.webp` - current home page AI confidence stack illustration
+- `public/logos/gt-logo.png` - brand mark (circuit tree, transparent PNG)
 
 ## Brand colours
 
@@ -66,8 +66,8 @@ Canonical brand tokens live in `knowledge/brand/brand-tokens.json`. The variable
 | `--color-accent-teal-deep` | `#006F7A` | Teal on small text / high contrast |
 | `--color-accent-teal-bright` | `#00A6B2` | Arrows, icon rings, fine rules |
 | `--color-accent-teal-wash` | `#D6F3F4` | Teal tint backgrounds |
-| `--color-warm-amber` | `#C4873A` | Secondary accent — use sparingly |
-| `--color-copper` | `#70828D` | Blue-grey — form interactions |
+| `--color-warm-amber` | `#C4873A` | Secondary accent - use sparingly |
+| `--color-copper` | `#70828D` | Blue-grey - form interactions |
 | `--color-soft-blue` | `#D8E8EC` | Section band backgrounds |
 
 ## Deployment
@@ -76,4 +76,4 @@ Deploys automatically to GitHub Pages on push to `main` via [`.github/workflows/
 
 Environment variables are injected at build time from GitHub Secrets. See [`knowledge/ops/env-vars.md`](knowledge/ops/env-vars.md) for the full list. The `.env.production` file provides fallback values if secrets are not set.
 
-The site uses a custom domain (`goodtransformer.ai`) — no `basePath` or `assetPrefix` is needed.
+The site uses a custom domain (`goodtransformer.ai`) - no `basePath` or `assetPrefix` is needed.

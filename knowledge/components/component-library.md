@@ -1,4 +1,4 @@
-# Good Transformer — Component Library
+# Good Transformer - Component Library
 
 All components live in `src/components/`. This document covers props, purpose, and usage patterns.
 
@@ -6,7 +6,7 @@ All components live in `src/components/`. This document covers props, purpose, a
 
 ## Layout components
 
-### `SiteHeader` — `site-header.tsx`
+### `SiteHeader` - `site-header.tsx`
 
 Global navigation bar rendered on every page via `layout.tsx`.
 
@@ -15,13 +15,13 @@ Global navigation bar rendered on every page via `layout.tsx`.
 - Navigation links from `navigation` in `site-content.ts`
 - Desktop top-right "Book a lesson" CTA
 - Mobile menu button and slide-down mobile nav
-- No props — reads directly from `siteConfig` and `navigation`
+- No props - reads directly from `siteConfig` and `navigation`
 
 **Usage:** Added once in `layout.tsx`. Do not add to pages directly.
 
 ---
 
-### `SiteFooter` — `site-footer.tsx`
+### `SiteFooter` - `site-footer.tsx`
 
 Global footer rendered on every page via `layout.tsx`.
 
@@ -36,7 +36,7 @@ Global footer rendered on every page via `layout.tsx`.
 
 ## Hero component
 
-### `HomeHero` — `home-hero.tsx`
+### `HomeHero` - `home-hero.tsx`
 
 The full-screen hero for the homepage only.
 
@@ -66,14 +66,14 @@ Design intent: the first viewport should read as one branded composition, not a 
 - Uses `.hero-stage-v2` for exact paper background (`#FAF3EA`)
 - Uses `public/hero/attention-flow-the-path-to-ai-mastery-web.webp` for the desktop-only right-side stack visual
 - The word "AI" in the title is automatically highlighted in teal via `HighlightedTitle` (internal component)
-- `leading-[1.0]` on the h1 is important — do not reduce below 1.0 or italic ascenders clip
+- `leading-[1.0]` on the h1 is important - do not reduce below 1.0 or italic ascenders clip
 - The route-card and signal-strip classes are approved homepage-specific implementation details. Do not copy them into new hero designs.
 
 ---
 
 ## Content components
 
-### `AnimatedReveal` — `animated-reveal.tsx`
+### `AnimatedReveal` - `animated-reveal.tsx`
 
 Wrapper that reveals children with a fade-up animation when scrolled into view.
 
@@ -93,11 +93,11 @@ Wrapper that reveals children with a fade-up animation when scrolled into view.
 </AnimatedReveal>
 ```
 
-**Note:** Uses `IntersectionObserver`. Content is hidden until it enters the viewport — be aware of this when using `window.scrollTo()` in scripts or tests.
+**Note:** Uses `IntersectionObserver`. Content is hidden until it enters the viewport - be aware of this when using `window.scrollTo()` in scripts or tests.
 
 ---
 
-### `FAQList` — `faq-list.tsx`
+### `FAQList` - `faq-list.tsx`
 
 Accordion-style FAQ list.
 
@@ -118,7 +118,7 @@ Accordion-style FAQ list.
 
 ---
 
-### `ArtefactDeck` — `artefact-deck.tsx`
+### `ArtefactDeck` - `artefact-deck.tsx`
 
 Shows a row of document artefact panels (used in the Patrick/proof section to show deliverables).
 
@@ -134,7 +134,7 @@ Each card represents a deliverable document (AI direction brief, use-case scorec
 
 ---
 
-### `ClientLogoStrip` — `client-logo-strip.tsx`
+### `ClientLogoStrip` - `client-logo-strip.tsx`
 
 Horizontal strip of client organisation logos.
 
@@ -150,7 +150,7 @@ Logos are defined in `proofSignals.organisations` in `site-content.ts`.
 
 ---
 
-### `PageIntro` — `page-intro.tsx`
+### `PageIntro` - `page-intro.tsx`
 
 Standard page header pattern used on inner pages (Services, About, etc.).
 
@@ -164,15 +164,15 @@ Standard page header pattern used on inner pages (Services, About, etc.).
 
 ---
 
-### `CTAGroup` — `cta-group.tsx`
+### `CTAGroup` - `cta-group.tsx`
 
 Renders the standard two-CTA pair (personal lesson + business call).
 
-No required props — reads from `siteConfig` directly.
+No required props - reads from `siteConfig` directly.
 
 ---
 
-### `ServiceContactPrompt` — `service-contact-prompt.tsx`
+### `ServiceContactPrompt` - `service-contact-prompt.tsx`
 
 Renders the compact service enquiry line and linked email address used above booking forms, on the booking chooser, and in the footer. Copy and the email address live in `serviceContact` in `site-content.ts`.
 
@@ -186,7 +186,7 @@ Renders the compact service enquiry line and linked email address used above boo
 
 ---
 
-### `BookingForm` — `booking-form.tsx`
+### `BookingForm` - `booking-form.tsx`
 
 Business brief intake form. Submits to Formspree.
 

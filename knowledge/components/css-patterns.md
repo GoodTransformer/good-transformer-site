@@ -1,4 +1,4 @@
-# Good Transformer — CSS Patterns
+# Good Transformer - CSS Patterns
 
 This covers the custom CSS component classes defined in `src/app/globals.css` and how they combine with Tailwind utilities.
 
@@ -19,9 +19,9 @@ These are defined in `tailwind.config.ts` and backed by CSS custom properties in
 | `text-brass` / `bg-brass` / `border-brass` | `--color-brass` | `#008C95` (teal) |
 | `text-copper` / `bg-copper` | `--color-copper` | `#008C95` |
 | `border-line` | `--color-line` | `#041F25` at low opacity |
-| `shadow-glow` | — | `0 28px 80px rgba(10,20,26,0.18)` |
+| `shadow-glow` | - | `0 28px 80px rgba(10,20,26,0.18)` |
 
-**Alpha modifier syntax** — supported on all brand colours:
+**Alpha modifier syntax** - supported on all brand colours:
 ```
 text-ink/72      → ink at 72% opacity
 text-paper/74    → paper at 74% opacity
@@ -94,7 +94,7 @@ Dark card: `rgba(3,24,28,0.96)` background with paper text and teal borders.
 Legacy proof strip in the current hero. Do not add new hero proof strips, stats, badges, or chips unless a redesign explicitly calls for them outside the first viewport.
 
 ### `.hero-v2-copy`
-Container for the hero text block — positions copy on top of the image.
+Container for the hero text block - positions copy on top of the image.
 
 ---
 

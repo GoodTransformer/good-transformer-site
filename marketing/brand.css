@@ -1,5 +1,5 @@
 /* ============================================================================
-   Good Transformer — collateral brand stylesheet
+   Good Transformer - collateral brand stylesheet
    Shared by every template in marketing/templates/.
    Mirrors the live site: colours from src/app/globals.css,
    fonts from src/app/layout.tsx (Newsreader + Schibsted Grotesk).
@@ -59,9 +59,9 @@ img { display: block; max-width: 100%; }
   overflow: hidden;
 }
 
-/* Cream surfaces are kept clean — no diffuse colour washes (they read sickly). */
+/* Cream surfaces are kept clean - no diffuse colour washes (they read sickly). */
 
-/* Slim teal top edge — the quiet brand signature from the OG bars. */
+/* Slim teal top edge - the quiet brand signature from the OG bars. */
 .sheet > .edge {
   position: absolute;
   top: 0; left: 0; right: 0;

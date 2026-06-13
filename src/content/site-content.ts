@@ -1,6 +1,7 @@
 export type LinkItem = {
   href: string;
   label: string;
+  children?: LinkItem[];
 };
 
 export type LessonFormat = {
@@ -16,6 +17,20 @@ export type Offer = {
   outputs: string[];
   fit?: string;
   cadence?: string[];
+};
+
+export type DownloadItem = {
+  label: string;
+  title: string;
+  body: string;
+  href: string;
+};
+
+export type ServiceDetailPage = {
+  title: string;
+  intro: string;
+  heroCta: LinkItem;
+  secondaryCta?: LinkItem;
 };
 
 export type ProofArtefact = {
@@ -67,7 +82,14 @@ export const serviceContact = {
 };
 
 export const navigation: LinkItem[] = [
-  { href: "/services", label: "Services" },
+  {
+    href: "/services",
+    label: "Services",
+    children: [
+      { href: "/services/ai-lessons-for-leaders", label: "AI Lessons for Leaders" },
+      { href: "/services/ai-advisory-for-teams", label: "AI Advisory for Teams" },
+    ],
+  },
   { href: "/patrick", label: "Patrick" },
   { href: "/about", label: "About" },
 ];
@@ -342,7 +364,7 @@ export const lessonOffers = [
       "A clear view of AI in your business",
       "1-to-1 coaching around your schedule",
     ],
-    href: "/book/personal",
+    href: "/services/ai-lessons-for-leaders",
   },
   {
     name: "AI Advisory for Teams",
@@ -354,7 +376,7 @@ export const lessonOffers = [
       "Pilot it inside your real workflows",
       "Leave the team able to keep it running",
     ],
-    href: "/book/business",
+    href: "/services/ai-advisory-for-teams",
   },
 ];
 
@@ -396,7 +418,7 @@ export const servicesPage = {
     heading: "AI Lessons for Leaders",
     intro:
       "For leaders short on time: build the practical AI skills to use it well, and the clarity to set your own AI direction for the business.",
-    cta: { label: "Book a 1-to-1 call", href: "/book/personal" },
+    cta: { label: "Explore leader lessons", href: "/services/ai-lessons-for-leaders" },
   },
   resourceSection: {
     label: "Free downloads",
@@ -440,6 +462,13 @@ export const servicesPage = {
         href: "/downloads/ai-for-agency-leaders.pdf",
       },
       {
+        label: "Corporate finance",
+        title: "AI for corporate finance leaders",
+        body:
+          "Synthesis, preparation and diligence support for judgement-heavy advisory work.",
+        href: "/downloads/ai-for-corporate-finance.pdf",
+      },
+      {
         label: "Legal & risk-aware services",
         title: "AI with verification built in",
         body:
@@ -452,7 +481,7 @@ export const servicesPage = {
     heading: "AI Advisory for Teams",
     intro:
       "Three ways to work together: a sprint to scope what's possible, a 90-day build to embed AI in how the team works, then a retainer to keep going.",
-    cta: { label: "Book a business call", href: "/book/business" },
+    cta: { label: "Explore team advisory", href: "/services/ai-advisory-for-teams" },
   },
   sampleArc: [
     {
@@ -474,6 +503,160 @@ export const servicesPage = {
   ],
   close:
     "If a smaller starting point can create real momentum, that is the recommendation.",
+};
+
+export const leaderLessonsPage: ServiceDetailPage & {
+  overview: {
+    label: string;
+    heading: string;
+    body: string;
+    points: string[];
+    download: DownloadItem;
+  };
+  sectorSection: {
+    label: string;
+    heading: string;
+    intro: string;
+    items: DownloadItem[];
+  };
+  lessonSection: {
+    heading: string;
+    intro: string;
+  };
+  proof: {
+    heading: string;
+    body: string;
+  };
+} = {
+  title: "AI Lessons for Leaders",
+  intro:
+    "Practical 1-to-1 AI coaching for leaders who want to understand AI, use it well, and see what it means for their role, their people and their business.",
+  heroCta: { label: "Book a 1-to-1 call", href: "/book/personal" },
+  secondaryCta: { label: "View all services", href: "/services" },
+  overview: {
+    label: "Start here",
+    heading: "What the lessons are",
+    body:
+      "The core lessons are not a generic tool demo. They are practical sessions built around the work you already do: decisions, meetings, writing, research, planning, team questions and the judgement calls AI now touches.",
+    points: [
+      "Understand AI in relation to your own role and responsibilities.",
+      "Turn real tasks into calmer, repeatable workflows.",
+      "See how AI could help your staff without losing judgement, safety or voice.",
+      "Leave with a useful action plan, not a pile of abstract possibilities.",
+    ],
+    download: {
+      label: "General overview",
+      title: "Practical AI Lessons for Leaders",
+      body:
+        "A short PDF explaining the offer, who it is for, what happens in a lesson and what leaders leave with.",
+      href: "/downloads/practical-ai-lessons-for-leaders.pdf",
+    },
+  },
+  sectorSection: {
+    label: "Sector notes",
+    heading: "Pick the version closest to your work",
+    intro:
+      "The lesson shape stays practical, but the use cases change by sector. These short notes show how the same leadership lessons apply in different professional services contexts.",
+    items: [
+      {
+        label: "Accountancy & advisory",
+        title: "AI for accountancy leaders",
+        body:
+          "Client prep, research, drafting and internal knowledge-sharing with human judgement still in charge.",
+        href: "/downloads/ai-for-accountancy-and-advisory.pdf",
+      },
+      {
+        label: "Recruitment",
+        title: "AI for recruitment leaders",
+        body:
+          "Candidate prep, market research, adverts, summaries and follow-ups, without losing the human touch.",
+        href: "/downloads/ai-for-recruitment.pdf",
+      },
+      {
+        label: "Agency & marketing",
+        title: "AI for agency leaders",
+        body:
+          "Client preparation, reporting, content and search shifts, with creative judgement kept visible.",
+        href: "/downloads/ai-for-agency-leaders.pdf",
+      },
+      {
+        label: "Corporate finance",
+        title: "AI for corporate finance leaders",
+        body:
+          "Synthesis, meeting prep and first-pass diligence support for judgement-heavy advisory work.",
+        href: "/downloads/ai-for-corporate-finance.pdf",
+      },
+      {
+        label: "Legal & risk-aware services",
+        title: "AI with verification built in",
+        body:
+          "Preparation, first drafts and knowledge work with confidentiality, accuracy and verification in view.",
+        href: "/downloads/ai-for-legal-and-risk-aware-professional-services.pdf",
+      },
+    ],
+  },
+  lessonSection: {
+    heading: "Lessons shaped around the leader in front of me",
+    intro:
+      "Some leaders need a first confident hour. Some need a short run of sessions to build habits. Some need an ongoing rhythm as the tools and business questions keep changing.",
+  },
+  proof: {
+    heading: "Experience without the theatre",
+    body:
+      "Patrick has worked with leaders at Google, Microsoft, SAP, Adobe, Vodafone, OneAdvanced and Sana Commerce, and written on AI for Fast Company and The Guardian. The lessons bring that context back to the practical work in front of you.",
+  },
+};
+
+export const teamAdvisoryPage: ServiceDetailPage & {
+  fit: {
+    heading: string;
+    intro: string;
+    points: string[];
+  };
+  operating: {
+    heading: string;
+    intro: string;
+  };
+  offerSection: {
+    heading: string;
+    intro: string;
+  };
+  arcSection: {
+    heading: string;
+    intro: string;
+  };
+} = {
+  title: "AI Advisory for Teams",
+  intro:
+    "Fractional AI advisory for teams that need AI to become part of working practice, not just a leadership ambition or another training session.",
+  heroCta: { label: "Book a business call", href: "/book/business" },
+  secondaryCta: { label: "View all services", href: "/services" },
+  fit: {
+    heading: "For teams that need a steadier way to move",
+    intro:
+      "This is for organisations where AI is already being discussed, tested or used unevenly, but the business still needs direction, ownership and practical follow-through.",
+    points: [
+      "Leadership wants a clear view of where AI should and should not be used.",
+      "Teams are experimenting, but habits and guardrails are patchy.",
+      "Useful pilots need to turn into repeatable working practice.",
+      "The business needs senior judgement without hiring a full-time AI lead.",
+    ],
+  },
+  operating: {
+    heading: "Direction, workflow and confidence in one rhythm",
+    intro:
+      "The work connects leadership priorities with the jobs people actually do. That means agreeing the right use cases, redesigning real workflows, and leaving the team able to keep improving after the engagement.",
+  },
+  offerSection: {
+    heading: "Three ways to work together",
+    intro:
+      "Start with the smallest engagement that can create useful momentum, then build only when the business has a clear reason to go further.",
+  },
+  arcSection: {
+    heading: "A simple 90-day arc",
+    intro:
+      "The core team engagement moves from clarity to working pilots to a practical operating rhythm the business can keep using.",
+  },
 };
 
 export const patrickPage = {
@@ -632,6 +815,18 @@ export const seoContent = {
       title: "Services",
       description:
         "AI lessons for leaders and fractional advisory for teams. Three engagement tiers: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
+    },
+    leaderLessons: {
+      path: "/services/ai-lessons-for-leaders/",
+      title: "AI Lessons for Leaders",
+      description:
+        "Practical 1-to-1 AI lessons for leaders with Patrick Hussey. Understand AI, apply it to your own work, and see what it means for your role, staff and business.",
+    },
+    teamAdvisory: {
+      path: "/services/ai-advisory-for-teams/",
+      title: "AI Advisory for Teams",
+      description:
+        "Fractional AI advisory for teams. Turn AI intention into working practice with clear direction, workflow pilots, team confidence and practical guardrails.",
     },
     about: {
       path: "/about/",

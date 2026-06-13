@@ -1,10 +1,10 @@
-# Good Transformer — Services and Offers
+# Good Transformer - Services and Offers
 
 ---
 
 ## Service line 1: Personal AI Lessons
 
-**Audience:** Individuals — beginners, improvers, freelancers, job-seekers, founders, professionals
+**Audience:** Individuals - beginners, improvers, freelancers, job-seekers, founders, professionals
 
 **Positioning:** One-to-one coaching, not a course. No syllabus, no platform. Shaped around the individual's tasks and confidence gaps.
 
@@ -15,7 +15,7 @@
 | Name | Duration | Description |
 |---|---|---|
 | Intro lesson | 1 hr | Single session tailored to skill level and real tasks |
-| Starter pack | 3 × 1 hr | Three building sessions — tools, habits, workflow |
+| Starter pack | 3 × 1 hr | Three building sessions - tools, habits, workflow |
 | Ongoing rhythm | 2 × 1 hr + async | Monthly sessions with support in between |
 
 ### What sessions cover
@@ -32,9 +32,9 @@ Online or at a co-working space (venue agreed at booking).
 
 ## Service line 2: Business AI Advisory
 
-**Audience:** Leaders, teams, and organisations — SMEs and mid-market businesses
+**Audience:** Leaders, teams, and organisations - SMEs and mid-market businesses
 
-**Positioning:** Fractional advisory — a defined senior cadence, not a full-time hire. Patrick works alongside teams to turn AI intent into working practice.
+**Positioning:** Fractional advisory - a defined senior cadence, not a full-time hire. Patrick works alongside teams to turn AI intent into working practice.
 
 **Booking route:** `/book/business`
 
@@ -50,7 +50,7 @@ Patrick operates across three layers:
 
 ### Engagement tiers
 
-#### AI Reality Check Sprint — 2 weeks
+#### AI Reality Check Sprint - 2 weeks
 **Purpose:** Fast clarity on where AI fits, and a plan to act on it.
 
 **Best for:** AI use is already happening, but ownership and guardrails are still unclear.
@@ -64,7 +64,7 @@ Patrick operates across three layers:
 
 ---
 
-#### 90-Day Adoption Build — 12 weeks
+#### 90-Day Adoption Build - 12 weeks
 **Purpose:** Embedded advisory to turn AI intent into real team habits.
 
 **Best for:** Direction exists, but working practice still needs to move.
@@ -78,8 +78,8 @@ Patrick operates across three layers:
 
 ---
 
-#### Fractional Retainer — 3-month minimum
-**Purpose:** Senior AI advisory alongside your team — no full-time hire.
+#### Fractional Retainer - 3-month minimum
+**Purpose:** Senior AI advisory alongside your team - no full-time hire.
 
 **Best for:** Multiple teams need progress, prioritisation, and steadier decision-making.
 
@@ -107,7 +107,7 @@ Patrick operates across three layers:
 
 | Artefact | What it is |
 |---|---|
-| AI direction brief | Leadership direction — priority decisions, sponsor cadence, next 90 days |
+| AI direction brief | Leadership direction - priority decisions, sponsor cadence, next 90 days |
 | Use-case scorecard | Portfolio scored against value, readiness, and delivery risk |
 | Team playbook | Workflow patterns, quality checks, champion support |
 | Governance pack | Approved tools, do-not-paste rules, escalation routes, plain-English guidance |

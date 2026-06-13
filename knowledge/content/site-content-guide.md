@@ -1,4 +1,4 @@
-# Good Transformer — Site Content Guide
+# Good Transformer - Site Content Guide
 
 **File:** `src/content/site-content.ts`
 
@@ -17,7 +17,7 @@ Important caveat: a few legacy strings may still exist in page components, struc
 
 ---
 
-## Exports — what's in the file
+## Exports - what's in the file
 
 ### `siteConfig`
 Global brand settings used across all pages and components.
@@ -25,13 +25,13 @@ Global brand settings used across all pages and components.
 ```ts
 siteConfig.brand          // "Good Transformer"
 siteConfig.descriptor     // Tagline / sub-brand description
-siteConfig.primaryCta     // { label, href } — generic "Book a call"
-siteConfig.personalCta    // { label, href } — personal lesson CTA
-siteConfig.businessCta    // { label, href } — business call CTA
+siteConfig.primaryCta     // { label, href } - generic "Book a call"
+siteConfig.personalCta    // { label, href } - personal lesson CTA
+siteConfig.businessCta    // { label, href } - business call CTA
 ```
 
 ### `navigation`
-Array of `{ href, label }` — the links in the site header.
+Array of `{ href, label }` - the links in the site header.
 Currently: Services, Patrick, About.
 
 ### `homePage`
@@ -121,7 +121,7 @@ Three operating model rows (Lead / Embed / Enable) for the services page.
 2. Find the export that corresponds to the page/section
 3. Search the codebase for the exact old string to check whether it is hardcoded anywhere else
 4. Edit the string value, or move the legacy hardcoded string into this file if needed
-5. Save — the change appears immediately in dev server
+5. Save - the change appears immediately in dev server
 
 **Example:** To change the hero headline:
 ```ts
@@ -134,8 +134,8 @@ title: "Get confident with AI",   // ← edit this string
 ## Types
 
 Types are exported at the top of the file:
-- `LinkItem` — `{ href, label }`
-- `LessonFormat` — `{ name, duration, body }`
-- `Offer` — `{ name, duration, purpose, outputs, fit?, cadence? }`
-- `ProofArtefact` — `{ title, label, subtitle, rows }`
-- `ProofOrganisation` — `{ name, slug, src, width, height, maxWidth }`
+- `LinkItem` - `{ href, label }`
+- `LessonFormat` - `{ name, duration, body }`
+- `Offer` - `{ name, duration, purpose, outputs, fit?, cadence? }`
+- `ProofArtefact` - `{ title, label, subtitle, rows }`
+- `ProofOrganisation` - `{ name, slug, src, width, height, maxWidth }`

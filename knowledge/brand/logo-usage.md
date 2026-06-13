@@ -1,10 +1,10 @@
-# Good Transformer — Logo Usage
+# Good Transformer - Logo Usage
 
 ---
 
 ## The mark
 
-The Good Transformer logo mark is a **circuit tree** — a tree whose branches are formed from circuit board traces. It represents the intersection of technology and growth.
+The Good Transformer logo mark is a **circuit tree** - a tree whose branches are formed from circuit board traces. It represents the intersection of technology and growth.
 
 **File:** `public/logos/gt-logo.png`
 
@@ -14,7 +14,7 @@ This is a PNG with true alpha transparency (no white background). It is used alo
 
 ## Colour treatments
 
-The PNG is rendered as a single-colour flat mark using CSS filters. **Do not use the raw PNG colour** — always apply one of these treatments:
+The PNG is rendered as a single-colour flat mark using CSS filters. **Do not use the raw PNG colour** - always apply one of these treatments:
 
 ### On light surfaces (paper, warm backgrounds)
 

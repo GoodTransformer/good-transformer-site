@@ -1,4 +1,4 @@
-# Good Transformer — globals.css Reference
+# Good Transformer - globals.css Reference
 
 **File:** `src/app/globals.css`
 
@@ -10,7 +10,7 @@ This file contains all CSS custom properties, global resets, and component-level
 
 Two `:root` blocks. The second block (`/* Good Transformer 2026 direction */`) is the canonical set.
 
-### First block (base colours — do not change without updating Tailwind config)
+### First block (base colours - do not change without updating Tailwind config)
 
 ```css
 :root {
@@ -36,7 +36,7 @@ Two `:root` blocks. The second block (`/* Good Transformer 2026 direction */`) i
 
 ```css
 :root {
-  --color-brass: 0 140 149;         /* #008C95 — teal primary */
+  --color-brass: 0 140 149;         /* #008C95 - teal primary */
   --color-soft-blue: 216 232 236;   /* #D8E8EC */
   --color-accent-teal-deep: 0 111 122;    /* #006F7A */
   --color-accent-teal-bright: 0 166 178;  /* #00A6B2 */
@@ -71,42 +71,42 @@ Both are cosmetic and pointer-events: none.
 ## Component classes
 
 ### Section layout
-- `.section-divider` — hairline top border between sections
-- `.page-eyebrow` — tiny all-caps label above headings
+- `.section-divider` - hairline top border between sections
+- `.page-eyebrow` - tiny all-caps label above headings
 
 ### Background bands
-- `.bg-soft-blue` — blue-neutral gradient (roles section)
-- `.bg-warm-paper` — warm paper gradient (Patrick/testimonial section)
+- `.bg-soft-blue` - blue-neutral gradient (roles section)
+- `.bg-warm-paper` - warm paper gradient (Patrick/testimonial section)
 
 ### Hero
-- `.hero-stage-v2` — homepage hero background, exact `#FAF3EA`
-- `.home-hero__layout` — two-column desktop hero grid
-- `.home-hero__content` — left hero copy/cards/proof column
-- `.home-hero__visual` — right hero visual column
-- `.ai-stack-visual` — desktop-only wrapper for the stack image
-- `.hero-route-card` — current homepage CTA card class; do not copy into new hero work
-- `.hero-route-card--light` — near-white variant
-- `.hero-route-card--dark` — dark teal-black variant
-- `.hero-v2-copy` — text block container
+- `.hero-stage-v2` - homepage hero background, exact `#FAF3EA`
+- `.home-hero__layout` - two-column desktop hero grid
+- `.home-hero__content` - left hero copy/cards/proof column
+- `.home-hero__visual` - right hero visual column
+- `.ai-stack-visual` - desktop-only wrapper for the stack image
+- `.hero-route-card` - current homepage CTA card class; do not copy into new hero work
+- `.hero-route-card--light` - near-white variant
+- `.hero-route-card--dark` - dark teal-black variant
+- `.hero-v2-copy` - text block container
 
 ### Panels
-- `.offer-panel` — light paper panel
-- `.roadmap-step` — numbered roadmap panel
+- `.offer-panel` - light paper panel
+- `.roadmap-step` - numbered roadmap panel
 
 ### Typography
-- `.text-link` — underline hover link
-- `.button-light` — light surface button
-- `.button-ghost-light` — ghost button for dark surfaces
+- `.text-link` - underline hover link
+- `.button-light` - light surface button
+- `.button-ghost-light` - ghost button for dark surfaces
 
 Non-hero buttons use an editorial oblong radius (`0.45rem`), not pills. The homepage hero route cards and top nav CTA have their own established styling.
 
 ### Artefact / document cards
-- `.artifact-sheet` — document sheet base
-- `.artifact-sheet--governance` — governance variant (larger title)
-- `.artifact-sheet-label` — small category label
-- `.artifact-sheet-title` — document title
-- `.artifact-sheet-subtitle` — subtitle line
-- `.artifact-sheet-row` — table-style row
+- `.artifact-sheet` - document sheet base
+- `.artifact-sheet--governance` - governance variant (larger title)
+- `.artifact-sheet-label` - small category label
+- `.artifact-sheet-title` - document title
+- `.artifact-sheet-subtitle` - subtitle line
+- `.artifact-sheet-row` - table-style row
 
 ---
 

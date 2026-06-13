@@ -1,6 +1,6 @@
 {
   "$schema": "https://goodtransformer.ai/knowledge/brand/brand-tokens-schema.json",
-  "$description": "Good Transformer brand tokens — single source of truth for colours, typography, and spacing. Last updated 2026.",
+  "$description": "Good Transformer brand tokens - single source of truth for colours, typography, and spacing. Last updated 2026.",
 
   "color": {
     "_note": "All hex values are the canonical references. RGB triplets are used in CSS custom properties for alpha compositing. The Tailwind alias is the class prefix used in the codebase.",
@@ -10,7 +10,7 @@
       "rgb": "4 31 37",
       "tailwind": "ink",
       "css_var": "--color-ink",
-      "use": "Main headlines, body copy, primary text — the default text colour on light surfaces"
+      "use": "Main headlines, body copy, primary text - the default text colour on light surfaces"
     },
     "slate": {
       "hex": "#5A6166",
@@ -61,7 +61,7 @@
       "rgb": "0 140 149",
       "tailwind": "brass",
       "css_var": "--color-brass",
-      "use": "Main accent — 'AI' word highlight, CTA borders, icon rings, active states, primary buttons",
+      "use": "Main accent - 'AI' word highlight, CTA borders, icon rings, active states, primary buttons",
       "_naming_note": "The Tailwind alias is 'brass' for legacy reasons. All teal accent usage goes through bg-brass / text-brass / border-brass"
     },
     "teal_deep": {
@@ -83,7 +83,7 @@
       "rgb": "214 243 244",
       "tailwind": "accent-teal-wash",
       "css_var": "--color-accent-teal-wash",
-      "use": "Very light teal tint — badge backgrounds, subtle highlights. Never a large fill"
+      "use": "Very light teal tint - badge backgrounds, subtle highlights. Never a large fill"
     },
 
     "soft_blue": {
@@ -99,7 +99,7 @@
       "rgb": "196 135 58",
       "css_var": "--color-warm-amber",
       "use": "Illustration details, diagram labels only. Never buttons, borders, or text",
-      "_warning": "Use sparingly — illustrative warmth only"
+      "_warning": "Use sparingly - illustrative warmth only"
     },
     "copper": {
       "hex": "#70828D",
@@ -112,7 +112,7 @@
     "dark_card": {
       "hex": "#041F25",
       "rgba": "rgba(4, 31, 37, 1)",
-      "use": "Dark CTA panels and current dark hero route card — near-black with warm dark-teal undertone"
+      "use": "Dark CTA panels and current dark hero route card - near-black with warm dark-teal undertone"
     },
     "dark_bg": {
       "hex": "#08070F",
@@ -122,7 +122,7 @@
     "RETIRED": {
       "brass_old": {
         "hex": "#A5701E",
-        "_warning": "RETIRED — do not use. The old warm brass accent. Replace with teal_primary (#008C95) in all contexts"
+        "_warning": "RETIRED - do not use. The old warm brass accent. Replace with teal_primary (#008C95) in all contexts"
       }
     }
   },
@@ -151,14 +151,14 @@
       "source": "Google Fonts",
       "variable": "--font-serif",
       "tailwind": "font-serif",
-      "use": "Headlines (h1–h3), blockquotes, display text — editorial and premium"
+      "use": "Headlines (h1–h3), blockquotes, display text - editorial and premium"
     },
     "font_sans": {
       "family": "Schibsted Grotesk",
       "source": "Google Fonts",
       "variable": "--font-sans",
       "tailwind": "font-sans",
-      "use": "Body copy, UI labels, navigation, captions — default body font"
+      "use": "Body copy, UI labels, navigation, captions - default body font"
     },
     "scale": {
       "display_hero": "clamp(2.8rem, 5.2vw, 5.4rem)",

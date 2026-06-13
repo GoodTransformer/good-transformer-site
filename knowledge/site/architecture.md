@@ -1,4 +1,4 @@
-# Good Transformer — Site Architecture
+# Good Transformer - Site Architecture
 
 ---
 
@@ -104,8 +104,8 @@ All copy, navigation, service descriptions, FAQs, testimonials, and structured d
 ### CSS architecture
 
 Two layers:
-1. **Tailwind utilities** — layout, spacing, colour (uses CSS custom properties via `rgb(var(--color-*) / alpha)`)
-2. **Custom component classes** in `globals.css` — complex multi-property patterns (`.hero-stage-v2`, `.offer-panel`, `.roadmap-step`, etc.)
+1. **Tailwind utilities** - layout, spacing, colour (uses CSS custom properties via `rgb(var(--color-*) / alpha)`)
+2. **Custom component classes** in `globals.css` - complex multi-property patterns (`.hero-stage-v2`, `.offer-panel`, `.roadmap-step`, etc.)
 
 ### Font loading
 
@@ -121,4 +121,4 @@ npm run build    # Production static export to /out
 npm run lint     # ESLint
 ```
 
-Build output goes to `/out` — this is what GitHub Pages serves.
+Build output goes to `/out` - this is what GitHub Pages serves.

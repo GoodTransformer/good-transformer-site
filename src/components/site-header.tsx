@@ -21,6 +21,7 @@ export function SiteHeader() {
   }, [pathname]);
 
   const linkClass = "text-ink/65 hover:text-ink";
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <header
@@ -49,7 +50,50 @@ export function SiteHeader() {
 
           <nav className="ml-6 hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
             {navigation.map((item) => {
-              const active = pathname === item.href;
+              const active = isActive(item.href);
+
+              if (item.children?.length) {
+                return (
+                  <div key={item.href} className="group relative">
+                    <Link
+                      href={item.href}
+                      aria-haspopup="true"
+                      className={classNames(
+                        "inline-flex items-center py-2 text-sm transition-colors",
+                        active ? "text-ink" : linkClass,
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                    <div className="pointer-events-none absolute left-1/2 top-full w-72 -translate-x-1/2 pt-3 opacity-0 transition duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                      <div className="border border-ink/10 bg-paper p-3 shadow-[0_18px_42px_rgba(4,31,37,0.12)]">
+                        <Link
+                          href={item.href}
+                          className="block border-b border-line/10 px-3 py-3 text-sm text-ink transition-colors hover:text-brass"
+                          data-analytics-event="nav_services_overview"
+                          data-analytics-label={item.label}
+                        >
+                          All services
+                        </Link>
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className={classNames(
+                              "block border-b border-line/10 px-3 py-3 text-sm transition-colors last:border-b-0 hover:text-brass",
+                              isActive(child.href) ? "text-ink" : "text-ink/70",
+                            )}
+                            data-analytics-event="nav_service_child"
+                            data-analytics-label={child.label}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
 
               return (
                 <Link
@@ -96,9 +140,20 @@ export function SiteHeader() {
         <div className="border-t border-ink/10 bg-paper/96 px-6 pb-6 lg:hidden">
           <nav className="flex flex-col gap-4 py-5" aria-label="Mobile navigation">
             {navigation.map((item) => (
-              <Link key={item.href} href={item.href} className="text-sm">
-                {item.label}
-              </Link>
+              <div key={item.href} className="flex flex-col gap-3">
+                <Link href={item.href} className="text-sm">
+                  {item.label}
+                </Link>
+                {item.children?.length ? (
+                  <div className="ml-4 flex flex-col gap-3 border-l border-ink/10 pl-4">
+                    {item.children.map((child) => (
+                      <Link key={child.href} href={child.href} className="text-sm text-ink/70">
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
             ))}
             <Link
               href={siteConfig.primaryCta.href}

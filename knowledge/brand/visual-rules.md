@@ -1,6 +1,6 @@
-# Good Transformer — Visual Rules
+# Good Transformer - Visual Rules
 
-The design system is **warm, editorial, and premium** — not cool-blue SaaS, not generic beige. Think ink on paper, a well-lit study, a trusted adviser's desk.
+The design system is **warm, editorial, and premium** - not cool-blue SaaS, not generic beige. Think ink on paper, a well-lit study, a trusted adviser's desk.
 
 For raw token values see `brand-tokens.json`.
 
@@ -10,11 +10,11 @@ For raw token values see `brand-tokens.json`.
 
 | Principle | Rule |
 |---|---|
-| Backgrounds | Warm paper tones — never pure white (`#fff`), never cool grey |
-| Text | Dark ink — never pure black, never mid-grey alone |
-| Accent | Teal only — used for interactive moments, not decoration |
-| Warmth | Small amber details in illustration only — never UI |
-| Landing heroes | One coherent first-viewport composition — not a dashboard, collage, or stack of unrelated promos |
+| Backgrounds | Warm paper tones - never pure white (`#fff`), never cool grey |
+| Text | Dark ink - never pure black, never mid-grey alone |
+| Accent | Teal only - used for interactive moments, not decoration |
+| Warmth | Small amber details in illustration only - never UI |
+| Landing heroes | One coherent first-viewport composition - not a dashboard, collage, or stack of unrelated promos |
 | Brand | Brand/product name must be a hero-level signal on branded pages |
 
 ---
@@ -25,10 +25,10 @@ For raw token values see `brand-tokens.json`.
 
 | Surface | Class / CSS | When to use |
 |---|---|---|
-| Page body | `#FAF3EA` plus subtle `site-frame` texture | Default — applied by `body` in `globals.css` |
+| Page body | `#FAF3EA` plus subtle `site-frame` texture | Default - applied by `body` in `globals.css` |
 | Hero section | `.hero-stage-v2` | Homepage hero panel; exact `#FAF3EA` to match the stack asset |
 | Light section | default (inherits body gradient) | Most content sections |
-| Blue-neutral band | `.bg-soft-blue` | Role/services intro section — one per page max |
+| Blue-neutral band | `.bg-soft-blue` | Role/services intro section - one per page max |
 | Warm paper band | `.bg-warm-paper` | Editorial sections, Patrick bio, testimonial area |
 | Dark panel | `bg-ink` with `text-paper` | Final CTA sections only |
 
@@ -44,7 +44,7 @@ For raw token values see `brand-tokens.json`.
 | On dark surfaces | `text-paper` or `text-paper/74` |
 | Teal accent word (e.g. "AI") | `text-brass` |
 
-### Teal accent — when and how
+### Teal accent - when and how
 
 Teal (`#008C95`, alias `brass`) is the **only UI accent colour**.
 
@@ -61,7 +61,7 @@ Teal (`#008C95`, alias `brass`) is the **only UI accent colour**.
 - Body text (use `text-accent-teal-deep` if teal must be used on small text)
 - Decorative splashes covering more than a small element
 
-### Warm amber — illustration only
+### Warm amber - illustration only
 
 `#C4873A` (warm amber) is permitted **only** in:
 - Illustration details (robot labels, diagram annotations)
@@ -150,8 +150,8 @@ Near-white (`#FBF8F4`) with ink text.
 
 ## Dark surface rules
 
-- Text: `#FBF8F4` or `#FAF3EA` — never ink
-- Accent: teal for icon rings, arrows, borders, active highlights only — no large teal fills
+- Text: `#FBF8F4` or `#FAF3EA` - never ink
+- Accent: teal for icon rings, arrows, borders, active highlights only - no large teal fills
 - Do not use warm amber on dark surfaces
 
 ---
