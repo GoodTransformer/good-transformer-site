@@ -14,6 +14,10 @@ type PageMetadataOptions = {
   description: string;
   path?: string;
   noIndex?: boolean;
+  /** Absolute or root-relative image to use for OG/Twitter cards. Falls back to OG_IMAGE. */
+  image?: string;
+  /** OpenGraph type. Use "article" for Insights posts. */
+  ogType?: "website" | "article";
 };
 
 export function buildPageMetadata({
@@ -21,8 +25,11 @@ export function buildPageMetadata({
   description,
   path,
   noIndex = false,
+  image,
+  ogType = "website",
 }: PageMetadataOptions): Metadata {
   const url = path ? absoluteUrl(path) : SITE_URL;
+  const imageUrl = image ? (image.startsWith("http") ? image : absoluteUrl(image)) : OG_IMAGE;
 
   return {
     title,
@@ -56,10 +63,10 @@ export function buildPageMetadata({
       url,
       siteName: seoContent.siteName,
       locale: "en_GB",
-      type: "website",
+      type: ogType,
       images: [
         {
-          url: OG_IMAGE,
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: seoContent.ogImageAlt,
@@ -70,7 +77,7 @@ export function buildPageMetadata({
       card: "summary_large_image",
       title: path === "/" || !path ? seoContent.openGraphTitle : `${title} | ${siteConfig.offerName}`,
       description,
-      images: [OG_IMAGE],
+      images: [imageUrl],
     },
   };
 }

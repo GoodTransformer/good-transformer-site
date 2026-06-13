@@ -90,9 +90,16 @@ export const navigation: LinkItem[] = [
       { href: "/services/ai-advisory-for-teams", label: "AI Advisory for Teams" },
     ],
   },
+  { href: "/insights", label: "Insights" },
   { href: "/patrick", label: "Patrick" },
   { href: "/about", label: "About" },
 ];
+
+export const insightsPage = {
+  title: "Insights",
+  intro:
+    "Practical writing on using AI with judgement — adoption, leadership, and the ethical questions that come with it — plus useful guides and templates you can take away.",
+};
 
 export const aboutPage = {
   title: "About",
@@ -815,6 +822,12 @@ export const seoContent = {
       title: "Services",
       description:
         "AI lessons for leaders and fractional advisory for teams. Three engagement tiers: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
+    },
+    insights: {
+      path: "/insights/",
+      title: "Insights",
+      description:
+        "Practical writing from Patrick Hussey on using AI with judgement — adoption, leadership and ethics — plus useful guides and templates for leaders and teams.",
     },
     leaderLessons: {
       path: "/services/ai-lessons-for-leaders/",

@@ -1,0 +1,96 @@
+name: Publish Insight (PLACEHOLDER)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PLACEHOLDER orchestration for automated Insights publishing.
+#
+# Today this scaffolds + validates a post on demand. The single missing piece is
+# the generator step (Cowork / Codex / another system) that writes the Markdown
+# file and cover image per content/insights/CONTRACT.md. Where that plugs in is
+# marked "TODO: GENERATOR" below.
+#
+# Flow:  generate .md + cover  →  validate  →  commit + push to main
+#        (pushing to main triggers deploy-pages.yml, which ships the site)
+#
+# Triggers:
+#   • Manual run (workflow_dispatch) with an optional topic
+#   • External trigger (repository_dispatch, event type "new-insight"),
+#     e.g. POST from the generator service
+#   • Daily schedule — commented out until the generator is wired
+# ─────────────────────────────────────────────────────────────────────────────
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "Topic / brief for the generated Insight (optional)"
+        required: false
+        type: string
+      tags:
+        description: "Comma-separated tags (optional)"
+        required: false
+        type: string
+  repository_dispatch:
+    types: [new-insight]
+  # schedule:
+  #   - cron: "0 7 * * *"   # 07:00 UTC daily — enable once the generator is wired
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-insight
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ─── TODO: GENERATOR ──────────────────────────────────────────────────
+      # Replace this step with the call to the content generator. It MUST output:
+      #   • content/insights/<slug>.md   (frontmatter per CONTRACT.md, draft: false)
+      #   • public/insights/<slug>/cover.jpg   (~1600×900) for a written post
+      #     (or public/insights/assets/<file> for an asset)
+      #
+      # The generator receives the topic via:
+      #   ${{ github.event.inputs.topic }}            (manual run)
+      #   ${{ github.event.client_payload.topic }}    (repository_dispatch)
+      # and will need an API key, e.g.:
+      #   env:
+      #     INSIGHTS_GENERATOR_API_KEY: ${{ secrets.INSIGHTS_GENERATOR_API_KEY }}
+      #
+      # Until then, this scaffolds an empty draft so the pipeline is exercisable:
+      - name: Generate Insight (placeholder scaffold)
+        run: |
+          TOPIC="${{ github.event.inputs.topic || github.event.client_payload.topic || 'Untitled Insight' }}"
+          TAGS="${{ github.event.inputs.tags || github.event.client_payload.tags || 'ai-adoption' }}"
+          echo "TODO: replace with real generator. Scaffolding draft for: $TOPIC"
+          node scripts/new-insight.mjs "$TOPIC" --tags "$TAGS"
+          # NOTE: scaffolds with draft: true, so validate/commit below are a no-op
+          # publish until the generator emits draft: false + a cover image.
+
+      - name: Validate Insights
+        run: node scripts/validate-insights.mjs
+
+      - name: Commit & push
+        run: |
+          git config user.name "good-transformer-bot"
+          git config user.email "bot@goodtransformer.ai"
+          git add content/insights public/insights
+          if git diff --cached --quiet; then
+            echo "No new Insight to publish."
+          else
+            git commit -m "Publish Insight via automation"
+            git push origin main
+          fi

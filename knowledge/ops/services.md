@@ -17,6 +17,8 @@ lives under. Keep this current when a service is added, moved, or its owner chan
 | **Microsoft 365 (Outlook)** | Domain email | Microsoft 365 tenant on **`goodtransformer.ai`** **_(confirm admin login)_** | Mailboxes `patrick@goodtransformer.ai` and `hello@goodtransformer.ai`. (Note: the old Outlook Bookings calendar has been replaced by Cal.com below - email stays on Microsoft 365.) |
 | **Cal.com** (EU instance, `cal.eu`) | Call / lesson scheduling calendar | Cal.com account, handle **`goodtransformerbooking`**, login email **`hello@goodtransformer.ai`** (primary). Log in via the **EU portal** `app.cal.eu` (not app.cal.com). | Live event types: `cal.eu/goodtransformerbooking/business-discovery-call` and `…/leaders-ai-discovery`. Stored in env vars **`NEXT_PUBLIC_CLARITY_CALL_URL`** (business; legacy name - it is **not** Microsoft/Calendly/Clarity) and `NEXT_PUBLIC_PERSONAL_LESSON_URL` (leaders). Both the GitHub secrets and the `.env.production` fallback hold these Cal.com URLs. |
 | **Formspree** | Form submission backend for the two intake forms | Formspree account **_(confirm login email)_** | Personal lesson form `maqazwgn`; business brief form `xbdqerev` (both confirmed live in the production bundle) |
+| **Resend** | Newsletter sending - the daily & weekly Insights digest | Resend account, login email **`hello@goodtransformer.ai`** (primary), account `goodtransformer` | Sends from `insights@send.goodtransformer.ai` (subdomain `send.goodtransformer.ai`, **verified** 13 Jun 2026, region eu-west-1/Ireland; DNS at GoDaddy/123-reg). New Resend model: **Topics** `Daily digest` (`9034d02c-63ce-40e0-9f2b-a6e7dddcb421`) + `Weekly digest` (`bab99185-9d93-4934-933e-a564d8cfa71a`), and an "All subscribers" **Segment** (`3c41bcc6-4550-4a22-8367-2ab15cab6041`). Secrets `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, `RESEND_TOPIC_DAILY_ID`, `RESEND_TOPIC_WEEKLY_ID`, `DIGEST_FROM` (GitHub Actions). Setup in [`NEWSLETTER-SETUP.md`](../../NEWSLETTER-SETUP.md). **_(IDs all wired; remaining: verify domain, deploy Worker, set GitHub secrets)_** |
+| **Cloudflare Workers** | Hosts the newsletter `subscribe` endpoint (keeps the Resend key off the client) | Cloudflare account **_(to be created)_** | Worker `gt-newsletter-subscribe` (see `workers/subscribe/`). Holds `RESEND_API_KEY` + audience IDs as Worker secrets; site reads its URL from `NEXT_PUBLIC_SUBSCRIBE_ENDPOINT`. **_(not yet deployed)_** |
 | **Google Analytics 4** | Site analytics (page views + click events) | Google account **`goodtransformer1@gmail.com`** | Account `353050501` · Property `486698902` · **Measurement ID `G-LN1EJ68X71`** |
 | **Google Search Console** | Search indexing / domain verification | Same Google account as GA4 (**`goodtransformer1@gmail.com`**) | Verification file `public/googled0b1f3ab4da77175.html` |
 
@@ -31,6 +33,12 @@ lives under. Keep this current when a service is added, moved, or its owner chan
   "Continue to scheduling" handoff in `src/components/booking-form.tsx`.
 - **Formspree** endpoints are stored as `NEXT_PUBLIC_FORMSPREE_*` and consumed in
   `src/components/booking-form.tsx`.
+- **Resend** sends the Insights digest: a scheduled GitHub Action
+  (`.github/workflows/send-digest.yml`) builds the email (`scripts/build-digest.mjs`) and
+  sends it via the Broadcasts API (`scripts/send-digest.mjs`). Subscribers are captured by the
+  Cloudflare **subscribe Worker** into the matching Resend audience; the signup form
+  (`src/components/insights/newsletter-signup.tsx`) posts to `NEXT_PUBLIC_SUBSCRIBE_ENDPOINT`.
+  Full wiring in [`NEWSLETTER-SETUP.md`](../../NEWSLETTER-SETUP.md).
 - **Google Analytics 4** is loaded by `src/components/google-analytics.tsx` and
   `src/components/analytics-events.tsx`, reading `NEXT_PUBLIC_GA_MEASUREMENT_ID`.
 - **Google Search Console** is verified by a static file served from `public/`.

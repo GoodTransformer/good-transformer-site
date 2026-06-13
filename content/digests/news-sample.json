@@ -1,0 +1,36 @@
+{
+  "$comment": "Sample AI-news payload. The pipeline writes news-latest.json in this exact shape. See NEWSLETTER-SETUP.md §News for the contract. 'stories' should be ordered most-important-first; the digest takes the top 3 (daily) or top 5 (weekly).",
+  "generatedAt": "2026-06-13",
+  "stories": [
+    {
+      "title": "EU AI Act enforcement phase begins for general-purpose models",
+      "url": "https://example.com/eu-ai-act-enforcement",
+      "source": "Reuters",
+      "summary": "The first binding obligations for general-purpose AI providers take effect, with documentation and transparency requirements leaders should note for procurement."
+    },
+    {
+      "title": "Major cloud provider ships agentic workflow tooling for enterprises",
+      "url": "https://example.com/agentic-workflows",
+      "source": "The Verge",
+      "summary": "New tooling lets teams chain models into multi-step workflows — promising for adoption, but it raises the governance questions covered in this week's Insight."
+    },
+    {
+      "title": "Study: most enterprise AI pilots still fail to reach production",
+      "url": "https://example.com/pilot-study",
+      "source": "MIT Sloan",
+      "summary": "A large survey finds the gap between successful pilots and scaled adoption remains wide, echoing the structural-shift theme."
+    },
+    {
+      "title": "New open-weight model narrows the gap with frontier systems",
+      "url": "https://example.com/open-weights",
+      "source": "Ars Technica",
+      "summary": "Cheaper, self-hostable options expand what smaller teams can do without sending data to third parties."
+    },
+    {
+      "title": "Regulators publish guidance on AI use in professional services",
+      "url": "https://example.com/professional-services-guidance",
+      "source": "Financial Times",
+      "summary": "Confidentiality and verification expectations are spelled out for legal, finance and advisory firms."
+    }
+  ]
+}

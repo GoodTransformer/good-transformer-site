@@ -1,0 +1,80 @@
+name: Send Insights digest
+
+# Builds and sends the daily / weekly Insights digest via Resend.
+#
+# Cadence is derived from the trigger:
+#   • daily   — weekday mornings  (cron "0 7 * * 1-5")
+#   • weekly  — Monday morning    (cron "0 8 * * 1")
+#   • manual  — choose cadence via workflow_dispatch
+#
+# Requires these repo secrets (see NEWSLETTER-SETUP.md):
+#   RESEND_API_KEY, RESEND_SEGMENT_ID, RESEND_TOPIC_DAILY_ID, RESEND_TOPIC_WEEKLY_ID, DIGEST_FROM
+# Without them, send-digest.mjs logs and exits 0 (no failed runs).
+
+on:
+  # Schedule is intentionally OFF until the real AI-news generator is wired
+  # (scripts/generate-ai-news.mjs) — otherwise the digest would ship the
+  # placeholder sample stories. Re-enable by uncommenting these two lines.
+  # schedule:
+  #   - cron: "0 7 * * 1-5" # daily, weekdays 07:00 UTC
+  #   - cron: "0 8 * * 1" # weekly, Monday 08:00 UTC
+  workflow_dispatch:
+    inputs:
+      cadence:
+        description: "Which digest to send"
+        type: choice
+        options: [daily, weekly]
+        default: weekly
+      dry_run:
+        description: "Build but do not send"
+        type: boolean
+        default: true
+
+concurrency:
+  group: send-digest
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Determine cadence
+        id: cadence
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "value=${{ github.event.inputs.cadence }}" >> "$GITHUB_OUTPUT"
+            echo "dry=${{ github.event.inputs.dry_run }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 8 * * 1" ]; then
+            echo "value=weekly" >> "$GITHUB_OUTPUT"
+            echo "dry=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=daily" >> "$GITHUB_OUTPUT"
+            echo "dry=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ─── TODO: GENERATOR ──────────────────────────────────────────────────
+      # Replace this with the real AI-news generator (see scripts/generate-ai-news.mjs).
+      # It must write content/digests/news-latest.json before the digest is built.
+      - name: Generate AI news
+        run: node scripts/generate-ai-news.mjs
+
+      - name: Send digest
+        run: node scripts/send-digest.mjs --cadence "${{ steps.cadence.outputs.value }}" ${{ steps.cadence.outputs.dry == 'true' && '--dry-run' || '' }}
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}
+          RESEND_TOPIC_DAILY_ID: ${{ secrets.RESEND_TOPIC_DAILY_ID }}
+          RESEND_TOPIC_WEEKLY_ID: ${{ secrets.RESEND_TOPIC_WEEKLY_ID }}
+          DIGEST_FROM: ${{ secrets.DIGEST_FROM }}

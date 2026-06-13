@@ -95,6 +95,9 @@ export const metadata: Metadata = {
   category: "AI coaching and advisory",
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": [{ url: "/feed.xml", title: "Good Transformer — Insights" }],
+    },
   },
   robots: {
     index: true,

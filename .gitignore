@@ -7,6 +7,7 @@ screenshots/
 .claude/
 .DS_Store
 *.log
+.env
 .env.local
 *.tsbuildinfo
 GTM research\ /
@@ -15,3 +16,7 @@ Vision Doc/
 # Local collateral review helpers (not part of the live site)
 public/collateral-preview.html
 public/previews/
+
+# Newsletter digest: generated each run by the pipeline, plus local previews
+content/digests/news-latest.json
+*.digest-preview.html

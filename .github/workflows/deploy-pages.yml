@@ -36,11 +36,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate Insights content
+        run: npm run validate:insights
+
       - name: Build static site
         run: npm run build
         env:
           NEXT_PUBLIC_FORMSPREE_PERSONAL_ENDPOINT: ${{ secrets.NEXT_PUBLIC_FORMSPREE_PERSONAL_ENDPOINT }}
           NEXT_PUBLIC_FORMSPREE_BOOKING_ENDPOINT: ${{ secrets.NEXT_PUBLIC_FORMSPREE_BOOKING_ENDPOINT }}
+          NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ENDPOINT: ${{ secrets.NEXT_PUBLIC_FORMSPREE_NEWSLETTER_ENDPOINT }}
+          NEXT_PUBLIC_SUBSCRIBE_ENDPOINT: ${{ secrets.NEXT_PUBLIC_SUBSCRIBE_ENDPOINT }}
           NEXT_PUBLIC_CLARITY_CALL_URL: ${{ secrets.NEXT_PUBLIC_CLARITY_CALL_URL }}
           NEXT_PUBLIC_PERSONAL_LESSON_URL: ${{ secrets.NEXT_PUBLIC_PERSONAL_LESSON_URL }}
           NEXT_PUBLIC_BOOKING_BRIEF_EMAIL: ${{ secrets.NEXT_PUBLIC_BOOKING_BRIEF_EMAIL }}
