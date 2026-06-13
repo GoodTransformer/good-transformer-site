@@ -99,7 +99,7 @@ export function BookingForm() {
   ].join("\n");
   const briefEmailHref = getMailtoHref(
     process.env.NEXT_PUBLIC_BOOKING_BRIEF_EMAIL ?? "",
-    "AI Clarity Call intake",
+    "Business discovery call intake",
     summary,
   );
   const autoRedirectsToCalendar = Boolean(briefEndpoint && calendarUrl);
@@ -158,7 +158,7 @@ export function BookingForm() {
     const briefPayload = {
       email: form.workEmail.trim(),
       source: siteConfig.offerName,
-      formType: "AI Clarity Call",
+      formType: "Business discovery call",
       submittedAt: new Date().toISOString(),
       organisationSize: form.organisationSize,
       sector: form.sector,
@@ -166,7 +166,7 @@ export function BookingForm() {
       tools: form.tools.trim(),
       outcome: form.outcome.trim(),
       summary,
-      _subject: "New AI Clarity Call brief",
+      _subject: "New business discovery call brief",
       _gotcha: trapField,
     };
 

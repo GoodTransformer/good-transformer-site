@@ -87,7 +87,7 @@ export default function HomePage() {
                     ))}
                   </ul>
                   <Link href={offer.href} className="text-link mt-7 inline-flex text-sm text-ink">
-                    {offer.href === "/book/personal" ? "Book a 1-to-1 call" : "Book a business call"}
+                    {offer.label === "For leaders" ? "Book a 1-to-1 discovery call" : "Book a business discovery call"}
                   </Link>
                 </article>
               ))}

@@ -1,5 +1,8 @@
 # Good Transformer - Environment Variables
 
+> For *which account* each external service lives under (GitHub, Microsoft 365, Formspree,
+> Google Analytics, Search Console), see the [services register](services.md).
+
 ---
 
 ## All variables
@@ -11,7 +14,7 @@
 | `NEXT_PUBLIC_CLARITY_CALL_URL` | Yes | Calendar URL for scheduling the business call (Calendly, Cal.com, etc.) |
 | `NEXT_PUBLIC_PERSONAL_LESSON_URL` | Yes | Calendar URL for scheduling a personal AI lesson after the personal intake form |
 | `NEXT_PUBLIC_BOOKING_BRIEF_EMAIL` | Recommended | Email address used for manual `mailto:` fallback if a form endpoint or calendar URL is missing |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Recommended | Google Analytics 4 measurement ID, for example `G-XXXXXXXXXX` |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Recommended | Google Analytics 4 measurement ID. Current value: `G-LN1EJ68X71` (GA4 property `486698902`). See [`services.md`](services.md) for the owning account. |
 
 These use the `NEXT_PUBLIC_` prefix because they are embedded in client-side JavaScript. They are safe to expose - they are public form endpoints, public booking links, a contact email, or a public GA4 measurement ID, not secret keys.
 

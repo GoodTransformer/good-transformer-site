@@ -54,19 +54,19 @@ export const siteConfig = {
   descriptor: "AI lessons for leaders and practical business advisory",
   brand: "Good Transformer",
   primaryCta: {
-    label: "Book a call",
+    label: "Book a discovery call",
     href: "/book",
   },
   heroSecondaryCta: {
-    label: "Book a 1-to-1 call",
+    label: "Book a 1-to-1 discovery call",
     href: "/book/personal",
   },
   personalCta: {
-    label: "Book a 1-to-1 call",
+    label: "Book a 1-to-1 discovery call",
     href: "/book/personal",
   },
   businessCta: {
-    label: "Book a business call",
+    label: "Book a business discovery call",
     href: "/book/business",
   },
   calendarEnvName: "NEXT_PUBLIC_CLARITY_CALL_URL",
@@ -531,7 +531,7 @@ export const leaderLessonsPage: ServiceDetailPage & {
   title: "AI Lessons for Leaders",
   intro:
     "Practical 1-to-1 AI coaching for leaders who want to understand AI, use it well, and see what it means for their role, their people and their business.",
-  heroCta: { label: "Book a 1-to-1 call", href: "/book/personal" },
+  heroCta: { label: "Book a 1-to-1 discovery call", href: "/book/personal" },
   secondaryCta: { label: "View all services", href: "/services" },
   overview: {
     label: "Start here",
@@ -629,7 +629,7 @@ export const teamAdvisoryPage: ServiceDetailPage & {
   title: "AI Advisory for Teams",
   intro:
     "Fractional AI advisory for teams that need AI to become part of working practice, not just a leadership ambition or another training session.",
-  heroCta: { label: "Book a business call", href: "/book/business" },
+  heroCta: { label: "Book a business discovery call", href: "/book/business" },
   secondaryCta: { label: "View all services", href: "/services" },
   fit: {
     heading: "For teams that need a steadier way to move",
@@ -721,9 +721,9 @@ export const bookingPage = {
 
 export const bookingSuccessPage = {
   personal: {
-    title: "Success, your 1-to-1 call is booked",
+    title: "Success, your 1-to-1 discovery call is booked",
     intro:
-      "Your 1-to-1 call is in the diary. You should receive a calendar invite and joining link by email shortly.",
+      "Your 1-to-1 discovery call is in the diary. You should receive a calendar invite and joining link by email shortly.",
     body:
       "If the invite does not appear within a few minutes, check spam or promotions, then reply to the booking email if you need help.",
     steps: [
@@ -741,9 +741,9 @@ export const bookingSuccessPage = {
     },
   },
   business: {
-    title: "Success, your business call is booked",
+    title: "Success, your business discovery call is booked",
     intro:
-      "Your business clarity call is confirmed. You should receive a calendar invite and joining link by email shortly.",
+      "Your business discovery call is confirmed. You should receive a calendar invite and joining link by email shortly.",
     body:
       "If the invite does not appear within a few minutes, check spam or promotions, then reply to the booking email if you need help.",
     steps: [
@@ -844,31 +844,31 @@ export const seoContent = {
       path: "/book/",
       title: "Book a Session",
       description:
-        "Two ways to work with Patrick Hussey: 1-to-1 AI lessons for leaders, or fractional advisory for teams. Book a short call to start either.",
+        "Two ways to work with Patrick Hussey: 1-to-1 AI lessons for leaders, or fractional advisory for teams. Book a short discovery call to start either.",
     },
     bookPersonal: {
       path: "/book/personal/",
       title: "AI Lessons for Leaders",
       description:
-        "1-to-1 AI lessons for leaders with Patrick Hussey. Start with a short call to work out what you need. No experience required.",
+        "1-to-1 AI lessons for leaders with Patrick Hussey. Start with a short discovery call to work out what you need. No experience required.",
     },
     bookBusiness: {
       path: "/book/business/",
       title: "AI Advisory for Teams",
       description:
-        "Fractional AI advisory for teams with Patrick Hussey. Submit a short brief and book a call to discuss AI strategy, adoption, and the right engagement for your team.",
+        "Fractional AI advisory for teams with Patrick Hussey. Submit a short brief and book a discovery call to discuss AI strategy, adoption, and the right engagement for your team.",
     },
     personalSuccess: {
       path: "/book/personal/success/",
-      title: "Success, Your 1-to-1 Call Is Booked",
+      title: "Success, Your 1-to-1 Discovery Call Is Booked",
       description:
-        "Confirmation page for 1-to-1 AI calls booked with Patrick Hussey at Good Transformer.",
+        "Confirmation page for 1-to-1 discovery calls booked with Patrick Hussey at Good Transformer.",
     },
     businessSuccess: {
       path: "/book/business/success/",
-      title: "Success, Your Business Call Is Booked",
+      title: "Success, Your Business Discovery Call Is Booked",
       description:
-        "Confirmation page for business clarity calls booked with Patrick Hussey at Good Transformer.",
+        "Confirmation page for business discovery calls booked with Patrick Hussey at Good Transformer.",
     },
     notFound: {
       title: "Page not found",
