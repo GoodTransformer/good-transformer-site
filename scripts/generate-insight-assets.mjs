@@ -31,6 +31,8 @@ const OUT = join(ROOT, 'public', 'insights', 'assets')
 const ASSETS = [
   ['insight-ai-leadership-literacy-self-assessment.html', 'ai-leadership-literacy-self-assessment'],
   ['insight-ai-delegation-decision-tree.html', 'ai-delegation-decision-tree'],
+  ['insight-ai-use-case-value-scorecard.html', 'ai-use-case-value-scorecard'],
+  ['insight-ai-value-conversion-worksheet.html', 'ai-value-conversion-worksheet'],
 ]
 
 const url = (file) => pathToFileURL(join(TPL, file)).href

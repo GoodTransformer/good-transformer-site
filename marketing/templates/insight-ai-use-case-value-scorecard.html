@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>The AI Use-Case VALUE Scorecard</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  .hero { margin-top: 13px; }
+  .hero .title { margin-top: 7px; }
+  .hero .lead { margin-top: 9px; }
+
+  .howto {
+    margin-top: 13px; border: 1px solid var(--line-soft); border-radius: 10px; padding: 10px 14px;
+    font-family: var(--font-sans); font-size: 11px; line-height: 1.5; color: #2c3a3e;
+  }
+  .howto b { color: var(--ink); font-weight: 600; }
+
+  .score { margin-top: 13px; display: grid; grid-template-columns: 2.1fr repeat(5, 0.86fr) 0.9fr;
+    border: 1px solid var(--line-soft); border-radius: 10px; overflow: hidden; }
+  .score > div { border-top: 1px solid var(--line-soft); border-left: 1px solid var(--line-soft);
+    padding: 9px 8px; font-family: var(--font-sans); font-size: 10px; color: #2c3a3e; min-height: 62px;
+    display: flex; align-items: flex-start; }
+  .score > div:nth-child(-n+7) { border-top: 0; font-weight: 700; color: var(--ink);
+    background: rgba(4,31,37,0.03); font-size: 9.5px; letter-spacing: 0.02em; min-height: 0; align-items: center; }
+  .score > div:nth-child(8n+1) { border-left: 0; }
+  .score .tot { background: rgba(0,140,149,0.05); }
+  .score .rowname { color: var(--slate); font-style: italic; font-size: 9.5px; }
+
+  .legend { margin-top: 8px; font-family: var(--font-sans); font-size: 9.5px; color: var(--slate); }
+  .legend b { color: var(--ink); font-weight: 600; }
+
+  .guide { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 9px 18px; }
+  .guide .g { font-family: var(--font-sans); font-size: 10.6px; line-height: 1.42; color: #2c3a3e; }
+  .guide .g b { color: var(--ink); font-weight: 600; }
+  .guide .g .lo { color: var(--moss); font-weight: 600; }
+
+  .bands { margin-top: 6px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .band { border: 1px solid var(--line-soft); border-radius: 10px; padding: 10px 12px; }
+  .band .r { font-family: var(--font-serif); font-style: italic; font-size: 12.5px; color: var(--teal); margin: 0 0 2px; }
+  .band p { font-family: var(--font-sans); font-size: 10.2px; line-height: 1.4; color: var(--slate); margin: 0; }
+
+  .rulebox { margin-top: 13px; border: 1.4px solid var(--teal); border-radius: 10px; padding: 10px 14px; background: rgba(0,140,149,0.05); }
+  .rulebox .k { font-family: var(--font-sans); font-weight: 700; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); }
+  .rulebox p { font-family: var(--font-sans); font-size: 10.8px; line-height: 1.5; color: #2c3a3e; margin: 5px 0 0; }
+  .rulebox b { color: var(--ink); font-weight: 600; }
+
+  .reco { margin-top: 13px; border: 1px solid var(--line-soft); border-radius: 10px; padding: 11px 14px; }
+  .reco .k { font-family: var(--font-sans); font-weight: 700; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); opacity: 0.55; }
+  .reco .fld { margin-top: 8px; font-family: var(--font-sans); font-size: 10.4px; color: var(--slate); }
+  .reco .ln { height: 1px; background: var(--line-soft); margin: 14px 0 0; }
+</style>
+</head>
+<body>
+
+  <!-- ───────── PAGE 1 ───────── -->
+  <div class="sheet">
+    <span class="edge"></span>
+    <header class="masthead">
+      <div class="brandmark"><img class="mark--ink" src="../../public/logos/gt-logo.png" alt=""><span class="wordmark">Good Transformer</span></div>
+      <span class="meta">A leader&rsquo;s scorecard</span>
+    </header>
+    <div class="rule" style="margin-top:13px"></div>
+
+    <section class="hero">
+      <p class="eyebrow">Decision tool &middot; Compare up to five</p>
+      <h1 class="title">The AI Use-Case <span class="accent">VALUE</span> Scorecard</h1>
+      <p class="lead">The best first AI project is rarely the most futuristic. Score your candidates on the five
+        things that decide whether a use case is worth starting with, and let the numbers argue.</p>
+    </section>
+
+    <div class="howto">
+      Score each candidate task from <b>1 to 5</b> on every criterion, where <b>5 is always the most favourable
+      for a first project</b>. Add the five scores for a total out of 25. Higher means a stronger, safer place to
+      start. Then read the warning flags before you commit.
+    </div>
+
+    <div class="score">
+      <div>Candidate use case</div><div>Value</div><div>Activity</div><div>Learn.</div><div>Uncert.</div><div>Ease</div><div class="tot">/25</div>
+      <div class="rowname">1.</div><div></div><div></div><div></div><div></div><div></div><div class="tot"></div>
+      <div class="rowname">2.</div><div></div><div></div><div></div><div></div><div></div><div class="tot"></div>
+      <div class="rowname">3.</div><div></div><div></div><div></div><div></div><div></div><div class="tot"></div>
+      <div class="rowname">4.</div><div></div><div></div><div></div><div></div><div></div><div class="tot"></div>
+      <div class="rowname">5.</div><div></div><div></div><div></div><div></div><div></div><div class="tot"></div>
+    </div>
+    <p class="legend"><b>Value</b> worth if it works &middot; <b>Activity</b> how often the task recurs &middot;
+      <b>Learnability</b> can your team tell good from bad &middot; <b>Uncertainty</b> score high when it is low-risk
+      and errors are easy to catch &middot; <b>Ease</b> how simply it stands up on tools you already have.</p>
+
+    <div class="grow"></div>
+    <div class="rule--soft" style="margin:10px 0 8px"></div>
+    <footer class="footer"><span>Good Transformer &middot; Choosing a first AI use case &middot; Page 1 of 2</span><span class="site">goodtransformer.ai</span></footer>
+  </div>
+
+  <!-- ───────── PAGE 2 ───────── -->
+  <div class="sheet">
+    <span class="edge"></span>
+    <header class="masthead">
+      <div class="brandmark"><img class="mark--ink" src="../../public/logos/gt-logo.png" alt=""><span class="wordmark">Good Transformer</span></div>
+      <span class="meta">A leader&rsquo;s scorecard</span>
+    </header>
+    <div class="rule" style="margin-top:13px"></div>
+
+    <p class="section-label" style="margin-top:16px">What each score means</p>
+    <div class="guide">
+      <p class="g"><b>Value &mdash;</b> <span class="lo">1</span> hard to name a benefit; <b>5</b> a clear, statable prize (hours into fee-earning work, faster turnaround, errors avoided).</p>
+      <p class="g"><b>Activity &mdash;</b> <span class="lo">1</span> happens rarely; <b>5</b> a high-frequency task, so the benefit compounds and the team gets many reps to learn.</p>
+      <p class="g"><b>Learnability &mdash;</b> <span class="lo">1</span> &ldquo;good&rdquo; needs years of judgement to assess; <b>5</b> good output is knowable and quick to check.</p>
+      <p class="g"><b>Uncertainty &mdash;</b> <span class="lo">1</span> complex, contested, errors are costly and hard to spot; <b>5</b> sits inside the technology&rsquo;s strengths and a mistake is caught easily and cheaply.</p>
+      <p class="g"><b>Ease &mdash;</b> <span class="lo">1</span> needs new systems, data access or sign-off; <b>5</b> runs on tools the team already opens, with little change.</p>
+    </div>
+
+    <p class="section-label" style="margin-top:16px">Reading the total</p>
+    <div class="bands">
+      <div class="band"><p class="r">Below 12</p><p>Not your first project. Park it and revisit once you have learned more.</p></div>
+      <div class="band"><p class="r">12&ndash;18</p><p>Workable. Look hard at the lowest score before you commit, that is your risk.</p></div>
+      <div class="band"><p class="r">19&ndash;25</p><p>A strong first candidate. Frequent, checkable, low-stakes and easy to stand up.</p></div>
+    </div>
+
+    <div class="rulebox">
+      <span class="k">Warning flag</span>
+      <p>A candidate scoring <b>5 on Value but 1&ndash;2 on Uncertainty or Learnability</b> is the seductive, brittle
+        project, the one that impressed the room and will quietly teach your team that AI overpromises. High value
+        alone is not enough. Favour the balanced score.</p>
+    </div>
+
+    <div class="reco">
+      <span class="k">Recommendation</span>
+      <p class="fld">We will start with:</p><div class="ln"></div>
+      <p class="fld" style="margin-top:12px">Because (the prize, in a sentence):</p><div class="ln"></div>
+      <p class="fld" style="margin-top:12px">Owner:</p><div class="ln"></div>
+      <p class="fld" style="margin-top:12px">The one measure we will check:</p><div class="ln"></div>
+    </div>
+
+    <div class="grow"></div>
+    <div class="rule--soft" style="margin:12px 0 11px"></div>
+    <div class="cta-row"><span class="cta">Book an AI Reality Check</span><span class="cta-aside">goodtransformer.ai/services/ai-advisory-for-teams &nbsp;&middot;&nbsp; <b>hello@goodtransformer.ai</b></span></div>
+    <div class="rule--soft" style="margin:13px 0 9px"></div>
+    <footer class="footer"><span>Good Transformer &middot; v1.0, June 2026 &middot; AI capability shifts quickly; rescore in six months</span><span class="site">Page 2 of 2</span></footer>
+  </div>
+</body>
+</html>
