@@ -20,7 +20,13 @@ export function ServiceContactPrompt({
       )}
       <span>
         {serviceContact.action}{" "}
-        <a href={emailHref} className="service-contact-prompt__link">
+        <a
+          href={emailHref}
+          data-analytics-event="cta_click"
+          data-analytics-section="service_contact_prompt"
+          data-analytics-label="email"
+          className="service-contact-prompt__link"
+        >
           {serviceContact.email}
         </a>
         .

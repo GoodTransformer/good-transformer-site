@@ -171,6 +171,9 @@ export function HomeHero({
                 <Link
                   key={route.href}
                   href={route.href}
+                  data-analytics-event="cta_click"
+                  data-analytics-section="home_hero"
+                  data-analytics-label={route.label}
                   className={`hero-card hero-route-card hero-route-card--${route.tone} ${route.tone === "dark" ? "hero-business-card" : ""}`}
                 >
                   <span className="hero-route-label">{route.label}</span>

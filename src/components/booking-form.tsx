@@ -4,6 +4,7 @@ import { startTransition, useState, type FormEvent } from "react";
 
 import { ServiceContactPrompt } from "@/components/service-contact-prompt";
 import { bookingForm, siteConfig } from "@/content/site-content";
+import { trackEvent } from "@/lib/analytics";
 
 type FormState = {
   workEmail: string;
@@ -199,6 +200,13 @@ export function BookingForm() {
       });
 
       if (nextMode === "endpoint" && calendarUrl) {
+        // href is the base calendar URL only — buildCalUrl appends the
+        // visitor's email, which must not be sent to analytics.
+        trackEvent("booking_start", {
+          section: "book_business",
+          label: "business",
+          href: calendarUrl,
+        });
         window.setTimeout(() => {
           window.location.assign(buildCalUrl(calendarUrl, { email: form.workEmail.trim() }));
         }, 120);
@@ -419,6 +427,13 @@ export function BookingForm() {
                   target="_blank"
                   rel="noreferrer"
                   referrerPolicy="no-referrer"
+                  onClick={() =>
+                    trackEvent("booking_start", {
+                      section: "book_business",
+                      label: "business",
+                      href: calendarUrl,
+                    })
+                  }
                   className="inline-flex min-h-11 items-center justify-center rounded-[0.45rem] bg-copper px-5 text-sm font-medium text-paper transition hover:bg-copper/90"
                 >
                   Continue to scheduling
@@ -579,6 +594,13 @@ export function PersonalBookingForm() {
       });
 
       if (nextMode === "endpoint" && calendarUrl) {
+        // href is the base calendar URL only — buildCalUrl appends the
+        // visitor's name and email, which must not be sent to analytics.
+        trackEvent("booking_start", {
+          section: "book_personal",
+          label: "personal",
+          href: calendarUrl,
+        });
         window.setTimeout(() => {
           window.location.assign(
             buildCalUrl(calendarUrl, { name: form.name.trim(), email: form.email.trim() }),
@@ -756,6 +778,13 @@ export function PersonalBookingForm() {
                   target="_blank"
                   rel="noreferrer"
                   referrerPolicy="no-referrer"
+                  onClick={() =>
+                    trackEvent("booking_start", {
+                      section: "book_personal",
+                      label: "personal",
+                      href: calendarUrl,
+                    })
+                  }
                   className="inline-flex min-h-11 items-center justify-center rounded-[0.45rem] bg-brass px-5 text-sm font-medium text-paper transition hover:bg-brass/90"
                 >
                   Continue to scheduling
