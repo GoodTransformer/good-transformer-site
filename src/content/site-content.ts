@@ -365,7 +365,7 @@ export const lessonFormats: {
 } = {
   heading: "Choose the support that fits",
   delivery:
-    "Sessions run online, at your office, or at a co-working space. Format and pricing are agreed on your discovery call.",
+    "Sessions run online, at your office, or at a co-working space. The format is agreed on your discovery call.",
   formats: [
     {
       name: "Intro lesson",
@@ -397,6 +397,56 @@ export const servicesPage = {
     intro:
       "For leaders short on time: build the practical AI skills to use it well, and the clarity to set your own AI direction for the business.",
     cta: { label: "Book a 1-to-1 call", href: "/book/personal" },
+  },
+  resourceSection: {
+    label: "Free downloads",
+    heading: "A practical way to start the conversation.",
+    intro:
+      "Use these short overviews before a call, in a leadership conversation, or when you need a plain-English way to explain where AI can help.",
+    items: [
+      {
+        label: "Leader one-pager",
+        title: "Practical AI Lessons for Leaders",
+        body:
+          "The core offer: calm 1-to-1 AI coaching built around real work, leadership judgement and a useful action plan.",
+        href: "/downloads/practical-ai-lessons-for-leaders.pdf",
+      },
+      {
+        label: "Checklist",
+        title: "5 questions before another AI tool",
+        body:
+          "A short leadership checklist for deciding whether a tool is useful, owned, safe and measurable.",
+        href: "/downloads/5-questions-before-buying-an-ai-tool.pdf",
+      },
+      {
+        label: "Accountancy & advisory",
+        title: "AI for accountancy leaders",
+        body:
+          "Client prep, research, drafting and knowledge-sharing, with judgement kept in the room.",
+        href: "/downloads/ai-for-accountancy-and-advisory.pdf",
+      },
+      {
+        label: "Recruitment",
+        title: "AI for recruitment leaders",
+        body:
+          "Sharper prep, faster research, better follow-ups and more confident consultants.",
+        href: "/downloads/ai-for-recruitment.pdf",
+      },
+      {
+        label: "Agency & marketing",
+        title: "AI for agency leaders",
+        body:
+          "Research, reporting, content and search shifts, without making client work generic.",
+        href: "/downloads/ai-for-agency-leaders.pdf",
+      },
+      {
+        label: "Legal & risk-aware services",
+        title: "AI with verification built in",
+        body:
+          "Preparation, first drafts and knowledge work with confidentiality and verification in view.",
+        href: "/downloads/ai-for-legal-and-risk-aware-professional-services.pdf",
+      },
+    ],
   },
   businessSection: {
     heading: "AI Advisory for Teams",

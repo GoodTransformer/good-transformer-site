@@ -36,6 +36,8 @@ const PDFS = [
   ['insert-accountancy.html',      'ai-for-accountancy-and-advisory.pdf'],
   ['insert-recruitment.html',      'ai-for-recruitment.pdf'],
   ['insert-corporate-finance.html','ai-for-corporate-finance.pdf'],
+  ['insert-agency.html',           'ai-for-agency-leaders.pdf'],
+  ['insert-legal.html',            'ai-for-legal-and-risk-aware-professional-services.pdf'],
 ]
 
 // PNGs (rendered at 2× for crisp retina display) → public/social

@@ -93,6 +93,39 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* ── Practical downloads ────────────────────────────────────────── */}
+      <section className="section-divider bg-warm-paper">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12 lg:py-16">
+          <AnimatedReveal className="max-w-3xl">
+            <p className="page-eyebrow">{servicesPage.resourceSection.label}</p>
+            <h2 className="mt-4 font-serif text-4xl leading-tight text-ink md:text-5xl">
+              {servicesPage.resourceSection.heading}
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-slate md:text-lg">
+              {servicesPage.resourceSection.intro}
+            </p>
+          </AnimatedReveal>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {servicesPage.resourceSection.items.map((item) => (
+              <AnimatedReveal key={item.href} className="border-t border-line pt-5">
+                <p className="page-eyebrow">{item.label}</p>
+                <h3 className="mt-3 font-serif text-3xl leading-tight text-ink">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-6 text-slate">{item.body}</p>
+                <Link
+                  href={item.href}
+                  className="text-link mt-6 inline-flex text-sm text-ink"
+                >
+                  Open PDF
+                </Link>
+              </AnimatedReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── AI Advisory for Teams ────────────────────────────────────────── */}
       <section className="section-divider">
         <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12 lg:py-16">

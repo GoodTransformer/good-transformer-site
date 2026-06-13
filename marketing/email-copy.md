@@ -16,6 +16,8 @@ Link these in emails — don't attach the PDFs.
 | Insert — Accountancy & advisory | `https://goodtransformer.ai/downloads/ai-for-accountancy-and-advisory.pdf` |
 | Insert — Recruitment | `https://goodtransformer.ai/downloads/ai-for-recruitment.pdf` |
 | Insert — Corporate finance & professional services | `https://goodtransformer.ai/downloads/ai-for-corporate-finance.pdf` |
+| Insert — Agency & marketing leaders | `https://goodtransformer.ai/downloads/ai-for-agency-leaders.pdf` |
+| Insert — Legal & risk-aware professional services | `https://goodtransformer.ai/downloads/ai-for-legal-and-risk-aware-professional-services.pdf` |
 | LinkedIn banner (1584×396) | `https://goodtransformer.ai/social/linkedin-banner.png` |
 | LinkedIn featured tile (1080×1080) | `https://goodtransformer.ai/social/linkedin-featured.png` |
 
@@ -48,6 +50,21 @@ supporting first-pass diligence — without ever putting client trust at risk. M
 lessons cover what to use it for, what to keep firmly off it, and how to verify. Practical,
 discreet, and built around your work. A one-page overview is here: [link]. For a short,
 no-pressure call, email hello@goodtransformer.ai.
+
+### Agency & marketing leaders
+Marketing and digital agencies are already feeling AI in client expectations, search,
+content, reporting and delivery. The useful question is not "which tool?", but where AI
+helps the team think, prepare, draft and analyse faster without flattening the judgement
+clients pay for. I run practical 1-to-1 lessons for agency leaders, shaped around real
+workflows and client work. A one-page overview is here: [link]. Happy to talk it through
+on a short call — hello@goodtransformer.ai.
+
+### Legal & risk-aware professional services
+In legal and risk-aware professional services, AI only earns its place if confidentiality,
+accuracy and verification stay front and centre. My 1-to-1 lessons help leaders understand
+where AI can support research, drafting, client preparation and internal knowledge-sharing,
+and where it should stay firmly out of the workflow. A one-page overview is here: [link].
+For a short, no-pressure call, email hello@goodtransformer.ai.
 
 ---
 
