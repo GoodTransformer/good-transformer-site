@@ -12,13 +12,12 @@ name: Send Insights digest
 # Without them, send-digest.mjs logs and exits 0 (no failed runs).
 
 on:
-  # Schedule is intentionally OFF until go-live is verified: the Resend repo
-  # secrets are set, the sending domain is verified in Resend, and a manual
-  # dry_run has been confirmed (see NEWSLETTER-SETUP.md). Re-enable by
-  # uncommenting the schedule key and the two cron lines below.
-  # schedule:
-  #   - cron: "0 7 * * 1-5" # daily, weekdays 07:00 UTC
-  #   - cron: "0 8 * * 1" # weekly, Monday 08:00 UTC
+  # Scheduled sends are LIVE: daily on weekday mornings, weekly on Monday.
+  # Cadence is derived from which cron fired (see the Determine cadence step).
+  # To pause sending, comment out the schedule key and the two cron lines.
+  schedule:
+    - cron: "0 7 * * 1-5" # daily, weekdays 07:00 UTC
+    - cron: "0 8 * * 1" # weekly, Monday 08:00 UTC
   workflow_dispatch:
     inputs:
       cadence:
