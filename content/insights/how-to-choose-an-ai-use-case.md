@@ -55,7 +55,7 @@ Second, the frontier moves. A task that sits outside the technology's reliable r
 
 List up to five candidate tasks, drawn from work your team actually does rather than from a vendor's feature list. Score each from one to five on Value, Activity, Learnability, Uncertainty and Ease. Be suspicious of anything that scores high only on Value and low on everything else. That is the seductive, brittle project. Pick the highest total with a manageable downside, and commit to it as a real piece of work with an owner and a way to measure it.
 
-This is the disciplined version of the "scan" in the government's "scan, pilot, scale" approach to AI adoption, and of what the [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) calls "Map": understand a use case in its context before you build anything. Choosing well is unglamorous, and it is most of the result.
+This is the disciplined version of the "scan" in the government's ["scan, pilot, scale"](https://www.gov.uk/government/publications/ai-opportunities-action-plan/ai-opportunities-action-plan) approach to AI adoption, and of what the [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) calls "Map": understand a use case in its context before you build anything. Choosing well is unglamorous, and it is most of the result.
 
 ## The tool
 

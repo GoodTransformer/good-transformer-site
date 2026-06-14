@@ -26,6 +26,20 @@ const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/
 const PATRICK_AUTHOR = 'Patrick Hussey'
 const FIRST_PERSON_SINGULAR_RE = /\b(?:I|i|I['’](?:m|ll|ve|d)|i['’](?:m|ll|ve|d)|me|my|mine|myself)\b/g
+const EM_DASH = '—'
+const WORD_TARGET_MIN = 1200
+
+// Hype / cliché wording to flag (warning). Lowercased substrings. From the
+// brand copy-voice guide plus common "AI-writing" tells. Warn, don't fail:
+// a human decides, and false positives shouldn't block a deploy.
+const BANNED_TERMS = [
+  'transformative', 'leverage', 'unlock', 'unleash', 'supercharge', 'ai-powered',
+  'best-in-class', 'next-generation', 'cutting-edge', 'game changer', 'game-changer',
+  'in today', 'rapidly evolving', 'delve', 'testament to', 'low-hanging fruit',
+  'move the needle', 'paradigm shift', 'the future is here', 'navigate the complexities',
+  'harness the potential', 'unlock the power', 'double-edged sword', 'seismic shift',
+  'tapestry', 'in conclusion',
+]
 
 // Docs that live alongside the content but are not posts.
 const IGNORED_FILES = new Set(['CONTRACT.md', 'README.md'])
@@ -73,6 +87,47 @@ function findFirstPersonSingular(content) {
   })
 
   return matches
+}
+
+/** Em dashes anywhere in the prose (outside fenced code). House rule: never. */
+function findEmDashes(content) {
+  const lines = []
+  let inFence = false
+  content.split('\n').forEach((rawLine, index) => {
+    if (rawLine.trim().startsWith('```')) {
+      inFence = !inFence
+      return
+    }
+    if (inFence) return
+    if (rawLine.includes(EM_DASH)) lines.push(`line ${index + 1}`)
+  })
+  return lines
+}
+
+/** Approximate body word count: drop code blocks and link URLs, then count. */
+function bodyWordCount(content) {
+  return content
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/\]\([^)]+\)/g, ']')
+    .replace(/[#>*_`|-]/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean).length
+}
+
+/** URLs listed under a "Sources" heading but never linked in the body above it. */
+function findOrphanCitations(content) {
+  const heading = content.match(/\n#{2,3}\s+Sources[^\n]*\n/i)
+  if (!heading) return []
+  const body = content.slice(0, heading.index)
+  const sources = content.slice(heading.index)
+  const urls = [...sources.matchAll(/\]\((https?:\/\/[^)]+)\)/g)].map((m) => m[1])
+  return [...new Set(urls.filter((u) => !body.includes(u)))]
+}
+
+/** Hype/cliché terms present in the prose (lowercased substring match). */
+function findBannedTerms(content) {
+  const lower = content.toLowerCase()
+  return BANNED_TERMS.filter((term) => lower.includes(term))
 }
 
 let files = []
@@ -185,6 +240,29 @@ for (const file of files) {
           .slice(0, 3)
           .join('; ')})`,
       )
+    }
+  }
+
+  // House copy rules (apply to every post, both voices).
+  if (type === 'post') {
+    const emDashes = findEmDashes(content)
+    if (emDashes.length > 0) {
+      fail(slug, `em dashes are not allowed (${emDashes.slice(0, 3).join(', ')}); use commas, colons, or separate sentences`)
+    }
+
+    const words = bodyWordCount(content)
+    if (words < WORD_TARGET_MIN) {
+      warn(slug, `body is ~${words} words; the series target is ${WORD_TARGET_MIN}-1,800`)
+    }
+
+    const orphans = findOrphanCitations(content)
+    if (orphans.length > 0) {
+      warn(slug, `source(s) listed but not linked in the body (decorative): ${orphans.slice(0, 4).join(', ')}`)
+    }
+
+    const banned = findBannedTerms(content)
+    if (banned.length > 0) {
+      warn(slug, `possible hype/cliché wording to review: ${banned.join(', ')}`)
     }
   }
 }

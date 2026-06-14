@@ -64,8 +64,13 @@ assetCta: "Download the guide"              # optional: defaults to "Download"
 - First-person singular is only allowed when the request explicitly asks for a
   Patrick piece and the frontmatter sets both `voice: patrick` and
   `author: "Patrick Hussey"`.
+- No em dashes (`—`) anywhere in a post body (outside fenced code). Use commas,
+  colons, or separate sentences.
 
-Warnings (don't block the build): no tags, no cover on a post, very short body.
+Warnings (don't block the build): no tags, no cover on a post, very short body,
+body under ~1,200 words (the series target), a source listed under "Sources" but
+never linked in the body (a decorative citation), and hype/cliché wording from
+the brand avoid-list.
 
 ---
 
