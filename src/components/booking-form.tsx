@@ -358,7 +358,7 @@ export function BookingForm() {
             <p className="text-sm text-slate">
               {autoRedirectsToCalendar
                 ? "We will take you straight to booking once the brief is saved."
-                : `${siteConfig.primaryCta.label} follows this short brief.`}
+                : "You book your discovery call right after this short brief."}
             </p>
           </div>
           {submitError ? (

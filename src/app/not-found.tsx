@@ -21,14 +21,14 @@ export default function NotFound() {
         </h1>
         <p className="mt-6 max-w-md text-base leading-7 text-slate md:text-lg">
           This page doesn&apos;t exist or has moved. Head back to the home page
-          or book a session directly.
+          or book a discovery call directly.
         </p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
           <Link href="/" className="button-light">
             Go home
           </Link>
           <Link href="/book" className="text-link text-sm text-ink">
-            Book a session →
+            Book a discovery call →
           </Link>
         </div>
       </div>

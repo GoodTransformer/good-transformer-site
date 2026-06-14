@@ -49,7 +49,7 @@ export default function BookPage() {
               <small>{bookingPage.personal.routeSummary}</small>
             </Link>
             <Link href="/book/business" className="booking-choice booking-choice--dark">
-              <span>For businesses</span>
+              <span>For teams</span>
               <strong>{siteConfig.businessCta.label}</strong>
               <small>{bookingPage.business.routeSummary}</small>
             </Link>
