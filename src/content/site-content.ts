@@ -503,7 +503,7 @@ export const servicesPage = {
         label: "Leader one-pager",
         title: "Practical AI Lessons for Leaders",
         body:
-          "The core offer: calm 1-to-1 AI coaching built around real work, leadership judgement and a useful action plan.",
+          "The core offer: calm 1-to-1 AI coaching built around your real work and leadership judgement.",
         href: "/downloads/practical-ai-lessons-for-leaders.pdf",
       },
       {
@@ -540,6 +540,20 @@ export const servicesPage = {
         body:
           "Synthesis, preparation and diligence support for judgement-heavy advisory work.",
         href: "/downloads/ai-for-corporate-finance.pdf",
+      },
+      {
+        label: "Wealth & financial planning",
+        title: "AI for wealth leaders",
+        body:
+          "Meeting prep, research, suitability notes and client letters, with the advice still yours.",
+        href: "/downloads/ai-for-wealth-and-financial-planning.pdf",
+      },
+      {
+        label: "Property & real estate",
+        title: "AI for property leaders",
+        body:
+          "Listings, market research, comparables and client updates, with local judgement kept yours.",
+        href: "/downloads/ai-for-property-and-real-estate.pdf",
       },
       {
         label: "Legal & risk-aware services",

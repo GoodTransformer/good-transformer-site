@@ -111,7 +111,10 @@ export default function ServicesPage() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {servicesPage.resourceSection.items.map((item) => (
-              <AnimatedReveal key={item.href} className="border-t border-line pt-5">
+              <AnimatedReveal
+                key={item.href}
+                className="flex h-full flex-col border-t border-line pt-5"
+              >
                 <p className="page-eyebrow">{item.label}</p>
                 <h3 className="mt-3 font-serif text-3xl leading-tight text-ink">
                   {item.title}
@@ -119,7 +122,7 @@ export default function ServicesPage() {
                 <p className="mt-4 text-sm leading-6 text-slate">{item.body}</p>
                 <Link
                   href={item.href}
-                  className="text-link mt-6 inline-flex text-sm text-ink"
+                  className="text-link mt-auto inline-flex self-start pt-6 text-sm text-ink"
                   data-analytics-event="pdf_download"
                   data-analytics-section="services_downloads"
                   data-analytics-asset={item.title}
