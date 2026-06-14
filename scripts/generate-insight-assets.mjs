@@ -35,6 +35,8 @@ const ASSETS = [
   ['insight-ai-value-conversion-worksheet.html', 'ai-value-conversion-worksheet'],
   ['insight-ai-strategy-canvas.html', 'ai-strategy-canvas'],
   ['insight-90-day-ai-adoption-planner.html', '90-day-ai-adoption-planner'],
+  ['insight-small-business-ai-policy-template.html', 'small-business-ai-policy-template'],
+  ['insight-ai-friction-time-log.html', 'ai-friction-time-log'],
 ]
 
 const url = (file) => pathToFileURL(join(TPL, file)).href
