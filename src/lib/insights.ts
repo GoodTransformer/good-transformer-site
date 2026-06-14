@@ -126,24 +126,30 @@ export function getAllSlugs(): string[] {
  * site. In-page heading anchors (#...) and internal links (/...) stay in the
  * same tab — they keep the reader on the site, so a new tab would only clutter.
  */
+interface HastNode {
+  type?: string;
+  tagName?: string;
+  properties?: Record<string, unknown>;
+  children?: HastNode[];
+}
+
 function rehypeExternalLinksNewTab() {
-  return (tree: unknown) => {
-    const visit = (node: any) => {
-      if (
-        node?.type === "element" &&
-        node.tagName === "a" &&
-        typeof node.properties?.href === "string" &&
-        /^(https?:)?\/\//.test(node.properties.href)
-      ) {
-        node.properties.target = "_blank";
-        node.properties.rel = "noopener noreferrer";
-      }
-      if (Array.isArray(node?.children)) {
-        for (const child of node.children) visit(child);
-      }
-    };
-    visit(tree);
+  const visit = (node: HastNode) => {
+    const href = node.properties?.href;
+    if (
+      node.type === "element" &&
+      node.tagName === "a" &&
+      typeof href === "string" &&
+      /^(https?:)?\/\//.test(href)
+    ) {
+      node.properties!.target = "_blank";
+      node.properties!.rel = "noopener noreferrer";
+    }
+    if (Array.isArray(node.children)) {
+      for (const child of node.children) visit(child);
+    }
   };
+  return (tree: HastNode) => visit(tree);
 }
 
 const processor = unified()
