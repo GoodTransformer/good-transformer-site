@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>The AI Agent Job Card</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  .hero { margin-top: 12px; }
+  .hero .title { margin-top: 7px; }
+  .hero .lead { margin-top: 8px; }
+
+  .grid { margin-top: 13px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .field { border: 1px solid var(--line-soft); border-radius: 10px; padding: 10px 12px;
+    background: linear-gradient(180deg, rgba(251,248,244,0.6), rgba(250,243,234,0.45)); }
+  .field .h { display: flex; align-items: baseline; gap: 8px; }
+  .field .n { font-family: var(--font-serif); font-style: italic; font-size: 12px; color: var(--teal); }
+  .field h3 { font-family: var(--font-sans); font-weight: 700; font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); margin: 0; }
+  .field .hint { font-family: var(--font-sans); font-size: 9.2px; line-height: 1.35; color: var(--slate); margin: 4px 0 0; }
+  .field .ln { height: 1px; background: var(--line-soft); margin-top: 13px; }
+  .field .ln.last { margin-top: 11px; }
+  .field .eg { font-family: var(--font-sans); font-style: italic; font-size: 10px; line-height: 1.4; color: var(--moss); margin: 6px 0 0; }
+
+  .full { grid-column: 1 / -1; }
+  .note { margin-top: 11px; font-family: var(--font-sans); font-size: 9.6px; line-height: 1.5; color: var(--slate); }
+  .note b { color: var(--ink); font-weight: 600; }
+  .exhead { margin-top: 16px; }
+</style>
+</head>
+<body>
+
+  <!-- ───────── PAGE 1: BLANK TEMPLATE ───────── -->
+  <div class="sheet">
+    <span class="edge"></span>
+    <header class="masthead">
+      <div class="brandmark"><img class="mark--ink" src="../../public/logos/gt-logo.png" alt=""><span class="wordmark">Good Transformer</span></div>
+      <span class="meta">A fillable template</span>
+    </header>
+    <div class="rule" style="margin-top:13px"></div>
+
+    <section class="hero">
+      <p class="eyebrow">Agent job card &middot; Ten lines</p>
+      <h1 class="title">The AI Agent <span class="accent">Job Card</span></h1>
+      <p class="lead">An agent is a delegated role, not a feature. Do not switch one on until every line below is
+        filled. The gaps you cannot complete are precisely your exposure.</p>
+    </section>
+
+    <div class="grid">
+      <div class="field full"><div class="h"><span class="n">1</span><h3>Purpose</h3></div><p class="hint">One job, in a sentence. If it needs a paragraph, the scope is too wide.</p><div class="ln last"></div></div>
+      <div class="field"><div class="h"><span class="n">2</span><h3>Tasks</h3></div><p class="hint">The specific things it does. Anything not listed is out of scope.</p><div class="ln"></div><div class="ln last"></div></div>
+      <div class="field"><div class="h"><span class="n">3</span><h3>Tools and data</h3></div><p class="hint">What it can reach. Read access and write access are different jobs.</p><div class="ln"></div><div class="ln last"></div></div>
+      <div class="field"><div class="h"><span class="n">4</span><h3>Permitted actions</h3></div><p class="hint">What it may do on its own. Keep this short and honest.</p><div class="ln"></div><div class="ln last"></div></div>
+      <div class="field"><div class="h"><span class="n">5</span><h3>Actions requiring approval</h3></div><p class="hint">Anything irreversible, costly, or affecting a person.</p><div class="ln"></div><div class="ln last"></div></div>
+      <div class="field"><div class="h"><span class="n">6</span><h3>Quality standard</h3></div><p class="hint">What &ldquo;good&rdquo; output is, and how it is checked.</p><div class="ln"></div><div class="ln last"></div></div>
+      <div class="field"><div class="h"><span class="n">7</span><h3>Escalation conditions</h3></div><p class="hint">When it must stop and hand to a human.</p><div class="ln"></div><div class="ln last"></div></div>
+      <div class="field"><div class="h"><span class="n">8</span><h3>Logging</h3></div><p class="hint">What it records, so its actions can be reviewed.</p><div class="ln last"></div></div>
+      <div class="field"><div class="h"><span class="n">9</span><h3>Human owner</h3></div><p class="hint">One named person. Not a team.</p><div class="ln last"></div></div>
+      <div class="field full"><div class="h"><span class="n">10</span><h3>Shutdown procedure</h3></div><p class="hint">How to turn it off quickly, and who can. If you cannot say, you are not ready to start.</p><div class="ln last"></div></div>
+    </div>
+
+    <div class="grow"></div>
+    <div class="rule--soft" style="margin:10px 0 8px"></div>
+    <footer class="footer"><span>Good Transformer &middot; AI agent job card &middot; Page 1 of 2 (template)</span><span class="site">goodtransformer.ai</span></footer>
+  </div>
+
+  <!-- ───────── PAGE 2: COMPLETED EXAMPLE ───────── -->
+  <div class="sheet">
+    <span class="edge"></span>
+    <header class="masthead">
+      <div class="brandmark"><img class="mark--ink" src="../../public/logos/gt-logo.png" alt=""><span class="wordmark">Good Transformer</span></div>
+      <span class="meta">Worked example</span>
+    </header>
+    <div class="rule" style="margin-top:13px"></div>
+
+    <section class="hero exhead">
+      <p class="eyebrow">Completed example &middot; CV-triage agent</p>
+      <h1 class="title" style="font-size:30px">A recruitment agency&rsquo;s <span class="accent">triage agent</span></h1>
+      <p class="lead">The same agent, defined. Same technology as an undefined one, completely different risk.</p>
+    </section>
+
+    <div class="grid">
+      <div class="field full"><div class="h"><span class="n">1</span><h3>Purpose</h3></div><p class="eg">Triage and summarise new inbound job applications.</p></div>
+      <div class="field"><div class="h"><span class="n">2</span><h3>Tasks</h3></div><p class="eg">Read each new CV; produce a structured summary against the role&rsquo;s must-haves.</p></div>
+      <div class="field"><div class="h"><span class="n">3</span><h3>Tools and data</h3></div><p class="eg">Read-only access to the applications inbox and the role spec. No write access to the ATS.</p></div>
+      <div class="field"><div class="h"><span class="n">4</span><h3>Permitted actions</h3></div><p class="eg">Draft a summary and a suggested shortlist tier. Nothing leaves the system.</p></div>
+      <div class="field"><div class="h"><span class="n">5</span><h3>Actions requiring approval</h3></div><p class="eg">Any contact with a candidate. Any rejection. Any write to the ATS.</p></div>
+      <div class="field"><div class="h"><span class="n">6</span><h3>Quality standard</h3></div><p class="eg">Covers the must-haves, flags gaps, invents no detail. Spot-checked daily by the owner.</p></div>
+      <div class="field"><div class="h"><span class="n">7</span><h3>Escalation conditions</h3></div><p class="eg">Ambiguous CVs, anything borderline, anything outside the role spec.</p></div>
+      <div class="field"><div class="h"><span class="n">8</span><h3>Logging</h3></div><p class="eg">Every summary, with its source CV and timestamp, kept for audit.</p></div>
+      <div class="field"><div class="h"><span class="n">9</span><h3>Human owner</h3></div><p class="eg">Priya Shah, senior consultant.</p></div>
+      <div class="field full"><div class="h"><span class="n">10</span><h3>Shutdown procedure</h3></div><p class="eg">Owner or ops lead disables the workflow in one click. Default to off if anything looks wrong.</p></div>
+    </div>
+
+    <p class="note"><b>Illustrative example, not a specific agency.</b> Notice the pattern: reading is permitted, anything
+      that touches a person or is hard to undo needs approval, and one named human owns it with a way to stop it.</p>
+
+    <div class="grow"></div>
+    <div class="rule--soft" style="margin:12px 0 11px"></div>
+    <div class="cta-row"><span class="cta">Discuss AI governance</span><span class="cta-aside">goodtransformer.ai/services/ai-advisory-for-teams &nbsp;&middot;&nbsp; <b>hello@goodtransformer.ai</b></span></div>
+    <div class="rule--soft" style="margin:13px 0 9px"></div>
+    <footer class="footer"><span>Good Transformer &middot; v1.0, June 2026 &middot; A practical aid, not a guarantee of safety</span><span class="site">Page 2 of 2</span></footer>
+  </div>
+</body>
+</html>
