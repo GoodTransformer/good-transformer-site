@@ -43,6 +43,7 @@ const ASSETS = [
   ['insight-shadow-ai-discovery-survey.html', 'shadow-ai-discovery-survey'],
   ['insight-30-day-ai-learning-to-adoption-plan.html', '30-day-ai-learning-to-adoption-plan'],
   ['insight-ai-work-mode-selector.html', 'ai-work-mode-selector'],
+  ['insight-ai-adoption-maturity-ladder.html', 'ai-adoption-maturity-ladder'],
 ]
 
 const url = (file) => pathToFileURL(join(TPL, file)).href
