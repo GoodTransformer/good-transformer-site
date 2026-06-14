@@ -8,7 +8,7 @@
  *   node scripts/send-digest.mjs --cadence daily
  *   node scripts/send-digest.mjs --cadence weekly --dry-run
  *
- * Required env (set as GitHub Actions secrets — see NEWSLETTER-SETUP.md):
+ * Required env (set as GitHub Actions secrets, see NEWSLETTER-SETUP.md):
  *   RESEND_API_KEY
  *   RESEND_SEGMENT_ID       Segment of all subscribers (the broadcast recipients)
  *   RESEND_TOPIC_DAILY_ID   Topic that scopes the daily send
@@ -49,7 +49,7 @@ async function main() {
   console.log(`[digest] posts=${posts.length} stories=${stories.length}`)
 
   if (posts.length === 0 && stories.length === 0) {
-    console.log('[digest] Nothing to send (no posts, no news) — skipping.')
+    console.log('[digest] Nothing to send (no posts, no news); skipping.')
     return
   }
 
@@ -60,7 +60,7 @@ async function main() {
 
   if (!apiKey || !segmentId || !topicId) {
     console.log(
-      '[digest] RESEND_API_KEY / RESEND_SEGMENT_ID / topic id not set — skipping send. See NEWSLETTER-SETUP.md.',
+      '[digest] RESEND_API_KEY / RESEND_SEGMENT_ID / topic id not set; skipping send. See NEWSLETTER-SETUP.md.',
     )
     return
   }

@@ -1,4 +1,4 @@
-# Insights newsletter — setup & architecture
+# Insights newsletter: setup & architecture
 
 The daily/weekly Insights digest, end to end. The code is all here; this doc is
 the one-time account setup (the parts only you can do: create accounts, verify a
@@ -24,10 +24,10 @@ Scheduled GitHub Action (cron)       │ send
 - **Capture** is a tiny Cloudflare Worker so the Resend API key never touches the
   client. Until it's deployed, the signup form falls back to Formspree / an email
   draft, so nothing is broken in the meantime.
-- **Sending** is a scheduled GitHub Action — no server needed, consistent with the
+- **Sending** is a scheduled GitHub Action (no server needed), consistent with the
   static GitHub Pages model.
 - **Free tier:** Resend gives 3,000 emails/month (100/day) and marketing sends to
-  up to 1,000 contacts free — comfortably enough to start.
+  up to 1,000 contacts free, comfortably enough to start.
 
 ## One-time setup
 
@@ -41,7 +41,7 @@ Resend → **Audience → Topics → Create topic**. Make two, both **Opt-in**,
 **Public**: `Daily digest` and `Weekly digest`. Copy each **Topic ID**.
 
 Then Resend → **Audience → Segments → Create segment**: an **"All subscribers"**
-segment that includes every contact. Copy its **Segment ID** — broadcasts send to
+segment that includes every contact. Copy its **Segment ID**; broadcasts send to
 this segment, scoped to a topic.
 
 ### 3. Deploy the subscribe Worker
@@ -64,29 +64,42 @@ Add these under Settings → Secrets and variables → Actions:
 `NEXT_PUBLIC_SUBSCRIBE_ENDPOINT` is already wired into `deploy-pages.yml`; the rest
 are read by `send-digest.yml`.
 
-### 5. (Pipeline) AI news source — §News
-The "biggest AI stories for leaders" come from `content/digests/news-latest.json`,
-written each run by `scripts/generate-ai-news.mjs`. **That script is a placeholder**
-— it currently copies `news-sample.json`. Wire the real generator there (a news
-API/search + the model ranking and summarising the top stories for leaders). Schema:
+### 5. (Pipeline) AI news source, §News
+The "AI news for leaders" block comes from `content/digests/news-latest.json`,
+which is gitignored and rebuilt on every send by `scripts/generate-ai-news.mjs`.
+That script is now plumbing, not the generator: it reads a tracked, committed
+source of truth, `content/digests/news-curated.json`, validates it, applies a
+freshness guard, and copies it through to `news-latest.json`.
+
+`news-curated.json` is written by the **Good Transformer newsjack engine** (the
+daily blog machine, a separate repo). That engine already scans the news, keeps
+the stories a leader must react to, ranks them, and pushes a rolling seven-day
+list here each morning. All editorial judgement lives there, so the site and the
+newsletter speak with one voice. Schema (both files):
 
 ```json
 {
-  "generatedAt": "2026-06-13",
+  "generatedAt": "2026-06-14",
   "stories": [
     { "title": "…", "url": "https://…", "source": "Reuters", "summary": "…" }
   ]
 }
 ```
-Stories are ordered most-important-first; the digest takes the top **3** (daily) or
-**5** (weekly). If the file is missing, the digest still sends with just the posts.
+Stories are ordered most-important-first; the digest takes the top **3** (daily)
+or **5** (weekly). If `news-curated.json` is missing or older than 10 days,
+`generate-ai-news.mjs` writes an empty list and the digest sends with just the
+posts. For a local preview with no engine, run `node scripts/generate-ai-news.mjs
+--sample` to use the committed `news-sample.json`.
+
+So nothing about the news source needs wiring here anymore; it is supplied by the
+blog machine's daily run. This repo's only job is to render and send it.
 
 ## Running it
 
 - **Schedule** (`.github/workflows/send-digest.yml`): daily on weekday mornings,
   weekly on Monday. Cadence is derived from which cron fired.
 - **Manual / test**: run the **Send Insights digest** workflow via
-  *Run workflow* — pick `daily`/`weekly` and keep `dry_run` ticked to build
+  *Run workflow*: pick `daily`/`weekly` and keep `dry_run` ticked to build
   without sending.
 - **Local preview** (no keys needed):
   ```bash
