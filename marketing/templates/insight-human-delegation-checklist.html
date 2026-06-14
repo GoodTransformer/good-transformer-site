@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>The HUMAN Delegation Checklist</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  .hero { margin-top: 13px; }
+  .hero .title { margin-top: 7px; }
+  .hero .lead { margin-top: 9px; }
+
+  .decision { margin-top: 14px; border: 1px solid var(--line-soft); border-radius: 10px; padding: 11px 14px; }
+  .decision .k { font-family: var(--font-sans); font-weight: 700; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); opacity: 0.55; }
+  .decision .ln { height: 1px; background: var(--line-soft); margin-top: 15px; }
+
+  .rows { margin-top: 14px; display: flex; flex-direction: column; }
+  .row { display: grid; grid-template-columns: 30px 1fr 22px; gap: 13px; align-items: start; padding: 10px 0; border-top: 1px solid var(--line-soft); }
+  .row:first-child { border-top: 0; }
+  .row .ltr { font-family: var(--font-serif); font-style: italic; font-size: 24px; color: var(--teal); line-height: 1; }
+  .row h3 { font-family: var(--font-sans); font-weight: 700; font-size: 11px; letter-spacing: 0.03em; color: var(--ink); margin: 2px 0 3px; }
+  .row p { font-family: var(--font-sans); font-size: 10.6px; line-height: 1.42; color: var(--slate); margin: 0; }
+  .row .box { width: 17px; height: 17px; border: 1.4px solid var(--mist); border-radius: 4px; margin-top: 3px; }
+
+  .tally { margin-top: 13px; font-family: var(--font-sans); font-size: 10.4px; color: #2c3a3e; }
+  .tally b { color: var(--ink); font-weight: 600; }
+
+  .bands { margin-top: 8px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; }
+  .band { border: 1px solid var(--line-soft); border-radius: 11px; padding: 11px 13px; }
+  .band .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: middle; }
+  .band h4 { font-family: var(--font-serif); font-weight: 500; font-size: 14px; color: var(--ink); margin: 0 0 4px; display: flex; align-items: center; }
+  .band p { font-family: var(--font-sans); font-size: 10px; line-height: 1.4; color: var(--slate); margin: 0; }
+  .green { background: #2e7d6b; }
+  .amber { background: var(--amber); }
+  .red { background: #b5503a; }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <span class="edge"></span>
+    <header class="masthead">
+      <div class="brandmark"><img class="mark--ink" src="../../public/logos/gt-logo.png" alt=""><span class="wordmark">Good Transformer</span></div>
+      <span class="meta">A leader&rsquo;s checklist</span>
+    </header>
+    <div class="rule" style="margin-top:13px"></div>
+
+    <section class="hero">
+      <p class="eyebrow">Delegation checklist &middot; One decision</p>
+      <h1 class="title">The <span class="accent">HUMAN</span> Delegation Checklist</h1>
+      <p class="lead">AI can inform almost any decision. The question is whether the responsibility can be separated
+        from a person. Tick each box that is true of the decision in front of you.</p>
+    </section>
+
+    <div class="decision">
+      <span class="k">The decision you are testing</span>
+      <div class="ln"></div>
+    </div>
+
+    <div class="rows">
+      <div class="row"><span class="ltr">H</span><div><h3>HIGH CONSEQUENCE</h3><p>Serious harm to a person, the business or a client if it goes wrong.</p></div><span class="box"></span></div>
+      <div class="row"><span class="ltr">U</span><div><h3>UNCLEAR OR CONTESTED</h3><p>No single right answer; it turns on judgement and competing interests.</p></div><span class="box"></span></div>
+      <div class="row"><span class="ltr">M</span><div><h3>MORALLY OR RELATIONALLY SIGNIFICANT</h3><p>It touches how you treat people, or a relationship that matters.</p></div><span class="box"></span></div>
+      <div class="row"><span class="ltr">A</span><div><h3>ACCOUNTABLE TO LAW, CUSTOMERS OR EMPLOYEES</h3><p>You would have to stand behind it to a regulator, a court, a client or your staff.</p></div><span class="box"></span></div>
+      <div class="row"><span class="ltr">N</span><div><h3>NOT READILY REVERSIBLE</h3><p>A mistake lands and stays; it cannot be quietly undone.</p></div><span class="box"></span></div>
+    </div>
+
+    <p class="tally"><b>Count the ticks</b>, then read the zone below. The more boxes ticked, the more firmly the decision stays with a person.</p>
+
+    <div class="bands">
+      <div class="band"><h4><span class="dot green"></span>Green</h4><p><b>0&ndash;1 ticks.</b> AI may decide, with light human review. Reversible, low-stakes work.</p></div>
+      <div class="band"><h4><span class="dot amber"></span>Amber</h4><p><b>2&ndash;3 ticks.</b> AI assists, a human decides and signs off. Keep the person in the chair.</p></div>
+      <div class="band"><h4><span class="dot red"></span>Red</h4><p><b>4&ndash;5 ticks.</b> A human owns it. AI may inform the thinking but never make the call.</p></div>
+    </div>
+
+    <div class="grow"></div>
+    <div class="rule--soft" style="margin:12px 0 11px"></div>
+    <div class="cta-row"><span class="cta">Discuss AI governance</span><span class="cta-aside">goodtransformer.ai/services/ai-advisory-for-teams &nbsp;&middot;&nbsp; <b>hello@goodtransformer.ai</b></span></div>
+    <div class="rule--soft" style="margin:13px 0 9px"></div>
+    <footer class="footer"><span>Good Transformer &middot; v1.0, June 2026 &middot; A practical aid, not legal advice</span><span class="site">goodtransformer.ai</span></footer>
+  </div>
+</body>
+</html>
