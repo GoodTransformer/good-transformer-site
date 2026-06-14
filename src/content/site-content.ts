@@ -674,6 +674,13 @@ export const leaderLessonsPage: ServiceDetailPage & {
         href: "/downloads/ai-for-corporate-finance.pdf",
       },
       {
+        label: "Property & real estate",
+        title: "AI for property leaders",
+        body:
+          "Listings, market research, comparables and client updates, with local judgement kept yours.",
+        href: "/downloads/ai-for-property-and-real-estate.pdf",
+      },
+      {
         label: "Legal & risk-aware services",
         title: "AI with verification built in",
         body:
