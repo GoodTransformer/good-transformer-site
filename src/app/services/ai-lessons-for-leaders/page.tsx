@@ -97,7 +97,10 @@ export default function LeaderLessonsPage() {
 
           <div className="mt-10 grid gap-x-8 gap-y-7 border-t border-line/10 pt-7 md:grid-cols-2 lg:grid-cols-3">
             {leaderLessonsPage.sectorSection.items.map((item) => (
-              <AnimatedReveal key={item.href} className="border-b border-line/10 pb-7">
+              <AnimatedReveal
+                key={item.href}
+                className="flex h-full flex-col border-b border-line/10 pb-7"
+              >
                 <p className="page-eyebrow">{item.label}</p>
                 <h3 className="mt-3 font-serif text-3xl leading-tight text-ink">
                   {item.title}
@@ -105,7 +108,7 @@ export default function LeaderLessonsPage() {
                 <p className="mt-4 text-sm leading-6 text-slate">{item.body}</p>
                 <Link
                   href={item.href}
-                  className="text-link mt-5 inline-flex text-sm text-ink"
+                  className="text-link mt-auto inline-flex self-start pt-6 text-sm text-ink"
                   data-analytics-event="pdf_download"
                   data-analytics-section="leader_lessons_sector_download"
                   data-analytics-asset={item.title}
