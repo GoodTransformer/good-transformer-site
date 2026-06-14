@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>The AI Work Mode Selector</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  .hero { margin-top: 13px; }
+  .hero .title { margin-top: 7px; }
+  .hero .lead { margin-top: 9px; }
+  a.cta { text-decoration: none; }
+  .cta-aside a { color: inherit; text-decoration: none; }
+  .cta-aside a b { color: var(--teal); }
+
+  .task { margin-top: 14px; border: 1px solid var(--line-soft); border-radius: 10px; padding: 11px 14px; }
+  .task .k { font-family: var(--font-sans); font-weight: 700; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); opacity: 0.55; }
+  .task .ln { height: 1px; background: var(--line-soft); margin-top: 15px; }
+
+  .qs { margin-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; }
+  .qq { border: 1px solid var(--line-soft); border-radius: 10px; padding: 10px 12px; }
+  .qq h4 { font-family: var(--font-sans); font-weight: 700; font-size: 9.5px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); margin: 0 0 4px; }
+  .qq p { font-family: var(--font-sans); font-size: 10px; line-height: 1.4; color: var(--slate); margin: 0; }
+
+  .modes { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .mode { display: grid; grid-template-columns: 130px 1fr; gap: 14px; border: 1px solid var(--line-soft); border-radius: 11px; padding: 12px 14px; }
+  .mode.team { border-color: var(--teal); background: rgba(0,140,149,0.04); }
+  .mode .nm { font-family: var(--font-serif); font-size: 17px; color: var(--teal); }
+  .mode .when { font-family: var(--font-sans); font-size: 9.6px; line-height: 1.4; color: var(--slate); margin: 4px 0 0; }
+  .mode .jobs { font-family: var(--font-sans); font-size: 10.6px; line-height: 1.5; color: #2c3a3e; }
+  .mode .jobs b { color: var(--ink); font-weight: 600; }
+
+  .rule-line { margin-top: 13px; font-family: var(--font-sans); font-size: 10.4px; line-height: 1.5; color: #2c3a3e; }
+  .rule-line b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <span class="edge"></span>
+    <header class="masthead">
+      <div class="brandmark"><img class="mark--ink" src="../../public/logos/gt-logo.png" alt=""><span class="wordmark">Good Transformer</span></div>
+      <span class="meta">A leader&rsquo;s decision guide</span>
+    </header>
+    <div class="rule" style="margin-top:13px"></div>
+
+    <section class="hero">
+      <p class="eyebrow">Decision guide &middot; One piece of work</p>
+      <h1 class="title">The AI Work <span class="accent">Mode</span> Selector</h1>
+      <p class="lead">AI can give one person a team's output. The question is which mode the work needs. Size the task
+        on the three questions, then choose solo, expert or team, each working with AI.</p>
+    </section>
+
+    <div class="task">
+      <span class="k">The piece of work</span>
+      <div class="ln"></div>
+    </div>
+
+    <div class="qs">
+      <div class="qq"><h4>How reversible?</h4><p>Easy to undo a mistake, or does it land and stay?</p></div>
+      <div class="qq"><h4>How contested?</h4><p>One right answer, or a matter of judgement and competing views?</p></div>
+      <div class="qq"><h4>Cost of being wrong?</h4><p>Cheap and quick to catch, or seriously damaging?</p></div>
+    </div>
+
+    <div class="modes">
+      <div class="mode">
+        <div><div class="nm">Solo + AI</div><p class="when">Reversible, lower-stakes, self-contained.</p></div>
+        <div class="jobs"><b>AI:</b> does the bulk of the work. <b>Human:</b> directs and checks. Enjoy the speed; this is most day-to-day work.</div>
+      </div>
+      <div class="mode">
+        <div><div class="nm">Expert + AI</div><p class="when">Judgement-heavy, higher-stakes, individual.</p></div>
+        <div class="jobs"><b>AI:</b> drafts and widens the options. <b>Human:</b> an expert who supplies the discernment to know when a fluent answer is wrong.</div>
+      </div>
+      <div class="mode team">
+        <div><div class="nm">Team + AI</div><p class="when">Contested, high-consequence, cross-disciplinary.</p></div>
+        <div class="jobs"><b>AI:</b> amplifies every member. <b>Humans:</b> challenge each other and bring real different expertise, the part AI cannot supply.</div>
+      </div>
+    </div>
+
+    <p class="rule-line"><b>The rule of thumb:</b> reversible and low-stakes goes Solo. Judgement-heavy goes Expert. Contested,
+      high-consequence or cross-disciplinary goes Team. The new failure mode is running team-grade work as solo-plus-AI
+      because the tool made it possible: fast, polished and unchallenged.</p>
+
+    <div class="grow"></div>
+    <div class="rule--soft" style="margin:11px 0 10px"></div>
+    <div class="cta-row"><a class="cta" href="https://goodtransformer.ai/services/ai-advisory-for-teams">Discuss AI for your team</a><span class="cta-aside"><a href="https://goodtransformer.ai/services/ai-advisory-for-teams">goodtransformer.ai/services/ai-advisory-for-teams</a> &nbsp;&middot;&nbsp; <a href="mailto:hello@goodtransformer.ai"><b>hello@goodtransformer.ai</b></a></span></div>
+    <div class="rule--soft" style="margin:13px 0 9px"></div>
+    <footer class="footer"><span>Good Transformer &middot; v1.0, June 2026 &middot; Choose the mode on purpose</span><span class="site">goodtransformer.ai</span></footer>
+  </div>
+</body>
+</html>

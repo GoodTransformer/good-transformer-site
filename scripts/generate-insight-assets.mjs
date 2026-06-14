@@ -41,6 +41,8 @@ const ASSETS = [
   ['insight-ai-agent-job-card.html', 'ai-agent-job-card'],
   ['insight-human-delegation-checklist.html', 'human-delegation-checklist'],
   ['insight-shadow-ai-discovery-survey.html', 'shadow-ai-discovery-survey'],
+  ['insight-30-day-ai-learning-to-adoption-plan.html', '30-day-ai-learning-to-adoption-plan'],
+  ['insight-ai-work-mode-selector.html', 'ai-work-mode-selector'],
 ]
 
 const url = (file) => pathToFileURL(join(TPL, file)).href
