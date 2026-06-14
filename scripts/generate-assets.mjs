@@ -3,7 +3,7 @@
  * generate-assets.mjs
  *
  * Generates static brand assets for Good Transformer:
- *   public/og-image.png          1200×630  Open Graph / social preview
+ *   public/og-image.png          2400×1260 Open Graph / social preview (2× retina)
  *   public/apple-touch-icon.png   180×180  Apple touch icon
  *   public/favicon.png             32×32   Browser favicon
  *
@@ -71,11 +71,15 @@ console.log('⏳  Generating og-image.png…')
 
 const OW = 1200
 const OH = 630
+// Render at 2× (2400×1260) so cards stay crisp on retina screens and when
+// social platforms uprender link previews. Layout coords below stay in the
+// 1200×630 design space via each SVG's viewBox; only raster layers scale.
+const SCALE = 2
 
 // ── 1. Exact warm paper background ────────────────────────────────────────────
 // Match the stack asset background exactly so social previews do not show a
 // visible block around the right-side visual.
-const bgSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www.w3.org/2000/svg">
+const bgSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" viewBox="0 0 ${OW} ${OH}" xmlns="http://www.w3.org/2000/svg">
   <rect width="${OW}" height="${OH}" fill="${rgb(PAPER)}"/>
   <circle cx="940" cy="145" r="220" fill="${rgb(TEAL)}" opacity="0.025"/>
   <circle cx="1015" cy="480" r="190" fill="${rgb(AMBER)}" opacity="0.018"/>
@@ -84,16 +88,16 @@ const bg = await sharp(bgSvg).png().toBuffer()
 
 // ── 2. Visual layers ──────────────────────────────────────────────────────────
 // Small ink logo for top-left brand mark.
-const inkLogo78 = await colourize(INK.r, INK.g, INK.b, 78, 78)
+const inkLogo78 = await colourize(INK.r, INK.g, INK.b, 78 * SCALE, 78 * SCALE)
 
 // Homepage stack visual for right-side social card continuity.
 const stackVisual = await sharp(STACK)
-  .resize(510, 510, { fit: 'contain', background: { ...PAPER, alpha: 0 } })
+  .resize(510 * SCALE, 510 * SCALE, { fit: 'contain', background: { ...PAPER, alpha: 0 } })
   .png()
   .toBuffer()
 
 // ── 3. Teal accent bars (SVG overlay) ─────────────────────────────────────────
-const barsSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www.w3.org/2000/svg">
+const barsSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" viewBox="0 0 ${OW} ${OH}" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0"       width="7"    height="${OH}" fill="${rgb(TEAL)}"/>
   <rect x="0" y="${OH-4}" width="${OW}" height="4"    fill="${rgb(TEAL)}"/>
 </svg>`)
@@ -102,7 +106,7 @@ const barsSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www
 //    Georgia for headlines (editorial serif), Helvetica Neue for UI text.
 //    Both render correctly via librsvg/pango on macOS and on GitHub Actions
 //    runners when font packages are installed.
-const textSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www.w3.org/2000/svg">
+const textSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" viewBox="0 0 ${OW} ${OH}" xmlns="http://www.w3.org/2000/svg">
 
   <!-- Brand eyebrow: "GOOD TRANSFORMER" in small teal caps -->
   <text x="191" y="114"
@@ -128,7 +132,7 @@ const textSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www
   <text x="80" y="434"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
     font-size="24.5"
-    fill="${rgb(SLATE)}">Personal AI lessons and practical business advisory</text>
+    fill="${rgb(SLATE)}">AI lessons for leaders and advisory for teams</text>
 
   <!-- Hairline rule -->
   <rect x="80" y="486" width="500" height="1" fill="${rgb(INK)}" opacity="0.16"/>
@@ -151,18 +155,18 @@ const textSvg = Buffer.from(`<svg width="${OW}" height="${OH}" xmlns="http://www
 await sharp(bg)
   .composite([
     // Homepage AI confidence stack - right-side social visual.
-    { input: stackVisual, left: 672, top: 60 },
+    { input: stackVisual, left: 672 * SCALE, top: 60 * SCALE },
     // Teal bars (left edge + bottom edge)
     { input: barsSvg,    left: 0,   top: 0  },
     // Brand mark top-left
-    { input: inkLogo78,  left: 80,  top: 70 },
+    { input: inkLogo78,  left: 80 * SCALE,  top: 70 * SCALE },
     // All text
     { input: textSvg,    left: 0,   top: 0  },
   ])
   .png({ compressionLevel: 9 })
   .toFile(join(PUB, 'og-image.png'))
 
-console.log('✓  og-image.png  (1200 × 630)')
+console.log(`✓  og-image.png  (${OW * SCALE} × ${OH * SCALE})`)
 
 // ═════════════════════════════════════════════════════════════════════════════
 // FAVICON SET
