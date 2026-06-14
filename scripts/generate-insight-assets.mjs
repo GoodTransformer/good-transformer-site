@@ -38,6 +38,7 @@ const ASSETS = [
   ['insight-small-business-ai-policy-template.html', 'small-business-ai-policy-template'],
   ['insight-ai-friction-time-log.html', 'ai-friction-time-log'],
   ['insight-ai-leadership-readiness-checklist.html', 'ai-leadership-readiness-checklist'],
+  ['insight-ai-readiness-checklist.html', 'ai-readiness-checklist'],
   ['insight-ai-agent-job-card.html', 'ai-agent-job-card'],
   ['insight-human-delegation-checklist.html', 'human-delegation-checklist'],
   ['insight-shadow-ai-discovery-survey.html', 'shadow-ai-discovery-survey'],
