@@ -93,6 +93,11 @@ styled by `.insight-prose`:
 
 - `##` / `###` / `####` headings (auto-anchored)
 - **bold**, _italic_, links, blockquotes, `---` rules
+  - Write links as plain Markdown `[text](url)`. External links (anything
+    starting `http`) are rendered with `target="_blank"` + `rel="noopener
+    noreferrer"` automatically, so readers never lose the site. Internal links
+    (`/...`) and heading anchors stay in the same tab. Do not hand-write
+    `target`/`rel` attributes.
 - ordered / unordered lists
 - `figure` + `figcaption`, images (auto rounded/bordered)
 - inline `code` and fenced code blocks

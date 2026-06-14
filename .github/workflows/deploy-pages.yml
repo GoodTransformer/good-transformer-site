@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Generate missing Insight covers
+        run: npm run generate:insight-covers
+
       - name: Validate Insights content
         run: npm run validate:insights
 

@@ -121,6 +121,31 @@ export function getAllSlugs(): string[] {
   return getAllPosts().map((post) => post.slug);
 }
 
+/**
+ * Open external links in a new tab so readers never lose the Good Transformer
+ * site. In-page heading anchors (#...) and internal links (/...) stay in the
+ * same tab — they keep the reader on the site, so a new tab would only clutter.
+ */
+function rehypeExternalLinksNewTab() {
+  return (tree: unknown) => {
+    const visit = (node: any) => {
+      if (
+        node?.type === "element" &&
+        node.tagName === "a" &&
+        typeof node.properties?.href === "string" &&
+        /^(https?:)?\/\//.test(node.properties.href)
+      ) {
+        node.properties.target = "_blank";
+        node.properties.rel = "noopener noreferrer";
+      }
+      if (Array.isArray(node?.children)) {
+        for (const child of node.children) visit(child);
+      }
+    };
+    visit(tree);
+  };
+}
+
 const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
@@ -130,6 +155,7 @@ const processor = unified()
     behavior: "wrap",
     properties: { className: "insight-prose__anchor" },
   })
+  .use(rehypeExternalLinksNewTab)
   .use(rehypeStringify);
 
 /** A single post with its body rendered to an HTML string. */
