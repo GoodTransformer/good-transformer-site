@@ -1,0 +1,42 @@
+{
+  "$comment": "Written by the Good Transformer newsjack engine (the daily blog machine). Rolling list of the last ~7 days of AI stories a leader should react to, ordered most-important-first. generate-ai-news.mjs copies the top of this into news-latest.json at send time (top 3 daily, top 5 weekly). Schema: { generatedAt: YYYY-MM-DD, stories: [{ title, url, source, summary }] }. Do not hand-edit during a run; the engine overwrites it.",
+  "generatedAt": "2026-06-14",
+  "stories": [
+    {
+      "title": "A frontier AI model was switched off worldwide with no notice",
+      "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+      "source": "Fortune",
+      "summary": "A US export-control order led Anthropic to disable its two most capable models for every customer globally on Friday evening, for an unknown length of time. The lesson for leaders is that a frontier model is a capability you borrow, not one you own. Find where one outside model has quietly become load-bearing in your firm's work, and make sure nothing important stops if it disappears."
+    },
+    {
+      "title": "Two AI compliance deadlines land this summer, and the bill to pause them has not passed",
+      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026",
+      "source": "Build Fast with AI",
+      "summary": "The Colorado AI Act takes effect on 30 June and the bulk of the EU AI Act applies from 2 August, both covering AI used in employment decisions. The federal bill some firms hoped would preempt state law has not moved. If you use AI in hiring, advice or eligibility calls, know where it touches a consequential decision, who signs it off, and whether you could show your working."
+    },
+    {
+      "title": "The newest models work for hours unsupervised, which changes the leader's job",
+      "url": "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos",
+      "source": "One Useful Thing",
+      "summary": "Ethan Mollick describes a model running autonomously for most of a working day on a single brief, spinning up its own sub-agents. As AI does more of the work unwatched, the leader's role shifts from steering each step to commissioning a result and judging it. Human sign-off and verification matter more, not less, where the output carries your name."
+    },
+    {
+      "title": "Apple lets people pick which AI answers on their iPhone",
+      "url": "https://aiweekly.co/node/2611",
+      "source": "AI Weekly",
+      "summary": "From September, iOS users can set Claude, Gemini, ChatGPT or Grok as the assistant behind Siri, across billions of devices. The behaviour of asking AI first, which already shapes how clients and candidates research you, becomes a phone default. Being found now means being legible to several assistants, not only ranking on Google."
+    },
+    {
+      "title": "Claude arrives in Excel as AI pricing shifts to metered billing",
+      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-11-2026",
+      "source": "Build Fast with AI",
+      "summary": "Claude is now an option in Excel's agent mode, and tools like GitHub Copilot have moved to usage-based pricing, with some sessions running to tens of dollars. AI is moving into the tools your team already uses, and its cost is becoming a line item to budget and govern rather than a flat fee to forget."
+    },
+    {
+      "title": "Most firms have no plan for the day their AI model goes away",
+      "url": "https://www.informationweek.com/machine-learning-ai/your-ai-vendor-is-now-a-single-point-of-failure",
+      "source": "InformationWeek",
+      "summary": "Risk and IT coverage keeps reaching the same warning: organisations plan for the failure of every layer of infrastructure except their foundation model. Practical steps are to tier AI uses by business impact, set performance baselines, keep one tested alternative for client-facing work, and check the deprecation and portability terms in vendor contracts."
+    }
+  ]
+}

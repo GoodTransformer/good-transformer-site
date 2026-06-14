@@ -3,18 +3,19 @@ name: Send Insights digest
 # Builds and sends the daily / weekly Insights digest via Resend.
 #
 # Cadence is derived from the trigger:
-#   • daily   — weekday mornings  (cron "0 7 * * 1-5")
-#   • weekly  — Monday morning    (cron "0 8 * * 1")
-#   • manual  — choose cadence via workflow_dispatch
+#   • daily:  weekday mornings  (cron "0 7 * * 1-5")
+#   • weekly: Monday morning    (cron "0 8 * * 1")
+#   • manual: choose cadence via workflow_dispatch
 #
 # Requires these repo secrets (see NEWSLETTER-SETUP.md):
 #   RESEND_API_KEY, RESEND_SEGMENT_ID, RESEND_TOPIC_DAILY_ID, RESEND_TOPIC_WEEKLY_ID, DIGEST_FROM
 # Without them, send-digest.mjs logs and exits 0 (no failed runs).
 
 on:
-  # Schedule is intentionally OFF until the real AI-news generator is wired
-  # (scripts/generate-ai-news.mjs) — otherwise the digest would ship the
-  # placeholder sample stories. Re-enable by uncommenting these two lines.
+  # Schedule is intentionally OFF until go-live is verified: the Resend repo
+  # secrets are set, the sending domain is verified in Resend, and a manual
+  # dry_run has been confirmed (see NEWSLETTER-SETUP.md). Re-enable by
+  # uncommenting the schedule key and the two cron lines below.
   # schedule:
   #   - cron: "0 7 * * 1-5" # daily, weekdays 07:00 UTC
   #   - cron: "0 8 * * 1" # weekly, Monday 08:00 UTC
@@ -64,9 +65,11 @@ jobs:
             echo "dry=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # ─── TODO: GENERATOR ──────────────────────────────────────────────────
-      # Replace this with the real AI-news generator (see scripts/generate-ai-news.mjs).
-      # It must write content/digests/news-latest.json before the digest is built.
+      # Render the AI-news block: generate-ai-news.mjs copies
+      # content/digests/news-curated.json (written by the newsjack engine) into
+      # news-latest.json after a light validation and a freshness check. If
+      # curated is missing or stale it writes an empty list, so the digest still
+      # ships the posts. Must run before the digest is built.
       - name: Generate AI news
         run: node scripts/generate-ai-news.mjs
 
