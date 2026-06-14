@@ -536,7 +536,7 @@ export const servicesPage = {
       },
       {
         label: "Corporate finance",
-        title: "AI for corporate finance leaders",
+        title: "AI for finance leaders",
         body:
           "Synthesis, preparation and diligence support for judgement-heavy advisory work.",
         href: "/downloads/ai-for-corporate-finance.pdf",
@@ -668,7 +668,7 @@ export const leaderLessonsPage: ServiceDetailPage & {
       },
       {
         label: "Corporate finance",
-        title: "AI for corporate finance leaders",
+        title: "AI for finance leaders",
         body:
           "Synthesis, meeting prep and first-pass diligence support for judgement-heavy advisory work.",
         href: "/downloads/ai-for-corporate-finance.pdf",
