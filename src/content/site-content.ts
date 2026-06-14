@@ -58,15 +58,15 @@ export const siteConfig = {
     href: "/book",
   },
   heroSecondaryCta: {
-    label: "Book a 1-to-1 discovery call",
+    label: "Book a discovery call for leaders",
     href: "/book/personal",
   },
   personalCta: {
-    label: "Book a 1-to-1 discovery call",
+    label: "Book a discovery call for leaders",
     href: "/book/personal",
   },
   businessCta: {
-    label: "Book a team advisory call",
+    label: "Book a discovery call for teams",
     href: "/book/business",
   },
   calendarEnvName: "NEXT_PUBLIC_CLARITY_CALL_URL",
@@ -223,7 +223,7 @@ export const offers: Offer[] = [
   {
     name: "90-Day Adoption Build",
     duration: "12 weeks",
-    purpose: "The core offer: turn scattered AI into working practice.",
+    purpose: "The defined project: turn scattered AI into working practice.",
     outputs: [
       "Two workflow pilots",
       "Team playbooks",
@@ -237,9 +237,9 @@ export const offers: Offer[] = [
     ],
   },
   {
-    name: "Fractional Retainer",
+    name: "Embedded AI Lead",
     duration: "3-month minimum",
-    purpose: "Ongoing senior AI advice without hiring a full-time lead.",
+    purpose: "An embedded, fractional AI lead without a full-time hire.",
     outputs: [
       "Monthly executive session",
       "Team operating rhythm",
@@ -343,7 +343,7 @@ export const homePage = {
       {
         label: "For teams",
         title: "AI Advisory for Teams",
-        body: "Senior AI advice to make AI part of real work.",
+        body: "Help your whole team use AI better in real work.",
         href: "/book/business",
         tone: "dark",
       },
@@ -354,7 +354,7 @@ export const homePage = {
         body: "Build clear understanding and AI vision.",
       },
       {
-        title: "Practical and relevant",
+        title: "Practical and real",
         body: "Built on real workflows, not slideware.",
       },
       {
@@ -366,7 +366,7 @@ export const homePage = {
   role: {
     heading: "AI is easier to learn when the lesson starts with your real work.",
     support:
-      "Good Transformer is built around calm, practical coaching. For leaders, that means one-to-one lessons shaped around your tools, tasks and AI questions. For organisations, it means senior advisory that connects use cases, workflows, guardrails and team habits.",
+      "Good Transformer is built around calm, practical coaching. For leaders, that means one-to-one lessons shaped around your tools, tasks and AI questions. For organisations, it means an embedded, fractional AI lead who connects use cases, workflows, guardrails and team habits.",
   },
   services: {
     heading: "Two clear routes into better AI use.",
@@ -375,9 +375,9 @@ export const homePage = {
     note: "Most work starts with the smallest engagement that can create real momentum.",
   },
   teamAdvisory: {
-    heading: "In 90 days, turn scattered AI into working practice.",
+    heading: "A 90-day project, or an embedded AI lead.",
     body:
-      "Patrick works with leadership and teams to choose the right use cases, redesign real workflows, set guardrails, and leave a rhythm the business can keep using.",
+      "Patrick embeds with leadership and teams to choose the right use cases, redesign real workflows, set guardrails, and leave a rhythm the business can keep using.",
   },
   patrick: {
     heading: "Patrick Hussey",
@@ -443,7 +443,7 @@ export const lessonOffers = [
     name: "AI Advisory for Teams",
     label: "For teams",
     purpose:
-      "Senior AI advice to turn scattered AI use into safe, useful working practice.",
+      "An embedded, fractional AI lead who turns scattered AI use into working practice.",
     points: [
       "Choose where AI really pays off",
       "Pilot it in real workflows",
@@ -553,7 +553,7 @@ export const servicesPage = {
   businessSection: {
     heading: "AI Advisory for Teams",
     intro:
-      "Three ways to work together: a sprint to choose the right use cases, a 90-day build to change workflows, and a retainer to keep the rhythm going.",
+      "Two shapes of engagement: a defined 90-day project, or an embedded, fractional AI lead, with a short sprint as the way in.",
     cta: { label: "Explore team advisory", href: "/services/ai-advisory-for-teams" },
   },
   sampleArc: [
@@ -604,7 +604,7 @@ export const leaderLessonsPage: ServiceDetailPage & {
   title: "AI Lessons for Leaders",
   intro:
     "Practical 1-to-1 AI coaching for leaders who want to understand AI, use it well, and see what it means for their role, their people and their business.",
-  heroCta: { label: "Book a 1-to-1 discovery call", href: "/book/personal" },
+  heroCta: { label: "Book a discovery call for leaders", href: "/book/personal" },
   secondaryCta: { label: "View all services", href: "/services" },
   overview: {
     label: "Start here",
@@ -701,7 +701,7 @@ export const teamAdvisoryPage: ServiceDetailPage & {
 } = {
   title: "AI Advisory for Teams",
   intro:
-    "A senior AI adviser working with leaders and teams to turn scattered AI use into safe, useful working practice.",
+    "An embedded, fractional AI lead working with your leadership and teams to turn scattered AI use into safe, useful working practice.",
   heroCta: siteConfig.businessCta,
   secondaryCta: { label: "View all services", href: "/services" },
   fit: {
@@ -712,7 +712,7 @@ export const teamAdvisoryPage: ServiceDetailPage & {
       "Leadership needs to know where AI should and should not be used.",
       "Teams are experimenting, but habits and guardrails are patchy.",
       "Promising pilots need to become repeatable working practice.",
-      "The business needs senior judgement without a full-time AI lead.",
+      "The business needs a fractional AI lead, not a full-time hire.",
     ],
   },
   operating: {
@@ -721,9 +721,9 @@ export const teamAdvisoryPage: ServiceDetailPage & {
       "The work connects leadership priorities with the jobs people actually do: choose the right use cases, redesign real workflows, set guardrails, support champions and leave a cadence the business can keep using.",
   },
   offerSection: {
-    heading: "Three ways to work together",
+    heading: "A way in, a project, an embedded role",
     intro:
-      "Start with the smallest engagement that can create useful momentum, then build only when the business has a clear reason to go further.",
+      "Start with a short sprint to see where AI pays off, then run a defined 90-day project or bring in an embedded, fractional lead, only when there is a clear reason to go further.",
   },
   arcSection: {
     heading: "A simple 90-day arc",
@@ -887,7 +887,7 @@ export const seoContent = {
       path: "/services/",
       title: "Services",
       description:
-        "AI lessons for leaders and AI Advisory for Teams. Engagements: AI Reality Check Sprint, 90-Day Adoption Build, and Fractional Retainer.",
+        "AI lessons for leaders and AI Advisory for Teams. Engagements: AI Reality Check Sprint, 90-Day Adoption Build, and Embedded AI Lead.",
     },
     insights: {
       path: "/insights/",
@@ -911,7 +911,7 @@ export const seoContent = {
       path: "/services/ai-advisory-for-teams/",
       title: "AI Advisory for Teams",
       description:
-        "AI Advisory for Teams. Turn scattered AI use into safe, useful working practice with clear use cases, workflow pilots and practical guardrails.",
+        "AI Advisory for Teams: an embedded, fractional AI lead who turns scattered AI use into safe, useful working practice, for a 90-day project or the long run.",
     },
     about: {
       path: "/about/",
