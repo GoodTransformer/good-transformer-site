@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 
 import { seoContent, siteConfig } from "@/content/site-content";
 
+import { OG_IMAGE_VERSION } from "./og-version";
+
 export const SITE_URL = seoContent.siteUrl;
-export const OG_IMAGE = `${SITE_URL}/og-image.png`;
+// The ?v= hash changes whenever the image is regenerated, so social platforms
+// refetch the new card instead of serving a stale cached copy. See og-version.ts.
+export const OG_IMAGE = `${SITE_URL}/og-image.png?v=${OG_IMAGE_VERSION}`;
 
 export function absoluteUrl(path: string) {
   return new URL(path, SITE_URL).toString();
