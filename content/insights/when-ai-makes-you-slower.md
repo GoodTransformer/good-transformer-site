@@ -19,7 +19,7 @@ That gap between feeling faster and being faster is the part worth sitting with.
 
 AI does not just do the task. It adds steps around it. You have to explain what you want, often more carefully than you would brief a colleague. You have to read and inspect what comes back, because it is plausible whether or not it is right. When it is subtly wrong, you carry the cost of the error, sometimes without knowing. And then you have to correct it, which on a fiddly task can take longer than doing the thing yourself.
 
-For a genuine expert on familiar work, those overheads can swamp the benefit. This is consistent with the wider evidence. The "jagged frontier" field experiment found AI helped knowledge workers on tasks suited to it but made them [meaningfully worse on a task just outside its range](https://mitsloan.mit.edu/sites/default/files/2023-10/SSRN-id4573321.pdf). And the large customer-support study by Brynjolfsson, Li and Raymond found the [biggest gains went to novices, with little benefit for the most experienced staff](https://www.nber.org/papers/w31161). The pattern repeats: AI lifts the floor more than the ceiling, so the more expert you are at a task, the less it tends to add, and the more its overhead shows.
+For a genuine expert on familiar work, those overheads can swamp the benefit. This is consistent with the wider evidence. The "jagged frontier" field experiment found AI helped knowledge workers on tasks suited to it but made them [meaningfully worse on a task just outside its range](https://mitsloan.mit.edu/sites/default/files/2023-10/SSRN-id4573321.pdf). And the large customer-support study by Brynjolfsson, Li and Raymond found the [biggest gains went to novices, with little benefit for the most experienced staff](https://www.nber.org/papers/w31161). The pattern repeats: AI lifts the floor more than the ceiling. The more expert you are at a task, the less it tends to add, and the more its overhead shows.
 
 A fair caveat about the METR study: it was small, sixteen developers on mature codebases they knew intimately, using early-2025 tools. It is not proof that AI slows everyone down. It is strong evidence that on expert, familiar work, it can, and that the people doing it will not feel it happening.
 
@@ -44,15 +44,15 @@ The same logic sorts marketing work, analysis and writing. AI tends to help most
 
 ## The honest limits
 
-This is not an argument that AI makes people slower. For a great deal of work, especially for less experienced staff and high-frequency tasks, the gains are real and well-evidenced. The point is narrower and more useful: the benefit is not universal, it varies sharply by task and person, and the feeling of speed is an unreliable guide. The NIST [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) makes measurement a deliberate function for exactly this reason, because intuition about AI's value is easy to get wrong.
+This is not an argument that AI makes people slower. For a great deal of work, especially for less experienced staff and high-frequency tasks, the gains are real and well-evidenced. The point is narrower and more useful: the benefit is not universal, it varies sharply by task and person, and the feeling of speed is an unreliable guide. The NIST [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) treats measurement as a distinct discipline rather than an afterthought, which matters precisely because intuition about AI's value is easy to get wrong.
 
 The frontier also moves. A task where AI slows an expert today may flip in six months as the tools improve. That is an argument for re-testing occasionally, not for assuming either way.
 
-For a manager, the practical implication is not to mandate AI everywhere, nor to ban it, but to let the people doing expert work make the call task by task, and to treat that as a respected professional judgement rather than a quiet act of rebellion against a tool they were told to adopt. The friction test below gives them a shared language for making it.
+For a manager, the practical implication is not to mandate AI everywhere, nor to ban it, but to let the people doing expert work make the call task by task. Treat that as respected professional judgement, not a quiet act of rebellion against a tool they were told to adopt. The friction test below gives them a shared language for making it.
 
 ## What to do next
 
-Pick one task you reflexively run through AI and time it honestly, once with and once without, paying attention to the correction effort, not just the first draft. Trust the clock over the feeling. You may find AI is earning its place; you may find you have been adding steps to work you were already good at. Either way, you will be deciding on evidence rather than vibes.
+Pick one task you reflexively run through AI and time it honestly, once with and once without, paying attention to the correction effort, not just the first draft. Trust the clock over the feeling. You may find AI is earning its place; you may find you have been adding steps to work you were already good at. Either way, you will be deciding on evidence rather than on a feeling.
 
 ## The tool
 

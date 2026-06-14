@@ -46,7 +46,7 @@ Written as a job card, the same agent is a different proposition. Its purpose is
 
 ## The honest limits
 
-Two cautions. First, a job card does not make a bad idea safe. Some work should not be delegated to an agent at all, not because the document is missing but because the judgement involved cannot be safely separated from a human. The card helps you see that clearly; it does not license you to ignore it.
+A few cautions. First, a job card does not make a bad idea safe. Some work should not be delegated to an agent at all, not because the document is missing but because the judgement involved cannot be safely separated from a human. The card helps you see that clearly; it does not license you to ignore it.
 
 Second, proportion matters. A trivial, fully reversible agent that drafts internal text does not need the same ceremony as one with access to client systems and the power to act. Match the rigour to the autonomy and the stakes. The point of the job card is not paperwork for its own sake; it is to make the delegation deliberate, so that what an agent can do is a decision someone made, not an accident of what it was able to reach.
 

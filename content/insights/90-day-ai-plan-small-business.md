@@ -21,7 +21,7 @@ The temptation is to start with a tool. Resist it. The first month is for gettin
 
 Start with leadership objectives. What is this actually for? More capacity without more hiring, faster turnaround, fewer errors in a risky process. Write it down in a sentence, because everything later is judged against it. Then map the existing use, including the quiet, unofficial kind. People are already using AI; you simply may not know where. Surface it without blame, because it is your best evidence of what helps.
 
-Next, do a light risk discovery: what client or personal data must never be pasted into a public tool, and where could a confident, wrong answer cause real harm. This does not need a consultant or a committee. It needs a clear-eyed hour and a short written rule. Then list candidate workflows, the frequent, worthwhile, checkable tasks where AI is likely to help. The field experiment behind the ["jagged frontier"](https://mitsloan.mit.edu/sites/default/files/2023-10/SSRN-id4573321.pdf), in which AI helped knowledge workers on tasks suited to it but actively hurt them on a task just outside its range, is a useful warning here: choosing the right task matters more than choosing the right tool.
+Next, do a light risk discovery: what client or personal data must never be pasted into a public tool, and where could a confident, wrong answer cause real harm. This does not need a consultant or a committee. It needs a clear-eyed hour and a short written rule. Then list candidate workflows, the frequent, worthwhile, checkable tasks where AI is likely to help. The field experiment behind the ["jagged frontier"](https://mitsloan.mit.edu/sites/default/files/2023-10/SSRN-id4573321.pdf) is a useful warning here. In it, AI helped knowledge workers on tasks suited to it but actively hurt them on a task just outside its range. Choosing the right task matters more than choosing the right tool.
 
 Finally, take a baseline measure. If you cannot say how long the chosen work takes today, or how often it goes wrong, you will never be able to show that anything improved. The government's [AI Opportunities Action Plan](https://www.gov.uk/government/publications/ai-opportunities-action-plan/ai-opportunities-action-plan) frames adoption as "scan, pilot, scale" for the same reason: look honestly before you leap.
 
@@ -51,7 +51,7 @@ Second, not every business should start today. If there is no leadership attenti
 
 ## What to do next
 
-Block the first week. Get leadership to agree the one-sentence objective, surface the AI already in use, and write the short data rule. That alone puts you ahead of most organisations, who skip straight to a tool and wonder why nothing sticks. The rest of the plan follows from that honest start.
+Block the first week. Get leadership to agree the one-sentence objective, surface the AI already in use, and write the short data rule. That alone puts you ahead of most organisations, who skip straight to a tool and wonder why nothing sticks. The rest of the plan follows from that honest start. And resist the urge to widen the scope mid-cycle: the discipline of finishing two workflows beats the comfort of starting six and completing none.
 
 ## The tool
 

@@ -17,7 +17,7 @@ This matters because the tools are a moving target. In 2024, US-based institutio
 
 So it is worth separating two things that often get muddled. Tool fluency is knowing which buttons to press in a particular application. AI literacy is the durable judgement that sits above any tool: what the technology can do, where it is worth using, how to tell whether the output is any good, and where responsibility still sits. The first dates in months. The second compounds over years.
 
-## Why this is now a baseline expectation, not a nice-to-have
+## Why this is now a baseline expectation
 
 There is a regulatory signal here too, and it is more practical than it sounds. Since 2 February 2025, the EU AI Act has required providers and deployers of AI systems to ensure "a sufficient level of AI literacy" among the staff who use them. The wording of [Article 4](https://artificialintelligenceact.eu/article/4/) is instructive: it does not define literacy as knowing any particular product. It frames it in terms of people's roles, their technical background, and the context in which a system is used. Even for a UK business outside the Act's direct scope, that is a sensible working definition of what "knowing enough" means.
 
@@ -47,11 +47,11 @@ There is also a sector reality to respect. A law firm's literacy has to weigh co
 
 ## What to do this month
 
-Pick one task you do regularly and do it twice, once as usual and once with an AI tool you already have, and pay close attention to where the tool helped and where you had to correct it. Write down, in a sentence each, what you now believe the technology is good and bad at for that task. Decide who in your organisation would be accountable if that AI-assisted work went out with an error in it. That is the whole of literacy in miniature: capability, application, evaluation, accountability, and the habit of adapting as you go.
+Pick one task you do regularly and do it twice: once as usual, once with an AI tool you already have. Pay close attention to where it helped and where you had to correct it. Write down, in a sentence each, what you now believe the technology is good and bad at for that task. Decide who in your organisation would be accountable if that AI-assisted work went out with an error in it. That is the whole of literacy in miniature: capability, application, evaluation, accountability, and the habit of adapting as you go.
 
 ## The tool
 
-To make this concrete, we have built a short diagnostic: the **AI Leadership Literacy Self-Assessment**. It scores you across all five parts, capability, application, evaluation, accountability and adaptation, and gives you a plain reading of whether you are at an early, developing or confident stage, plus where your weakest area is. It takes about ten minutes and needs nothing but a pen.
+To make this concrete, we have built a short diagnostic: the **AI Leadership Literacy Self-Assessment**. It scores you across all five parts and gives you a plain reading of whether you are at an early, developing or confident stage, and where your weakest area is. It takes about ten minutes and needs nothing but a pen.
 
 [Download the AI Leadership Literacy Self-Assessment (PDF)](/insights/assets/ai-leadership-literacy-self-assessment.pdf)
 

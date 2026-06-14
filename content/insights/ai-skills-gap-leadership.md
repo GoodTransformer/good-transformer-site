@@ -17,11 +17,11 @@ The numbers are striking. In the 2024 Work Trend Index, a survey from Microsoft 
 
 ## Willing staff, absent direction
 
-This matters because employees cannot adopt AI intelligently in a vacuum. When no one has said what AI is for, what is permitted, or how success will be judged, people do the only thing they can: they improvise privately, which is how an organisation ends up with energy but no coherence. The MIT Media Lab's [GenAI Divide report](https://nanda.media.mit.edu/ai_report_2025.pdf) concluded that the thing separating the organisations getting value from the ones not getting value was not talent or infrastructure but learning, integration and adaptation, all of which are leadership responsibilities, not front-line ones.
+This matters because employees cannot adopt AI intelligently in a vacuum. When no one has said what AI is for, what is permitted, or how success will be judged, people do the only thing they can: they improvise privately, which is how an organisation ends up with energy but no coherence. The MIT Media Lab's [GenAI Divide report](https://nanda.media.mit.edu/ai_report_2025.pdf) concluded that what separated the organisations getting value from those not getting it was not talent or infrastructure, but learning, integration and adaptation. All three are leadership responsibilities, not front-line ones.
 
 There is even a regulatory echo. The EU AI Act places its [AI literacy duty](https://artificialintelligenceact.eu/article/4/) on the organisations deploying AI, not on individual employees. Literacy is treated as something a business owes its people, set from the top. The same logic runs through the NIST [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), whose "Govern" function is explicitly about leadership setting the culture and direction that everything else depends on.
 
-The cost of leaving this gap unfilled shows up everywhere else, usually wearing a different name. It is the unofficial, unmanaged AI use that appears when there is no sanctioned route. It is the training that does not stick because nothing around the work actually changed. It is the promising pilot that never scales because no one with authority decided it should. Each of these tends to be treated as a separate problem with its own fix. More often they are the same problem seen from below: a direction that was never set, and a permission that was never clearly given.
+The cost of leaving this gap unfilled shows up everywhere else, usually wearing a different name. It is the unofficial, unmanaged AI use that appears when there is no sanctioned route. It is the training that does not stick because nothing around the work actually changed. It is the promising pilot that never scales because no one with authority decided it should. Each of these tends to be treated as a separate problem with its own fix. More often they are the same problem seen from below: a direction that was never set, and permission that was never clearly given.
 
 ## Four leadership obligations
 
@@ -63,7 +63,7 @@ Building a leader's own confidence with AI is exactly what our [AI lessons for l
 
 ## Sources and further reading
 
-- [Microsoft and LinkedIn, 2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part). Vendor survey. Source for 75% of knowledge workers using AI, 78% bringing their own tools, and 60% of leaders reporting no AI plan. Read as vendor research, not independent measurement.
+- [Microsoft and LinkedIn, 2024 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part). Vendor survey. Source for 75% of knowledge workers using AI, 78% bringing their own tools, 60% of leaders reporting no AI plan, and 79% calling AI critical to competitiveness. Read as vendor research, not independent measurement.
 - [MIT Media Lab (Project NANDA), The GenAI Divide: State of AI in Business 2025](https://nanda.media.mit.edu/ai_report_2025.pdf). Industry report, not peer-reviewed; the 95% figure has been contested. Source for the divide being about learning and integration, not talent.
 - [EU AI Act, Article 4: AI literacy](https://artificialintelligenceact.eu/article/4/). Applicable from 2 February 2025. Source for AI literacy being an organisational duty.
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework). Independent US standards body. Source for the leadership-level "Govern" function.

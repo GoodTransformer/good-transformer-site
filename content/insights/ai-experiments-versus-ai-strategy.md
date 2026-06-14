@@ -11,7 +11,7 @@ featured: false
 draft: false
 ---
 
-Walk through most organisations today and you will find AI everywhere and nowhere. Someone in marketing drafts with ChatGPT, an analyst has a clever Copilot habit, a partner quietly runs documents through Claude. It feels like momentum, and it is often mistaken for one. A business with thirty people each using AI their own way does not have an AI strategy. It has thirty experiments and a rising sense that something is happening.
+Walk through most organisations today and you will find AI everywhere and nowhere. Someone in marketing drafts with ChatGPT, an analyst has a clever Copilot habit, a partner quietly runs documents through Claude. It feels like momentum, and it is often mistaken for a strategy. A business with thirty people each using AI their own way does not have an AI strategy. It has thirty experiments and a rising sense that something is happening.
 
 Experiments are good. They are how an organisation learns what works. But a pile of local efficiencies is not the same as a direction, and the gap between the two is where most of the value quietly leaks away.
 
@@ -19,7 +19,7 @@ Experiments are good. They are how an organisation learns what works. But a pile
 
 Scattered use has a ceiling, and the evidence is starting to show it. An MIT Media Lab report, [The GenAI Divide: State of AI in Business 2025](https://nanda.media.mit.edu/ai_report_2025.pdf), found very high adoption sitting alongside very little measurable business return, a split it calls high adoption and low transformation. The figure deserves caution, since it is an industry report rather than peer-reviewed work and its headline number has been contested, but the shape of the finding matches what we see: plenty of activity, thin results.
 
-There is a structural reason for this. Brynjolfsson, Rock and Syverson described a ["productivity J-curve"](https://www.nber.org/papers/w25148) in which the payoff from a general-purpose technology lags until organisations make the complementary changes around it: redesigned processes, shared practices, new responsibilities. Individual experiments cannot make those changes. They are too small and too private. Only a deliberate choice at the level of the business can, and that choice is what a strategy is.
+There is a structural reason for this. Brynjolfsson, Rock and Syverson described a ["productivity J-curve"](https://www.nber.org/papers/w25148) in which the payoff from a general-purpose technology lags until organisations make the complementary changes around it: redesigned processes, shared practices, new responsibilities. Individual experiments cannot make those changes. They are too small and too private. Only a deliberate choice at the level of the business can, and that choice is what a strategy is. There is a competitive edge in this, too. When one firm turns scattered use into a few well-run, improving workflows while a rival leaves thirty private experiments to wither, the gap between them compounds quietly, year on year.
 
 ## The AI strategy stack
 
@@ -27,7 +27,7 @@ A strategy does not have to be a long document. It has to answer seven questions
 
 **Business objective.** What is AI in service of? Not "using AI", but the actual goal: more capacity without more hiring, faster turnaround clients notice, fewer errors in a risky process. If the top of the stack is vague, everything below it wanders.
 
-**Priority workflows.** Which two or three pieces of real work matter most? A strategy is as much about what you are not doing yet. Spreading attention across ten workflows is how organisations end up with ten half-finished experiments.
+**Priority workflows.** Which two or three pieces of real work matter most? A strategy is as much about what you are not doing as what you are. Spreading attention across ten workflows is how organisations end up with ten half-finished experiments.
 
 **Capabilities and tools.** What does the chosen work actually need: a reusable assistant, a fixed automation, something more? Tools come after the work, not before. The order matters, and most organisations reverse it.
 
