@@ -94,6 +94,15 @@ posts. For a local preview with no engine, run `node scripts/generate-ai-news.mj
 So nothing about the news source needs wiring here anymore; it is supplied by the
 blog machine's daily run. This repo's only job is to render and send it.
 
+**Keeping the feed fresh.** That automatic push needs a write credential,
+`GT_PUBLISH_TOKEN`, set in the newsjack engine's own config (not this repo): a
+fine-grained GitHub PAT with Contents read/write on this repo. Without it the
+engine still builds the feed but cannot push, so `news-curated.json` only changes
+when committed by hand. Because the digest drops the news block once the feed is
+older than 10 days, a missing token means sends quietly go posts-only after about
+a week. So if the "AI news for leaders" block ever disappears, the cause is a
+stale `news-curated.json`: refresh it (engine push, or commit a new one).
+
 ## Running it
 
 - **Schedule** (`.github/workflows/send-digest.yml`): daily on weekday mornings,
