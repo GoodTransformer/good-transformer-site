@@ -13,6 +13,11 @@ See [`services.md`](services.md) for the owning Google account and
 - **Google Analytics 4** loads site-wide from the root layout via
   `src/components/google-analytics.tsx`, reading `NEXT_PUBLIC_GA_MEASUREMENT_ID`
   (`G-LN1EJ68X71`). With no ID set (local dev) it renders nothing.
+- **LinkedIn Insight Tag** loads site-wide from the root layout via
+  `src/components/linkedin-insight-tag.tsx`, reading
+  `NEXT_PUBLIC_LINKEDIN_PARTNER_ID` (currently `9252146`). With no partner ID
+  set it renders nothing. The partner ID comes from the Good Transformer
+  LinkedIn Campaign Manager account, under Analyze → Insight Tag.
 - **Custom events** are dispatched through one helper, `src/lib/analytics.ts`
   (`trackEvent`), which fires the **same payload to both GA4 (`gtag`) and
   Plausible** (`window.plausible`, if present). Two callers:
@@ -112,6 +117,27 @@ views.
 `?debug_mode=1`). Click a hero CTA, submit a test newsletter signup, and walk a
 booking through to the Cal.com handoff; confirm `cta_click`, `newsletter_signup`,
 and `booking_start` appear with the expected parameters.
+
+---
+
+## LinkedIn Insight Tag setup
+
+In LinkedIn Campaign Manager for the Good Transformer page/ad account:
+
+1. Go to **Analyze → Insight Tag**.
+2. Choose **Manually install tag** and copy the numeric partner ID from the tag.
+3. Add it to GitHub Actions secrets as `NEXT_PUBLIC_LINKEDIN_PARTNER_ID`.
+4. Push/deploy the site.
+5. Verify in Campaign Manager under **Analyze → Conversion Tracking → Data Sources**.
+
+LinkedIn may take up to 24 hours to show the tag as active after a LinkedIn
+member visits the site. For browser verification, open DevTools → Network,
+filter for `ads.linkedin`, refresh the page, and confirm a LinkedIn request is
+sent.
+
+Use this for aggregated visitor demographics, matched companies, retargeting
+audiences, and campaign optimisation. It should not be treated as a named
+individual visitor identification tool.
 
 ---
 

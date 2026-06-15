@@ -7,6 +7,7 @@ import "./globals.css";
 import { AnalyticsEvents } from "@/components/analytics-events";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { JsonLd } from "@/components/json-ld";
+import { LinkedInInsightTag } from "@/components/linkedin-insight-tag";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { seoContent, siteConfig } from "@/content/site-content";
@@ -163,6 +164,7 @@ export default function RootLayout({
         </a>
         <SiteHeader />
         <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        <LinkedInInsightTag partnerId={process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID} />
         <AnalyticsEvents />
         <main id="content">{children}</main>
         <SiteFooter />

@@ -51,6 +51,7 @@ jobs:
           NEXT_PUBLIC_PERSONAL_LESSON_URL: ${{ secrets.NEXT_PUBLIC_PERSONAL_LESSON_URL }}
           NEXT_PUBLIC_BOOKING_BRIEF_EMAIL: ${{ secrets.NEXT_PUBLIC_BOOKING_BRIEF_EMAIL }}
           NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+          NEXT_PUBLIC_LINKEDIN_PARTNER_ID: 9252146
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5

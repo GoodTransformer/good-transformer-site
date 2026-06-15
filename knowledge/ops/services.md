@@ -20,6 +20,7 @@ lives under. Keep this current when a service is added, moved, or its owner chan
 | **Resend** | Newsletter sending - the daily & weekly Insights digest | Resend account, login email **`hello@goodtransformer.ai`** (primary), account `goodtransformer` | Sends from `insights@send.goodtransformer.ai` (subdomain `send.goodtransformer.ai`, **verified** 13 Jun 2026, region eu-west-1/Ireland; DNS at GoDaddy/123-reg). New Resend model: **Topics** `Daily digest` (`9034d02c-63ce-40e0-9f2b-a6e7dddcb421`) + `Weekly digest` (`bab99185-9d93-4934-933e-a564d8cfa71a`), and an "All subscribers" **Segment** (`3c41bcc6-4550-4a22-8367-2ab15cab6041`). Secrets `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, `RESEND_TOPIC_DAILY_ID`, `RESEND_TOPIC_WEEKLY_ID`, `DIGEST_FROM` (GitHub Actions). Setup in [`NEWSLETTER-SETUP.md`](../../NEWSLETTER-SETUP.md). **_(IDs all wired; remaining: verify domain, deploy Worker, set GitHub secrets)_** |
 | **Cloudflare Workers** | Hosts the newsletter `subscribe` endpoint (keeps the Resend key off the client) | Cloudflare account, login **`hello@goodtransformer.ai`** | Worker `gt-newsletter-subscribe` (see `workers/subscribe/`), live at **`https://gt-newsletter-subscribe.misty-smoke-81e7.workers.dev`**. `RESEND_API_KEY` set as a Worker secret; topic/segment IDs as plaintext vars. The site form defaults to this URL (override via `NEXT_PUBLIC_SUBSCRIBE_ENDPOINT`). **Deployed & tested** 13 Jun 2026. |
 | **Google Analytics 4** | Site analytics (page views + click events) | Google account **`goodtransformer1@gmail.com`** | Account `353050501` · Property `486698902` · **Measurement ID `G-LN1EJ68X71`** |
+| **LinkedIn Campaign Manager** | LinkedIn Insight Tag, audience insights, retargeting, and campaign conversion optimisation | Good Transformer LinkedIn Page / ad account **_(confirm admin login)_** | Partner ID `9252146`, stored as `NEXT_PUBLIC_LINKEDIN_PARTNER_ID`; get it from Campaign Manager under Analyze → Insight Tag |
 | **Google Search Console** | Search indexing / domain verification | Same Google account as GA4 (**`goodtransformer1@gmail.com`**) | Verification file `public/googled0b1f3ab4da77175.html` |
 
 ---
@@ -43,6 +44,9 @@ lives under. Keep this current when a service is added, moved, or its owner chan
   (reading `NEXT_PUBLIC_GA_MEASUREMENT_ID`); custom conversion/engagement events
   are dispatched via `src/lib/analytics.ts` + `src/components/analytics-events.tsx`.
   Full event list and the one-time GA4 admin setup: [`analytics.md`](analytics.md).
+- **LinkedIn Insight Tag** is loaded by `src/components/linkedin-insight-tag.tsx`
+  (reading `NEXT_PUBLIC_LINKEDIN_PARTNER_ID`) for LinkedIn audience insights and
+  retargeting. Setup notes live in [`analytics.md`](analytics.md).
 - **Google Search Console** is verified by a static file served from `public/`.
 
 All config values live in [`env-vars.md`](env-vars.md). This file is the "who owns what" layer
