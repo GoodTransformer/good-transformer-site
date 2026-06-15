@@ -15,12 +15,6 @@
       "summary": "Ethan Mollick describes a model running autonomously for most of a working day on a single brief, spinning up its own sub-agents. As AI does more of the work unwatched, the leader's role shifts from steering each step to commissioning a result and judging it. Human sign-off and verification matter more, not less, where the output carries your name."
     },
     {
-      "title": "Apple lets people pick which AI answers on their iPhone",
-      "url": "https://www.macrumors.com/2026/05/05/ios-27-third-party-chatbots-apple-intelligence/",
-      "source": "MacRumors",
-      "summary": "With iOS 27, iPhone users will be able to set a third-party assistant such as Claude, Gemini or ChatGPT behind Siri rather than the default. The habit of asking AI first, which already shapes how clients and candidates research you, becomes a phone default. Being found now means being legible to several assistants, not only ranking on Google."
-    },
-    {
       "title": "Claude arrives in Excel, putting a frontier model in a tool your team already uses",
       "url": "https://www.techtimes.com/articles/317988/20260608/claude-now-works-inside-excel-microsoft-drops-anthropics-ai-spreadsheet-750-million-people-use.htm",
       "source": "Tech Times",
