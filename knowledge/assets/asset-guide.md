@@ -63,6 +63,8 @@ Do not hand-edit `public/og-image.png` without updating the generator, otherwise
 | `microsoft.svg` | `public/logos/microsoft.svg` | Microsoft |
 | `oneadvanced.svg` | `public/logos/oneadvanced.svg` | OneAdvanced |
 | `sana-commerce.svg` | `public/logos/sana-commerce.svg` | Sana Commerce |
+| `fast-company.svg` | `public/logos/fast-company.svg` | Fast Company |
+| `superintelligence.svg` | `public/logos/superintelligence.svg` | Superintelligence |
 
 These are referenced in `proofSignals.organisations` in `site-content.ts`. Each entry includes:
 - `name` - display name

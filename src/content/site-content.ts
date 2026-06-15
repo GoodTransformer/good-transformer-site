@@ -49,6 +49,21 @@ export type ProofOrganisation = {
   maxWidth: number;
 };
 
+export type ProofPublicationLogo = {
+  src: string;
+  width: number;
+  height: number;
+  maxWidth: number;
+};
+
+export type ProofPublication = {
+  publication: string;
+  title: string;
+  summary: string;
+  href: string;
+  logo: ProofPublicationLogo;
+};
+
 export const siteConfig = {
   offerName: "Good Transformer",
   descriptor: "AI lessons for leaders and practical team advisory",
@@ -613,6 +628,11 @@ export const leaderLessonsPage: ServiceDetailPage & {
   proof: {
     heading: string;
     body: string;
+    thoughtLeadership: {
+      heading: string;
+      intro: string;
+      articles: ProofPublication[];
+    };
   };
 } = {
   title: "AI Lessons for Leaders",
@@ -697,7 +717,40 @@ export const leaderLessonsPage: ServiceDetailPage & {
   proof: {
     heading: "Experience without the theatre",
     body:
-      "Patrick has worked with leaders at Google, Microsoft, SAP, Adobe, Vodafone, OneAdvanced and Sana Commerce, and written on AI for Fast Company and The Guardian. The lessons bring that context back to the practical work in front of you.",
+      "Patrick has worked with leaders at Google, Microsoft, SAP, Adobe, Vodafone, OneAdvanced and Sana Commerce. The lessons bring that context back to the practical work in front of you.",
+    thoughtLeadership: {
+      heading: "Professional thought leadership on AI",
+      intro:
+        "Published work that brings the same clear judgement to AI adoption, competition and accountability.",
+      articles: [
+        {
+          publication: "Fast Company",
+          title: "What happens when the AIs turn on each other?",
+          summary:
+            "A reported look at competitive AI and the strange real-world dynamics that emerge when autonomous systems start contending with one another.",
+          href: "https://www.fastcompany.com/91092363/what-happens-when-the-ais-turn-on-each-other",
+          logo: {
+            src: "/logos/fast-company.svg",
+            width: 220,
+            height: 38,
+            maxWidth: 8.9,
+          },
+        },
+        {
+          publication: "Superintelligence",
+          title: "The Agentic Economy Has No Black Box",
+          summary:
+            "An essay on cross-party agent failures, public accountability, and the civic infrastructure still missing as agentic systems scale.",
+          href: "https://getsuperintel.site/p/the-agentic-economy-has-no-black-box",
+          logo: {
+            src: "/logos/superintelligence.svg",
+            width: 312,
+            height: 38,
+            maxWidth: 11.8,
+          },
+        },
+      ],
+    },
   },
 };
 

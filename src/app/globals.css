@@ -338,6 +338,72 @@ img {
   height: 1.36rem;
 }
 
+.lesson-proof-testimonial {
+  max-width: 30rem;
+}
+
+.lesson-proof-logo-block {
+  max-width: 31rem;
+}
+
+.lesson-proof-publications {
+  max-width: 35rem;
+}
+
+.lesson-proof-publication-grid {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.lesson-proof-publication {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgb(var(--color-line) / 0.12);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lesson-proof-publication:hover,
+.lesson-proof-publication:focus-visible {
+  opacity: 0.9;
+  transform: translateY(-0.12rem);
+}
+
+.lesson-proof-publication__logo {
+  display: flex;
+  align-items: center;
+  min-height: 1.6rem;
+  max-width: var(--publication-logo-max-width);
+}
+
+.lesson-proof-publication__logo-image {
+  display: block;
+  width: auto;
+  height: 1.5rem;
+  max-width: 100%;
+  object-fit: contain;
+  opacity: 0.8;
+  filter: grayscale(1) saturate(0) brightness(0.24) contrast(1.02);
+}
+
+.lesson-proof-publication__body {
+  min-width: 0;
+}
+
+.lesson-proof-publication__title-row {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.lesson-proof-publication__arrow {
+  flex: 0 0 auto;
+  padding-top: 0.12rem;
+}
+
 .artifact-stack {
   position: relative;
   width: min(100%, 34rem);
@@ -689,6 +755,27 @@ details > summary::-webkit-details-marker {
 
   .client-logo-cell--microsoft .client-logo-image {
     height: 1.46rem;
+  }
+
+  .lesson-proof-column {
+    min-height: 100%;
+  }
+
+  .lesson-proof-logo-block .client-logo-strip {
+    max-width: 31rem;
+  }
+
+  .lesson-proof-publication-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.8rem 2rem;
+  }
+
+  .lesson-proof-publication__logo {
+    min-height: 1.9rem;
+  }
+
+  .lesson-proof-publication__logo-image {
+    height: 1.72rem;
   }
 
   .artifact-stack {
