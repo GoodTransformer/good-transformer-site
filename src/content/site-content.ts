@@ -517,49 +517,49 @@ export const servicesPage = {
         label: "Accountancy & advisory",
         title: "AI for accountancy leaders",
         body:
-          "Client prep, research, drafting and knowledge-sharing, with judgement kept in the room.",
+          "1-to-1 coaching on AI, capacity, review standards and firm-wide judgement.",
         href: "/downloads/ai-for-accountancy-and-advisory.pdf",
       },
       {
         label: "Recruitment",
         title: "AI for recruitment leaders",
         body:
-          "Sharper prep, faster research, better follow-ups and more confident consultants.",
+          "1-to-1 coaching on AI-written applications, desk workflows and human review.",
         href: "/downloads/ai-for-recruitment.pdf",
       },
       {
         label: "Agency & marketing",
         title: "AI for agency leaders",
         body:
-          "Research, reporting, content and search shifts, without making client work generic.",
+          "1-to-1 coaching on AI search shifts, client pressure and non-generic work.",
         href: "/downloads/ai-for-agency-leaders.pdf",
       },
       {
         label: "Corporate finance",
         title: "AI for finance leaders",
         body:
-          "Synthesis, preparation and diligence support for judgement-heavy advisory work.",
+          "1-to-1 coaching on deal prep, first-pass synthesis and verification rules.",
         href: "/downloads/ai-for-corporate-finance.pdf",
       },
       {
         label: "Wealth & financial planning",
         title: "AI for wealth leaders",
         body:
-          "Meeting prep, research, suitability notes and client letters, with the advice still yours.",
+          "1-to-1 coaching on adviser workflow, client trust and compliance boundaries.",
         href: "/downloads/ai-for-wealth-and-financial-planning.pdf",
       },
       {
         label: "Property & real estate",
         title: "AI for property leaders",
         body:
-          "Listings, market research, comparables and client updates, with local judgement kept yours.",
+          "1-to-1 coaching on client updates, local briefs and valuation judgement.",
         href: "/downloads/ai-for-property-and-real-estate.pdf",
       },
       {
         label: "Legal & risk-aware services",
         title: "AI with verification built in",
         body:
-          "Preparation, first drafts and knowledge work with confidentiality and verification in view.",
+          "1-to-1 coaching on verified drafting, knowledge work and AI boundaries.",
         href: "/downloads/ai-for-legal-and-risk-aware-professional-services.pdf",
       },
     ],
@@ -649,42 +649,42 @@ export const leaderLessonsPage: ServiceDetailPage & {
         label: "Accountancy & advisory",
         title: "AI for accountancy leaders",
         body:
-          "Client prep, research, drafting and internal knowledge-sharing with human judgement still in charge.",
+          "1-to-1 coaching on AI, capacity, review standards and firm-wide judgement.",
         href: "/downloads/ai-for-accountancy-and-advisory.pdf",
       },
       {
         label: "Recruitment",
         title: "AI for recruitment leaders",
         body:
-          "Candidate prep, market research, adverts, summaries and follow-ups, without losing the human touch.",
+          "1-to-1 coaching on AI-written applications, desk workflows and human review.",
         href: "/downloads/ai-for-recruitment.pdf",
       },
       {
         label: "Agency & marketing",
         title: "AI for agency leaders",
         body:
-          "Client preparation, reporting, content and search shifts, with creative judgement kept visible.",
+          "1-to-1 coaching on AI search shifts, client pressure and non-generic work.",
         href: "/downloads/ai-for-agency-leaders.pdf",
       },
       {
         label: "Corporate finance",
         title: "AI for finance leaders",
         body:
-          "Synthesis, meeting prep and first-pass diligence support for judgement-heavy advisory work.",
+          "1-to-1 coaching on deal prep, first-pass synthesis and verification rules.",
         href: "/downloads/ai-for-corporate-finance.pdf",
       },
       {
         label: "Property & real estate",
         title: "AI for property leaders",
         body:
-          "Listings, market research, comparables and client updates, with local judgement kept yours.",
+          "1-to-1 coaching on client updates, local briefs and valuation judgement.",
         href: "/downloads/ai-for-property-and-real-estate.pdf",
       },
       {
         label: "Legal & risk-aware services",
         title: "AI with verification built in",
         body:
-          "Preparation, first drafts and knowledge work with confidentiality, accuracy and verification in view.",
+          "1-to-1 coaching on verified drafting, knowledge work and AI boundaries.",
         href: "/downloads/ai-for-legal-and-risk-aware-professional-services.pdf",
       },
     ],

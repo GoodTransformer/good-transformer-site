@@ -3,7 +3,7 @@
  * generate-collateral.mjs
  *
  * Renders the branded marketing collateral in marketing/templates/ to:
- *   public/downloads/*.pdf   one-pager, checklist, 3 sector inserts (A4)
+ *   public/downloads/*.pdf   one-pager, checklist, sector inserts (A4)
  *   public/social/*.png      LinkedIn company cover (4200×700) + featured tile (1080×1080)
  *
  * Uses headless Chromium (Playwright) so the real brand fonts
