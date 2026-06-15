@@ -1,18 +1,12 @@
 {
   "$comment": "Written by the Good Transformer newsjack engine (the daily blog machine). Rolling list of the last ~7 days of AI stories a leader should react to, ordered most-important-first. generate-ai-news.mjs copies the top of this into news-latest.json at send time (top 3 daily, top 5 weekly). Schema: { generatedAt: YYYY-MM-DD, stories: [{ title, url, source, summary }] }. Do not hand-edit during a run; the engine overwrites it.",
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-06-15",
   "stories": [
     {
       "title": "A frontier AI model was switched off worldwide with no notice",
       "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
       "source": "Fortune",
       "summary": "A US export-control order led Anthropic to disable its two most capable models for every customer globally on Friday evening, for an unknown length of time. The lesson for leaders is that a frontier model is a capability you borrow, not one you own. Find where one outside model has quietly become load-bearing in your firm's work, and make sure nothing important stops if it disappears."
-    },
-    {
-      "title": "Two AI compliance deadlines land this summer, and the bill to pause them has not passed",
-      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026",
-      "source": "Build Fast with AI",
-      "summary": "The Colorado AI Act takes effect on 30 June and the bulk of the EU AI Act applies from 2 August, both covering AI used in employment decisions. The federal bill some firms hoped would preempt state law has not moved. If you use AI in hiring, advice or eligibility calls, know where it touches a consequential decision, who signs it off, and whether you could show your working."
     },
     {
       "title": "The newest models work for hours unsupervised, which changes the leader's job",
@@ -22,15 +16,15 @@
     },
     {
       "title": "Apple lets people pick which AI answers on their iPhone",
-      "url": "https://aiweekly.co/node/2611",
-      "source": "AI Weekly",
-      "summary": "From September, iOS users can set Claude, Gemini, ChatGPT or Grok as the assistant behind Siri, across billions of devices. The behaviour of asking AI first, which already shapes how clients and candidates research you, becomes a phone default. Being found now means being legible to several assistants, not only ranking on Google."
+      "url": "https://www.macrumors.com/2026/05/05/ios-27-third-party-chatbots-apple-intelligence/",
+      "source": "MacRumors",
+      "summary": "With iOS 27, iPhone users will be able to set a third-party assistant such as Claude, Gemini or ChatGPT behind Siri rather than the default. The habit of asking AI first, which already shapes how clients and candidates research you, becomes a phone default. Being found now means being legible to several assistants, not only ranking on Google."
     },
     {
-      "title": "Claude arrives in Excel as AI pricing shifts to metered billing",
-      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-11-2026",
-      "source": "Build Fast with AI",
-      "summary": "Claude is now an option in Excel's agent mode, and tools like GitHub Copilot have moved to usage-based pricing, with some sessions running to tens of dollars. AI is moving into the tools your team already uses, and its cost is becoming a line item to budget and govern rather than a flat fee to forget."
+      "title": "Claude arrives in Excel, putting a frontier model in a tool your team already uses",
+      "url": "https://www.techtimes.com/articles/317988/20260608/claude-now-works-inside-excel-microsoft-drops-anthropics-ai-spreadsheet-750-million-people-use.htm",
+      "source": "Tech Times",
+      "summary": "At its Build conference Microsoft made Anthropic's Claude an option in Excel's agent mode, letting it write and explain formulas, clean messy data and draft analysis without leaving the sheet. AI is arriving inside the tools your staff open every day, not as a separate app to adopt. That makes capability easier to reach and usage-based cost something to budget and govern rather than a flat fee to forget."
     },
     {
       "title": "Most firms have no plan for the day their AI model goes away",
