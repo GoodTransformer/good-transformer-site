@@ -1,30 +1,41 @@
 {
-  "$comment": "Written by the Good Transformer newsjack engine (the daily blog machine). Rolling list of the last ~7 days of AI stories a leader should react to, ordered most-important-first. generate-ai-news.mjs copies the top of this into news-latest.json at send time (top 3 daily, top 5 weekly). Schema: { generatedAt: YYYY-MM-DD, stories: [{ title, url, source, summary }] }. Do not hand-edit during a run; the engine overwrites it.",
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-06-16",
   "stories": [
     {
-      "title": "A frontier AI model was switched off worldwide with no notice",
+      "title": "The EU AI Act's August deadline: check whether it reaches your firm before you act on it",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
+      "source": "Council of the EU",
+      "summary": "Coverage this week treats 2 August 2026 as a hard EU AI Act deadline, while a provisional 7 May agreement would push the use-based high-risk obligations to December 2027 once it is formally published. For a UK firm the first question is not the date but the scope: the Act only reaches you where you put an AI system on the EU market or its output is used in the EU, and the clearest case for this audience is AI that screens or ranks job applicants for EU roles. A purely UK-facing practice should check that nexus rather than panic about a calendar that may not be its own."
+    },
+    {
+      "title": "A frontier model was switched off worldwide overnight, a reminder you borrow AI rather than own it",
       "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
       "source": "Fortune",
-      "summary": "A US export-control order led Anthropic to disable its two most capable models for every customer globally on Friday evening, for an unknown length of time. The lesson for leaders is that a frontier model is a capability you borrow, not one you own. Find where one outside model has quietly become load-bearing in your firm's work, and make sure nothing important stops if it disappears."
+      "summary": "A US export-control order pulled Anthropic's two most capable models for every customer globally on a Friday evening, with no restoration date. The lesson for a leader is operational, not political: find where one outside model has quietly become load-bearing in client work, and keep a tested alternative so nothing important stops if it disappears."
     },
     {
-      "title": "The newest models work for hours unsupervised, which changes the leader's job",
-      "url": "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos",
-      "source": "One Useful Thing",
-      "summary": "Ethan Mollick describes a model running autonomously for most of a working day on a single brief, spinning up its own sub-agents. As AI does more of the work unwatched, the leader's role shifts from steering each step to commissioning a result and judging it. Human sign-off and verification matter more, not less, where the output carries your name."
-    },
-    {
-      "title": "Claude arrives in Excel, putting a frontier model in a tool your team already uses",
-      "url": "https://www.techtimes.com/articles/317988/20260608/claude-now-works-inside-excel-microsoft-drops-anthropics-ai-spreadsheet-750-million-people-use.htm",
+      "title": "Prompt injection is being called a permanent flaw in AI agents, not a bug that gets patched",
+      "url": "https://www.techtimes.com/articles/318361/20260614/ai-agent-security-hits-its-reckoning-prompt-injection-may-permanent-flaw-not-patchable-bug.htm",
       "source": "Tech Times",
-      "summary": "At its Build conference Microsoft made Anthropic's Claude an option in Excel's agent mode, letting it write and explain formulas, clean messy data and draft analysis without leaving the sheet. AI is arriving inside the tools your staff open every day, not as a separate app to adopt. That makes capability easier to reach and usage-based cost something to budget and govern rather than a flat fee to forget."
+      "summary": "As firms wire AI agents into email and documents, security researchers warn that the trick of hiding instructions in the content an agent reads may not be fully fixable. Treat an agent like a junior with no supervision: do not give it standing access to anything you would not let an unsupervised newcomer touch."
     },
     {
-      "title": "Most firms have no plan for the day their AI model goes away",
-      "url": "https://www.informationweek.com/machine-learning-ai/your-ai-vendor-is-now-a-single-point-of-failure",
-      "source": "InformationWeek",
-      "summary": "Risk and IT coverage keeps reaching the same warning: organisations plan for the failure of every layer of infrastructure except their foundation model. Practical steps are to tier AI uses by business impact, set performance baselines, keep one tested alternative for client-facing work, and check the deprecation and portability terms in vendor contracts."
+      "title": "A tribunal warned that uploading client documents to open AI tools can waive confidentiality",
+      "url": "https://www.legalfutures.co.uk/latest-news/solicitor-faces-probe-after-putting-client-documents-into-chatgpt",
+      "source": "Legal Futures",
+      "summary": "An adviser who put client material into a consumer AI tool was found to have placed it in the public domain, breaching confidentiality and waiving privilege. The line for any team handling client information is simple: client material does not go into a free or consumer AI tool, and the firm's policy should say so in one sentence everyone remembers."
+    },
+    {
+      "title": "Anthropic says most of its own code is now AI-written, a useful prompt to discount vendor numbers",
+      "url": "https://siliconangle.com/2026/06/04/anthropic-calls-global-pause-ai-development-humans-lose-control/",
+      "source": "SiliconANGLE",
+      "summary": "Anthropic reports that more than 80 percent of code merged into its codebase is written by its own model, against a self-reported median productivity gain nearer four times. The gap between the dramatic adoption figure and the real gain is the point: judge any tool by what it does for work like yours, not by a vendor's headline statistic."
+    },
+    {
+      "title": "Google's Gemini 3.5 Pro is still pending, with a much larger context window on the way",
+      "url": "https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm",
+      "source": "Tech Times",
+      "summary": "Gemini 3.5 Pro, promised with a two-million-token context window and a deeper reasoning mode, has not shipped yet, with market odds pointing to late June. A bigger context window matters for long-document work such as diligence and contract review, so it is worth watching, but it is not a decision to make until it is actually available."
     }
   ]
 }
