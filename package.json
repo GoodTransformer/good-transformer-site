@@ -18,6 +18,7 @@
     "digest:send": "node scripts/send-digest.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.2",
     "gray-matter": "^4.0.3",
     "next": "^15.5.15",
     "react": "19.1.0",
@@ -30,6 +31,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "resend": "^6.12.4",
+    "twitter-api-v2": "^1.29.0",
     "unified": "^11.0.5"
   },
   "overrides": {

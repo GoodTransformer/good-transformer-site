@@ -1,0 +1,80 @@
+name: Auto-post Insight to social
+
+# ─────────────────────────────────────────────────────────────────────────────
+# When a new Insight lands on main, post it to LinkedIn (Good Transformer
+# Company Page) and X, with the post's social.jpg share card attached and copy
+# drafted by Claude. See SOCIAL-AUTOPOST-SETUP.md for the one-time credential
+# setup. Until the secrets are set, scripts/post-to-social.mjs is a safe no-op.
+#
+# The ledger (content/social/posted.json) is committed back but lives OUTSIDE
+# the trigger paths, so its commit does not re-trigger this workflow. (Pushes by
+# GITHUB_TOKEN also don't trigger workflows, a second loop guard.)
+# ─────────────────────────────────────────────────────────────────────────────
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/insights/**"
+      - "public/insights/**"
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Post a specific slug (optional; default = newest unposted)"
+        required: false
+        type: string
+      dry_run:
+        description: "Draft copy + resolve image but do not post"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-autopost
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Post to social
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_ORG_ID: ${{ secrets.LINKEDIN_ORG_ID }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          node scripts/post-to-social.mjs \
+            ${{ github.event.inputs.slug && format('--slug {0}', github.event.inputs.slug) || '' }} \
+            ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
+
+      - name: Commit ledger
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "good-transformer-bot"
+          git config user.email "bot@goodtransformer.ai"
+          git add content/social/posted.json
+          if git diff --cached --quiet; then
+            echo "No ledger change."
+          else
+            git commit -m "Record social posts [skip ci]"
+            git push origin main
+          fi
