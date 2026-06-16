@@ -31,7 +31,7 @@ export async function generateMetadata({
       title: meta.title,
       description: meta.description,
       path: `/insights/${meta.slug}/`,
-      image: meta.cover,
+      image: meta.social ?? meta.cover,
       ogType: "article",
     });
   } catch {
@@ -73,7 +73,7 @@ export default async function InsightPostPage({
     description: meta.description,
     datePublished: meta.date,
     dateModified: meta.updated ?? meta.date,
-    image: meta.cover ? absoluteUrl(meta.cover) : OG_IMAGE,
+    image: meta.social ?? meta.cover ? absoluteUrl((meta.social ?? meta.cover)!) : OG_IMAGE,
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     author: authorJsonLd,

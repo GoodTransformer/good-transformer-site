@@ -52,21 +52,10 @@ function formatTag(tag) {
   return tag.replace(/-/g, ' ').replace(/\bai\b/gi, 'AI').replace(/^./, (c) => c.toUpperCase())
 }
 
-/** First Markdown blockquote in the body, cleaned up: the article's pull-quote. */
-function firstQuote(content) {
-  const lines = content.split('\n')
-  const collected = []
-  let started = false
-  for (const line of lines) {
-    if (line.trimStart().startsWith('>')) {
-      started = true
-      collected.push(line.replace(/^\s*>\s?/, ''))
-    } else if (started) {
-      break
-    }
-  }
-  let quote = collected
-    .join(' ')
+/** Condense a raw string into a punchy cover line: strip markup, prefer the
+ *  first complete sentence, and hard-cap length so it never runs mid-thought. */
+function condense(text) {
+  let quote = String(text || '')
     .replace(/[*_`]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
@@ -81,6 +70,22 @@ function firstQuote(content) {
     quote = quote.slice(0, 97).replace(/\s+\S*$/, '') + '…'
   }
   return quote
+}
+
+/** First Markdown blockquote in the body, cleaned up: the article's pull-quote. */
+function firstQuote(content) {
+  const lines = content.split('\n')
+  const collected = []
+  let started = false
+  for (const line of lines) {
+    if (line.trimStart().startsWith('>')) {
+      started = true
+      collected.push(line.replace(/^\s*>\s?/, ''))
+    } else if (started) {
+      break
+    }
+  }
+  return condense(collected.join(' '))
 }
 
 /** Greedy word-wrap into at most maxLines lines of ~maxChars. */
@@ -245,6 +250,133 @@ ${quoteSvg}
 </svg>`
 }
 
+// Social / OG share card (1200x630). Unlike the on-site cover, the headline and
+// subtitle are baked IN — this image is used only for social sharing and the
+// og:image, never rendered on the site, so it can carry the title without
+// duplicating the heading shown beside the on-site cover. House style: dark
+// teal, crisp bright-teal accent, the attention graph pulled clear to the right.
+function buildSocialSvg({ eyebrow, title, subtitle, seed }) {
+  const rand = mulberry32(seed || 1)
+  const SW = 1200
+  const SH = 630
+  const ACCENT = '#46D3C4' // crisp bright teal for the rule + active-node glow
+
+  // Right-side attention graph, kept clear of the left text column.
+  const minX = 700
+  const N = 5 + Math.floor(rand() * 3)
+  const nodes = []
+  for (let i = 0; i < N; i += 1) {
+    nodes.push({
+      x: Math.round(minX + rand() * (SW - minX - 90)),
+      y: Math.round(120 + rand() * (SH - 240)),
+      r: 4 + Math.round(rand() * 2),
+      o: (0.4 + rand() * 0.3).toFixed(2),
+    })
+  }
+  const seen = new Set()
+  const edges = []
+  nodes.forEach((n, i) => {
+    nodes
+      .map((m, j) => ({ j, d: (m.x - n.x) ** 2 + (m.y - n.y) ** 2 }))
+      .filter((o) => o.j !== i)
+      .sort((a, b) => a.d - b.d)
+      .slice(0, 2)
+      .forEach((o) => {
+        const key = i < o.j ? `${i}-${o.j}` : `${o.j}-${i}`
+        if (!seen.has(key)) {
+          seen.add(key)
+          edges.push([i, o.j])
+        }
+      })
+  })
+  const accent = new Set(
+    nodes
+      .map((n, i) => ({ i, x: n.x }))
+      .sort((a, b) => b.x - a.x)
+      .slice(0, 2)
+      .map((o) => o.i),
+  )
+  const edgeSvg = edges
+    .map(
+      ([a, b]) =>
+        `<line x1="${nodes[a].x}" y1="${nodes[a].y}" x2="${nodes[b].x}" y2="${nodes[b].y}" stroke="${PAPER}" stroke-opacity="0.16" stroke-width="1.5"/>`,
+    )
+    .join('')
+  // Active nodes get a teal glow built from stacked translucent discs (no SVG
+  // filter, so it renders identically on every box — same lesson as the covers).
+  const nodeSvg = nodes
+    .map((n, i) =>
+      accent.has(i)
+        ? `<circle cx="${n.x}" cy="${n.y}" r="46" fill="${ACCENT}" fill-opacity="0.10"/><circle cx="${n.x}" cy="${n.y}" r="30" fill="${ACCENT}" fill-opacity="0.16"/><circle cx="${n.x}" cy="${n.y}" r="19" fill="${ACCENT}" fill-opacity="0.22"/><circle cx="${n.x}" cy="${n.y}" r="17" fill="none" stroke="${PAPER}" stroke-opacity="0.5" stroke-width="1.5"/><circle cx="${n.x}" cy="${n.y}" r="8.5" fill="${PAPER}" fill-opacity="0.95"/>`
+        : `<circle cx="${n.x}" cy="${n.y}" r="${n.r}" fill="${PAPER}" fill-opacity="${n.o}"/>`,
+    )
+    .join('')
+  const focus = [...accent][0]
+  const glowX = nodes[focus]?.x ?? 900
+  const glowY = nodes[focus]?.y ?? 300
+
+  // Headline: auto-fit so it never spills the left column or runs past 3 lines.
+  const colChars = (fs) => Math.max(8, Math.floor(560 / (0.55 * fs)))
+  let titleFs = 50
+  let titleLines = wrap(title, colChars(50), 4)
+  for (const cand of [78, 70, 62, 56, 50]) {
+    const lines = wrap(title, colChars(cand), 4)
+    if (lines.length <= 3) {
+      titleFs = cand
+      titleLines = lines
+      break
+    }
+  }
+  const lh = Math.round(titleFs * 1.08)
+  const subLines = wrap(subtitle, 46, 2)
+  const subLh = 32
+  const subGap = 52
+  // Centre the headline+subtitle block, but clamp so the last subtitle line
+  // never drops past y=512 (≈62px above the wordmark) however tall the title is.
+  const span = (titleLines.length - 1) * lh + subGap + (subLines.length - 1) * subLh
+  const firstBaseline = Math.round(Math.max(250, Math.min(SH / 2 - span / 2 + 30, 512 - span)))
+  const titleSvg = titleLines
+    .map((line, i) => `<tspan x="80" y="${firstBaseline + i * lh}">${escapeXml(line)}</tspan>`)
+    .join('')
+  const subStart = firstBaseline + (titleLines.length - 1) * lh + subGap
+  const subSvg = subLines
+    .map((line, i) => `<tspan x="80" y="${subStart + i * subLh}">${escapeXml(line)}</tspan>`)
+    .join('')
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${SW}" height="${SH}" viewBox="0 0 ${SW} ${SH}">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="${INK}"/>
+      <stop offset="0.62" stop-color="${MOSS}"/>
+      <stop offset="1" stop-color="${TEAL}"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="${PAPER}" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="${PAPER}" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="${PAPER}" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="${SW}" height="${SH}" fill="url(#bg)"/>
+  <rect width="${SW}" height="${SH}" fill="url(#grid)"/>
+  <circle cx="${glowX}" cy="${glowY}" r="360" fill="url(#glow)"/>
+
+  <g>${edgeSvg}${nodeSvg}</g>
+
+  <line x1="80" y1="120" x2="178" y2="120" stroke="${ACCENT}" stroke-width="3"/>
+  <text x="80" y="166" font-family="Schibsted Grotesk, Arial, sans-serif" font-size="22" letter-spacing="5" fill="${PAPER}" fill-opacity="0.85">${escapeXml(
+    eyebrow.toUpperCase(),
+  )}</text>
+
+  <text font-family="Schibsted Grotesk, Arial, sans-serif" font-weight="700" font-size="${titleFs}" letter-spacing="-0.5" fill="${PAPER}">${titleSvg}</text>
+  <text font-family="Schibsted Grotesk, Arial, sans-serif" font-size="25" fill="${PAPER}" fill-opacity="0.72">${subSvg}</text>
+
+  <text x="80" y="${SH - 56}" font-family="Schibsted Grotesk, Arial, sans-serif" font-size="22" letter-spacing="4" fill="${PAPER}" fill-opacity="0.62">GOOD TRANSFORMER</text>
+</svg>`
+}
+
 let files = []
 try {
   files = readdirSync(CONTENT_DIR).filter((f) => f.endsWith('.md') && !f.startsWith('_'))
@@ -259,16 +391,37 @@ for (const file of files) {
   const { data, content } = matter(readFileSync(join(CONTENT_DIR, file), 'utf8'))
   if (!data.cover) continue
   const out = join(PUBLIC_DIR, String(data.cover).replace(/^\//, ''))
-  if (existsSync(out) && !FORCE) continue
-
+  const socialOut = join(dirname(out), 'social.jpg')
   const eyebrow = Array.isArray(data.tags) && data.tags[0] ? formatTag(data.tags[0]) : 'Insight'
-  const quote = data.coverQuote ? String(data.coverQuote) : firstQuote(content)
-  const svg = buildSvg({ eyebrow, seed: hash(slug), quote })
 
-  mkdirSync(dirname(out), { recursive: true })
-  await sharp(Buffer.from(svg)).jpeg({ quality: 86 }).toFile(out)
-  made += 1
-  console.log(`✓ ${data.cover}`)
+  // On-site cover: attention graph + pull-quote. The title is deliberately NOT
+  // drawn — it renders as text beside the cover on the listing/article pages.
+  if (!existsSync(out) || FORCE) {
+    // Quote source, in order of preference: an explicit coverQuote, then the
+    // article's first blockquote, then the frontmatter description. The last
+    // guarantees auto-published posts never ship a wordless cover even when the
+    // author wrote no pull-quote.
+    const quote =
+      (data.coverQuote ? String(data.coverQuote) : firstQuote(content)) ||
+      condense(data.description)
+    const svg = buildSvg({ eyebrow, seed: hash(slug), quote })
+    mkdirSync(dirname(out), { recursive: true })
+    await sharp(Buffer.from(svg)).jpeg({ quality: 86 }).toFile(out)
+    made += 1
+    console.log(`✓ ${data.cover}`)
+  }
+
+  // Social / OG card: headline + subtitle baked in, for sharing only (never
+  // shown on-site). Optional socialTitle/socialSubtitle override the defaults.
+  if (!existsSync(socialOut) || FORCE) {
+    const title = String(data.socialTitle ?? data.title ?? slug)
+    const subtitle = condense(data.socialSubtitle ?? data.description)
+    const svg = buildSocialSvg({ eyebrow, title, subtitle, seed: hash(slug) })
+    mkdirSync(dirname(socialOut), { recursive: true })
+    await sharp(Buffer.from(svg)).jpeg({ quality: 88 }).toFile(socialOut)
+    made += 1
+    console.log(`✓ ${String(data.cover).replace(/cover\.jpg$/i, 'social.jpg')}`)
+  }
 }
 
-console.log(made === 0 ? 'All covers already present.' : `Generated ${made} cover image(s).`)
+console.log(made === 0 ? 'All images already present.' : `Generated ${made} image(s).`)

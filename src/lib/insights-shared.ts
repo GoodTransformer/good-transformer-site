@@ -21,6 +21,9 @@ export type PostMeta = {
   tags: string[];
   cover?: string;
   coverAlt?: string;
+  /** Social / OG share card (title baked in). Used for og:image only, never
+   *  rendered on-site. Set when a sibling social.jpg exists next to the cover. */
+  social?: string;
   featured: boolean;
   readingMinutes: number;
   readingLabel: string; // e.g. "5 min read"

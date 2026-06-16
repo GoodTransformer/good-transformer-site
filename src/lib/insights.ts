@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 import matter from "gray-matter";
@@ -75,6 +75,20 @@ function buildMeta(slug: string, data: Record<string, unknown>, content: string)
   const type: PostType = data.type === "asset" ? "asset" : "post";
   const voice: PostVoice = data.voice === "patrick" ? "patrick" : "brand";
 
+  // The social/OG card sits next to the cover as social.jpg. Only expose it when
+  // it's actually been generated, so older posts fall back to the cover.
+  const cover = data.cover ? String(data.cover) : undefined;
+  let social: string | undefined;
+  if (cover) {
+    const candidate = cover.replace(/cover\.(jpe?g|png|webp)$/i, "social.jpg");
+    if (
+      candidate !== cover &&
+      existsSync(join(process.cwd(), "public", candidate.replace(/^\//, "")))
+    ) {
+      social = candidate;
+    }
+  }
+
   return {
     slug,
     title: String(data.title ?? slug),
@@ -85,8 +99,9 @@ function buildMeta(slug: string, data: Record<string, unknown>, content: string)
     voice,
     type,
     tags: toTags(data.tags),
-    cover: data.cover ? String(data.cover) : undefined,
+    cover,
     coverAlt: data.coverAlt ? String(data.coverAlt) : undefined,
+    social,
     featured: data.featured === true,
     readingMinutes: Math.max(1, Math.round(stats.minutes)),
     readingLabel: `${Math.max(1, Math.round(stats.minutes))} min read`,
