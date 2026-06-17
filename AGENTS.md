@@ -43,6 +43,7 @@ When searching the repo, focus on authored source and docs. Ignore generated, ve
 | `knowledge/dev/tailwind-config.md` | Tailwind theme extensions and custom utilities |
 | `knowledge/dev/globals-css.md` | CSS custom properties, component classes |
 | `knowledge/ops/deployment.md` | GitHub Actions deploy, custom domain, secrets |
+| `knowledge/ops/blog-machine-publishing.md` | How blog and newsletter content is auto-published by the external Blog Machine; the `GT_PUBLISH_TOKEN` and the cloud-mount caveat |
 | `knowledge/ops/env-vars.md` | All environment variables with descriptions |
 | `knowledge/assets/asset-guide.md` | Images, logos, and other public assets |
 

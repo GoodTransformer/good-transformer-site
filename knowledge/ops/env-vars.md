@@ -75,3 +75,11 @@ The GitHub Actions workflow injects these at build time.
 ## Fallbacks
 
 `.env.production` contains fallback values used if secrets are not set in GitHub. This file is committed to the repo but should contain only public endpoints, safe placeholders, or empty values - never private secrets.
+
+---
+
+## External automation (not a site build variable)
+
+| Variable | Where it lives | Description |
+|---|---|---|
+| `GT_PUBLISH_TOKEN` | Blog Machine `.env` (primary), this repo `.env` (copy) | Fine-grained GitHub PAT (Contents: Read and write on this repo) used by the external Good Transformer Blog Machine to push finished Insights and the newsletter feed to `main`. Not read by Next.js or the build. As of 2026-06-17 the durable home is the Blog Machine `.env`, because the scheduled publisher does not mount this repo. See [`blog-machine-publishing.md`](blog-machine-publishing.md).
