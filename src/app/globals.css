@@ -338,6 +338,16 @@ img {
   height: 1.36rem;
 }
 
+/*
+ * The "Google" wordmark carries a `g` descender the other client logos lack, so
+ * centring its bounding box leaves the optical body sitting high. Nudge down by a
+ * fraction of the logo's own height (translate % is relative to the element box),
+ * so the correction scales with every breakpoint's height from one source.
+ */
+.client-logo-cell--google .client-logo-image {
+  transform: translateY(9.8%);
+}
+
 .lesson-proof-testimonial {
   max-width: 30rem;
 }
