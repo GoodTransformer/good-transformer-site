@@ -1,6 +1,12 @@
 {
-  "generatedAt": "2026-06-16",
+  "generatedAt": "2026-06-17",
   "stories": [
+    {
+      "title": "OpenAI is spending $150m to say the constraint on AI value is your organisation, not the model",
+      "url": "https://openai.com/index/introducing-openai-partner-network/",
+      "source": "OpenAI",
+      "summary": "OpenAI launched a Partner Network backed by $150m and a plan to certify 300,000 consultants, stating plainly that the limiting factor for enterprise AI value is no longer model capability but how organisations redesign workflows and drive adoption. For a smaller firm the reading is not go hire a Big Four, it is that results now depend on the judgement and habits of your own people. Treat AI as a capability question for your team, not a procurement question about which tool to buy."
+    },
     {
       "title": "The EU AI Act's August deadline: check whether it reaches your firm before you act on it",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
@@ -11,7 +17,7 @@
       "title": "A frontier model was switched off worldwide overnight, a reminder you borrow AI rather than own it",
       "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
       "source": "Fortune",
-      "summary": "A US export-control order pulled Anthropic's two most capable models for every customer globally on a Friday evening, with no restoration date. The lesson for a leader is operational, not political: find where one outside model has quietly become load-bearing in client work, and keep a tested alternative so nothing important stops if it disappears."
+      "summary": "A US export-control order pulled Anthropic's two most capable models for every customer globally on a Friday evening, with no restoration date, and talks with the administration this week ended without agreement. The lesson for a leader is operational, not political: find where one outside model has quietly become load-bearing in client work, and keep a tested alternative so nothing important stops if it disappears."
     },
     {
       "title": "Prompt injection is being called a permanent flaw in AI agents, not a bug that gets patched",
