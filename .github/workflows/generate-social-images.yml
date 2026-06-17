@@ -1,0 +1,60 @@
+name: Generate social images on publish
+
+# ─────────────────────────────────────────────────────────────────────────────
+# When a new Insight lands on main, make sure its share/cover images exist in
+# the repo. A post is published as Markdown only (frontmatter declares a
+# `cover:`); this generates the missing cover.jpg + social.jpg and commits them
+# back, so every published post has a social image ready to go — in the repo,
+# on the live site, and for any downstream sharing.
+#
+# generate:insight-covers is a gap-filler: it only creates images that don't
+# exist yet and never overwrites real art, so this is safe to run on every push.
+#
+# A GITHUB_TOKEN push does not re-trigger workflows, so committing the images
+# back does not loop this (or the deploy) workflow.
+# ─────────────────────────────────────────────────────────────────────────────
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/insights/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-social-images
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate missing Insight covers
+        run: npm run generate:insight-covers
+
+      - name: Commit social images
+        run: |
+          git config user.name "good-transformer-bot"
+          git config user.email "bot@goodtransformer.ai"
+          git add public/insights
+          if git diff --cached --quiet; then
+            echo "No new social images to commit."
+          else
+            git commit -m "Add social images for new Insights [skip ci]"
+            git push origin main
+          fi
