@@ -202,7 +202,7 @@ const newsletterArtSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * 
   <!-- Strapline -->
   <text x="80" y="381"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-    font-size="22" fill="${rgb(SLATE)}">Read with judgement, not hype.</text>
+    font-size="22" fill="${rgb(SLATE)}">Made with judgement, not hype.</text>
 
   <!-- Hairline rule -->
   <rect x="80" y="486" width="430" height="1" fill="${rgb(INK)}" opacity="0.16"/>

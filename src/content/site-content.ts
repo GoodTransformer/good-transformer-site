@@ -949,7 +949,7 @@ export const seoContent = {
   ogImageAlt:
     "Good Transformer - Get confident with AI. AI lessons for leaders and AI advisory for teams.",
   ogImageAltNewsletter:
-    "Good Transformer newsletter - AI news for business leaders, read with judgement. Get the digest weekly or daily.",
+    "Good Transformer newsletter - AI news for business leaders, made with judgement. Get the digest weekly or daily.",
   personName: "Patrick Hussey",
   personJobTitle: "AI Coach and Fractional AI Adviser",
   pages: {

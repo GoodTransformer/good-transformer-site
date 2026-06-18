@@ -3,4 +3,4 @@
 // social-card URL so that when an image changes, the URL changes too, forcing
 // platform caches (LinkedIn, X, Facebook, iMessage, Slack) to refetch the new image.
 export const OG_IMAGE_VERSION = "0570a0e5";
-export const OG_IMAGE_NEWSLETTER_VERSION = "898e4650";
+export const OG_IMAGE_NEWSLETTER_VERSION = "07ebb0fc";
