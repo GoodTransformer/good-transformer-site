@@ -1,23 +1,17 @@
 {
-  "generatedAt": "2026-06-17",
+  "generatedAt": "2026-06-18",
   "stories": [
     {
-      "title": "OpenAI is spending $150m to say the constraint on AI value is your organisation, not the model",
-      "url": "https://openai.com/index/introducing-openai-partner-network/",
+      "title": "A new study finds 76% of firms think they are ahead on AI, while 10% are actually getting a return",
+      "url": "https://www.globenewswire.com/news-release/2026/06/17/3313432/9060/en/Businesses-overestimate-real-progress-on-AI.html",
+      "source": "EXL",
+      "summary": "EXL's 2026 enterprise AI study found that 76 percent of companies believe they are beating competitors on AI, while only one in ten have embedded it into core work and seen real returns. The firms that pulled ahead did not buy better tools, they redesigned how the work is done. The useful question for a leader is not which model to add but which workflow you would rebuild if AI had been there from the start."
+    },
+    {
+      "title": "Your AI vendor can change the model under you with no warning, and OpenAI just published the proof",
+      "url": "https://openai.com/index/deployment-simulation/",
       "source": "OpenAI",
-      "summary": "OpenAI launched a Partner Network backed by $150m and a plan to certify 300,000 consultants, stating plainly that the limiting factor for enterprise AI value is no longer model capability but how organisations redesign workflows and drive adoption. For a smaller firm the reading is not go hire a Big Four, it is that results now depend on the judgement and habits of your own people. Treat AI as a capability question for your team, not a procurement question about which tool to buy."
-    },
-    {
-      "title": "The EU AI Act's August deadline: check whether it reaches your firm before you act on it",
-      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
-      "source": "Council of the EU",
-      "summary": "Coverage this week treats 2 August 2026 as a hard EU AI Act deadline, while a provisional 7 May agreement would push the use-based high-risk obligations to December 2027 once it is formally published. For a UK firm the first question is not the date but the scope: the Act only reaches you where you put an AI system on the EU market or its output is used in the EU, and the clearest case for this audience is AI that screens or ranks job applicants for EU roles. A purely UK-facing practice should check that nexus rather than panic about a calendar that may not be its own."
-    },
-    {
-      "title": "A frontier model was switched off worldwide overnight, a reminder you borrow AI rather than own it",
-      "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
-      "source": "Fortune",
-      "summary": "A US export-control order pulled Anthropic's two most capable models for every customer globally on a Friday evening, with no restoration date, and talks with the administration this week ended without agreement. The lesson for a leader is operational, not political: find where one outside model has quietly become load-bearing in client work, and keep a tested alternative so nothing important stops if it disappears."
+      "summary": "OpenAI published a method that replays around 1.3 million real conversations through a new model before release, built specifically to catch the behaviour changes that ship silently with model updates. The lesson for any firm that has put an AI step into client work is that a process you tested and trusted can drift without notice. Keep a person checking the judgement-heavy output, and re-test on real tasks when something starts to feel different."
     },
     {
       "title": "Prompt injection is being called a permanent flaw in AI agents, not a bug that gets patched",
@@ -26,16 +20,22 @@
       "summary": "As firms wire AI agents into email and documents, security researchers warn that the trick of hiding instructions in the content an agent reads may not be fully fixable. Treat an agent like a junior with no supervision: do not give it standing access to anything you would not let an unsupervised newcomer touch."
     },
     {
-      "title": "A tribunal warned that uploading client documents to open AI tools can waive confidentiality",
-      "url": "https://www.legalfutures.co.uk/latest-news/solicitor-faces-probe-after-putting-client-documents-into-chatgpt",
-      "source": "Legal Futures",
-      "summary": "An adviser who put client material into a consumer AI tool was found to have placed it in the public domain, breaching confidentiality and waiving privilege. The line for any team handling client information is simple: client material does not go into a free or consumer AI tool, and the firm's policy should say so in one sentence everyone remembers."
+      "title": "Anthropic says Claude now writes more than 80% of its code, a useful prompt to discount vendor numbers",
+      "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+      "source": "Anthropic",
+      "summary": "Anthropic reports that more than 80 percent of the code merged into its production codebase is now written by its own model, up from low single digits last year. The figure is a share of work done, not a productivity multiple, and the two are easy to confuse. Judge any AI tool by what it does for work like yours, not by a vendor's headline adoption statistic."
     },
     {
-      "title": "Anthropic says most of its own code is now AI-written, a useful prompt to discount vendor numbers",
-      "url": "https://siliconangle.com/2026/06/04/anthropic-calls-global-pause-ai-development-humans-lose-control/",
-      "source": "SiliconANGLE",
-      "summary": "Anthropic reports that more than 80 percent of code merged into its codebase is written by its own model, against a self-reported median productivity gain nearer four times. The gap between the dramatic adoption figure and the real gain is the point: judge any tool by what it does for work like yours, not by a vendor's headline statistic."
+      "title": "A frontier model was switched off worldwide overnight, a reminder you borrow AI rather than own it",
+      "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+      "source": "Fortune",
+      "summary": "A US export-control order pulled Anthropic's two most capable models for every customer globally on a Friday evening, with no restoration date. The lesson for a leader is operational, not political: find where one outside model has quietly become load-bearing in client work, and keep a tested alternative so nothing important stops if it disappears."
+    },
+    {
+      "title": "OpenAI's GPT-5.6 is close, billed as a meaningful step up, but not yet shipped",
+      "url": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "source": "Tech Times",
+      "summary": "OpenAI's next flagship, GPT-5.6, is being described by its chief scientist as a meaningful leap and is expected within weeks. A new top model is worth noting, but there is no decision to make until it ships and you can test it on your own work. Watch for the release rather than acting on the billing."
     },
     {
       "title": "Google's Gemini 3.5 Pro is still pending, with a much larger context window on the way",
