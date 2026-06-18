@@ -14,7 +14,7 @@ draft: false
 
 The hardest part of running a business alone is not the workload. It is making consequential decisions with no one in the room to push back. Should you take the awkward client? Drop the underperforming service? Sign the lease? A bigger company would put that question in front of a few people whose job is to see what you cannot, the finance head who flags the cash risk, the lawyer who spots the clause, the colleague who asks the obvious question you were too close to ask. A solo owner makes the same call at the kitchen table, and the only voice in the room is the one that already agrees with them.
 
-AI gives a one-person business a cheap version of that room. Not a decision-maker, and not an oracle, but a set of advisers you can convene on demand to stress-test a choice before you commit to it. Allie K. Miller, who writes widely about practical AI for business, is blunt that the tool is exactly that, a tool: ["a tool (not a silver bullet),"](https://www.linkedin.com/posts/alliekmiller_let-me-make-this-ai-advice-as-clear-as-humanly-activity-7128120074502115328-7Q_M) in her words. Used as a sounding board rather than an answer machine, it earns its place.
+AI gives a one-person business a cheap version of that room. Allie K. Miller, one of the most widely followed voices on practical AI in business, calls it a [personal AI boardroom](https://www.coalitioninc.com/blog/broker-education/allie-k-miller-activate-2026): you spin up several AI personas, a sceptical finance head, a cautious risk voice, and make them stress-test your thinking before you commit. It is not a decision-maker and not an oracle, but a panel of advisers you can convene on demand. Miller is equally blunt that the tool underneath is exactly that, a tool: ["a tool (not a silver bullet),"](https://www.linkedin.com/posts/alliekmiller_let-me-make-this-ai-advice-as-clear-as-humanly-activity-7128120074502115328-7Q_M) in her words. Used as a sounding board rather than an answer machine, it earns its place.
 
 ## The lonely-decision problem
 
@@ -62,5 +62,6 @@ Making lonely calls with more rigour is a large part of what the [AI Lessons for
 
 ## Sources and further reading
 
+- [Allie K. Miller's "personal AI boardroom," reported in Coalition's write-up of her Activate 2026 talk](https://www.coalitioninc.com/blog/broker-education/allie-k-miller-activate-2026), 16 April 2026. Source for the personal AI boardroom concept: spinning up AI personas to stress-test a decision.
 - [Allie K. Miller, a LinkedIn post setting out clear, practical AI advice for business owners](https://www.linkedin.com/posts/alliekmiller_let-me-make-this-ai-advice-as-clear-as-humanly-activity-7128120074502115328-7Q_M), November 2023. Source for AI as "a tool (not a silver bullet)" and the know-your-business, experiment, refine sequence.
 - [Greg Shove, gregshove.com](https://www.gregshove.com/), 2025. Source for the argument that leaders should treat AI as a standing adviser and model the behaviour themselves.

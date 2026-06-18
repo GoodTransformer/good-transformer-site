@@ -20,7 +20,7 @@ For twenty years we have all been trained by search engines to do one thing: typ
 
 The search reflex has three moves baked in. Keep it short, because search engines reward brevity. Expect one shot, because you type once and get a page of results. And do the real work yourself, because the engine only points you at sources. All three are sensible for search. All three throw away what makes AI useful.
 
-When you type a five-word question into a model and judge it on the one-paragraph answer, you are using a tool built for extended, contextual, back-and-forth work as if it were a lookup service. As an industry group summarising Grennan's point put it, ["using AI tools like ChatGPT merely as search engines limits their potential."](https://www.microsoft.com/en-us/worklab/podcast/conor-grennan-on-moving-beyond-the-search-engine-mindset) The limit is not in the tool. It is in the habit you brought to it.
+When you type a five-word question into a model and judge it on the one-paragraph answer, you are using a tool built for extended, contextual, back-and-forth work as if it were a lookup service. Grennan's point, set out in [his WorkLab conversation on moving past the search-engine mindset](https://www.microsoft.com/en-us/worklab/podcast/conor-grennan-on-moving-beyond-the-search-engine-mindset), is that using AI merely as a search engine wastes most of what it can do. The limit is not in the tool. It is in the habit you brought to it.
 
 ## Why one-shot prompts disappoint
 
