@@ -13,7 +13,7 @@ draft: false
 
 If your inbox has filled with warnings about an EU AI Act deadline on 2 August, here is the short version before you reorganise the quarter around it. For most firms working from the UK, that date is not your deadline, because the Act reaches you only where you place an AI system on the EU market or the output of your AI is used inside the EU. The one place it genuinely bites for this audience is recruitment, where AI that screens or ranks candidates is treated as high-risk. And the date itself is moving. So the question worth an hour this week is whether any of this reaches you at all, and that you can settle quickly.
 
-The reason the deadline talk is loud is that several things are happening at once. The G7 data protection authorities meet in Paris from 23 June to coordinate AI enforcement, the Évian leaders' summit put AI on the front page, and compliance vendors have an obvious interest in a countdown. None of that tells a UK leader whether the rules are theirs. The scope test does.
+The reason the deadline talk is loud is that several things are happening at once. The [G7 data protection authorities meet in Paris from 23 June](https://www.cnil.fr/en/g7-2026-cnil-hosts-roundtable-in-paris) to coordinate AI enforcement, the Évian leaders' summit put AI on the front page, and compliance vendors have an obvious interest in a countdown. None of that tells a UK leader whether the rules are theirs. The scope test does.
 
 ## Start with scope, not the calendar
 
