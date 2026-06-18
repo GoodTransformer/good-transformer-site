@@ -97,12 +97,6 @@ const stackVisual = await sharp(STACK)
   .png()
   .toBuffer()
 
-// 4. Teal accent bars (left edge + bottom edge).
-const barsSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" viewBox="0 0 ${OW} ${OH}" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0"       width="7"    height="${OH}" fill="${rgb(TEAL)}"/>
-  <rect x="0" y="${OH-4}" width="${OW}" height="4"    fill="${rgb(TEAL)}"/>
-</svg>`)
-
 // ── Typography layer ──────────────────────────────────────────────────────────
 //    Georgia for headlines (editorial serif), Helvetica Neue for UI text.
 //    Both render correctly via librsvg/pango on macOS and on GitHub Actions
@@ -161,8 +155,6 @@ async function buildOgCard(outFile, copy) {
     .composite([
       // Homepage AI confidence stack - right-side social visual.
       { input: stackVisual,        left: 672 * SCALE, top: 60 * SCALE },
-      // Teal bars (left edge + bottom edge)
-      { input: barsSvg,            left: 0,           top: 0  },
       // Brand mark top-left
       { input: inkLogo78,          left: 80 * SCALE,  top: 70 * SCALE },
       // All text
@@ -268,8 +260,6 @@ const newsletterArtSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * 
 
 await sharp(bg)
   .composite([
-    // Teal bars (left edge + bottom edge)
-    { input: barsSvg,            left: 0,           top: 0 },
     // Brand mark top-left
     { input: inkLogo78,          left: 80 * SCALE,  top: 70 * SCALE },
     // Left value prop + right signup block

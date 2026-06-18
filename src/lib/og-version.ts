@@ -2,5 +2,5 @@
 // Short content hashes of the public/og-*.png cards. Each is appended to its
 // social-card URL so that when an image changes, the URL changes too, forcing
 // platform caches (LinkedIn, X, Facebook, iMessage, Slack) to refetch the new image.
-export const OG_IMAGE_VERSION = "6e14dcda";
-export const OG_IMAGE_NEWSLETTER_VERSION = "f0ee6821";
+export const OG_IMAGE_VERSION = "0570a0e5";
+export const OG_IMAGE_NEWSLETTER_VERSION = "898e4650";
