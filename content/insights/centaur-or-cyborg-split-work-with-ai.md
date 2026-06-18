@@ -14,7 +14,7 @@ draft: false
 
 Most owners think the first AI question is which tool to buy. Spend an afternoon comparing them and the differences blur, because for the work a small team actually does, the better question is not which model sits in front of you. It is how you and the machine divide a single job. Get that division right and the same tool that felt like a toy starts to earn its place. Get it wrong and you either hand over work that needs a human, or you fiddle endlessly with work the machine could have finished.
 
-There is a clean way to think about this, and it comes from Ethan Mollick, who has spent two years watching how people actually work with these tools. He borrows two images from chess, where human-plus-machine teams beat either alone. A centaur keeps a clear line down the middle: the person does some parts, the AI does others, and the join is deliberate. A cyborg blurs the line, weaving back and forth, prompting and editing in a tight loop. Both work. They suit different tasks. The mistake is using one approach for everything.
+There is a clean way to think about this, and it comes from Ethan Mollick, the academic who has done most to popularise these two ways of working with AI. He borrows two images from chess, where human-plus-machine teams beat either alone. A centaur keeps a clear line down the middle: the person does some parts, the AI does others, and the join is deliberate. A cyborg blurs the line, weaving back and forth, prompting and editing in a tight loop. Both work. They suit different tasks. The mistake is using one approach for everything.
 
 ## The wrong question and the better one
 

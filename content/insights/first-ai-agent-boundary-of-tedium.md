@@ -14,7 +14,7 @@ draft: false
 
 Say "AI agent" to a small-business owner and they picture something expensive and slightly science-fiction: an autonomous system running the company while everyone sleeps. So they file the whole idea under "not for us yet" and move on. That instinct skips the one place an agent actually earns its keep in a small firm, which is not the dramatic work at all. It is the dull, fiddly, repetitive work that sits in the gap between "this needs doing" and "not right now."
 
-Azeem Azhar, who writes one of the most-read newsletters on where this technology is heading, has a name for that gap. He calls it the boundary of tedium, and reframing the first agent around it is the most useful thing a small firm can do with the idea. ["Every knowledge worker has a boundary of tedium,"](https://www.exponentialview.co/p/the-boundary-of-tedium-has-moved) he writes: work that is "too boring or too fiddly for you to do yourself, but too complex or too specific to easily hand off to someone else." That is exactly where your first agent belongs.
+Azeem Azhar, who writes one of the most-read newsletters on where this technology is heading, coined a phrase for that gap. He calls it the boundary of tedium, and reframing the first agent around it is the most useful thing a small firm can do with the idea. ["Every knowledge worker has a boundary of tedium,"](https://www.exponentialview.co/p/the-boundary-of-tedium-has-moved) he writes: work that is "too boring or too fiddly for you to do yourself, but too complex or too specific to easily hand off to someone else." That is exactly where your first agent belongs.
 
 ## Where the boundary sits
 

@@ -12,7 +12,7 @@ featured: false
 draft: false
 ---
 
-A new kind of business is becoming common: one person, no staff, and a growing collection of tools and AI agents doing work that used to need a small team. The owner is not a freelancer taking on more than they can handle. They are running a real operation, with marketing, delivery, admin and finance all happening, except that most of the doers are software. Jurgen Appelo, who writes about this shift, calls the person at the centre of it a Solo Chief, and the name is doing real work. You are not a sole trader any more. You are the chief of an operation whose staff happen to be agents.
+A new kind of business is becoming common: one person, no staff, and a growing collection of tools and AI agents doing work that used to need a small team. The owner is not a freelancer taking on more than they can handle. They are running a real operation, with marketing, delivery, admin and finance all happening, except that most of the doers are software. Jurgen Appelo, who writes about this shift, coined a term for the person at the centre of it, the Solo Chief, and the name is doing real work. You are not a sole trader any more. You are the chief of an operation whose staff happen to be agents.
 
 That changes the job in ways worth thinking about before you build a tangle you cannot maintain. The skills that matter shift from doing the work to directing it, and the risks shift with them. Appelo puts the accountability plainly: as a Solo Chief, ["you're the strategist, the operator, and the single wringable neck."](https://substack.jurgenappelo.com/p/the-solo-chief) Everything that goes right and everything that goes wrong stops at you.
 

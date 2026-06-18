@@ -14,7 +14,7 @@ draft: false
 
 A lot of people try AI once, decide it is overrated, and go back to how they worked before. Watch what they actually did and the reason is usually the same. They typed a short question, the way they would into a search engine, got a generic answer back, and concluded the tool was not all that. The verdict was fair on the evidence. The evidence was just from using a powerful tool in completely the wrong way.
 
-For twenty years we have all been trained by search engines to do one thing: type a few keywords, scan a list of links, click one, find the answer ourselves. That habit is deep, and it is exactly the wrong instinct for AI. Conor Grennan, who teaches people to work with these tools, calls this the search-engine mindset, and it is the single most common reason capable users get disappointing results. Treat the model like Google and you waste almost everything it can do.
+For twenty years we have all been trained by search engines to do one thing: type a few keywords, scan a list of links, click one, find the answer ourselves. That habit is deep, and it is exactly the wrong instinct for AI. Conor Grennan, who teaches people to work with these tools, coined a phrase for this, the search-engine mindset, and it is the single most common reason capable users get disappointing results. Treat the model like Google and you waste almost everything it can do.
 
 ## The Google reflex
 

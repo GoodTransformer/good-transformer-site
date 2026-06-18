@@ -12,7 +12,7 @@ featured: false
 draft: false
 ---
 
-Josh Bersin, who studies how work and workforces are changing, has a useful name for what AI does to a capable person: it makes them a Superworker. Not replaced, not automated away, but amplified, doing more, and more interesting, work than they could alone. The term usually shows up in writing aimed at large enterprises with thousands of staff and a workforce strategy to match. That is a shame, because the idea matters more, not less, in a firm of twelve people.
+Josh Bersin, who studies how work and workforces are changing, coined a name for what AI does to a capable person: it makes them a Superworker. Not replaced, not automated away, but amplified, doing more, and more interesting, work than they could alone. The term usually shows up in writing aimed at large enterprises with thousands of staff and a workforce strategy to match. That is a shame, because the idea matters more, not less, in a firm of twelve people.
 
 In a big company, one amplified worker is a rounding error. In a twelve-person firm, one person whose output has genuinely stepped up is a noticeable share of the whole business. The maths of small teams means the Superworker idea lands harder here than anywhere. Bersin's framing is deliberately optimistic about people: a Superworker uses AI ["to dramatically enhance their productivity, performance, and creativity,"](https://joshbersin.com/2025/01/the-rise-of-the-superworker-delivering-on-the-promise-of-ai/) which is a story about enlarging what a person can do, not about doing without them.
 

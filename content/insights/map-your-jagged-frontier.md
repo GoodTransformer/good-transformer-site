@@ -12,7 +12,7 @@ featured: false
 draft: false
 ---
 
-AI is uneven in a way that catches people out. It will draft a tricky client email beautifully, then get a simple sum wrong with total confidence. It will summarise a long document well, then invent a fact that was never in it. The capability is not a smooth slope from easy to hard. It is jagged: excellent on one task and quietly poor on a near-identical one that looks no harder. Ethan Mollick coined a name for this, the "jagged frontier", and for a small firm it has a blunt practical consequence. You cannot tell from the outside where the edge sits. You have to find it in your own work.
+AI is uneven in a way that catches people out. It will draft a tricky client email beautifully, then get a simple sum wrong with total confidence. It will summarise a long document well, then invent a fact that was never in it. The capability is not a smooth slope from easy to hard. It is jagged: excellent on one task and quietly poor on a near-identical one that looks no harder. Ethan Mollick, the academic who first coined the term, called this the "jagged frontier", and for a small firm it has a blunt practical consequence. You cannot tell from the outside where the edge sits. You have to find it in your own work.
 
 This matters most at the point of buying. A vendor demo is built to show the tool on the side of the frontier where it shines. Your business lives on both sides. So before you commit money or a workflow to AI, spend a little time mapping where it reliably helps you and where it lets you down. The mapping is cheap. The mistake it prevents is not.
 
