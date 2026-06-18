@@ -189,8 +189,13 @@ export function buildDigest({ cadence = 'weekly', day, window = 7 } = {}) {
   const isWeekly = cadence === 'weekly'
   const today = day || new Date().toISOString().slice(0, 10)
   const posts = isWeekly ? postsForWindow(today, window) : postsForDay(today)
+  // The blog machine now selects and counts the news per cadence (news.preselected),
+  // so for those files we render its list as-is. freshStories stays as a guard so
+  // the news block never echoes a recent Insight. Only the transitional curated
+  // pool (preselected === false) still needs the legacy top-3/top-5 slice here.
   const news = getNews()
-  const stories = news ? freshStories(news.stories, today).slice(0, isWeekly ? 5 : 3) : []
+  let stories = news ? freshStories(news.stories, today) : []
+  if (news && !news.preselected) stories = stories.slice(0, isWeekly ? 5 : 3)
 
   const label = isWeekly ? 'Weekly' : 'Daily'
   const subject = `Good Transformer ${label}, ${formatDate(today)}`
