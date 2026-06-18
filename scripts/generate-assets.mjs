@@ -67,9 +67,9 @@ async function colourize(r, g, b, w, h) {
 }
 
 // ═════════════════════════════════════════════════════════════════════════════
-// OG IMAGE  1200 × 630
+// OG IMAGES  1200 × 630  (rendered at 2× → 2400 × 1260)
 // ═════════════════════════════════════════════════════════════════════════════
-console.log('⏳  Generating og-image.png…')
+console.log('⏳  Generating OG images…')
 
 const OW = 1200
 const OH = 630
@@ -78,9 +78,9 @@ const OH = 630
 // 1200×630 design space via each SVG's viewBox; only raster layers scale.
 const SCALE = 2
 
-// ── 1. Exact warm paper background ────────────────────────────────────────────
-// Match the stack asset background exactly so social previews do not show a
-// visible block around the right-side visual.
+// ── Shared layers (identical across every card) ───────────────────────────────
+// 1. Exact warm paper background. Match the stack asset background exactly so
+//    social previews do not show a visible block around the right-side visual.
 const bgSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" viewBox="0 0 ${OW} ${OH}" xmlns="http://www.w3.org/2000/svg">
   <rect width="${OW}" height="${OH}" fill="${rgb(PAPER)}"/>
   <circle cx="940" cy="145" r="220" fill="${rgb(TEAL)}" opacity="0.025"/>
@@ -88,27 +88,28 @@ const bgSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" vie
 </svg>`)
 const bg = await sharp(bgSvg).png().toBuffer()
 
-// ── 2. Visual layers ──────────────────────────────────────────────────────────
-// Small ink logo for top-left brand mark.
+// 2. Small ink logo for top-left brand mark.
 const inkLogo78 = await colourize(INK.r, INK.g, INK.b, 78 * SCALE, 78 * SCALE)
 
-// Homepage stack visual for right-side social card continuity.
+// 3. Homepage stack visual for right-side social card continuity.
 const stackVisual = await sharp(STACK)
   .resize(510 * SCALE, 510 * SCALE, { fit: 'contain', background: { ...PAPER, alpha: 0 } })
   .png()
   .toBuffer()
 
-// ── 3. Teal accent bars (SVG overlay) ─────────────────────────────────────────
+// 4. Teal accent bars (left edge + bottom edge).
 const barsSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" viewBox="0 0 ${OW} ${OH}" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0"       width="7"    height="${OH}" fill="${rgb(TEAL)}"/>
   <rect x="0" y="${OH-4}" width="${OW}" height="4"    fill="${rgb(TEAL)}"/>
 </svg>`)
 
-// ── 4. Typography layer ───────────────────────────────────────────────────────
+// ── Typography layer ──────────────────────────────────────────────────────────
 //    Georgia for headlines (editorial serif), Helvetica Neue for UI text.
 //    Both render correctly via librsvg/pango on macOS and on GitHub Actions
-//    runners when font packages are installed.
-const textSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" viewBox="0 0 ${OW} ${OH}" xmlns="http://www.w3.org/2000/svg">
+//    runners when font packages are installed. The headline is two lines; the
+//    second line ends in a teal italic accent word ("AI." / "digest.").
+function ogTextSvg({ headline1, headline2Pre, headline2Accent, tagline, byline, url }) {
+  return Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" viewBox="0 0 ${OW} ${OH}" xmlns="http://www.w3.org/2000/svg">
 
   <!-- Brand eyebrow: "GOOD TRANSFORMER" in small teal caps -->
   <text x="191" y="114"
@@ -121,20 +122,20 @@ const textSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" v
     font-family="Georgia, 'Times New Roman', serif"
     font-size="80" font-weight="normal"
     letter-spacing="0"
-    fill="${rgb(INK)}">Get confident</text>
+    fill="${rgb(INK)}">${headline1}</text>
 
-  <!-- Headline line 2 - "with " ink, "AI." teal -->
+  <!-- Headline line 2 - prefix ink, accent word teal italic -->
   <text x="80" y="370"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="80" font-weight="normal"
     letter-spacing="0"
-    fill="${rgb(INK)}">with <tspan fill="${rgb(TEAL)}" font-style="italic">AI.</tspan></text>
+    fill="${rgb(INK)}">${headline2Pre}<tspan fill="${rgb(TEAL)}" font-style="italic">${headline2Accent}</tspan></text>
 
   <!-- Tagline -->
   <text x="80" y="434"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
     font-size="24.5"
-    fill="${rgb(SLATE)}">AI lessons for leaders and advisory for teams</text>
+    fill="${rgb(SLATE)}">${tagline}</text>
 
   <!-- Hairline rule -->
   <rect x="80" y="486" width="500" height="1" fill="${rgb(INK)}" opacity="0.16"/>
@@ -143,49 +144,79 @@ const textSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" v
   <text x="80" y="524"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
     font-size="20.5"
-    fill="${rgb(SLATE)}">Patrick Hussey - AI coach and fractional adviser</text>
+    fill="${rgb(SLATE)}">${byline}</text>
 
   <!-- Site URL in teal -->
   <text x="80" y="562"
     font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
     font-size="20.5"
-    fill="${rgb(TEAL)}">goodtransformer.ai</text>
+    fill="${rgb(TEAL)}">${url}</text>
 
 </svg>`)
+}
 
-// ── 5. Composite all layers ───────────────────────────────────────────────────
-await sharp(bg)
-  .composite([
-    // Homepage AI confidence stack - right-side social visual.
-    { input: stackVisual, left: 672 * SCALE, top: 60 * SCALE },
-    // Teal bars (left edge + bottom edge)
-    { input: barsSvg,    left: 0,   top: 0  },
-    // Brand mark top-left
-    { input: inkLogo78,  left: 80 * SCALE,  top: 70 * SCALE },
-    // All text
-    { input: textSvg,    left: 0,   top: 0  },
-  ])
-  .png({ compressionLevel: 9 })
-  .toFile(join(PUB, 'og-image.png'))
+// ── Composite all layers into one card and write it ───────────────────────────
+async function buildOgCard(outFile, copy) {
+  await sharp(bg)
+    .composite([
+      // Homepage AI confidence stack - right-side social visual.
+      { input: stackVisual,        left: 672 * SCALE, top: 60 * SCALE },
+      // Teal bars (left edge + bottom edge)
+      { input: barsSvg,            left: 0,           top: 0  },
+      // Brand mark top-left
+      { input: inkLogo78,          left: 80 * SCALE,  top: 70 * SCALE },
+      // All text
+      { input: ogTextSvg(copy),    left: 0,           top: 0  },
+    ])
+    .png({ compressionLevel: 9 })
+    .toFile(join(PUB, outFile))
+  console.log(`✓  ${outFile}  (${OW * SCALE} × ${OH * SCALE})`)
+}
 
-console.log(`✓  og-image.png  (${OW * SCALE} × ${OH * SCALE})`)
+// Default site-wide card — "Get confident with AI."
+await buildOgCard('og-image.png', {
+  headline1: 'Get confident',
+  headline2Pre: 'with ',
+  headline2Accent: 'AI.',
+  tagline: 'AI lessons for leaders and advisory for teams',
+  byline: 'Patrick Hussey - AI coach and fractional adviser',
+  url: 'goodtransformer.ai',
+})
 
-// Stamp a short content hash of the OG image into src/lib/og-version.ts.
-// seo.ts appends it as ?v=<hash> so the social-card URL changes whenever the
-// image does, busting platform caches (LinkedIn, X, iMessage, Slack) on its own.
-const ogHash = createHash('sha1')
-  .update(readFileSync(join(PUB, 'og-image.png')))
-  .digest('hex')
-  .slice(0, 8)
+// Newsletter card — "Get the digest" for /newsletter/ shares.
+await buildOgCard('og-newsletter.png', {
+  headline1: 'Get the',
+  headline2Pre: '',
+  headline2Accent: 'digest.',
+  tagline: 'The AI stories that matter, weekly or daily.',
+  byline: 'Patrick Hussey - AI coach and fractional adviser',
+  url: 'goodtransformer.ai/newsletter',
+})
+
+// Stamp a short content hash of each OG image into src/lib/og-version.ts.
+// seo.ts appends it as ?v=<hash> so a card URL changes whenever its image does,
+// busting platform caches (LinkedIn, X, iMessage, Slack) on its own.
+const OG_VERSIONS = [
+  ['og-image.png', 'OG_IMAGE_VERSION'],
+  ['og-newsletter.png', 'OG_IMAGE_NEWSLETTER_VERSION'],
+]
+const versionLines = OG_VERSIONS.map(([file, name]) => {
+  const hash = createHash('sha1')
+    .update(readFileSync(join(PUB, file)))
+    .digest('hex')
+    .slice(0, 8)
+  console.log(`✓  ${name}  (v=${hash})`)
+  return `export const ${name} = ${JSON.stringify(hash)};`
+})
 writeFileSync(
   join(ROOT, 'src', 'lib', 'og-version.ts'),
   `// AUTO-GENERATED by scripts/generate-assets.mjs — do not edit by hand.\n` +
-  `// Short content hash of public/og-image.png. It is appended to the social-card\n` +
-  `// URL so that when the image changes, the URL changes too, forcing platform\n` +
-  `// caches (LinkedIn, X, Facebook, iMessage, Slack) to refetch the new image.\n` +
-  `export const OG_IMAGE_VERSION = ${JSON.stringify(ogHash)};\n`,
+  `// Short content hashes of the public/og-*.png cards. Each is appended to its\n` +
+  `// social-card URL so that when an image changes, the URL changes too, forcing\n` +
+  `// platform caches (LinkedIn, X, Facebook, iMessage, Slack) to refetch the new image.\n` +
+  versionLines.join('\n') + `\n`,
 )
-console.log(`✓  og-version.ts  (v=${ogHash})`)
+console.log(`✓  og-version.ts`)
 
 // ═════════════════════════════════════════════════════════════════════════════
 // FAVICON SET

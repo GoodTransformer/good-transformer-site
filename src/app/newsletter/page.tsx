@@ -7,9 +7,13 @@ import { PostCard } from "@/components/insights/post-card";
 import { JsonLd } from "@/components/json-ld";
 import { newsletterPage, seoContent } from "@/content/site-content";
 import { getAllPosts } from "@/lib/insights";
-import { buildBreadcrumbJsonLd, buildPageMetadata, SITE_URL } from "@/lib/seo";
+import { buildBreadcrumbJsonLd, buildPageMetadata, OG_IMAGE_NEWSLETTER, SITE_URL } from "@/lib/seo";
 
-export const metadata: Metadata = buildPageMetadata(seoContent.pages.newsletter);
+export const metadata: Metadata = buildPageMetadata({
+  ...seoContent.pages.newsletter,
+  image: OG_IMAGE_NEWSLETTER,
+  imageAlt: seoContent.ogImageAltNewsletter,
+});
 
 const webPageJsonLd = {
   "@context": "https://schema.org",

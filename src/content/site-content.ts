@@ -948,6 +948,8 @@ export const seoContent = {
     "AI lessons for leaders and senior advisory for teams. Patrick Hussey helps organisations turn scattered AI use into safe, useful working practice.",
   ogImageAlt:
     "Good Transformer - Get confident with AI. AI lessons for leaders and AI advisory for teams.",
+  ogImageAltNewsletter:
+    "Good Transformer - Get the digest. The AI stories that matter for leaders, weekly or daily.",
   personName: "Patrick Hussey",
   personJobTitle: "AI Coach and Fractional AI Adviser",
   pages: {

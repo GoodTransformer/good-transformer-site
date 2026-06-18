@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 
 import { seoContent, siteConfig } from "@/content/site-content";
 
-import { OG_IMAGE_VERSION } from "./og-version";
+import { OG_IMAGE_NEWSLETTER_VERSION, OG_IMAGE_VERSION } from "./og-version";
 
 export const SITE_URL = seoContent.siteUrl;
 // The ?v= hash changes whenever the image is regenerated, so social platforms
 // refetch the new card instead of serving a stale cached copy. See og-version.ts.
 export const OG_IMAGE = `${SITE_URL}/og-image.png?v=${OG_IMAGE_VERSION}`;
+// Newsletter-specific card ("Get the digest") used by /newsletter/.
+export const OG_IMAGE_NEWSLETTER = `${SITE_URL}/og-newsletter.png?v=${OG_IMAGE_NEWSLETTER_VERSION}`;
 
 export function absoluteUrl(path: string) {
   return new URL(path, SITE_URL).toString();
@@ -20,6 +22,8 @@ type PageMetadataOptions = {
   noIndex?: boolean;
   /** Absolute or root-relative image to use for OG/Twitter cards. Falls back to OG_IMAGE. */
   image?: string;
+  /** Alt text for the OG/Twitter image. Falls back to the global ogImageAlt. */
+  imageAlt?: string;
   /** OpenGraph type. Use "article" for Insights posts. */
   ogType?: "website" | "article";
 };
@@ -30,10 +34,12 @@ export function buildPageMetadata({
   path,
   noIndex = false,
   image,
+  imageAlt,
   ogType = "website",
 }: PageMetadataOptions): Metadata {
   const url = path ? absoluteUrl(path) : SITE_URL;
   const imageUrl = image ? (image.startsWith("http") ? image : absoluteUrl(image)) : OG_IMAGE;
+  const imageAltText = imageAlt ?? seoContent.ogImageAlt;
 
   return {
     title,
@@ -73,7 +79,7 @@ export function buildPageMetadata({
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: seoContent.ogImageAlt,
+          alt: imageAltText,
         },
       ],
     },
