@@ -21,7 +21,7 @@ Read the existence of the tool, not only its results. A leading lab built a 1.3-
 
 ## This is documented, not a hunch
 
-The unease is neither new nor anecdotal. Researchers at Stanford and Berkeley [measured the same GPT-4 service behaving differently across a few months in 2023](https://arxiv.org/abs/2307.09009). On one task, telling prime numbers from composite ones, accuracy fell from 84 per cent to 51 per cent between two versions of the same product, with no announcement explaining why. Their plain conclusion was that the behaviour of the "same" service can change substantially in a short time, and that anyone depending on it needs to keep watching it.
+The unease is neither new nor anecdotal. Researchers at Stanford and Berkeley [measured the same GPT-4 service behaving differently across a few months in 2023](https://arxiv.org/abs/2307.09009). On one task, telling prime numbers from composite ones, accuracy fell from 84 per cent to 51 per cent between two versions of the same product, with no announcement explaining why. They concluded that the behaviour of the "same" service can change substantially in a short time, and that anyone depending on it needs to keep watching it.
 
 OpenAI's own history makes the point in a more human way. In April 2025 it shipped an update that made the model so eager to please it would agree with almost anything put to it, then rolled the update back within days once users noticed. The lesson is the same in both cases. The model your team signed off on is a snapshot. The live service is a moving target, and the movement is usually silent.
 
