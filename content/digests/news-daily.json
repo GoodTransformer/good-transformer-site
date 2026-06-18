@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-06-18",
+  "cadence": "daily",
+  "stories": [
+    {
+      "id": "openai-model-drift-deployment-simulation",
+      "title": "Your AI vendor can change the model under you with no warning, and OpenAI just published the proof",
+      "url": "https://openai.com/index/deployment-simulation/",
+      "source": "OpenAI",
+      "summary": "OpenAI published a method that replays around 1.3 million real conversations through a new model before release, built specifically to catch the behaviour changes that ship silently with model updates. The lesson for any firm that has put an AI step into client work is that a process you tested and trusted can drift without notice. Keep a person checking the judgement-heavy output, and re-test on real tasks when something starts to feel different."
+    },
+    {
+      "id": "exl-2026-ai-roi-overestimate",
+      "title": "A new study finds 76% of firms think they are ahead on AI, while 10% are actually getting a return",
+      "url": "https://www.globenewswire.com/news-release/2026/06/17/3313432/9060/en/Businesses-overestimate-real-progress-on-AI.html",
+      "source": "EXL",
+      "summary": "EXL's 2026 enterprise AI study found that 76 percent of companies believe they are beating competitors on AI, while only one in ten have embedded it into core work and seen real returns. The firms that pulled ahead did not buy better tools, they redesigned how the work is done. The useful question for a leader is not which model to add but which workflow you would rebuild if AI had been there from the start."
+    },
+    {
+      "id": "gpt-5-6-launch-nears",
+      "title": "OpenAI's GPT-5.6 is close, billed as a meaningful step up, but not yet shipped",
+      "url": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "source": "Tech Times",
+      "summary": "OpenAI's next flagship, GPT-5.6, is being described by its chief scientist as a meaningful leap and is expected within weeks. A new top model is worth noting, but there is no decision to make until it ships and you can test it on your own work. Watch for the release rather than acting on the billing."
+    }
+  ]
+}
