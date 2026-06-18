@@ -183,15 +183,101 @@ await buildOgCard('og-image.png', {
   url: 'goodtransformer.ai',
 })
 
-// Newsletter card — "Get the digest" for /newsletter/ shares.
-await buildOgCard('og-newsletter.png', {
-  headline1: 'Get the',
-  headline2Pre: '',
-  headline2Accent: 'digest.',
-  tagline: 'The AI stories that matter, weekly or daily.',
-  byline: 'Patrick Hussey - AI coach and fractional adviser',
-  url: 'goodtransformer.ai/newsletter',
-})
+// Newsletter card — instead of the hero stack, render the actual signup block
+// (rhythm chooser + email + Subscribe) as vector art on the right. The left
+// column carries the value proposition so "Get the digest" appears only once,
+// inside the block. All elements are drawn in the 1200×630 design space.
+const WARM = '#F7ECE4' // selected-card highlight (matches the live signup UI)
+const newsletterArtSvg = Buffer.from(`<svg width="${OW * SCALE}" height="${OH * SCALE}" viewBox="0 0 ${OW} ${OH}" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- ── Left column: brand + value proposition ──────────────────────────── -->
+  <!-- Brand eyebrow (sits beside the ink logo bitmap) -->
+  <text x="191" y="114"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="12" letter-spacing="3.2"
+    fill="${rgb(TEAL)}">GOOD TRANSFORMER</text>
+
+  <!-- Headline line 1 -->
+  <text x="80" y="255"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="64" fill="${rgb(INK)}">AI news for</text>
+
+  <!-- Headline line 2 - "business " ink, "leaders." teal italic accent -->
+  <text x="80" y="327"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="64" fill="${rgb(INK)}">business <tspan fill="${rgb(TEAL)}" font-style="italic">leaders.</tspan></text>
+
+  <!-- Strapline -->
+  <text x="80" y="381"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="22" fill="${rgb(SLATE)}">Read with judgement, not hype.</text>
+
+  <!-- Hairline rule -->
+  <rect x="80" y="486" width="430" height="1" fill="${rgb(INK)}" opacity="0.16"/>
+
+  <!-- Patrick descriptor -->
+  <text x="80" y="524"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="20.5" fill="${rgb(SLATE)}">Patrick Hussey - AI coach and fractional adviser</text>
+
+  <!-- Site URL -->
+  <text x="80" y="562"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="20.5" fill="${rgb(TEAL)}">goodtransformer.ai/newsletter</text>
+
+  <!-- ── Right column: the signup block ──────────────────────────────────── -->
+  <!-- Soft depth + white panel -->
+  <rect x="660" y="138" width="480" height="370" rx="20" fill="${rgb(INK)}" opacity="0.05"/>
+  <rect x="660" y="130" width="480" height="370" rx="20" fill="#ffffff" stroke="${rgb(INK)}" stroke-opacity="0.10" stroke-width="1.5"/>
+
+  <!-- Block eyebrow + heading + sub -->
+  <text x="692" y="180"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="12" letter-spacing="3.2" fill="${rgb(TEAL)}">NEWSLETTER</text>
+  <text x="692" y="222"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="34" fill="${rgb(INK)}">Get the digest</text>
+  <text x="692" y="250"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="14.5" fill="${rgb(SLATE)}">Choose your rhythm, then subscribe.</text>
+
+  <!-- Weekly option (selected): warm fill, solid ink border, filled teal radio -->
+  <rect x="692" y="272" width="200" height="116" rx="14" fill="${WARM}" stroke="${rgb(INK)}" stroke-width="2"/>
+  <text x="712" y="312" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="${rgb(INK)}">Weekly</text>
+  <circle cx="864" cy="305" r="11" fill="none" stroke="${rgb(TEAL)}" stroke-width="2.5"/>
+  <circle cx="864" cy="305" r="5" fill="${rgb(TEAL)}"/>
+  <text x="712" y="344" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="${rgb(SLATE)}">New Insights, plus</text>
+  <text x="712" y="364" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="${rgb(SLATE)}">5 big AI stories.</text>
+
+  <!-- Daily option (unselected): white fill, faint border, empty radio -->
+  <rect x="908" y="272" width="200" height="116" rx="14" fill="#ffffff" stroke="${rgb(INK)}" stroke-opacity="0.18" stroke-width="1.5"/>
+  <text x="928" y="312" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="${rgb(INK)}">Daily</text>
+  <circle cx="1080" cy="305" r="11" fill="none" stroke="${rgb(SLATE)}" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="928" y="344" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="${rgb(SLATE)}">New Insight, plus</text>
+  <text x="928" y="364" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="${rgb(SLATE)}">3 big AI stories.</text>
+
+  <!-- Email input -->
+  <rect x="692" y="410" width="288" height="52" rx="12" fill="#ffffff" stroke="${rgb(INK)}" stroke-opacity="0.18" stroke-width="1.5"/>
+  <text x="712" y="443" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" fill="${rgb(SLATE)}" opacity="0.7">name@email.com</text>
+
+  <!-- Subscribe button -->
+  <rect x="992" y="410" width="116" height="52" rx="12" fill="${rgb(TEAL)}"/>
+  <text x="1050" y="443" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Subscribe</text>
+
+</svg>`)
+
+await sharp(bg)
+  .composite([
+    // Teal bars (left edge + bottom edge)
+    { input: barsSvg,            left: 0,           top: 0 },
+    // Brand mark top-left
+    { input: inkLogo78,          left: 80 * SCALE,  top: 70 * SCALE },
+    // Left value prop + right signup block
+    { input: newsletterArtSvg,   left: 0,           top: 0 },
+  ])
+  .png({ compressionLevel: 9 })
+  .toFile(join(PUB, 'og-newsletter.png'))
+console.log(`✓  og-newsletter.png  (${OW * SCALE} × ${OH * SCALE})`)
 
 // Stamp a short content hash of each OG image into src/lib/og-version.ts.
 // seo.ts appends it as ?v=<hash> so a card URL changes whenever its image does,
