@@ -60,5 +60,5 @@ Helping owners get genuinely hands-on, so they can lead AI from experience rathe
 
 ## Sources and further reading
 
-- [Greg Shove, gregshove.com](https://www.gregshove.com/), 2025. Source for the argument that leaders should model AI use for their teams and others around them.
-- [Jacob Morgan, "What Leaders Need to Know About Where AI in the Workplace Really Stands Today," Great Leadership](https://greatleadership.substack.com/p/ai-in-the-workplace-leadership-trends-2025), 2025. Source for the point that most firms are earlier in adoption than the noise suggests and that honest leadership matters.
+- [Greg Shove, gregshove.com](https://www.gregshove.com/), 2025. His argument that leaders should model AI use for their teams and the people around them.
+- [Jacob Morgan, "What Leaders Need to Know About Where AI in the Workplace Really Stands Today," Great Leadership](https://greatleadership.substack.com/p/ai-in-the-workplace-leadership-trends-2025), 2025. A reminder that most firms are earlier in adoption than the noise suggests, and that honesty from leaders matters.

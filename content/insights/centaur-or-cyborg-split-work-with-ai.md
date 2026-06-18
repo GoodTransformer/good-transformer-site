@@ -64,5 +64,5 @@ That one page is worth more than another tool. It is the difference between a te
 
 ## Sources and further reading
 
-- [Ethan Mollick, "Centaurs and Cyborgs on the Jagged Frontier," One Useful Thing](https://www.oneusefulthing.org/p/centaurs-and-cyborgs-on-the-jagged), 16 September 2023. An independent practitioner-researcher's account. Source for the centaur and cyborg distinction and the "you won't know which is which" warning.
-- [Simon Willison, on how he uses LLMs to help write code](https://simonw.substack.com/p/how-i-use-llms-to-help-me-write-code), 2025. An independent developer writing from daily use. Source for the "over-confident pair programming assistant" framing.
+- [Ethan Mollick, "Centaurs and Cyborgs on the Jagged Frontier," One Useful Thing](https://www.oneusefulthing.org/p/centaurs-and-cyborgs-on-the-jagged), 16 September 2023. Where the centaur and cyborg distinction comes from, and the warning that you won't know where AI fails until you have used it a lot. Mollick is an academic writing from his own research.
+- [Simon Willison, on how he uses LLMs to help write code](https://simonw.substack.com/p/how-i-use-llms-to-help-me-write-code), 2025. A developer's honest account of daily use, and the source of the over-confident-pair-programmer line.

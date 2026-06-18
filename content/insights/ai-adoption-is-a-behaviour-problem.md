@@ -60,5 +60,5 @@ Building those habits deliberately, rather than hoping they appear, is the core 
 
 ## Sources and further reading
 
-- [Conor Grennan, "Lowering Barriers to AI Adoption," OpenAI Forum](https://forum.openai.com/public/blogs/lowering-barriers-to-ai-adoption-with-conor-greenan-2024-10-02), 2 October 2024. Source for the claim that the barriers to AI adoption are behavioural rather than technological.
-- [Conor Grennan, AI Mindset newsletter](https://www.ai-mindset.ai/ai-mindset-newsletter), 2025. Source for the point that adoption is about changing how people think, work and solve problems, not mastering tools.
+- [Conor Grennan, "Lowering Barriers to AI Adoption," OpenAI Forum](https://forum.openai.com/public/blogs/lowering-barriers-to-ai-adoption-with-conor-greenan-2024-10-02), 2 October 2024. His central claim that what blocks adoption is behaviour, not technology.
+- [Conor Grennan, AI Mindset newsletter](https://www.ai-mindset.ai/ai-mindset-newsletter), 2025. More on why adoption is really about changing how people work, rather than learning a tool.

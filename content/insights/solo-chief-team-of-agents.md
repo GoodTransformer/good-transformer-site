@@ -60,5 +60,5 @@ Designing that setup so it stays understandable, and deciding what should never 
 
 ## Sources and further reading
 
-- [Jurgen Appelo, "The Solo Chief"](https://substack.jurgenappelo.com/p/the-solo-chief), 2025. Source for the Solo Chief idea and "the strategist, the operator, and the single wringable neck."
-- [Jurgen Appelo, "Widesizing: AI Creates More Businesses, Not Fewer Jobs," The Solo Chief](https://substack.jurgenappelo.com/p/forget-downsizing-try-widesizing), 2025. Source for the point that a one-person operation can now look and behave professionally from day one.
+- [Jurgen Appelo, "The Solo Chief"](https://substack.jurgenappelo.com/p/the-solo-chief), 2025. Where the Solo Chief idea comes from, including the line about being "the strategist, the operator, and the single wringable neck".
+- [Jurgen Appelo, "Widesizing: AI Creates More Businesses, Not Fewer Jobs," The Solo Chief](https://substack.jurgenappelo.com/p/forget-downsizing-try-widesizing), 2025. More on how a one-person operation can now punch well above its headcount.

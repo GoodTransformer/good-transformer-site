@@ -56,5 +56,5 @@ Turning that structural advantage into a real, repeatable habit, fast, is exactl
 
 ## Sources and further reading
 
-- [Robyn Agoston, "Predicting work in the Age of AI," Work Evolved](https://workevolved.substack.com/p/predicting-work-in-the-age-of-ai), 2025. Source for the observation that significant innovation is coming from medium-sized firms with resources but without big-company governance drag.
-- [Jurgen Appelo, "Widesizing: AI Creates More Businesses, Not Fewer Jobs," The Solo Chief](https://substack.jurgenappelo.com/p/forget-downsizing-try-widesizing), 2025. Source for the point that AI lets small firms look and behave professionally from day one.
+- [Robyn Agoston, "Predicting work in the Age of AI," Work Evolved](https://workevolved.substack.com/p/predicting-work-in-the-age-of-ai), 2025. Her observation that a lot of the real innovation is coming from mid-sized firms: enough resources to experiment, none of the big-company drag.
+- [Jurgen Appelo, "Widesizing: AI Creates More Businesses, Not Fewer Jobs," The Solo Chief](https://substack.jurgenappelo.com/p/forget-downsizing-try-widesizing), 2025. His argument that AI lets a tiny firm look and behave professionally from day one.

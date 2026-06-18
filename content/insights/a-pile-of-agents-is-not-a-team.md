@@ -58,5 +58,5 @@ Organising AI work so it stays under control as it grows, with clear lanes, owne
 
 ## Sources and further reading
 
-- [Rohit Krishnan, "Homo Agenticus," Strange Loop Canon](https://www.strangeloopcanon.com/p/homo-agenticus), 2025. Source for the argument that a pile of agents is not a company without roles, ownership, escalation paths, standards and approvals.
-- [Rohit Krishnan, "Seeing like an agent," Strange Loop Canon](https://www.strangeloopcanon.com/p/seeing-like-an-agent), 2025. Source for the observation that agents are role-absorbed and follow instructions literally.
+- [Rohit Krishnan, "Homo Agenticus," Strange Loop Canon](https://www.strangeloopcanon.com/p/homo-agenticus), 2025. The argument the title borrows: a pile of agents is not a company without roles, ownership and escalation.
+- [Rohit Krishnan, "Seeing like an agent," Strange Loop Canon](https://www.strangeloopcanon.com/p/seeing-like-an-agent), 2025. Why agents follow instructions so literally, and what that means for supervising them.

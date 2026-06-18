@@ -58,5 +58,5 @@ Working out which job is the right first one, and keeping the scope honest so it
 
 ## Sources and further reading
 
-- [Dharmesh Shah, "Why The Future Of AI Is Agents," Simple.ai](https://simple.ai/p/why-the-future-of-ai-is-agents), 25 September 2024. A software founder building agent tools. Source for the case that much software is becoming agentic.
-- [Dharmesh Shah, "Feeling Behind on AI? How Dharmesh Shah Stays Up to Date," Agent.ai blog](https://blog.agent.ai/feeling-behind-on-ai-how-dharmesh-shah-stays-up-to-date-on-ai-news), 2025. Source for testing new tools against a specific real problem and re-evaluating roughly every quarter.
+- [Dharmesh Shah, "Why The Future Of AI Is Agents," Simple.ai](https://simple.ai/p/why-the-future-of-ai-is-agents), 25 September 2024. Shah's case that much software is becoming agentic, from someone who builds these tools for a living.
+- [Dharmesh Shah, "Feeling Behind on AI? How Dharmesh Shah Stays Up to Date," Agent.ai blog](https://blog.agent.ai/feeling-behind-on-ai-how-dharmesh-shah-stays-up-to-date-on-ai-news), 2025. His habit of testing any new tool against a real problem, and re-checking his stack every quarter.

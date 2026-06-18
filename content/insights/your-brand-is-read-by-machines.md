@@ -60,5 +60,5 @@ Getting your firm understood, and recommended, by the tools your customers now u
 
 ## Sources and further reading
 
-- [Tony Uphoff, "B2B Branding Has a New Audience. Most Companies Are Talking to the Wrong One," Uphoff on Media](https://tonyuphoff.substack.com/p/b2b-branding-has-a-new-audience-most), 27 April 2026. Source for the point that a brand is now evaluated by a combined machine-and-human system.
-- [Allie K. Miller, alliekmiller.com](https://www.alliekmiller.com/), 2025. Source for the framing of practical AI fluency as making a business legible to these tools.
+- [Tony Uphoff, "B2B Branding Has a New Audience. Most Companies Are Talking to the Wrong One," Uphoff on Media](https://tonyuphoff.substack.com/p/b2b-branding-has-a-new-audience-most), 27 April 2026. His argument that a brand is now read first by machines and only then by people.
+- [Allie K. Miller, alliekmiller.com](https://www.alliekmiller.com/), 2025. Her work on the practical fluency that makes a business easy for these tools to understand.

@@ -62,5 +62,5 @@ Helping people and teams build that working habit, rather than abandoning the to
 
 ## Sources and further reading
 
-- [Conor Grennan on moving beyond the search-engine mindset, Microsoft WorkLab](https://www.microsoft.com/en-us/worklab/podcast/conor-grennan-on-moving-beyond-the-search-engine-mindset), 2024. Source for the search-engine mindset and the point that using AI as a search engine limits its potential.
-- [Nat Eliason, "The Window of Opportunity is Here"](https://blog.nateliason.com/p/window-of-opportunity), 17 April 2024. Source for the point that most people who dismiss AI lack the skills and imagination to use it well.
+- [Conor Grennan on moving past the search-engine mindset, Microsoft WorkLab](https://www.microsoft.com/en-us/worklab/podcast/conor-grennan-on-moving-beyond-the-search-engine-mindset), 2024. Where the "search-engine mindset" idea comes from, and why it leaves people underwhelmed.
+- [Nat Eliason, "The Window of Opportunity is Here"](https://blog.nateliason.com/p/window-of-opportunity), 17 April 2024. His point that most people who write AI off simply have not learned to use it well yet.

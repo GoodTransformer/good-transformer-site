@@ -62,5 +62,5 @@ Working out which jobs are genuinely ready for an agent, and where to put the hu
 
 ## Sources and further reading
 
-- [Nate B. Jones, "Executive Briefing: Your 2025 AI Agent Playbook in 10 Minutes," Nate's Newsletter](https://natesnewsletter.substack.com/p/executive-briefing-your-2025-ai-agent), 2025. Source for the pattern where AI drafts, a human reviews, and the AI proceeds.
-- [Azeem Azhar, "AI in 2030," Exponential View](https://www.exponentialview.co/p/ai-in-2030), 10 May 2025. Source for the description of agents as an extension of your will, working in the background.
+- [Nate B. Jones, "Executive Briefing: Your 2025 AI Agent Playbook in 10 Minutes," Nate's Newsletter](https://natesnewsletter.substack.com/p/executive-briefing-your-2025-ai-agent), 2025. A clean version of the review-and-proceed pattern: AI drafts, a human checks, the AI carries on.
+- [Azeem Azhar, "AI in 2030," Exponential View](https://www.exponentialview.co/p/ai-in-2030), 10 May 2025. His description of agents working in the background as an extension of your will.

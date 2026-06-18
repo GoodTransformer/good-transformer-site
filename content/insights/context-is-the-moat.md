@@ -64,5 +64,5 @@ Turning a team's scattered, in-the-head knowledge into shared context that any t
 
 ## Sources and further reading
 
-- [Daniel Miessler, "Building a Personal AI Infrastructure (PAI), December 2025 Version"](https://danielmiessler.com/blog/personal-ai-infrastructure-december-2025), December 2025. Source for "the system architecture matters more than which model you use" and the practice of capturing mission, goals and challenges in a single context document.
-- [Allie K. Miller, alliekmiller.com resources](https://www.alliekmiller.com/resources), 2025. Source for the idea of ready-made context prompts to make AI understand your business.
+- [Daniel Miessler, "Building a Personal AI Infrastructure (PAI), December 2025 Version"](https://danielmiessler.com/blog/personal-ai-infrastructure-december-2025), December 2025. Where "the system architecture matters more than which model you use" comes from, plus his way of capturing mission, goals and constraints in one document.
+- [Allie K. Miller, alliekmiller.com resources](https://www.alliekmiller.com/resources), 2025. Ready-made prompts for handing an AI the context it needs to understand your business.

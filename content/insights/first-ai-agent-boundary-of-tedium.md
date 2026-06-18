@@ -58,5 +58,5 @@ Working out which routines are worth automating, and which should stay in human 
 
 ## Sources and further reading
 
-- [Azeem Azhar, "The boundary of tedium has moved," Exponential View](https://www.exponentialview.co/p/the-boundary-of-tedium-has-moved), 2025. Source for the "boundary of tedium" framing and the description of work too boring to do yourself and too specific to hand off.
-- [Dharmesh Shah, "The Secret Behind How Agent.AI Got Started," Simple.ai](https://simple.ai/p/secret-behind-agent-ai), 2024. A software founder building agent tools. Source for the minimum viable agent and the "multiple steps to accomplish a goal" description.
+- [Azeem Azhar, "The boundary of tedium has moved," Exponential View](https://www.exponentialview.co/p/the-boundary-of-tedium-has-moved), 2025. Where the "boundary of tedium" comes from: work too boring to do yourself and too fiddly to hand off.
+- [Dharmesh Shah, "The Secret Behind How Agent.AI Got Started," Simple.ai](https://simple.ai/p/secret-behind-agent-ai), 2024. Shah builds agent tools; this is his "minimum viable agent", software that takes a few steps to reach a goal.

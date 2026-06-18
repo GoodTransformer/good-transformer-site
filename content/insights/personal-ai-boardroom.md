@@ -62,6 +62,6 @@ Making lonely calls with more rigour is a large part of what the [AI Lessons for
 
 ## Sources and further reading
 
-- [Allie K. Miller's "personal AI boardroom," reported in Coalition's write-up of her Activate 2026 talk](https://www.coalitioninc.com/blog/broker-education/allie-k-miller-activate-2026), 16 April 2026. Source for the personal AI boardroom concept: spinning up AI personas to stress-test a decision.
-- [Allie K. Miller, a LinkedIn post setting out clear, practical AI advice for business owners](https://www.linkedin.com/posts/alliekmiller_let-me-make-this-ai-advice-as-clear-as-humanly-activity-7128120074502115328-7Q_M), November 2023. Source for AI as "a tool (not a silver bullet)" and the know-your-business, experiment, refine sequence.
-- [Greg Shove, gregshove.com](https://www.gregshove.com/), 2025. Source for the argument that leaders should treat AI as a standing adviser and model the behaviour themselves.
+- [Allie K. Miller's "personal AI boardroom," in Coalition's write-up of her Activate 2026 talk](https://www.coalitioninc.com/blog/broker-education/allie-k-miller-activate-2026), 16 April 2026. Where the idea comes from: spinning up AI personas to stress-test a decision before you commit to it.
+- [Allie K. Miller, a LinkedIn post of plain AI advice for business owners](https://www.linkedin.com/posts/alliekmiller_let-me-make-this-ai-advice-as-clear-as-humanly-activity-7128120074502115328-7Q_M), November 2023. Her line that AI is "a tool (not a silver bullet)", and the know-your-business-then-experiment sequence.
+- [Greg Shove, gregshove.com](https://www.gregshove.com/), 2025. His case that leaders should treat AI as a standing adviser, and actually use it themselves.

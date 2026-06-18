@@ -58,5 +58,5 @@ Working out who to amplify first, and how to enlarge the role rather than hollow
 
 ## Sources and further reading
 
-- [Josh Bersin, "The Rise of the Superworker: Delivering On The Promise Of AI"](https://joshbersin.com/2025/01/the-rise-of-the-superworker-delivering-on-the-promise-of-ai/), 14 January 2025. Source for the Superworker idea and the description of AI enhancing a person's productivity, performance and creativity.
-- [Greg Shove, gregshove.com](https://www.gregshove.com/), 2025. Source for the argument that leaders should model AI use rather than only endorse it.
+- [Josh Bersin, "The Rise of the Superworker: Delivering On The Promise Of AI"](https://joshbersin.com/2025/01/the-rise-of-the-superworker-delivering-on-the-promise-of-ai/), 14 January 2025. Where the "Superworker" comes from: a person whose output is amplified, not replaced, by AI.
+- [Greg Shove, gregshove.com](https://www.gregshove.com/), 2025. His point that leaders should model AI use themselves rather than just endorse it.
