@@ -26,7 +26,7 @@ export function ArticleHeader({ post }: { post: PostMeta }) {
         ))}
       </div>
 
-      <h1 className="mt-5 font-serif text-[clamp(1.875rem,1.41rem+2.07vw,3rem)] font-semibold leading-[1.08] text-ink text-balance">
+      <h1 className="mt-5 font-serif text-[clamp(1.875rem,1.41rem+2.07vw,3rem)] font-semibold leading-[1.08] text-ink text-pretty">
         {post.title}
       </h1>
 
