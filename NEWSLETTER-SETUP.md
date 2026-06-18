@@ -11,7 +11,7 @@ Reader subscribes (site)
    └─> Cloudflare Worker  ──>  Resend contact  (Topic: Daily | Weekly  +  "All subscribers" Segment)
                                      ▲
 Scheduled GitHub Action (cron)       │ send
-   1. generate-ai-news.mjs  ──> content/digests/news-latest.json
+   1. generate-ai-news.mjs  ──> content/digests/news-latest.json  (picks news-daily/weekly.json by cadence)
    2. build-digest.mjs      ──> branded HTML (this week's/today's posts + news)
    3. send-digest.mjs       ──> Resend Broadcast (Segment scoped to Topic) ──┘
 ```
@@ -67,29 +67,46 @@ are read by `send-digest.yml`.
 ### 5. (Pipeline) AI news source, §News
 The "AI news for leaders" block comes from `content/digests/news-latest.json`,
 which is gitignored and rebuilt on every send by `scripts/generate-ai-news.mjs`.
-That script is now plumbing, not the generator: it reads a tracked, committed
-source of truth, `content/digests/news-curated.json`, validates it, applies a
-freshness guard, and copies it through to `news-latest.json`.
+That script is now plumbing, not the generator: it picks the engine's
+purpose-built file for the cadence being sent, validates it, applies a freshness
+guard, and copies it through to `news-latest.json`.
 
-`news-curated.json` is written by the **Good Transformer newsjack engine** (the
-daily blog machine, a separate repo). That engine already scans the news, keeps
-the stories a leader must react to, ranks them, and pushes a rolling seven-day
-list here each morning. All editorial judgement lives there, so the site and the
-newsletter speak with one voice. Schema (both files):
+The files are written by the **Good Transformer newsjack engine** (the daily blog
+machine, a separate repo). Selection, freshness and dedup now live there, because
+it runs the scan and is the only component that knows what has already shipped:
+
+- `content/digests/news-daily.json` — the daily send: up to **3** stories, deduped
+  against recent dailies so they are fresh, ordered most-important-first.
+- `content/digests/news-weekly.json` — the weekly send: up to **5**, the biggest of
+  the last 7 days. A roundup, so it may repeat a story that went out in a daily.
+
+All editorial judgement lives there, so the site and the newsletter speak with one
+voice. Schema (both files), with a stable per-story `id` the engine keys dedup on:
 
 ```json
 {
-  "generatedAt": "2026-06-14",
+  "generatedAt": "2026-06-18",
+  "cadence": "daily",
   "stories": [
-    { "title": "…", "url": "https://…", "source": "Reuters", "summary": "…" }
+    { "id": "stable-story-slug", "title": "…", "url": "https://…", "source": "OpenAI", "summary": "…" }
   ]
 }
 ```
-Stories are ordered most-important-first; the digest takes the top **3** (daily)
-or **5** (weekly). If `news-curated.json` is missing or older than 10 days,
-`generate-ai-news.mjs` writes an empty list and the digest sends with just the
-posts. For a local preview with no engine, run `node scripts/generate-ai-news.mjs
---sample` to use the committed `news-sample.json`.
+The lists arrive already counted and ranked, so the digest sends them as-is — no
+slicing on this side. `freshStories()` in `build-digest.mjs` still runs as a guard,
+dropping any story whose topic echoes a recent Insight. If the source file is
+missing or older than 10 days, `generate-ai-news.mjs` writes an empty list and the
+digest sends with just the posts. For a local preview with no engine, run `node
+scripts/generate-ai-news.mjs --cadence daily --sample` to use the committed
+`news-sample.json` (treated as an unselected pool, so the preview still slices it).
+
+**Transition.** Until the site confirms it reads the two new files, the engine also
+keeps writing the old rolling pool, `content/digests/news-curated.json` (a copy of
+the weekly file). If a cadence file is absent, `generate-ai-news.mjs` falls back to
+that pool and stamps `preselected: false`, so `build-digest.mjs` applies the legacy
+top-3 (daily) / top-5 (weekly) slice and nothing breaks mid-switch. Once the daily
+and weekly files are confirmed flowing in CI, tell the engine to stop writing
+`news-curated.json`.
 
 So nothing about the news source needs wiring here anymore; it is supplied by the
 blog machine's daily run. This repo's only job is to render and send it.

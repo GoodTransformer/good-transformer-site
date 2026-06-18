@@ -1,17 +1,27 @@
 # How blog and newsletter content is published
 
-> Sitrep and standing reference for the AI that manages this site. Last updated 2026-06-17.
+> Sitrep and standing reference for the AI that manages this site. Last updated 2026-06-18.
 
 ## The short version
 
 Insights (the blog, `content/insights/*.md`) and the newsletter news feed
-(`content/digests/news-curated.json`) are not authored here by hand. A separate
-system, the **Good Transformer Blog Machine**, runs on a daily schedule, drafts
-and validates content, and pushes finished files straight to `main`. A push to
-`main` triggers the normal Pages deploy, so new posts go live with no PR and no
-manual step. If you see a new file under `content/insights/` or an updated
-`content/digests/news-curated.json` arrive on `main` without a pull request, that
-is the Blog Machine working as intended.
+(`content/digests/news-daily.json` + `news-weekly.json`) are not authored here by
+hand. A separate system, the **Good Transformer Blog Machine**, runs on a daily
+schedule, drafts and validates content, and pushes finished files straight to
+`main`. A push to `main` triggers the normal Pages deploy, so new posts go live
+with no PR and no manual step. If you see a new file under `content/insights/` or
+updated `content/digests/news-*.json` arrive on `main` without a pull request,
+that is the Blog Machine working as intended.
+
+> **News feed moved to two files (2026-06-18).** The machine used to write one
+> rolling pool, `news-curated.json`, which the digest sliced top-3/top-5 — that
+> made the daily re-send durable stories on consecutive days. It now writes a
+> purpose-built file per cadence (`news-daily.json`, deduped vs recent dailies;
+> `news-weekly.json`, the biggest of 7 days), with selection and dedup on its
+> side. The site reads the cadence file and sends it as-is (see
+> [`NEWSLETTER-SETUP.md`](../../NEWSLETTER-SETUP.md) §News). During the switch the
+> machine still writes `news-curated.json` as a fallback; once the two files are
+> confirmed flowing in CI, tell it to stop.
 
 ## The credential
 

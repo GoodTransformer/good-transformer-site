@@ -1,5 +1,5 @@
 {
-  "$comment": "Sample AI-news payload. The pipeline writes news-latest.json in this exact shape. See NEWSLETTER-SETUP.md §News for the contract. 'stories' should be ordered most-important-first; the digest takes the top 3 (daily) or top 5 (weekly).",
+  "$comment": "Sample AI-news payload. The engine writes news-daily.json / news-weekly.json in this shape (each story may also carry a stable 'id'); the pipeline copies the cadence file through to news-latest.json. See NEWSLETTER-SETUP.md §News for the contract. 'stories' is ordered most-important-first and already counted by the engine (up to 3 daily / 5 weekly); this sample is treated as an unselected pool, so a local preview still slices it.",
   "generatedAt": "2026-06-13",
   "stories": [
     {

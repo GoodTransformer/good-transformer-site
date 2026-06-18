@@ -6,29 +6,41 @@
  * in the daily/weekly digest. news-latest.json is gitignored and rebuilt on
  * every send; this script is the step that fills it.
  *
- * Source of truth: content/digests/news-curated.json (tracked, committed).
- * That file is written by the Good Transformer newsjack engine (the daily blog
- * machine), which already scans the news, keeps the stories a leader must react
- * to, ranks them, and writes a rolling seven-day list in this exact schema:
+ * Source of truth: the newsjack engine (the daily blog machine) writes a
+ * purpose-built file per cadence, with selection, freshness and same-cadence
+ * dedup already done on its side (it is the only component that knows what has
+ * shipped):
  *
- *   { "generatedAt": "YYYY-MM-DD",
- *     "stories": [ { "title", "url", "source", "summary" }, ... ] }
+ *   content/digests/news-daily.json   up to 3, deduped vs recent dailies, ranked
+ *   content/digests/news-weekly.json  up to 5, the biggest of the last 7 days
  *
- * Stories are ordered most-important-first. The digest takes the top 3 (daily)
- * or top 5 (weekly). This script copies the curated list through to
- * news-latest.json after a light validation, with a freshness guard so a stale
- * feed is dropped rather than mailed.
+ * Both share one schema, with a stable per-story `id` the engine keys dedup on:
  *
- *   node scripts/generate-ai-news.mjs           # curated -> latest (normal path)
- *   node scripts/generate-ai-news.mjs --sample  # use the committed sample (local preview only)
+ *   { "generatedAt": "YYYY-MM-DD", "cadence": "daily",
+ *     "stories": [ { "id", "title", "url", "source", "summary" }, ... ] }
+ *
+ * Stories arrive ordered most-important-first and already counted, so this script
+ * no longer slices them. It picks the file for the cadence being sent, validates
+ * it, applies a freshness guard, and copies it through to news-latest.json. The
+ * `preselected: true` flag it stamps tells build-digest.mjs not to re-slice.
+ *
+ * Transition: the engine also keeps writing the old rolling pool,
+ * content/digests/news-curated.json (a copy of the weekly file), until the site
+ * confirms the switch. If the cadence file is absent we fall back to that pool
+ * and stamp `preselected: false`, so build-digest.mjs applies the legacy top-3
+ * (daily) / top-5 (weekly) slice and nothing breaks mid-transition.
+ *
+ *   node scripts/generate-ai-news.mjs --cadence daily    # news-daily.json  -> latest
+ *   node scripts/generate-ai-news.mjs --cadence weekly   # news-weekly.json -> latest (default)
+ *   node scripts/generate-ai-news.mjs --sample           # committed sample (local preview only)
  *
  * Design notes:
- *  - If curated is missing, empty, or older than MAX_AGE_DAYS, this writes an
+ *  - If the source is missing, empty, or older than MAX_AGE_DAYS, this writes an
  *    empty stories list. The digest builder tolerates that and simply omits the
  *    news block, so a quiet week ships the posts alone rather than stale news.
- *  - All editorial judgement (what matters, the leader angle, the wording) lives
- *    in the newsjack engine, not here. This script is plumbing, kept dumb on
- *    purpose so there is one place that decides what leaders read.
+ *  - All editorial judgement (what matters, the leader angle, the wording, and
+ *    now the selection) lives in the newsjack engine, not here. This script is
+ *    plumbing, kept dumb on purpose.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
@@ -38,16 +50,20 @@ import { fileURLToPath } from 'node:url'
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DIGEST_DIR = join(ROOT, 'content', 'digests')
 const CURATED = join(DIGEST_DIR, 'news-curated.json')
+const DAILY = join(DIGEST_DIR, 'news-daily.json')
+const WEEKLY = join(DIGEST_DIR, 'news-weekly.json')
 const SAMPLE = join(DIGEST_DIR, 'news-sample.json')
 const OUT = join(DIGEST_DIR, 'news-latest.json')
 
 const MAX_AGE_DAYS = 10 // older than this and we drop the news block rather than mail stale stories
 const useSample = process.argv.includes('--sample')
+const cadIdx = process.argv.indexOf('--cadence')
+const cadence = cadIdx !== -1 && process.argv[cadIdx + 1] === 'daily' ? 'daily' : 'weekly'
 
 mkdirSync(DIGEST_DIR, { recursive: true })
 
 function writeEmpty(reason) {
-  writeFileSync(OUT, JSON.stringify({ generatedAt: '', stories: [] }, null, 2))
+  writeFileSync(OUT, JSON.stringify({ generatedAt: '', cadence, preselected: false, stories: [] }, null, 2))
   console.log(`Wrote an empty news-latest.json (${reason}). The digest will omit the news block.`)
 }
 
@@ -62,6 +78,7 @@ function cleanStories(stories) {
   const out = []
   for (const s of stories) {
     if (!s || typeof s !== 'object') continue
+    const id = String(s.id || '').trim()
     const title = String(s.title || '').trim()
     const url = String(s.url || '').trim()
     const summary = String(s.summary || '').trim()
@@ -70,10 +87,12 @@ function cleanStories(stories) {
       console.warn(`! skipped a story missing a title, summary, or real URL: "${title || '(untitled)'}"`)
       continue
     }
-    const key = url.toLowerCase()
+    // Dedup on the stable id when present (a story's URL can change between days,
+    // so the engine keys on id); fall back to the URL for the legacy pool.
+    const key = id ? `id:${id.toLowerCase()}` : url.toLowerCase()
     if (seen.has(key)) continue
     seen.add(key)
-    out.push({ title, url, source, summary })
+    out.push(id ? { id, title, url, source, summary } : { title, url, source, summary })
   }
   return out
 }
@@ -84,14 +103,34 @@ function ageInDays(iso) {
   return (Date.now() - t) / 86400000
 }
 
-const sourcePath = useSample ? SAMPLE : CURATED
-const sourceLabel = useSample ? 'sample' : 'curated'
+// Prefer the purpose-built file the engine writes for this cadence (already
+// selected, so build-digest must not re-slice it). During the transition, fall
+// back to the rolling curated pool, which is unselected and still needs slicing.
+let sourcePath
+let sourceLabel
+let preselected
+if (useSample) {
+  sourcePath = SAMPLE
+  sourceLabel = 'sample'
+  preselected = false
+} else {
+  const cadenceFile = cadence === 'daily' ? DAILY : WEEKLY
+  if (existsSync(cadenceFile)) {
+    sourcePath = cadenceFile
+    sourceLabel = `news-${cadence}.json`
+    preselected = true
+  } else {
+    sourcePath = CURATED
+    sourceLabel = 'news-curated.json (fallback)'
+    preselected = false
+  }
+}
 
 if (!existsSync(sourcePath)) {
   if (useSample) {
     writeEmpty('no sample found')
   } else {
-    writeEmpty('no news-curated.json found yet; the newsjack engine has not written one')
+    writeEmpty(`no news-${cadence}.json or news-curated.json found yet; the newsjack engine has not written one`)
   }
   process.exit(0)
 }
@@ -118,9 +157,12 @@ if (!stories.length) {
 
 const payload = {
   generatedAt: String(parsed.generatedAt || '').slice(0, 10),
+  cadence,
+  preselected,
   stories,
 }
 writeFileSync(OUT, JSON.stringify(payload, null, 2))
 console.log(
-  `Wrote content/digests/news-latest.json from ${sourceLabel} (${stories.length} stories, generated ${payload.generatedAt}).`,
+  `Wrote content/digests/news-latest.json from ${sourceLabel} for the ${cadence} send ` +
+    `(${stories.length} stories, generated ${payload.generatedAt}, preselected=${preselected}).`,
 )

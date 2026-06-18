@@ -64,13 +64,14 @@ jobs:
             echo "dry=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # Render the AI-news block: generate-ai-news.mjs copies
-      # content/digests/news-curated.json (written by the newsjack engine) into
-      # news-latest.json after a light validation and a freshness check. If
-      # curated is missing or stale it writes an empty list, so the digest still
-      # ships the posts. Must run before the digest is built.
+      # Render the AI-news block: generate-ai-news.mjs picks the engine's
+      # purpose-built file for this cadence (content/digests/news-daily.json or
+      # news-weekly.json), validates it, runs a freshness check, and copies it into
+      # news-latest.json. It falls back to the legacy news-curated.json pool while
+      # the engine still writes it. If the source is missing or stale it writes an
+      # empty list, so the digest still ships the posts. Must run before the build.
       - name: Generate AI news
-        run: node scripts/generate-ai-news.mjs
+        run: node scripts/generate-ai-news.mjs --cadence "${{ steps.cadence.outputs.value }}"
 
       - name: Send digest
         run: node scripts/send-digest.mjs --cadence "${{ steps.cadence.outputs.value }}" ${{ steps.cadence.outputs.dry == 'true' && '--dry-run' || '' }}
