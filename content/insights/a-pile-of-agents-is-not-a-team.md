@@ -14,7 +14,7 @@ draft: false
 
 There is a stage many owners reach a few months into using AI agents. The first one worked, so they built a second, then a third, then a few more, each handling some useful job. And somewhere around the fifth, the whole thing stopped feeling like progress and started feeling like a mess. Agents overlapping, doing slightly contradictory things, with no clear sense of which one owns what or who to blame when something breaks. The capability went up. The order went down.
 
-This is a familiar problem in an unfamiliar costume. Anyone who has managed people knows that a group of capable individuals is not a team until it has roles, ownership and a way of handling exceptions. Rohit Krishnan, who writes thoughtfully about how AI agents behave, makes exactly this point about agents: ["a pile of agents is not a company for the same reason a pile of smart people is not a company."](https://www.strangeloopcanon.com/p/homo-agenticus) A firm of agents, in his words, needs "roles, ownership, shared state, ledgers, escalation paths, standards, prices, and approvals." Capability was never the missing piece. Structure is.
+This is a familiar problem in an unfamiliar costume. Anyone who has managed people knows that a group of capable individuals is not a team until it has roles, ownership and a way of handling exceptions. Rohit Krishnan, who writes thoughtfully about how AI agents behave, made exactly this point about agents, and this post borrows its title from his version of it: ["a pile of agents is not a company for the same reason a pile of smart people is not a company."](https://www.strangeloopcanon.com/p/homo-agenticus) A firm of agents, in his words, needs "roles, ownership, shared state, ledgers, escalation paths, standards, prices, and approvals." Capability was never the missing piece. Structure is.
 
 ## The sprawl problem
 
@@ -58,5 +58,5 @@ Organising AI work so it stays under control as it grows, with clear lanes, owne
 
 ## Sources and further reading
 
-- [Rohit Krishnan, "Homo Agenticus," Strange Loop Canon](https://www.strangeloopcanon.com/p/homo-agenticus), 2025. The argument the title borrows: a pile of agents is not a company without roles, ownership and escalation.
+- [Rohit Krishnan, "Homo Agenticus," Strange Loop Canon](https://www.strangeloopcanon.com/p/homo-agenticus), 2025. Krishnan's case that agents need roles, ownership, escalation, standards and approvals before they add up to anything like a company.
 - [Rohit Krishnan, "Seeing like an agent," Strange Loop Canon](https://www.strangeloopcanon.com/p/seeing-like-an-agent), 2025. Why agents follow instructions so literally, and what that means for supervising them.

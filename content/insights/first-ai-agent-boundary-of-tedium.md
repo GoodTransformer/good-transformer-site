@@ -14,7 +14,7 @@ draft: false
 
 Say "AI agent" to a small-business owner and they picture something expensive and slightly science-fiction: an autonomous system running the company while everyone sleeps. So they file the whole idea under "not for us yet" and move on. That instinct skips the one place an agent actually earns its keep in a small firm, which is not the dramatic work at all. It is the dull, fiddly, repetitive work that sits in the gap between "this needs doing" and "not right now."
 
-Azeem Azhar, who writes one of the most-read newsletters on where this technology is heading, coined a phrase for that gap. He calls it the boundary of tedium, and reframing the first agent around it is the most useful thing a small firm can do with the idea. ["Every knowledge worker has a boundary of tedium,"](https://www.exponentialview.co/p/the-boundary-of-tedium-has-moved) he writes: work that is "too boring or too fiddly for you to do yourself, but too complex or too specific to easily hand off to someone else." That is exactly where your first agent belongs.
+This post takes its title and its starting point from Azeem Azhar, who writes one of the most-read newsletters on where this technology is heading. In a piece called ["You already have an AI agent"](https://www.exponentialview.co/p/the-boundary-of-tedium-has-moved) he makes the case directly, and coins a phrase for where that first agent belongs: the boundary of tedium. It is, in his words, work that is "too boring or too fiddly for you to do yourself, but too complex or too specific to easily hand off to someone else." That is exactly where your first agent belongs.
 
 ## Where the boundary sits
 
@@ -58,5 +58,5 @@ Working out which routines are worth automating, and which should stay in human 
 
 ## Sources and further reading
 
-- [Azeem Azhar, "The boundary of tedium has moved," Exponential View](https://www.exponentialview.co/p/the-boundary-of-tedium-has-moved), 2025. Where the "boundary of tedium" comes from: work too boring to do yourself and too fiddly to hand off.
+- [Azeem Azhar, "You already have an AI agent" (a.k.a. "The boundary of tedium has moved"), Exponential View](https://www.exponentialview.co/p/the-boundary-of-tedium-has-moved), 2025. Where the "boundary of tedium" comes from, and the piece this post takes its title from.
 - [Dharmesh Shah, "The Secret Behind How Agent.AI Got Started," Simple.ai](https://simple.ai/p/secret-behind-agent-ai), 2024. Shah builds agent tools; this is his "minimum viable agent", software that takes a few steps to reach a goal.
