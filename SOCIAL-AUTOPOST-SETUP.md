@@ -12,6 +12,15 @@ runs [`scripts/post-to-social.mjs`](scripts/post-to-social.mjs), which:
 **Until the secrets below are set, the script is a safe no-op** (it logs "not configured"
 and exits 0). Add the secrets in GitHub → repo **Settings → Secrets and variables → Actions**.
 
+> **Decision (2026-06-16): X only, LinkedIn parked.** LinkedIn's Company Page posting
+> needs the Community Management API, which is gated on an *active registered business*.
+> Good Transformer trades as a sole trader (no Companies House registration), so that
+> application would be rejected. We are running **X only** for now. The LinkedIn section
+> below is kept for reference in case the entity is incorporated later; leaving the
+> `LINKEDIN_*` secrets unset makes the script skip LinkedIn cleanly. To post to LinkedIn
+> without the API in the meantime, use a scheduler that already holds Page rights (Buffer,
+> Hootsuite) or post manually. Only sections **0**, **1**, and **3** apply right now.
+
 ---
 
 ## 0. Before you flip it on — seed the ledger
@@ -40,7 +49,7 @@ plain template (title + description + link + hashtags). With it set, copy is dra
 
 ---
 
-## 2. LinkedIn Company Page — `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_ORG_ID`
+## 2. LinkedIn Company Page — `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_ORG_ID` — PARKED (see decision note above)
 
 Posting as the Company Page needs the **Community Management API**, which requires
 LinkedIn's app review. Expect a few days.

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>LinkedIn avatar v2 / company logo - Good Transformer</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  body { margin: 0; background: #fff; display: flex; flex-wrap: wrap; gap: 40px; padding: 40px; }
+
+  /* Each tile renders at 600px and is screenshotted @2x -> 1200x1200.
+     Mark capped well inside the centre so it survives LinkedIn's circular
+     crop on company pages and the rounded-square crop in feeds. */
+  .tile {
+    width: 600px; height: 600px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  /* Explicit height forces the (portrait) mark to scale UP to fill the tile.
+     max-height alone would not enlarge an image smaller than the cap. */
+  .tile img { width: auto; height: 70%; max-width: 70%; position: relative; z-index: 2; }
+
+  /* 1 — HALO (primary): dimensional teal, white mark, soft inner ring.
+     A radial gradient gives depth the old flat teal lacked, and reads
+     cleanly even at 48px in the feed. */
+  #halo {
+    background: radial-gradient(circle at 50% 42%, #00A6B2 0%, #008C95 46%, #006F7A 100%);
+  }
+  #halo::after {
+    content: ""; position: absolute; inset: 40px; z-index: 1;
+    border-radius: 50%;
+    border: 3px solid rgba(251,248,244,0.22);
+  }
+
+  /* 2 — INK: deep ground with a bright-teal keyline. Pairs with the dark cover. */
+  #ink { background: radial-gradient(circle at 50% 40%, #0B3D45 0%, #062A31 60%, #04171C 100%); }
+  #ink::after {
+    content: ""; position: absolute; inset: 44px; z-index: 1;
+    border-radius: 36px;
+    border: 5px solid rgba(0,166,178,0.85);
+  }
+
+  /* 3 — PAPER: warm cream ground, solid ink mark, thin teal keyline.
+     The light option for contexts that want the cream brand surface. */
+  #paper { background: #FBF8F4; }
+  #paper::after {
+    content: ""; position: absolute; inset: 44px; z-index: 1;
+    border-radius: 36px;
+    border: 4px solid rgba(0,140,149,0.9);
+  }
+  #paper img { filter: brightness(0) saturate(100%) opacity(0.9); }
+</style>
+</head>
+<body>
+  <div class="tile" id="halo"><img class="mark--white" src="../../public/logos/gt-logo-trimmed.png" alt=""></div>
+  <div class="tile" id="ink"><img class="mark--white" src="../../public/logos/gt-logo-trimmed.png" alt=""></div>
+  <div class="tile" id="paper"><img src="../../public/logos/gt-logo-trimmed.png" alt=""></div>
+</body>
+</html>

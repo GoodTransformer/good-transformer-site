@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>X / Twitter header - Good Transformer</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  /* X / Twitter header: 1500x500 (3:1), rendered @2x -> 3000x1000.
+     Brand teal ground. Everything is held in the centre band so it survives
+     the mobile top/bottom crop (~1500x400 visible), and clear of the lower-left
+     avatar (~220x220) and the lower-right action button (~200x100). */
+  :root { --teal-bright: #2BBCC4; }
+
+  html, body { width: 1500px; height: 500px; margin: 0; }
+  .stage {
+    position: relative;
+    width: 1500px; height: 500px;
+    background: linear-gradient(118deg, #0B3D45 0%, #062A31 54%, #04171C 100%);
+    overflow: hidden;
+    color: var(--paper);
+  }
+  .stage::after {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(circle at 88% 6%,  rgba(0,166,178,0.30), transparent 48%),
+      radial-gradient(circle at 4% 96%,  rgba(0,166,178,0.10), transparent 40%);
+  }
+
+  /* Circuit-tree mark as atmosphere, bleeding off the right edge. Sits in the
+     upper-right safe zone, kept clear of the lower-right button corner. */
+  .ghost {
+    position: absolute; z-index: 0; top: 44%; right: -70px;
+    transform: translateY(-50%);
+    height: 600px; width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.06;
+  }
+
+  /* Centre lockup, vertically centred inside the mobile-safe band. */
+  .lockup {
+    position: absolute; z-index: 1; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .wordmark {
+    font-family: var(--font-serif); font-weight: 400;
+    font-size: 92px; line-height: 0.98; letter-spacing: -0.02em;
+    text-transform: none;   /* brand wordmark is mixed-case, override global h1 caps */
+    color: var(--paper); margin: 0;
+  }
+
+  /* Thin teal rule with an end dot - the brand's hairline accent. */
+  .rule {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0; margin: 22px auto 20px; width: 300px;
+  }
+  .rule .line { height: 2px; flex: 1; background: var(--teal-bright); opacity: 0.9; }
+  .rule .dot  { width: 9px; height: 9px; border-radius: 50%; border: 2px solid var(--teal-bright); margin-left: -1px; }
+
+  .sub {
+    font-family: var(--font-sans); font-weight: 400;
+    font-size: 25px; line-height: 1.4; letter-spacing: 0.01em;
+    color: rgba(251,248,244,0.92); margin: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <img class="ghost" src="../../public/logos/gt-logo-trimmed.png" alt="">
+    <div class="lockup">
+      <h1 class="wordmark">Good<br>Transformer</h1>
+      <div class="rule"><span class="line"></span><span class="dot"></span></div>
+      <p class="sub">AI lessons and advisory for leaders<br>who need judgement, not hype.</p>
+    </div>
+  </div>
+</body>
+</html>

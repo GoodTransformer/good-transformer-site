@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>LinkedIn company cover v2 - Good Transformer</title>
+<link rel="stylesheet" href="../brand.css">
+<style>
+  /* LinkedIn Company Page cover: 6:1, rendered 2100x350 @2x -> 4200x700.
+     Deep teal ground (cream would blend into LinkedIn's white UI). Content is
+     centre-weighted and held inside the mobile safe zone; the bottom-left stays
+     clear because the company avatar sits over that corner. */
+  :root { --teal-bright: #2BBCC4; }
+
+  html, body { width: 2100px; height: 350px; margin: 0; }
+  .stage {
+    position: relative;
+    width: 2100px; height: 350px;
+    background: linear-gradient(115deg, #0B3D45 0%, #062A31 52%, #04171C 100%);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    color: var(--paper);
+  }
+
+  /* Corner brand glow for depth - centre stays dark so the headline pops. */
+  .stage::after {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(circle at 90% 8%,  rgba(0,166,178,0.30), transparent 46%),
+      radial-gradient(circle at 6% 96%,  rgba(0,166,178,0.12), transparent 42%);
+  }
+
+  /* Oversized circuit-tree mark, very faint, bleeding off the right edge as
+     atmosphere. Kept off-centre so it never competes with the headline. */
+  .ghost {
+    position: absolute; z-index: 0; top: 50%; right: -110px;
+    transform: translateY(-50%);
+    height: 560px; width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.05;
+  }
+
+  .stage > .content { position: relative; z-index: 1; }
+
+  /* Brand lockup: white mark + wordmark eyebrow, above the headline. */
+  .brand {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    margin: 0 0 18px;
+  }
+  .brand img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: 0.92; }
+  .brand .wordmark {
+    font-family: var(--font-sans); font-weight: 600; font-size: 17px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(251,248,244,0.92);
+  }
+
+  .headline {
+    font-family: var(--font-serif); font-weight: 400; font-size: 78px;
+    line-height: 1.0; letter-spacing: -0.018em; color: var(--paper); margin: 0;
+    white-space: nowrap;
+  }
+  .headline .accent { color: var(--teal-bright); font-style: italic; }
+
+  .sub {
+    font-family: var(--font-sans); font-weight: 400; font-size: 23px;
+    letter-spacing: 0.01em; color: rgba(251,248,244,0.92); margin: 20px 0 0;
+  }
+  .sub .dot { color: var(--teal-bright); margin: 0 10px; }
+
+  .site {
+    position: absolute; left: 0; right: 0; bottom: 26px; z-index: 1;
+    text-align: center;
+    font-family: var(--font-sans); font-weight: 700; font-size: 19px;
+    letter-spacing: 0.03em; color: var(--teal-bright);
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <img class="ghost" src="../../public/logos/gt-logo.png" alt="">
+    <div class="content">
+      <div class="brand">
+        <img src="../../public/logos/gt-logo.png" alt="">
+        <span class="wordmark">Good Transformer</span>
+      </div>
+      <h1 class="headline">Get confident with <span class="accent">AI</span></h1>
+      <p class="sub">Practical lessons for leaders<span class="dot">&middot;</span>Advisory for teams<span class="dot">&middot;</span>No hype</p>
+    </div>
+    <span class="site">goodtransformer.ai</span>
+  </div>
+</body>
+</html>
