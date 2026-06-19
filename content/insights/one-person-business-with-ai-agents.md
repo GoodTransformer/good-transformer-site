@@ -1,13 +1,13 @@
 ---
-title: "The Solo Chief: running a one-person business with a team of agents"
+title: "Running a one-person business with a team of agents"
 description: "A growing class of owners run alone while orchestrating tools and AI agents instead of staff. What changes about identity, accountability and how you build when your team is mostly software."
 date: 2026-05-20
 type: post
 voice: brand
 tags: ["solo-business", "ai-agents", "operations"]
-cover: /insights/solo-chief-team-of-agents/cover.jpg
+cover: /insights/one-person-business-with-ai-agents/cover.jpg
 coverAlt: "Dark teal cover with a single figure connected to several small nodes and the Good Transformer wordmark, marking an article on running a one-person business with AI agents."
-coverQuote: "You are the strategist, the operator, and the one accountable for all of it."
+coverQuote: "When the team is software, the accountability is still all yours."
 featured: false
 draft: false
 ---
