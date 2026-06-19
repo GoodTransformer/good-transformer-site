@@ -49,6 +49,15 @@ img {
   max-width: 100%;
 }
 
+/* Form controls default to min-width:auto (a <select> won't shrink below its
+   widest option). Inside grid/flex cells that forces horizontal overflow, so
+   reset to 0 and let controls fill their cell. */
+input,
+select,
+textarea {
+  min-width: 0;
+}
+
 ::selection {
   background: rgba(0, 140, 149, 0.18);
 }
@@ -1839,6 +1848,13 @@ details > summary::-webkit-details-marker {
   z-index: 2;
   transform: translateY(-50%);
   background: rgb(var(--color-paper));
+}
+
+/* When the panel is open the button takes the active (dark) treatment. Restore
+   the ink background the base .insight-filter__more rule would otherwise mask,
+   so the light label/caret don't render invisibly on the paper backdrop. */
+.insight-filter__more.insight-chip--active {
+  background: rgb(var(--color-ink));
 }
 
 .insight-filter__more-caret {

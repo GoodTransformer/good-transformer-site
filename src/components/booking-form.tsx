@@ -232,7 +232,7 @@ export function BookingForm() {
   }
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
       <form
         onSubmit={handleSubmit}
         className="rounded-[2rem] border border-line bg-paper/82 p-6 shadow-glow backdrop-blur md:p-8"
@@ -640,7 +640,7 @@ export function PersonalBookingForm() {
   }
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
       <form
         onSubmit={handleSubmit}
         className="rounded-[1.25rem] border border-line bg-paper/82 p-6 shadow-glow backdrop-blur md:p-8"
