@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 import { AnalyticsEvents } from "@/components/analytics-events";
+import { ConsentBanner } from "@/components/consent-banner";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { JsonLd } from "@/components/json-ld";
 import { LinkedInInsightTag } from "@/components/linkedin-insight-tag";
@@ -168,6 +169,7 @@ export default function RootLayout({
         <AnalyticsEvents />
         <main id="content">{children}</main>
         <SiteFooter />
+        <ConsentBanner />
       </body>
     </html>
   );

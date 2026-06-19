@@ -199,13 +199,24 @@ export function BookingForm() {
         setSubmitted(true);
       });
 
+      // Primary conversion: the brief was delivered server-side (endpoint) or
+      // as an email draft. Manual mode delivers nothing, so it fires nothing.
+      if (nextMode !== "manual") {
+        trackEvent("booking_brief_submit", {
+          section: "book_business",
+          label: "business",
+          mode: nextMode,
+        });
+      }
+
       if (nextMode === "endpoint" && calendarUrl) {
         // href is the base calendar URL only: buildCalUrl appends the
         // visitor's email, which must not be sent to analytics.
-        trackEvent("booking_start", {
+        trackEvent("booking_schedule_click", {
           section: "book_business",
           label: "business",
           href: calendarUrl,
+          mode: "auto",
         });
         window.setTimeout(() => {
           window.location.assign(buildCalUrl(calendarUrl, { email: form.workEmail.trim() }));
@@ -428,10 +439,11 @@ export function BookingForm() {
                   rel="noreferrer"
                   referrerPolicy="no-referrer"
                   onClick={() =>
-                    trackEvent("booking_start", {
+                    trackEvent("booking_schedule_click", {
                       section: "book_business",
                       label: "business",
                       href: calendarUrl,
+                      mode: "manual",
                     })
                   }
                   className="inline-flex min-h-11 items-center justify-center rounded-[0.45rem] bg-copper px-5 text-sm font-medium text-paper transition hover:bg-copper/90"
@@ -593,13 +605,24 @@ export function PersonalBookingForm() {
         setSubmitted(true);
       });
 
+      // Primary conversion: the brief was delivered server-side (endpoint) or
+      // as an email draft. Manual mode delivers nothing, so it fires nothing.
+      if (nextMode !== "manual") {
+        trackEvent("booking_brief_submit", {
+          section: "book_personal",
+          label: "personal",
+          mode: nextMode,
+        });
+      }
+
       if (nextMode === "endpoint" && calendarUrl) {
         // href is the base calendar URL only: buildCalUrl appends the
         // visitor's name and email, which must not be sent to analytics.
-        trackEvent("booking_start", {
+        trackEvent("booking_schedule_click", {
           section: "book_personal",
           label: "personal",
           href: calendarUrl,
+          mode: "auto",
         });
         window.setTimeout(() => {
           window.location.assign(
@@ -779,10 +802,11 @@ export function PersonalBookingForm() {
                   rel="noreferrer"
                   referrerPolicy="no-referrer"
                   onClick={() =>
-                    trackEvent("booking_start", {
+                    trackEvent("booking_schedule_click", {
                       section: "book_personal",
                       label: "personal",
                       href: calendarUrl,
+                      mode: "manual",
                     })
                   }
                   className="inline-flex min-h-11 items-center justify-center rounded-[0.45rem] bg-brass px-5 text-sm font-medium text-paper transition hover:bg-brass/90"

@@ -23,6 +23,19 @@ export function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 window.gtag = gtag;
+// Consent Mode v2: deny all storage by default (privacy-first, UK/GDPR).
+// Must be queued before config so GA starts in cookieless modeling mode;
+// the consent banner calls gtag('consent','update',...) once the visitor
+// accepts. wait_for_update holds the first hit briefly for that signal.
+var stored = null;
+try { stored = window.localStorage.getItem('gt-analytics-consent'); } catch (e) {}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: stored === 'granted' ? 'granted' : 'denied',
+  wait_for_update: 500,
+});
 gtag('js', new Date());
 gtag('config', ${JSON.stringify(id)});
           `.trim(),

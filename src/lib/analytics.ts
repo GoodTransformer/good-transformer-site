@@ -8,7 +8,11 @@
 declare global {
   interface Window {
     plausible?: (eventName: string, options?: { props?: Record<string, string> }) => void;
-    gtag?: (command: "event", eventName: string, params?: Record<string, string>) => void;
+    gtag?: (
+      command: "event" | "consent" | "config" | "set",
+      action: string,
+      params?: Record<string, string>,
+    ) => void;
   }
 }
 
@@ -17,23 +21,32 @@ export type AnalyticsProps = {
   section?: string;
   asset?: string;
   href?: string;
+  mode?: string;
 };
 
 export function trackEvent(eventName: string, props: AnalyticsProps = {}) {
   if (typeof window === "undefined" || !eventName) return;
 
-  const payload = {
+  // Plausible keeps the original prop shape (strings only, no empties dropped
+  // for stability across reports).
+  const plausibleProps = {
     label: props.label ?? "",
     section: props.section ?? "",
     asset: props.asset ?? "",
     href: props.href ?? "",
+    mode: props.mode ?? "",
   };
+  window.plausible?.(eventName, { props: plausibleProps });
 
-  window.plausible?.(eventName, { props: payload });
-  window.gtag?.("event", eventName, {
-    event_category: payload.section || "engagement",
-    event_label: payload.label,
-    link_url: payload.href,
-    asset: payload.asset,
-  });
+  // GA4: send native snake_case params, omitting empties so the GA4 UI doesn't
+  // register noisy "(not set)" values. Each of these must be registered once as
+  // an event-scoped custom dimension in GA4 Admin to appear in reports — see
+  // docs/analytics-ga4-setup.md.
+  const gaParams: Record<string, string> = { section: props.section || "engagement" };
+  if (props.label) gaParams.label = props.label;
+  if (props.href) gaParams.link_url = props.href;
+  if (props.asset) gaParams.asset = props.asset;
+  if (props.mode) gaParams.mode = props.mode;
+
+  window.gtag?.("event", eventName, gaParams);
 }
