@@ -167,6 +167,30 @@ function rehypeExternalLinksNewTab() {
   return (tree: HastNode) => visit(tree);
 }
 
+/** Wrap each <table> in a scroll container so wide tables scroll on narrow
+ *  screens instead of being clipped by the page's overflow-x:hidden. */
+function rehypeWrapTables() {
+  const visit = (node: HastNode) => {
+    if (!Array.isArray(node.children)) return;
+    // Recurse into the original children first, then wrap. The wrapper is
+    // created after the descent, so it is never revisited (which would
+    // otherwise re-wrap the table endlessly).
+    for (const child of node.children) visit(child);
+    node.children = node.children.map((child) => {
+      if (child.type === "element" && child.tagName === "table") {
+        return {
+          type: "element",
+          tagName: "div",
+          properties: { className: "insight-prose__table-wrap" },
+          children: [child],
+        } satisfies HastNode;
+      }
+      return child;
+    });
+  };
+  return (tree: HastNode) => visit(tree);
+}
+
 const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
@@ -177,6 +201,7 @@ const processor = unified()
     properties: { className: "insight-prose__anchor" },
   })
   .use(rehypeExternalLinksNewTab)
+  .use(rehypeWrapTables)
   .use(rehypeStringify);
 
 /** A single post with its body rendered to an HTML string. */

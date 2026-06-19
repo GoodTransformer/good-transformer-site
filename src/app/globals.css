@@ -1977,9 +1977,11 @@ details > summary::-webkit-details-marker {
   margin-top: var(--flow-gap);
 }
 
-/* Set-pieces breathe a little more than running text (1.5× the base gap). */
-.insight-prose > :is(figure, pre, table, blockquote) + *,
-.insight-prose > * + :is(figure, pre, table, blockquote) {
+/* Set-pieces breathe a little more than running text (1.5× the base gap).
+   Tables ship wrapped in .insight-prose__table-wrap (for horizontal scroll on
+   narrow screens), so the rhythm targets the wrapper rather than the table. */
+.insight-prose > :is(figure, pre, .insight-prose__table-wrap, blockquote) + *,
+.insight-prose > * + :is(figure, pre, .insight-prose__table-wrap, blockquote) {
   margin-top: calc(var(--flow-gap) * 1.5);
 }
 
@@ -2149,6 +2151,13 @@ details > summary::-webkit-details-marker {
   padding: 0;
   background: transparent;
   color: inherit;
+}
+
+/* Wide tables scroll horizontally inside their own box instead of being
+   clipped by the page's overflow-x:hidden on narrow screens. */
+.insight-prose__table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .insight-prose table {
