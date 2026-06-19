@@ -1,5 +1,5 @@
 ---
-title: "You already have an AI agent: start at the boundary of tedium"
+title: "Start your first AI agent at the boundary of tedium"
 description: "Owners imagine agents as exotic and expensive. The first one should clear your boundary of tedium: work too boring to do yourself and too fiddly to hand off. A practical way to pick it and build the smallest useful version."
 date: 2026-05-22
 type: post

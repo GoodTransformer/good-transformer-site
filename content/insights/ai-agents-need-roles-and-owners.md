@@ -1,13 +1,13 @@
 ---
-title: "A pile of agents is not a team"
+title: "A dozen agents and no one in charge"
 description: "As owners add more AI agents, they hit what every manager of people already knows: capability without roles, ownership and escalation produces chaos. How to organise AI work before it sprawls."
 date: 2026-05-07
 type: post
 voice: brand
 tags: ["ai-agents", "operations", "small-business"]
-cover: /insights/a-pile-of-agents-is-not-a-team/cover.jpg
-coverAlt: "Dark teal cover with several disconnected nodes resolving into an ordered structure and the Good Transformer wordmark, marking an article on organising AI agents into a structured team."
-coverQuote: "Capability without roles is not a team. It is a mess that moves fast."
+cover: /insights/ai-agents-need-roles-and-owners/cover.jpg
+coverAlt: "Dark teal cover with several disconnected nodes resolving into an ordered structure and the Good Transformer wordmark, marking an article on organising AI agents with clear roles and owners."
+coverQuote: "Capability without roles is just a faster kind of mess."
 featured: false
 draft: false
 ---
