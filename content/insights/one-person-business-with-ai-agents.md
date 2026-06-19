@@ -1,5 +1,6 @@
 ---
 title: "Running a one-person business with a team of agents"
+socialSubtitle: "A new class of owners run solo, orchestrating AI agents instead of staff."
 description: "A growing class of owners run alone while orchestrating tools and AI agents instead of staff. What changes about identity, accountability and how you build when your team is mostly software."
 date: 2026-05-20
 type: post

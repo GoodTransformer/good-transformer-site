@@ -1,5 +1,8 @@
 ---
 title: "An AI agent is now in your Office tools. Where do you let it act, and what does it cost?"
+socialTitle: "An AI agent is now in your Office tools. Where do you let it act?"
+socialSubtitle: "An autonomous agent now runs end-to-end in Microsoft 365, billed by the task."
+coverQuote: "An agent that returns finished work is a different kind of colleague."
 description: "Microsoft switched on Copilot Cowork, an autonomous agent in Microsoft 365 billed by the task. The two decisions a leader owes their firm before turning it on."
 date: 2026-06-19
 type: post

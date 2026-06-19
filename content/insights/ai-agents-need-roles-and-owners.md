@@ -1,5 +1,6 @@
 ---
 title: "A dozen agents and no one in charge"
+socialSubtitle: "Capability without roles, ownership and escalation produces chaos."
 description: "As owners add more AI agents, they hit what every manager of people already knows: capability without roles, ownership and escalation produces chaos. How to organise AI work before it sprawls."
 date: 2026-05-07
 type: post

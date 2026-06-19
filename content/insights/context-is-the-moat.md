@@ -1,5 +1,6 @@
 ---
 title: "Context is the moat: teach the AI your business once"
+socialSubtitle: "Write your business context once so AI stops starting from scratch."
 description: "The most valuable thing a small team can build is a reusable context: who you are, your house style, your goals and constraints. Write it once so AI stops starting from scratch and the knowledge stops living in one person's head."
 date: 2026-05-15
 type: post

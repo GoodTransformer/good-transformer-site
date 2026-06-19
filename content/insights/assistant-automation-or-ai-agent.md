@@ -1,5 +1,7 @@
 ---
 title: "Assistant, automation or agent: what does your business actually need?"
+socialTitle: "Assistant, automation or agent: which do you need?"
+socialSubtitle: "A four-level test for how much to hand to AI: Answer, Assist, Automate, Act."
 description: "Assistant, automation or agent? A four-level test for deciding how much to hand to AI, and how much to keep: Answer, Assist, Automate, Act."
 date: 2026-06-12
 type: post

@@ -1,5 +1,6 @@
 ---
 title: "Start with a Minimum Viable Agent, not a moonshot"
+socialSubtitle: "The smallest useful agent that does one repeatable job end to end."
 description: "The cheapest way into agentic AI is the smallest useful agent that does one repeatable job end to end. How to scope it, test it against a real problem, and avoid buying capability you will never use."
 date: 2026-05-19
 type: post

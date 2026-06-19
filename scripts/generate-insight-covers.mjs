@@ -28,6 +28,14 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const CONTENT_DIR = join(ROOT, 'content', 'insights')
 const PUBLIC_DIR = join(ROOT, 'public')
 const FORCE = process.argv.includes('--force')
+// --check: don't write images; just report any card whose copy would be clipped
+// and exit non-zero. Lets the publish flow fail fast on overflowing headlines.
+const CHECK = process.argv.includes('--check')
+
+// Slugs whose social headline/subtitle overflowed its box and had to be
+// ellipsised. A clipped card means the copy needs an explicit, shorter
+// `socialTitle`/`socialSubtitle` in the post frontmatter.
+const overflow = []
 
 const W = 1600
 const H = 900
@@ -88,21 +96,38 @@ function firstQuote(content) {
   return condense(collected.join(' '))
 }
 
-/** Greedy word-wrap into at most maxLines lines of ~maxChars. */
+/** Greedy word-wrap into at most maxLines lines of ~maxChars.
+ *  If the text doesn't fit, the final line is closed with an ellipsis (at a
+ *  word boundary) rather than chopped mid-phrase, and `wrap.truncated` is set
+ *  so callers can warn instead of silently shipping clipped copy. Read
+ *  `wrap.truncated` immediately after the call you care about. */
 function wrap(text, maxChars, maxLines) {
-  const words = text.split(/\s+/)
+  const words = String(text).split(/\s+/).filter(Boolean)
   const lines = []
   let line = ''
+  let consumed = 0
   for (const word of words) {
-    if ((line + ' ' + word).trim().length > maxChars && line) {
+    const tentative = line ? `${line} ${word}` : word
+    if (tentative.length > maxChars && line) {
+      if (lines.length + 1 >= maxLines) break // last allowed line is full; stop
       lines.push(line)
       line = word
     } else {
-      line = (line + ' ' + word).trim()
+      line = tentative
     }
+    consumed += 1
   }
-  if (line) lines.push(line)
-  return lines.slice(0, maxLines)
+  if (line && lines.length < maxLines) lines.push(line)
+
+  wrap.truncated = consumed < words.length
+  if (wrap.truncated && lines.length) {
+    let last = lines[lines.length - 1]
+    while (last && `${last}…`.length > maxChars && /\s/.test(last)) {
+      last = last.replace(/\s*\S+$/, '')
+    }
+    lines[lines.length - 1] = `${last.replace(/[\s,;:.]+$/, '')}…`
+  }
+  return lines
 }
 
 /** Deterministic PRNG so each slug gets a distinct-but-stable composition. */
@@ -116,7 +141,7 @@ function mulberry32(a) {
   }
 }
 
-function buildSvg({ eyebrow, seed, quote }) {
+function buildSvg({ eyebrow, seed, quote, slug }) {
   const rand = mulberry32(seed || 1)
 
   // With a quote, the constellation pulls right so the two never collide.
@@ -193,6 +218,9 @@ function buildSvg({ eyebrow, seed, quote }) {
   let quoteSvg = ''
   if (quote) {
     const qLines = wrap(quote, 22, 4)
+    if (wrap.truncated) {
+      overflow.push(`${slug}: cover quote clipped → "${qLines.join(' ')}" (set a shorter coverQuote, or shorten the post's first blockquote)`)
+    }
     const lh = 60
     const blockTop = Math.round((H - qLines.length * lh) / 2) + 24
     const last = qLines.length - 1
@@ -255,7 +283,7 @@ ${quoteSvg}
 // og:image, never rendered on the site, so it can carry the title without
 // duplicating the heading shown beside the on-site cover. House style: dark
 // teal, crisp bright-teal accent, the attention graph pulled clear to the right.
-function buildSocialSvg({ eyebrow, title, subtitle, seed }) {
+function buildSocialSvg({ eyebrow, title, subtitle, seed, slug }) {
   const rand = mulberry32(seed || 1)
   const SW = 1200
   const SH = 630
@@ -328,8 +356,20 @@ function buildSocialSvg({ eyebrow, title, subtitle, seed }) {
     }
   }
   const lh = Math.round(titleFs * 1.08)
+  // Did the chosen headline drop words? (The fit-loop's later wrap() calls
+  // clobber wrap.truncated, so compare rendered words against the source.)
+  const wordCount = (s) => String(s).split(/\s+/).filter(Boolean).length
+  const titleClipped = wordCount(titleLines.join(' ').replace(/…/g, '')) < wordCount(title)
   const subLines = wrap(subtitle, 46, 2)
+  const subClipped = wrap.truncated
   const subLh = 32
+
+  if (titleClipped) {
+    overflow.push(`${slug}: headline clipped → "${titleLines.join(' ')}" (set a shorter socialTitle)`)
+  }
+  if (subClipped) {
+    overflow.push(`${slug}: subtitle clipped → "${subLines.join(' ')}" (set a shorter socialSubtitle)`)
+  }
   const subGap = 52
   // Centre the headline+subtitle block, but clamp so the last subtitle line
   // never drops past y=512 (≈62px above the wordmark) however tall the title is.
@@ -396,7 +436,7 @@ for (const file of files) {
 
   // On-site cover: attention graph + pull-quote. The title is deliberately NOT
   // drawn — it renders as text beside the cover on the listing/article pages.
-  if (!existsSync(out) || FORCE) {
+  if (CHECK || !existsSync(out) || FORCE) {
     // Quote source, in order of preference: an explicit coverQuote, then the
     // article's first blockquote, then the frontmatter description. The last
     // guarantees auto-published posts never ship a wordless cover even when the
@@ -404,24 +444,40 @@ for (const file of files) {
     const quote =
       (data.coverQuote ? String(data.coverQuote) : firstQuote(content)) ||
       condense(data.description)
-    const svg = buildSvg({ eyebrow, seed: hash(slug), quote })
-    mkdirSync(dirname(out), { recursive: true })
-    await sharp(Buffer.from(svg)).jpeg({ quality: 86 }).toFile(out)
-    made += 1
-    console.log(`✓ ${data.cover}`)
+    // buildSvg records any clipped pull-quote in `overflow` as a side effect.
+    const svg = buildSvg({ eyebrow, seed: hash(slug), quote, slug })
+    if (!CHECK) {
+      mkdirSync(dirname(out), { recursive: true })
+      await sharp(Buffer.from(svg)).jpeg({ quality: 86 }).toFile(out)
+      made += 1
+      console.log(`✓ ${data.cover}`)
+    }
   }
 
   // Social / OG card: headline + subtitle baked in, for sharing only (never
   // shown on-site). Optional socialTitle/socialSubtitle override the defaults.
-  if (!existsSync(socialOut) || FORCE) {
+  if (CHECK || !existsSync(socialOut) || FORCE) {
     const title = String(data.socialTitle ?? data.title ?? slug)
     const subtitle = condense(data.socialSubtitle ?? data.description)
-    const svg = buildSocialSvg({ eyebrow, title, subtitle, seed: hash(slug) })
-    mkdirSync(dirname(socialOut), { recursive: true })
-    await sharp(Buffer.from(svg)).jpeg({ quality: 88 }).toFile(socialOut)
-    made += 1
-    console.log(`✓ ${String(data.cover).replace(/cover\.jpg$/i, 'social.jpg')}`)
+    // buildSocialSvg records any clipping in `overflow` as a side effect.
+    const svg = buildSocialSvg({ eyebrow, title, subtitle, seed: hash(slug), slug })
+    if (!CHECK) {
+      mkdirSync(dirname(socialOut), { recursive: true })
+      await sharp(Buffer.from(svg)).jpeg({ quality: 88 }).toFile(socialOut)
+      made += 1
+      console.log(`✓ ${String(data.cover).replace(/cover\.jpg$/i, 'social.jpg')}`)
+    }
   }
+}
+
+if (overflow.length) {
+  console.error(`\n⚠ ${overflow.length} image(s) have clipped copy:`)
+  for (const w of overflow) console.error(`  • ${w}`)
+}
+
+if (CHECK) {
+  console.log(overflow.length ? '' : '✓ All cover and social card copy fits.')
+  process.exit(overflow.length ? 1 : 0)
 }
 
 console.log(made === 0 ? 'All images already present.' : `Generated ${made} image(s).`)

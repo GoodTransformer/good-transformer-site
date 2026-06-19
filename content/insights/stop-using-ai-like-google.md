@@ -1,5 +1,6 @@
 ---
 title: "Stop using AI like Google"
+socialSubtitle: "Treating a chatbot like a search box is why first-timers give up."
 description: "Most first-time users treat a chatbot like a search box, get underwhelming answers, and give up. The search-engine reflex explains the disappointment. Three habits that shift you to a way of working that actually pays off."
 date: 2026-05-13
 type: post

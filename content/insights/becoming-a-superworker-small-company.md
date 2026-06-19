@@ -1,5 +1,6 @@
 ---
 title: "Becoming a Superworker in a 12-person company"
+socialSubtitle: "In a tiny firm, one AI-amplified person can change the whole business."
 description: "The Superworker, a person whose output is amplified by AI, is usually pitched to big enterprises. In a tiny firm, one amplified person can change the whole business. How to do it to enlarge what people do, not to cut heads."
 date: 2026-05-12
 type: post

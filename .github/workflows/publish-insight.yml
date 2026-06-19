@@ -86,6 +86,9 @@ jobs:
       - name: Validate Insights
         run: node scripts/validate-insights.mjs
 
+      - name: Check social cards fit their copy
+        run: node scripts/generate-insight-covers.mjs --check
+
       - name: Commit & push
         run: |
           git config user.name "good-transformer-bot"
