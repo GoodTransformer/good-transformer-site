@@ -1893,7 +1893,7 @@ details > summary::-webkit-details-marker {
   color: rgb(var(--color-ink));
   letter-spacing: normal;
   scroll-margin-top: 6rem;
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 .insight-prose h2 {
