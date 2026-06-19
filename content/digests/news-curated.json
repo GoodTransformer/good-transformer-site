@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-18",
+  "generatedAt": "2026-06-19",
   "cadence": "weekly",
   "stories": [
     {
-      "id": "anthropic-fable-mythos-global-shutdown",
-      "title": "A frontier model was switched off worldwide overnight, a reminder you borrow AI rather than own it",
-      "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
-      "source": "Fortune",
-      "summary": "A US export-control order pulled Anthropic's two most capable models for every customer globally on a Friday evening, with no restoration date. The lesson for a leader is operational, not political: find where one outside model has quietly become load-bearing in client work, and keep a tested alternative so nothing important stops if it disappears."
+      "id": "copilot-cowork-ga-usage-pricing",
+      "title": "Microsoft switched on an autonomous AI agent inside Microsoft 365, and it bills by the task",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+      "source": "Microsoft",
+      "summary": "Microsoft made Copilot Cowork generally available to every Microsoft 365 Copilot customer worldwide, an agent that runs a multi-step task end to end and hands back a finished result rather than a draft. It is billed by usage in Copilot Credits, so the cost of AI inside Outlook, Teams and Excel moves from a fixed per-seat fee to a bill that rises with how much the agent does. Decide which work an agent may finish without a person signing off, set the spending caps before switching it on, and keep judgement-heavy client work with a human."
     },
     {
-      "id": "openai-adoption-not-model-partner-network",
-      "title": "OpenAI is spending $150m to say the constraint on AI value is your organisation, not the model",
-      "url": "https://openai.com/index/introducing-openai-partner-network/",
-      "source": "OpenAI",
-      "summary": "OpenAI launched a Partner Network backed by $150m and a plan to certify 300,000 consultants, stating plainly that the limiting factor for enterprise AI value is no longer model capability but how organisations redesign workflows and drive adoption. For a smaller firm the reading is not go hire a Big Four, it is that results now depend on the judgement and habits of your own people. Treat AI as a capability question for your team, not a procurement question about which tool to buy."
+      "id": "publicis-sapient-enterprise-ai-readiness-gap",
+      "title": "A new survey finds 73% of firms use AI across most processes, but only 10% say it is core to the business",
+      "url": "https://www.publicissapient.com/company/news/ai-adoption-enterprise-readiness-report-2026",
+      "source": "Publicis Sapient",
+      "summary": "A survey of 1,550 AI decision-makers found 73 percent now use AI across most business processes, while only 10 percent say it is core to how the business runs. The gap is not the tools, it is that few firms have changed the workflows and habits around them. The useful move for a leader is to pick one process and rebuild it as if AI had been there from the start, rather than bolting a tool onto the old way of working."
     },
     {
       "id": "openai-model-drift-deployment-simulation",
@@ -24,18 +24,18 @@
       "summary": "OpenAI published a method that replays around 1.3 million real conversations through a new model before release, built specifically to catch the behaviour changes that ship silently with model updates. The lesson for any firm that has put an AI step into client work is that a process you tested and trusted can drift without notice. Keep a person checking the judgement-heavy output, and re-test on real tasks when something starts to feel different."
     },
     {
+      "id": "anthropic-fable-mythos-global-shutdown",
+      "title": "A frontier model was switched off worldwide overnight, a reminder you borrow AI rather than own it",
+      "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+      "source": "Fortune",
+      "summary": "A US export-control order pulled Anthropic's two most capable models for every customer globally on a Friday evening, with no restoration date. The lesson for a leader is operational, not political: find where one outside model has quietly become load-bearing in client work, and keep a tested alternative so nothing important stops if it disappears."
+    },
+    {
       "id": "eu-ai-act-august-deadline-scope",
       "title": "The EU AI Act's August deadline: check whether it reaches your firm before you act on it",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
       "source": "Council of the EU",
       "summary": "Coverage this week treats 2 August 2026 as a hard EU AI Act deadline, while a provisional 7 May agreement would push the use-based high-risk obligations to December 2027 once it is formally published. For a UK firm the first question is not the date but the scope: the Act only reaches you where you put an AI system on the EU market or its output is used in the EU, and the clearest case for this audience is AI that screens or ranks job applicants for EU roles. A purely UK-facing practice should check that nexus rather than panic about a calendar that may not be its own."
-    },
-    {
-      "id": "prompt-injection-permanent-flaw",
-      "title": "Prompt injection is being called a permanent flaw in AI agents, not a bug that gets patched",
-      "url": "https://www.techtimes.com/articles/318361/20260614/ai-agent-security-hits-its-reckoning-prompt-injection-may-permanent-flaw-not-patchable-bug.htm",
-      "source": "Tech Times",
-      "summary": "As firms wire AI agents into email and documents, security researchers warn that the trick of hiding instructions in the content an agent reads may not be fully fixable. Treat an agent like a junior with no supervision: do not give it standing access to anything you would not let an unsupervised newcomer touch."
     }
   ]
 }
