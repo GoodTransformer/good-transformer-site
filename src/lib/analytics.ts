@@ -2,12 +2,11 @@
 //
 // The delegated click tracker (components/analytics-events.tsx) and any
 // programmatic events (form successes, scheduling redirects) all go through
-// this helper so they produce an identical Plausible + GA4 payload shape and
-// aggregate cleanly in reporting.
+// this helper so they produce a consistent GA4 payload shape and aggregate
+// cleanly in reporting.
 
 declare global {
   interface Window {
-    plausible?: (eventName: string, options?: { props?: Record<string, string> }) => void;
     gtag?: (
       command: "event" | "consent" | "config" | "set",
       action: string,
@@ -26,17 +25,6 @@ export type AnalyticsProps = {
 
 export function trackEvent(eventName: string, props: AnalyticsProps = {}) {
   if (typeof window === "undefined" || !eventName) return;
-
-  // Plausible keeps the original prop shape (strings only, no empties dropped
-  // for stability across reports).
-  const plausibleProps = {
-    label: props.label ?? "",
-    section: props.section ?? "",
-    asset: props.asset ?? "",
-    href: props.href ?? "",
-    mode: props.mode ?? "",
-  };
-  window.plausible?.(eventName, { props: plausibleProps });
 
   // GA4: send native snake_case params, omitting empties so the GA4 UI doesn't
   // register noisy "(not set)" values. Each of these must be registered once as

@@ -71,16 +71,26 @@ on — this is what captures page_view on Next.js client-side navigations (there
 is no manual page_view in the code by design). Verify in DebugView (step 7) by
 clicking between pages and watching `page_view` fire each time.
 
-Also useful and on by default here: Outbound clicks, File downloads, Form
-interactions. Leave them on.
+Also useful and on by default here: Outbound clicks, Form interactions.
+**File downloads is intentionally turned OFF** — the site fires its own richer
+`pdf_download` / `asset_download` events (with section/label/asset dimensions),
+so leaving native `file_download` on would record every download twice under two
+different event names. Note: any *new* download link must carry the
+`data-analytics-event` attribute or it won't be tracked at all.
 
 ---
 
 ## 6. Consent Mode v2 (implemented in code — verify here)
 
 The site sets Consent Mode v2 defaults to **denied** before GA loads
-(`src/components/google-analytics.tsx`) and flips `analytics_storage` to granted
-via the banner (`src/components/consent-banner.tsx`) when a visitor accepts.
+(`src/components/google-analytics.tsx`) and flips all four signals to granted
+via the banner (`src/components/consent-banner.tsx`) when a visitor accepts. A
+returning visitor's stored decision restores all four signals on load (not just
+`analytics_storage`).
+
+GA4 is the **only** analytics tracker on the site. (Earlier code referenced
+Plausible, but no Plausible script was ever installed; that dead code path was
+removed.)
 
 To verify: open the site in a fresh/incognito window, open DebugView, and check
 that before accepting you see consent state denied (modeled traffic), and after
@@ -90,9 +100,10 @@ In GA4, no action is strictly required, but for best modeling enable
 **Consent Mode behavioural/conversion modeling** if prompted in Admin → Data
 Settings, and confirm Google signals settings match your consent posture.
 
-> Follow-up (out of scope for GA, flag for later): the LinkedIn Insight Tag in
-> `layout.tsx` loads independently of this banner. For full UK/PECR compliance
-> it should also be gated behind consent. Track separately.
+> Known/accepted: the LinkedIn Insight Tag in `layout.tsx` loads independently
+> of this banner (before consent). The site owner has chosen to leave it
+> always-on for retargeting reach, accepting the UK/PECR trade-off. Revisit if
+> the compliance posture changes.
 
 ---
 

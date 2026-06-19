@@ -60,9 +60,9 @@ export function ConsentBanner() {
       className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-2xl rounded-[1.25rem] border border-line bg-paper/95 p-5 shadow-glow backdrop-blur md:inset-x-auto md:right-4 md:left-auto md:max-w-md"
     >
       <p className="text-sm leading-6 text-slate">
-        We use privacy-friendly analytics to understand what is useful on this
-        site. May we also enable Google Analytics to measure visits in more
-        detail? You can decline and the site works exactly the same.
+        We&rsquo;d like to use Google Analytics to understand how visitors use
+        this site. It stays off until you agree. You can decline and the site
+        works exactly the same.
       </p>
       <div className="mt-4 flex flex-col gap-2 sm:flex-row">
         <button
