@@ -3,7 +3,7 @@ title: "Every AI agent needs a job description"
 description: "An AI agent is a delegated role, not a feature. Give it what you would give a new hire: a remit, limits, a quality bar, an escalation route, and a named human owner."
 date: 2026-06-04
 type: post
-tags: ["ai-agents", "governance", "ai-adoption"]
+tags: ["ai-agents", "ai-governance", "ai-adoption"]
 cover: /insights/ai-agent-job-description/cover.jpg
 coverAlt: "Dark teal cover with a node-and-edge motif and the Good Transformer wordmark, marking an article on giving AI agents a job description."
 coverQuote: "An agent without an owner is a liability with a login."

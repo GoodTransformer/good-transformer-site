@@ -3,7 +3,7 @@ title: "How to write an AI policy employees will actually use"
 description: "A short, specific AI policy protects a business better than a long one nobody reads. Seven lines that cover the real risks, in language people remember."
 date: 2026-06-07
 type: post
-tags: ["ai-policy", "governance", "small-business"]
+tags: ["ai-policy", "ai-governance", "small-business"]
 cover: /insights/simple-ai-policy-for-small-business/cover.jpg
 coverAlt: "Dark teal cover with a node-and-edge motif and the Good Transformer wordmark, marking an article on writing a practical small-business AI policy."
 coverQuote: "A policy nobody remembers protects nobody."
