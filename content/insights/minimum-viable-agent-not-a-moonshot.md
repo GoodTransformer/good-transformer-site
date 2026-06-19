@@ -14,7 +14,7 @@ draft: false
 
 When a small firm decides to try an AI agent, the instinct is to aim big. If you are going to build something, the thinking goes, make it count: the agent that runs the whole sales pipeline, or handles the entire inbox, or manages every supplier. These are the projects that get sketched on a whiteboard with great enthusiasm and quietly abandoned three weeks later, because they were too big to finish, too complex to trust, and too entangled with everything else to test safely.
 
-There is a better starting point, and it is deliberately humble. Dharmesh Shah, a software founder who builds agent tools, coined the idea of the minimum viable agent: the smallest version that does one useful job from start to finish. Not the grand system you can imagine, but the modest one you can actually stand up this month, watch work, and rely on. For a small firm with no AI department and no time to waste, the minimum viable agent is the only sensible way in.
+There is a better starting point, and it is deliberately humble. Dharmesh Shah, a software founder who builds agent tools, argues for what he calls the minimum viable agent: the smallest version that does one useful job from start to finish. Not the grand system you can imagine, but the modest one you can actually stand up this month, watch work, and rely on. For a small firm with no AI department and no time to waste, the minimum viable agent is the only sensible way in.
 
 ## Why moonshots fail in small firms
 

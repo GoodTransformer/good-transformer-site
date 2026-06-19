@@ -20,7 +20,7 @@ That logic gets the dynamics backwards. For this particular shift, a small firm'
 
 Scale wins when the game is doing more of the same thing cheaply. AI adoption is not that game. It is a behaviour change, a thousand small shifts in how people actually do their work, and behaviour change does not respond to budget the way infrastructure does. You cannot buy your way to a team that uses AI well any faster than you can buy your way to a team that communicates well.
 
-Robyn Agoston, who writes about how work is changing under AI, has noticed where the real movement is coming from. A lot of the genuine innovation, in her reading, is coming not from the largest organisations but from [medium-sized companies](https://workevolved.substack.com/p/predicting-work-in-the-age-of-ai) that have enough resources to experiment but not enough bureaucracy to smother the experiment. They have the means without the drag. That combination is rare at the top of the market and common in the middle of it.
+Robyn Agoston, who writes about how work is changing under AI, points to where the real movement is happening. [A lot of the genuine innovation, she observes, is coming from medium-sized firms](https://workevolved.substack.com/p/predicting-work-in-the-age-of-ai) rather than the largest organisations. The reason is structural: a mid-sized firm has the resources to experiment without the bureaucracy that slows a big one down. They have the means without the drag. That combination is rare at the top of the market and common in the middle of it.
 
 ## The bureaucracy tax on big firms
 

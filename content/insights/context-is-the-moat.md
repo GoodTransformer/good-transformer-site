@@ -40,7 +40,7 @@ A context file is a plain document that captures the things about your business 
 
 ## Building yours in an afternoon
 
-You do not need a project for this. Open a document and write the five sections above in plain sentences, as if briefing a sharp new hire on their first morning. Do not aim for perfect. Aim for true and useful, then improve it as you go. Allie K. Miller, who publishes ready-made prompts for exactly this, describes the goal as giving the model what it needs ["to make AI actually understand you,"](https://www.alliekmiller.com/resources) rather than guessing at you every time. An afternoon gets you a first version that immediately makes every tool work better.
+You do not need a project for this. Open a document and write the five sections above in plain sentences, as if briefing a sharp new hire on their first morning. Do not aim for perfect. Aim for true and useful, then improve it as you go. Allie K. Miller, who publishes ready-made prompts for exactly this, frames the goal as giving the model what it needs to [actually understand your business](https://www.alliekmiller.com/resources), rather than guessing at you every time. An afternoon gets you a first version that immediately makes every tool work better.
 
 Then use it. Paste the relevant parts at the start of a task, or load it into the tools that let you store standing context. The point is that you stop explaining your business from scratch and start every task from a shared, accurate baseline.
 

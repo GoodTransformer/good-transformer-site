@@ -15,7 +15,7 @@ The word "agent" is doing a great deal of work in sales decks at the moment. It 
 
 So the useful question for a leader is rarely "should we use AI here?" It is "how much of this should we actually hand over?" Get that wrong in the ambitious direction and you have bought complexity, cost and risk you did not need. Get it wrong in the timid direction and you leave obvious gains on the table. Either way, the decision deserves more than a vibe.
 
-It helps to know that even the people building these systems argue for restraint. Anthropic, which makes the Claude models, puts it plainly in its engineering guidance [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) (December 2024): "find the simplest solution possible, and only increase complexity when needed." For many tasks, the same guidance notes, a single well-set-up model call is enough. That is a vendor telling you to buy less autonomy than you might assume, which is worth listening to.
+It helps to know that even the people building these systems argue for restraint. Anthropic, which makes the Claude models, says so plainly in its engineering guidance [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) (December 2024): it recommends "finding the simplest solution possible, and only increasing complexity when needed." For many tasks, the same guidance notes, a single well-set-up model call is enough. That is a vendor telling you to buy less autonomy than you might assume, which is worth listening to.
 
 ## Four levels of AI delegation
 
@@ -27,7 +27,7 @@ We find it clearer to think in four levels rather than three product categories.
 
 **Automate.** Here the work runs without a person triggering each step. Crucially, it still follows a fixed, predefined path. Anthropic draws exactly this line: workflows are "systems where LLMs and tools are orchestrated through predefined code paths." When a CV lands in the inbox, fields are extracted and written to your applicant system; when an invoice arrives, it is categorised and queued. Predictable inputs, predictable route, predictable outputs. The intelligence is in the design, not in the running.
 
-**Act.** Only at this level do you have an agent in the strong sense: a system that, in Anthropic's words, "dynamically directs its own processes and tool usage," deciding the steps itself and taking actions that land in the real world. It might message a candidate, move money, change a record, or reply to a customer on its own initiative. This is genuinely powerful and genuinely the most demanding to govern, because you are delegating not just the work but the judgement about how to do it.
+**Act.** Only at this level do you have an agent in the strong sense: a system where, in Anthropic's words, "LLMs dynamically direct their own processes and tool usage," deciding the steps itself and taking actions that land in the real world. It might message a candidate, move money, change a record, or reply to a customer on its own initiative. This is genuinely powerful and genuinely the most demanding to govern, because you are delegating not just the work but the judgement about how to do it.
 
 The mistake we see most often is treating these as a ladder you are supposed to climb, with "Act" as the prize. It is not. The goal is the lowest level that does the job well.
 

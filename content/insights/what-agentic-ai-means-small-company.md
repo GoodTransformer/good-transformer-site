@@ -14,7 +14,7 @@ draft: false
 
 "Agentic AI" is everywhere at the moment, and almost all of it is written for companies with a thousand staff and a technology budget to match. For an owner of a ten-person firm, the phrase mostly produces a vague sense of being behind, without much idea of what it would actually mean on a Tuesday. So here is the plain version, stripped of the conference language: an agent is software that can take several steps on its own toward a goal you set, rather than waiting for you to direct each step.
 
-That is the whole of it. An ordinary assistant answers when you ask. An agent, given a goal, will go and do a short sequence of things to reach it: look something up, use that to do the next thing, check a condition, produce a result. Azeem Azhar, who writes about where the technology is heading, describes agents working in the background as ["an extension of your will,"](https://www.exponentialview.co/p/ai-in-2030) carrying out your intent without you steering every move. For a small firm the useful question is not whether this is impressive. It is which jobs it can genuinely take on, and which it cannot yet be trusted with.
+That is the whole of it. An ordinary assistant answers when you ask. An agent, given a goal, will go and do a short sequence of things to reach it: look something up, use that to do the next thing, check a condition, produce a result. Azeem Azhar, who writes about where the technology is heading, imagines a future personal AI that acts as ["an extension of your will,"](https://www.exponentialview.co/p/ai-in-2030) carrying out your intent in the background without you steering every move. For a small firm the useful question is not whether this is impressive. It is which jobs it can genuinely take on, and which it cannot yet be trusted with.
 
 ## A plain definition of an agent
 
@@ -63,4 +63,4 @@ Working out which jobs are genuinely ready for an agent, and where to put the hu
 ## Sources and further reading
 
 - [Nate B. Jones, "Executive Briefing: Your 2025 AI Agent Playbook in 10 Minutes," Nate's Newsletter](https://natesnewsletter.substack.com/p/executive-briefing-your-2025-ai-agent), 2025. A clean version of the review-and-proceed pattern: AI drafts, a human checks, the AI carries on.
-- [Azeem Azhar, "AI in 2030," Exponential View](https://www.exponentialview.co/p/ai-in-2030), 10 May 2025. His description of agents working in the background as an extension of your will.
+- [Azeem Azhar, "AI in 2030," Exponential View](https://www.exponentialview.co/p/ai-in-2030), 10 May 2025. His description of a future personal AI as an extension of your will.
