@@ -1,7 +1,8 @@
 ---
-title: "AI decisions about people: the UK rules changed, and a rubber stamp won't pass"
+title: "Using AI to screen candidates or score clients? The UK rules changed this year"
 description: "The UK's automated decision rules changed this year. What it means for firms using AI to screen candidates or sort clients, and the test the ICO applies to your human review."
 date: 2026-06-20
+updated: 2026-06-20
 type: post
 voice: brand
 tags: ["ai-regulation", "recruitment", "leadership"]
