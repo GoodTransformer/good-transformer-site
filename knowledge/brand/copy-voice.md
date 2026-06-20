@@ -123,6 +123,69 @@ Insights default to Good Transformer's brand voice:
 - First-person Patrick articles must set `voice: patrick` and
   `author: "Patrick Hussey"` in frontmatter.
 
+### Plain English — always
+
+No sentence should require industry knowledge to decode. If a concept has a name, explain what it means before using the name.
+
+Jargon to avoid in Insights copy:
+
+| ❌ Jargon | ✅ Plain version |
+|---|---|
+| Structural shift | The shape of the work is changing |
+| Governance overhead | The rules and checks around the work |
+| Accountability pathways | Who is responsible for what |
+| Validation hierarchies | Who reviews what, and in what order |
+| Complementary changes | Changes to the process that sit around the tool |
+| Operationalise | Put into practice / build into the workflow |
+| Strategic reinvestment | Deliberately using saved time on something that matters |
+
+Coined terms from named researchers (productivity J-curve, jagged frontier, centaur/cyborg) are allowed but must be defined in plain English immediately after first use. Do not assume the reader has seen the source.
+
+### Orient the reader in the opening
+
+The first paragraph of every Insights post must answer three questions:
+
+1. **Who is this for?** (Name the situation, not a job title: "if you've run a pilot that worked and then watched it go nowhere" or "if your team has AI tools and isn't sure how to use them well")
+2. **What is this post about?** In one plain sentence.
+3. **Why does it matter now?** What happens if they don't read this, or what will they be able to do after they do?
+
+Never open with abstract framing, survey statistics, or a concept name before you've told the reader why they should care. Data and frameworks earn their place once the reader knows why they are relevant to them.
+
+**Bad opening:** "AI is not a productivity upgrade. It's a structural shift. Most organisations approach AI adoption like purchasing faster hardware."
+
+**Good opening:** "Most teams use AI to do the same things faster. That isn't wrong, but it leaves most of the value on the table. The harder question is what you do with the time AI frees up, and most organisations never ask it."
+
+### Titles and subheadings
+
+Post titles should tell the reader exactly what they will get. A reader skimming the Insights index should know from the title alone whether the post is for them.
+
+**Titles:**
+- Concrete and specific over clever: "Why your AI pilot didn't scale" beats "The Gap Between Feasibility and Adoption"
+- The subtitle (description field) adds the one thing the title couldn't: "Successful pilots that quietly die are the most common pattern in AI adoption. The reasons are predictable, and mostly fixable."
+- No title should be another thinker's direct quote or article title, even with credit in the body.
+
+**Subheadings (h2 and h3):**
+- Should be clear statements a reader can understand without reading the section
+- "The three gaps that kill it" is fine. "The productivity framing has a ceiling" is not: it requires the reader to already know what framing is being discussed.
+- A subheading should tell the reader what to expect, not tease them into reading to find out.
+
+**Good subheadings:** "Why good pilot numbers lie" / "What to do instead" / "The honest limits"
+
+**Weak subheadings:** "The structural imperative" / "Reimagining the adoption stack" / "Complementary change dynamics"
+
+### End with something the reader can do on Monday
+
+Every Insights post must close with a specific, named action. Not "consider redesigning your approach" or "think carefully about which workflows matter." Something a real person can do without asking a follow-up question.
+
+The "What to do next" section should name:
+- The action (one verb)
+- What to do it to (one specific thing)
+- What the output is or what "done" looks like
+
+**Bad:** "Think carefully about whether your workflows are suited to AI."
+
+**Good:** "Pick one recurring task your team does at least weekly. Map every step it involves, including the informal ones. Mark which steps exist because a person was doing it by hand. That list is where to start."
+
 ---
 
 ## What Good Transformer is not
