@@ -6,7 +6,7 @@ export type LinkItem = {
 
 export type LessonFormat = {
   name: string;
-  duration: string;
+  stage: string;
   body: string;
 };
 
@@ -473,27 +473,27 @@ export const lessonFormats: {
   delivery: string;
   formats: LessonFormat[];
 } = {
-  heading: "Choose the support that fits",
+  heading: "What working together tends to look like",
   delivery:
-    "Sessions run online, at your office, or at a co-working space. The format is agreed on your discovery call.",
+    "The shape is agreed on your discovery call, never booked off a menu. Sessions run online, at your office, or at a co-working space.",
   formats: [
     {
-      name: "Intro lesson",
-      duration: "1 hr",
+      name: "A first lesson",
+      stage: "Where most people start",
       body:
-        "A single session tailored to your skill level, your tools, and the work that matters most to you. You leave with something you can use straight away.",
+        "A single session shaped around your skill level, your tools, and the work that matters most to you. You leave with something you can use straight away.",
     },
     {
-      name: "Starter pack",
-      duration: "3 × 1 hr",
+      name: "A short series",
+      stage: "Going deeper",
       body:
-        "Three sessions that build in sequence. Go deeper on the tools that suit your work, form habits that stick, and develop a workflow you can keep running.",
+        "A handful of sessions that build in sequence. Go deeper on the tools that suit your work, form habits that stick, and develop a workflow you can keep running.",
     },
     {
-      name: "Ongoing rhythm",
-      duration: "2 × 1 hr + async support",
+      name: "An ongoing rhythm",
+      stage: "Staying in rhythm",
       body:
-        "Two sessions per month plus support between them. For leaders who want to keep moving: new tools, new challenges, accountability, and someone to think with.",
+        "Regular sessions plus support between them, for leaders who want to keep moving: new tools, new challenges, accountability, and someone to think with.",
     },
   ],
 };
@@ -712,7 +712,7 @@ export const leaderLessonsPage: ServiceDetailPage & {
   lessonSection: {
     heading: "Lessons shaped around the leader in front of me",
     intro:
-      "Some leaders need a first confident hour. Some need a short run of sessions to build habits. Some need an ongoing rhythm as the tools and business questions keep changing.",
+      "Some leaders need a first confident step. Some need a short run of sessions to build habits. Some need an ongoing rhythm as the tools and business questions keep changing.",
   },
   proof: {
     heading: "Experience without the theatre",
