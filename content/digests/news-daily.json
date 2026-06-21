@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-20",
+  "generatedAt": "2026-06-21",
   "cadence": "daily",
   "stories": [
     {
-      "id": "copilot-cowork-ga-usage-pricing",
-      "title": "Microsoft switched on an autonomous AI agent inside Microsoft 365, and it bills by the task",
-      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
-      "source": "Microsoft",
-      "summary": "Microsoft made Copilot Cowork generally available to every Microsoft 365 Copilot customer worldwide, an agent that runs a multi-step task end to end and hands back a finished result rather than a draft. It is billed by usage in Copilot Credits, so the cost of AI inside Outlook, Teams and Excel moves from a fixed per-seat fee to a bill that rises with how much the agent does. Decide which work an agent may finish without a person signing off, set the spending caps before switching it on, and keep judgement-heavy client work with a human."
+      "id": "pwc-ai-jobs-barometer-2026-two-track",
+      "title": "AI is splitting work into two tracks, and the pay gap is widening with it",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html",
+      "source": "PwC",
+      "summary": "PwC's 2026 Global AI Jobs Barometer, drawn from more than a billion job ads, finds AI splitting work into two tracks: professionalised roles, where AI amplifies an expert, are growing about twice as fast as democratised ones where AI lets non-experts do the job, and the wage premium for AI skills has risen to 62 percent. The useful question for a leader is which of your own roles AI is making more expert-led and which it is commoditising, because that is where pay, hiring and margin are now moving. Treat it as a map of where to invest in people, not just which tool to buy."
     },
     {
-      "id": "anthropic-fable-mythos-global-shutdown",
-      "title": "A frontier model was switched off worldwide overnight, a reminder you borrow AI rather than own it",
-      "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
-      "source": "Fortune",
-      "summary": "A US export-control order pulled Anthropic's two most capable models for every customer globally on a Friday evening, with no restoration date. The lesson for a leader is operational, not political: find where one outside model has quietly become load-bearing in client work, and keep a tested alternative so nothing important stops if it disappears."
+      "id": "msft-work-trend-index-2026-leadership-alignment",
+      "title": "Only about one in four workers say their leaders agree on what AI is for",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+      "source": "Microsoft",
+      "summary": "Microsoft's 2026 Work Trend Index, a survey of 20,000 workers across ten markets including the UK, found only about one in four AI users (26 percent) say their leadership is clearly and consistently aligned on AI. It also found that workplace conditions, culture, manager support and how people are evaluated account for more than twice the value people get from AI than individual effort does. The takeaway is that the bottleneck is rarely the staff or the tools, it is leaders agreeing what AI is for and changing how work is measured to match."
     }
   ]
 }

@@ -1,17 +1,24 @@
 {
-  "generatedAt": "2026-06-20",
+  "generatedAt": "2026-06-21",
   "cadence": "weekly",
   "stories": [
+    {
+      "id": "pwc-ai-jobs-barometer-2026-apprenticeship",
+      "title": "AI is removing the junior work that used to train people, and asking for senior judgement earlier",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html",
+      "source": "PwC",
+      "summary": "PwC's 2026 Global AI Jobs Barometer, drawn from more than a billion job ads, finds that AI-exposed entry-level roles are now seven times more likely to demand traditionally senior skills like judgement and leadership, and that AI is taking the routine work that once acted as an apprenticeship. The risk for most firms is not redundancies but quietly not replacing the junior rung, then finding the pipeline of experienced people has dried up. The move for a leader is to decide on purpose how people now build judgement, rather than letting the apprenticeship erode by default."
+    },
     {
       "id": "copilot-cowork-ga-usage-pricing",
       "title": "Microsoft switched on an autonomous AI agent inside Microsoft 365, and it bills by the task",
       "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
       "source": "Microsoft",
-      "summary": "Microsoft made Copilot Cowork generally available to every Microsoft 365 Copilot customer worldwide, an agent that runs a multi-step task end to end and hands back a finished result rather than a draft. It is billed by usage in Copilot Credits, so the cost of AI inside Outlook, Teams and Excel moves from a fixed per-seat fee to a bill that rises with how much the agent does. Decide which work an agent may finish without a person signing off, set the spending caps before switching it on, and keep judgement-heavy client work with a human."
+      "summary": "Microsoft made Copilot Cowork generally available to every Microsoft 365 Copilot customer, an agent that runs a multi-step task end to end and hands back a finished result rather than a draft. It is billed by usage in Copilot Credits, so the cost of AI inside Outlook, Teams and Excel moves from a fixed per-seat fee to a bill that rises with how much the agent does. Decide which work an agent may finish without a person signing off, set spending caps before switching it on, and keep judgement-heavy client work with a human."
     },
     {
       "id": "publicis-sapient-enterprise-ai-readiness-gap",
-      "title": "A new survey finds 73% of firms use AI across most processes, but only 10% say it is core to the business",
+      "title": "A survey finds 73% of firms use AI across most processes, but only 10% say it is core to the business",
       "url": "https://www.publicissapient.com/company/news/ai-adoption-enterprise-readiness-report-2026",
       "source": "Publicis Sapient",
       "summary": "A survey of 1,550 AI decision-makers found 73 percent now use AI across most business processes, while only 10 percent say it is core to how the business runs. The gap is not the tools, it is that few firms have changed the workflows and habits around them. The useful move for a leader is to pick one process and rebuild it as if AI had been there from the start, rather than bolting a tool onto the old way of working."
@@ -21,21 +28,14 @@
       "title": "Your AI vendor can change the model under you with no warning, and OpenAI just published the proof",
       "url": "https://openai.com/index/deployment-simulation/",
       "source": "OpenAI",
-      "summary": "OpenAI published a method that replays around 1.3 million real conversations through a new model before release, built specifically to catch the behaviour changes that ship silently with model updates. The lesson for any firm that has put an AI step into client work is that a process you tested and trusted can drift without notice. Keep a person checking the judgement-heavy output, and re-test on real tasks when something starts to feel different."
+      "summary": "OpenAI published a method that replays around 1.3 million real conversations through a new model before release, built to catch the behaviour changes that ship silently with model updates. The lesson for any firm that has put an AI step into client work is that a process you tested and trusted can drift without notice. Keep a person checking the judgement-heavy output, and re-test on real tasks when something starts to feel different."
     },
     {
-      "id": "anthropic-fable-mythos-global-shutdown",
-      "title": "A frontier model was switched off worldwide overnight, a reminder you borrow AI rather than own it",
-      "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
-      "source": "Fortune",
-      "summary": "A US export-control order pulled Anthropic's two most capable models for every customer globally on a Friday evening, with no restoration date. The lesson for a leader is operational, not political: find where one outside model has quietly become load-bearing in client work, and keep a tested alternative so nothing important stops if it disappears."
-    },
-    {
-      "id": "eu-ai-act-august-deadline-scope",
-      "title": "The EU AI Act's August deadline: check whether it reaches your firm before you act on it",
-      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
-      "source": "Council of the EU",
-      "summary": "Coverage this week treats 2 August 2026 as a hard EU AI Act deadline, while a provisional 7 May agreement would push the use-based high-risk obligations to December 2027 once it is formally published. For a UK firm the first question is not the date but the scope: the Act only reaches you where you put an AI system on the EU market or its output is used in the EU, and the clearest case for this audience is AI that screens or ranks job applicants for EU roles. A purely UK-facing practice should check that nexus rather than panic about a calendar that may not be its own."
+      "id": "gpt-5-6-launch-nears",
+      "title": "OpenAI's GPT-5.6 is close, billed as a meaningful step up, but not yet shipped",
+      "url": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+      "source": "Tech Times",
+      "summary": "OpenAI's next flagship, GPT-5.6, is being described by its chief scientist as a meaningful leap, with market odds pointing to a release in the next week or two. A new top model is worth noting, but there is no decision to make until it ships and you can test it on your own work. Watch for the release rather than acting on the billing."
     }
   ]
 }
