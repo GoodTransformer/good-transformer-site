@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-21",
+  "generatedAt": "2026-06-22",
   "cadence": "daily",
   "stories": [
     {
-      "id": "pwc-ai-jobs-barometer-2026-two-track",
-      "title": "AI is splitting work into two tracks, and the pay gap is widening with it",
-      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html",
-      "source": "PwC",
-      "summary": "PwC's 2026 Global AI Jobs Barometer, drawn from more than a billion job ads, finds AI splitting work into two tracks: professionalised roles, where AI amplifies an expert, are growing about twice as fast as democratised ones where AI lets non-experts do the job, and the wage premium for AI skills has risen to 62 percent. The useful question for a leader is which of your own roles AI is making more expert-led and which it is commoditising, because that is where pay, hiring and margin are now moving. Treat it as a map of where to invest in people, not just which tool to buy."
+      "id": "aws-summit-ny-agent-context-security",
+      "title": "AWS says AI agents need business context and guardrails, and launched tools to add both",
+      "url": "https://www.aboutamazon.com/news/aws/aws-summit-nyc-2026-ai-agents",
+      "source": "Amazon",
+      "summary": "At its New York summit, AWS launched Context, a knowledge graph that feeds an agent the business information it needs to answer well, and a security agent that starts in a supervised mode and earns the right to act on its own only as you grant it. The wider point for any firm turning on agents is that an agent is only as useful as the context you give it and only as safe as the limits you set, and most have neither by default. Before letting an agent near real work, decide what it can see and what it is allowed to finish without a person signing off."
     },
     {
-      "id": "msft-work-trend-index-2026-leadership-alignment",
-      "title": "Only about one in four workers say their leaders agree on what AI is for",
-      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
-      "source": "Microsoft",
-      "summary": "Microsoft's 2026 Work Trend Index, a survey of 20,000 workers across ten markets including the UK, found only about one in four AI users (26 percent) say their leadership is clearly and consistently aligned on AI. It also found that workplace conditions, culture, manager support and how people are evaluated account for more than twice the value people get from AI than individual effort does. The takeaway is that the bottleneck is rarely the staff or the tools, it is leaders agreeing what AI is for and changing how work is measured to match."
+      "id": "berkeley-ai-grade-inflation-2026",
+      "title": "A study of 500,000 grades suggests AI is lifting output, not skill",
+      "url": "https://cshe.berkeley.edu/publications/artificial-intelligence-and-grade-inflation-cshe-higher-education-working-paper-series",
+      "source": "UC Berkeley CSHE",
+      "summary": "A UC Berkeley analysis of more than 500,000 university grades found marks rose sharply in writing and coding courses after ChatGPT, with the jump concentrated in take-home work rather than exams, a sign students used AI to produce the work rather than to learn it. The same gap can open in a firm, where AI makes the output look better while the underlying skill quietly stops growing. When your team leans on AI, check whether they are learning the work or only producing it, because that difference shows up later in who can actually judge the result."
     }
   ]
 }
