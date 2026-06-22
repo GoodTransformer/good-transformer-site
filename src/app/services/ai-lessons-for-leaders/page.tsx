@@ -138,7 +138,7 @@ export default function LeaderLessonsPage() {
           <AnimatedReveal className="mt-10 grid gap-5 md:grid-cols-3">
             {lessonFormats.formats.map((format) => (
               <div key={format.name} className="border-t border-line pt-5">
-                <p className="page-eyebrow">{format.duration}</p>
+                <p className="page-eyebrow">{format.stage}</p>
                 <h3 className="mt-3 font-serif text-[2rem] leading-tight text-ink">
                   {format.name}
                 </h3>
