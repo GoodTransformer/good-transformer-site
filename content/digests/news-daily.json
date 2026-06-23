@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-22",
+  "generatedAt": "2026-06-23",
   "cadence": "daily",
   "stories": [
     {
-      "id": "aws-summit-ny-agent-context-security",
-      "title": "AWS says AI agents need business context and guardrails, and launched tools to add both",
-      "url": "https://www.aboutamazon.com/news/aws/aws-summit-nyc-2026-ai-agents",
-      "source": "Amazon",
-      "summary": "At its New York summit, AWS launched Context, a knowledge graph that feeds an agent the business information it needs to answer well, and a security agent that starts in a supervised mode and earns the right to act on its own only as you grant it. The wider point for any firm turning on agents is that an agent is only as useful as the context you give it and only as safe as the limits you set, and most have neither by default. Before letting an agent near real work, decide what it can see and what it is allowed to finish without a person signing off."
+      "id": "thomson-reuters-ai-professional-services-2026",
+      "title": "Most firms now use AI, but only 18% check whether it pays",
+      "url": "https://www.thomsonreuters.com/en-us/posts/technology/ai-in-professional-services-report-2026/",
+      "source": "Thomson Reuters Institute",
+      "summary": "Thomson Reuters' 2026 report finds AI adoption across professional services has passed critical mass, yet only 18% of firms track the business value it returns, and 40% have had different clients tell them both to use and not to use AI on their work. The useful moves are to set a clear, client-facing position on when the firm uses AI, and to measure a pilot or two on quality and time saved rather than on how much the tool gets used. For most leaders the harder work now is proving each use earns its place."
     },
     {
-      "id": "berkeley-ai-grade-inflation-2026",
-      "title": "A study of 500,000 grades suggests AI is lifting output, not skill",
-      "url": "https://cshe.berkeley.edu/publications/artificial-intelligence-and-grade-inflation-cshe-higher-education-working-paper-series",
-      "source": "UC Berkeley CSHE",
-      "summary": "A UC Berkeley analysis of more than 500,000 university grades found marks rose sharply in writing and coding courses after ChatGPT, with the jump concentrated in take-home work rather than exams, a sign students used AI to produce the work rather than to learn it. The same gap can open in a firm, where AI makes the output look better while the underlying skill quietly stops growing. When your team leans on AI, check whether they are learning the work or only producing it, because that difference shows up later in who can actually judge the result."
+      "id": "openai-enterprise-spend-controls",
+      "title": "OpenAI added spend controls and usage analytics for business accounts",
+      "url": "https://openai.com/index/chatgpt-enterprise-spend-controls/",
+      "source": "OpenAI",
+      "summary": "OpenAI has added usage analytics and updated spend controls for its enterprise customers, letting an organisation see where AI use is concentrated and cap what it costs. As AI moves to pricing that rises with how much the tool does, these controls are the practical answer to a bill that can otherwise climb unseen. If your firm runs AI on a business plan, set the caps and review the usage before the spend becomes a habit no one chose."
     }
   ]
 }
