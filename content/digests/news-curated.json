@@ -1,7 +1,14 @@
 {
-  "generatedAt": "2026-06-23",
+  "generatedAt": "2026-06-24",
   "cadence": "weekly",
   "stories": [
+    {
+      "id": "anthropic-claude-tag-slack-ambient-agent",
+      "title": "Anthropic put an AI teammate in Slack that anyone can tag and that can act on its own",
+      "url": "https://www.anthropic.com/news/introducing-claude-tag",
+      "source": "Anthropic",
+      "summary": "Anthropic launched Claude Tag, an agent that sits in a Slack channel as a shared team member: anyone can tag it to delegate work, it remembers context from the channels it is in, and an optional ambient mode lets it flag things and chase quiet threads without being asked. It moves AI from a tool you open for one task to something always present in the space where work happens. Before a team starts tagging, a leader should decide what it is allowed to see and retain across shared channels, and where it stays reactive rather than acting on its own."
+    },
     {
       "id": "ai-enabled-fraud-uk-finance-2026",
       "title": "AI has removed the tells that used to help staff spot a scam",
@@ -10,32 +17,25 @@
       "summary": "The UK Finance Annual Fraud Report 2026 reports authorised push payment fraud up 19% to £576.4 million last year, with criminals using AI for cloned voices, deepfakes and clean, personalised scam messages. The old signals staff relied on, poor grammar and a generic greeting, are gone, and a convincing fake of a director now costs a few thousand pounds. Decide that money moving and sensitive data leaving the firm are confirmed through a second channel on a known number, never on the strength of the message that asked."
     },
     {
-      "id": "openai-daybreak-cyber-inflection",
-      "title": "OpenAI says AI has changed the balance of cyber attack and defence",
-      "url": "https://openai.com/index/daybreak-securing-the-world/",
-      "source": "OpenAI",
-      "summary": "OpenAI launched Daybreak, a set of tools and an updated GPT-5.5-Cyber model meant to help defenders find and patch software flaws as fast as AI can now find them, calling cyber defence an inflection point. Anthropic's parallel research found attackers using AI deeper in the attack chain, letting less-skilled actors do damage that used to need real expertise. Most firms will not buy these tools, but the signal for any leader is that the attacks reaching their staff are getting cheaper, faster and more convincing."
+      "id": "thomson-reuters-ai-professional-services-2026",
+      "title": "AI adoption has hit critical mass in professional services, but value tracking lags",
+      "url": "https://www.thomsonreuters.com/en-us/posts/technology/ai-in-professional-services-report-2026/",
+      "source": "Thomson Reuters Institute",
+      "summary": "Thomson Reuters' 2026 report finds most professional-services firms now use AI, while only 18% track the business value it returns and many receive conflicting instructions from clients on whether to use it. The practical moves are to set a clear position with clients on when the firm uses AI, and to measure a pilot or two on quality and time rather than on how much the tool gets used. For most leaders the harder work now is proving each use earns its place."
     },
     {
       "id": "pwc-ai-jobs-barometer-2026-apprenticeship",
       "title": "AI is removing the junior work that used to train people, and asking for senior judgement earlier",
       "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html",
       "source": "PwC",
-      "summary": "PwC's 2026 Global AI Jobs Barometer, drawn from more than a billion job ads, finds that AI-exposed entry-level roles are now seven times more likely to demand traditionally senior skills like judgement and leadership, and that AI is taking the routine work that once acted as an apprenticeship. The risk for most firms is not redundancies but quietly not replacing the junior rung, then finding the pipeline of experienced people has dried up. The move for a leader is to decide on purpose how people now build judgement, rather than letting the apprenticeship erode by default."
+      "summary": "PwC's 2026 Global AI Jobs Barometer, drawn from more than a billion job ads, finds AI-exposed entry-level roles increasingly asked for traditionally senior skills like judgement and leadership, while AI takes the routine work that once acted as an apprenticeship. The risk for most firms is not redundancies but quietly not replacing the junior rung, then finding the pipeline of experienced people has dried up. The move for a leader is to decide on purpose how people now build judgement, rather than letting the apprenticeship erode by default."
     },
     {
-      "id": "copilot-cowork-ga-usage-pricing",
-      "title": "Microsoft switched on an autonomous AI agent inside Microsoft 365, and it bills by the task",
-      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
-      "source": "Microsoft",
-      "summary": "Microsoft made Copilot Cowork generally available to every Microsoft 365 Copilot customer, an agent that runs a multi-step task end to end and hands back a finished result rather than a draft. It is billed by usage in Copilot Credits, so the cost of AI inside Outlook, Teams and Excel moves from a fixed per-seat fee to a bill that rises with how much the agent does. Decide which work an agent may finish without a person signing off, set spending caps before switching it on, and keep judgement-heavy client work with a human."
-    },
-    {
-      "id": "thomson-reuters-ai-professional-services-2026",
-      "title": "AI adoption has hit critical mass in professional services, but value tracking lags",
-      "url": "https://www.thomsonreuters.com/en-us/posts/technology/ai-in-professional-services-report-2026/",
-      "source": "Thomson Reuters Institute",
-      "summary": "Thomson Reuters' 2026 report finds most professional-services firms now use AI, while only 18% track the business value it returns and 40% have had clients give conflicting instructions on whether to use it. The practical moves are to set a clear position with clients on when the firm uses AI, and to measure a pilot or two on quality and time rather than on how much the tool gets used. For most leaders the harder work now is proving each use earns its place."
+      "id": "openai-daybreak-cyber-inflection",
+      "title": "The labs say AI has shifted the balance between cyber attack and defence",
+      "url": "https://openai.com/index/daybreak-securing-the-world/",
+      "source": "OpenAI",
+      "summary": "OpenAI launched Daybreak, a set of tools and an updated GPT-5.5-Cyber model meant to help defenders find and patch software flaws as fast as AI can now find them, calling cyber defence an inflection point. Anthropic's parallel research found attackers using AI deeper in the attack chain, letting less-skilled actors do damage that used to need real expertise. Most firms will not buy these tools, but the signal for any leader is that the attacks reaching their staff are getting cheaper, faster and more convincing."
     }
   ]
 }

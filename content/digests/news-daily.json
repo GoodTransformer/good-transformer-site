@@ -1,20 +1,13 @@
 {
-  "generatedAt": "2026-06-23",
+  "generatedAt": "2026-06-24",
   "cadence": "daily",
   "stories": [
     {
-      "id": "thomson-reuters-ai-professional-services-2026",
-      "title": "Most firms now use AI, but only 18% check whether it pays",
-      "url": "https://www.thomsonreuters.com/en-us/posts/technology/ai-in-professional-services-report-2026/",
-      "source": "Thomson Reuters Institute",
-      "summary": "Thomson Reuters' 2026 report finds AI adoption across professional services has passed critical mass, yet only 18% of firms track the business value it returns, and 40% have had different clients tell them both to use and not to use AI on their work. The useful moves are to set a clear, client-facing position on when the firm uses AI, and to measure a pilot or two on quality and time saved rather than on how much the tool gets used. For most leaders the harder work now is proving each use earns its place."
-    },
-    {
-      "id": "openai-enterprise-spend-controls",
-      "title": "OpenAI added spend controls and usage analytics for business accounts",
-      "url": "https://openai.com/index/chatgpt-enterprise-spend-controls/",
+      "id": "openai-daybreak-cyber-inflection",
+      "title": "The labs say AI has shifted the balance between cyber attack and defence",
+      "url": "https://openai.com/index/daybreak-securing-the-world/",
       "source": "OpenAI",
-      "summary": "OpenAI has added usage analytics and updated spend controls for its enterprise customers, letting an organisation see where AI use is concentrated and cap what it costs. As AI moves to pricing that rises with how much the tool does, these controls are the practical answer to a bill that can otherwise climb unseen. If your firm runs AI on a business plan, set the caps and review the usage before the spend becomes a habit no one chose."
+      "summary": "OpenAI launched Daybreak, a set of tools and an updated GPT-5.5-Cyber model meant to help defenders find and patch software flaws as fast as AI can now find them, calling cyber defence an inflection point. Anthropic's parallel research found attackers using AI deeper in the attack chain, letting less-skilled actors do damage that used to need real expertise. Most firms will not buy a tool like this, so the useful response is not a purchase but a process: assume the messages reaching your staff are cleaner and more convincing than before, and confirm anything that moves money or data through a second channel."
     }
   ]
 }
