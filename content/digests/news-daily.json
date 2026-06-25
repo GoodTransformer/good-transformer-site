@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-24",
+  "generatedAt": "2026-06-25",
   "cadence": "daily",
   "stories": [
     {
-      "id": "openai-daybreak-cyber-inflection",
-      "title": "The labs say AI has shifted the balance between cyber attack and defence",
-      "url": "https://openai.com/index/daybreak-securing-the-world/",
-      "source": "OpenAI",
-      "summary": "OpenAI launched Daybreak, a set of tools and an updated GPT-5.5-Cyber model meant to help defenders find and patch software flaws as fast as AI can now find them, calling cyber defence an inflection point. Anthropic's parallel research found attackers using AI deeper in the attack chain, letting less-skilled actors do damage that used to need real expertise. Most firms will not buy a tool like this, so the useful response is not a purchase but a process: assume the messages reaching your staff are cleaner and more convincing than before, and confirm anything that moves money or data through a second channel."
+      "id": "microsoft-365-copilot-permanent-sku-2026",
+      "title": "Microsoft 365 Copilot becomes a permanent paid plan on 1 July, with a renewal window closing 30 June",
+      "url": "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates",
+      "source": "Microsoft",
+      "summary": "Microsoft confirmed that the Copilot add-ons for Microsoft 365 Business Standard and Business Premium become permanent paid plans on 1 July, with the standalone Copilot Business add-on moving to a higher list price at the same time. Customers who renew before 1 July can hold current pricing until their next renewal. Check when your contract renews and what you actually pay for Copilot, and decide before the deadline rather than letting it roll over."
     }
   ]
 }

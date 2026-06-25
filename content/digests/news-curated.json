@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24",
+  "generatedAt": "2026-06-25",
   "cadence": "weekly",
   "stories": [
     {
@@ -7,14 +7,21 @@
       "title": "Anthropic put an AI teammate in Slack that anyone can tag and that can act on its own",
       "url": "https://www.anthropic.com/news/introducing-claude-tag",
       "source": "Anthropic",
-      "summary": "Anthropic launched Claude Tag, an agent that sits in a Slack channel as a shared team member: anyone can tag it to delegate work, it remembers context from the channels it is in, and an optional ambient mode lets it flag things and chase quiet threads without being asked. It moves AI from a tool you open for one task to something always present in the space where work happens. Before a team starts tagging, a leader should decide what it is allowed to see and retain across shared channels, and where it stays reactive rather than acting on its own."
+      "summary": "Anthropic launched Claude Tag, an agent that sits in a Slack channel as a shared team member: anyone can tag it to delegate work, it remembers context from the channels it is in, and an optional ambient mode lets it flag things and chase quiet threads without being asked. It moves AI from a tool you open for one task to something always present in the space where work happens. Before a team starts tagging, decide what it is allowed to see and retain across shared channels, and where it stays reactive rather than acting on its own."
+    },
+    {
+      "id": "microsoft-365-copilot-permanent-sku-2026",
+      "title": "Microsoft 365 Copilot becomes a permanent paid plan on 1 July, with a renewal window closing 30 June",
+      "url": "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates",
+      "source": "Microsoft",
+      "summary": "Microsoft confirmed that the Copilot add-ons for Microsoft 365 Business Standard and Business Premium become permanent paid plans on 1 July, with the standalone Copilot Business add-on moving to a higher list price at the same time. Customers who renew before 1 July can hold current pricing until their next renewal. Check when your contract renews and what you pay for Copilot, and decide before the deadline rather than letting it roll over."
     },
     {
       "id": "ai-enabled-fraud-uk-finance-2026",
       "title": "AI has removed the tells that used to help staff spot a scam",
       "url": "https://www.ukfinance.org.uk/news-and-insight/press-release/fraud-report-2026-press-release",
       "source": "UK Finance",
-      "summary": "The UK Finance Annual Fraud Report 2026 reports authorised push payment fraud up 19% to £576.4 million last year, with criminals using AI for cloned voices, deepfakes and clean, personalised scam messages. The old signals staff relied on, poor grammar and a generic greeting, are gone, and a convincing fake of a director now costs a few thousand pounds. Decide that money moving and sensitive data leaving the firm are confirmed through a second channel on a known number, never on the strength of the message that asked."
+      "summary": "The UK Finance Annual Fraud Report 2026 reports authorised push payment fraud up 19% to 576.4 million pounds last year, with criminals using AI for cloned voices, deepfakes and clean, personalised scam messages. The old signals staff relied on, poor grammar and a generic greeting, are gone, and a convincing fake of a director now costs a few thousand pounds. Decide that money moving and sensitive data leaving the firm are confirmed through a second channel on a known number, never on the strength of the message that asked."
     },
     {
       "id": "thomson-reuters-ai-professional-services-2026",
@@ -29,13 +36,6 @@
       "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html",
       "source": "PwC",
       "summary": "PwC's 2026 Global AI Jobs Barometer, drawn from more than a billion job ads, finds AI-exposed entry-level roles increasingly asked for traditionally senior skills like judgement and leadership, while AI takes the routine work that once acted as an apprenticeship. The risk for most firms is not redundancies but quietly not replacing the junior rung, then finding the pipeline of experienced people has dried up. The move for a leader is to decide on purpose how people now build judgement, rather than letting the apprenticeship erode by default."
-    },
-    {
-      "id": "openai-daybreak-cyber-inflection",
-      "title": "The labs say AI has shifted the balance between cyber attack and defence",
-      "url": "https://openai.com/index/daybreak-securing-the-world/",
-      "source": "OpenAI",
-      "summary": "OpenAI launched Daybreak, a set of tools and an updated GPT-5.5-Cyber model meant to help defenders find and patch software flaws as fast as AI can now find them, calling cyber defence an inflection point. Anthropic's parallel research found attackers using AI deeper in the attack chain, letting less-skilled actors do damage that used to need real expertise. Most firms will not buy these tools, but the signal for any leader is that the attacks reaching their staff are getting cheaper, faster and more convincing."
     }
   ]
 }
