@@ -1,13 +1,20 @@
 {
-  "generatedAt": "2026-06-25",
+  "generatedAt": "2026-06-26",
   "cadence": "daily",
   "stories": [
     {
-      "id": "microsoft-365-copilot-permanent-sku-2026",
-      "title": "Microsoft 365 Copilot becomes a permanent paid plan on 1 July, with a renewal window closing 30 June",
-      "url": "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates",
-      "source": "Microsoft",
-      "summary": "Microsoft confirmed that the Copilot add-ons for Microsoft 365 Business Standard and Business Premium become permanent paid plans on 1 July, with the standalone Copilot Business add-on moving to a higher list price at the same time. Customers who renew before 1 July can hold current pricing until their next renewal. Check when your contract renews and what you actually pay for Copilot, and decide before the deadline rather than letting it roll over."
+      "id": "openai-codex-agentic-work-evidence-2026",
+      "title": "AI agent use is growing fastest among non-technical staff, not engineers",
+      "url": "https://openai.com/index/how-agents-are-transforming-work/",
+      "source": "OpenAI",
+      "summary": "A new OpenAI Economic Research paper tracking a year of Codex use finds the shift from chatbots to agents is moving fastest among non-technical teams, with legal, finance and recruiting at OpenAI making agents their main AI tool and non-developer adoption growing far quicker than developer adoption. The work itself is changing shape, from short questions to delegated tasks that would take a person an hour or more. The prompt for a leader is to look past the engineers and ask which fee-earning and back-office tasks your own people could now hand to an agent, while keeping a human accountable for checking the output."
+    },
+    {
+      "id": "openai-anthropic-ai-consultant-certification-2026",
+      "title": "The big AI labs are certifying hundreds of thousands of consultants who will soon pitch your firm",
+      "url": "https://openai.com/index/introducing-openai-partner-network/",
+      "source": "OpenAI",
+      "summary": "OpenAI's Partner Network, launched on 14 June, states an aim to train and certify 300,000 AI consultants by the end of 2026, and Anthropic runs a parallel Services Track for certified partners. Before long, someone holding an OpenAI-certified or Claude-certified badge will pitch your firm for AI help. The badge proves training on a vendor's tools, not that the holder understands your sector's judgement calls or how your people will actually adopt a new way of working, so vet for business judgement, not just tool fluency."
     }
   ]
 }
