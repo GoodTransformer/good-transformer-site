@@ -3,13 +3,6 @@
   "cadence": "daily",
   "stories": [
     {
-      "id": "openai-codex-agentic-work-evidence-2026",
-      "title": "AI agent use is growing fastest among non-technical staff, not engineers",
-      "url": "https://openai.com/index/how-agents-are-transforming-work/",
-      "source": "OpenAI",
-      "summary": "A new OpenAI Economic Research paper tracking a year of Codex use finds the shift from chatbots to agents is moving fastest among non-technical teams, with legal, finance and recruiting at OpenAI making agents their main AI tool and non-developer adoption growing far quicker than developer adoption. The work itself is changing shape, from short questions to delegated tasks that would take a person an hour or more. The prompt for a leader is to look past the engineers and ask which fee-earning and back-office tasks your own people could now hand to an agent, while keeping a human accountable for checking the output."
-    },
-    {
       "id": "openai-anthropic-ai-consultant-certification-2026",
       "title": "The big AI labs are certifying hundreds of thousands of consultants who will soon pitch your firm",
       "url": "https://openai.com/index/introducing-openai-partner-network/",
