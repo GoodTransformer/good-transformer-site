@@ -10,11 +10,11 @@
       "summary": "Microsoft confirmed that the Copilot add-ons for Microsoft 365 Business Standard and Business Premium become permanent paid plans on 1 July, with the standalone Copilot Business add-on moving to a higher list price at the same time. Customers who renew before 1 July can hold current pricing until their next renewal. Check when your contract renews and what you pay for Copilot, and decide before the deadline rather than letting it roll over."
     },
     {
-      "id": "openai-anthropic-ai-consultant-certification-2026",
-      "title": "The big AI labs are certifying hundreds of thousands of consultants who will soon pitch your firm",
-      "url": "https://openai.com/index/introducing-openai-partner-network/",
+      "id": "openai-gpt-5-6-sol-terra-luna-preview",
+      "title": "OpenAI previews GPT-5.6 with cheaper model tiers, but limits who can use it for now",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
       "source": "OpenAI",
-      "summary": "OpenAI's Partner Network, launched on 14 June, states an aim to train and certify 300,000 AI consultants by the end of 2026, and Anthropic runs a parallel Services Track for certified partners. Before long, someone holding an OpenAI-certified or Claude-certified badge will pitch your firm for AI help. The badge proves training on a vendor's tools, not that the holder understands your sector's judgement calls or how your people will actually adopt a new way of working, so vet for business judgement, not just tool fluency."
+      "summary": "OpenAI has previewed GPT-5.6 as three tiers, Sol, Terra and Luna, with Terra matching the previous flagship at about half the cost and Luna cheaper still. Access is limited to a small group of partners for now while OpenAI and the US government work through a release process tied to the model's cyber capabilities, with general availability said to be a few weeks away. The takeaway is not to chase a preview you cannot use, but to note the direction: capable AI keeps getting cheaper per task, so once the tiers are generally available it is worth repricing the work you already run on AI and re-checking supplier terms set a year ago."
     },
     {
       "id": "openai-codex-agentic-work-evidence-2026",
@@ -31,11 +31,11 @@
       "summary": "Anthropic launched Claude Tag, an agent that sits in a Slack channel as a shared team member: anyone can tag it to delegate work, it remembers context from the channels it is in, and an optional ambient mode lets it flag things and chase quiet threads without being asked. It moves AI from a tool you open for one task to something always present in the space where work happens. Before a team starts tagging, decide what it is allowed to see and retain across shared channels, and where it stays reactive rather than acting on its own."
     },
     {
-      "id": "anthropic-alibaba-distillation-attack-2026",
-      "title": "Anthropic accuses Alibaba of copying Claude's abilities at scale, a reminder that cheap models can carry weaker safeguards",
-      "url": "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html",
-      "source": "CNBC",
-      "summary": "Anthropic has told a US Senate committee that operators linked to Alibaba's Qwen lab ran the largest known distillation attack on Claude, generating about 28.8 million exchanges through roughly 25,000 fake accounts to train a rival on Claude's outputs. The point for a leader is not the politics, it is what distillation produces: a cheaper model that mimics a stronger one's answers without necessarily inheriting its safety and accuracy controls. When you pick a model for confidential or client-facing work, weigh who stands behind it and what safeguards it carries, not just the price per token."
+      "id": "openai-anthropic-ai-consultant-certification-2026",
+      "title": "The big AI labs are certifying hundreds of thousands of consultants who will soon pitch your firm",
+      "url": "https://openai.com/index/introducing-openai-partner-network/",
+      "source": "OpenAI",
+      "summary": "OpenAI's Partner Network, launched on 14 June, states an aim to train and certify 300,000 AI consultants by the end of 2026, and Anthropic runs a parallel Services Track for certified partners. Before long, someone holding an OpenAI-certified or Claude-certified badge will pitch your firm for AI help. The badge proves training on a vendor's tools, not that the holder understands your sector's judgement calls or how your people will actually adopt a new way of working, so vet for business judgement, not just tool fluency."
     }
   ]
 }

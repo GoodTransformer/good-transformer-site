@@ -3,11 +3,11 @@
   "cadence": "daily",
   "stories": [
     {
-      "id": "anthropic-alibaba-distillation-attack-2026",
-      "title": "Anthropic accuses Alibaba of copying Claude's abilities at scale, a reminder that cheap models can carry weaker safeguards",
-      "url": "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html",
-      "source": "CNBC",
-      "summary": "Anthropic has told a US Senate committee that operators linked to Alibaba's Qwen lab ran the largest known distillation attack on Claude, generating about 28.8 million exchanges through roughly 25,000 fake accounts to train a rival on Claude's outputs. The point for a leader is not the politics, it is what distillation produces: a cheaper model that mimics a stronger one's answers without necessarily inheriting its safety and accuracy controls. When you pick a model for confidential or client-facing work, weigh who stands behind it and what safeguards it carries, not just the price per token."
+      "id": "openai-gpt-5-6-sol-terra-luna-preview",
+      "title": "OpenAI previews GPT-5.6 with cheaper model tiers, but limits who can use it for now",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "source": "OpenAI",
+      "summary": "OpenAI has previewed GPT-5.6 as three tiers, Sol, Terra and Luna, with Terra matching the previous flagship at about half the cost and Luna cheaper still. Access is limited to a small group of partners for now while OpenAI and the US government work through a release process tied to the model's cyber capabilities, with general availability said to be a few weeks away. The takeaway is not to chase a preview you cannot use, but to note the direction: capable AI keeps getting cheaper per task, so once the tiers are generally available it is worth repricing the work you already run on AI and re-checking supplier terms set a year ago."
     }
   ]
 }
