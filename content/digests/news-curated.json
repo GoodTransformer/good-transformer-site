@@ -1,13 +1,20 @@
 {
-  "generatedAt": "2026-06-26",
+  "generatedAt": "2026-06-27",
   "cadence": "weekly",
   "stories": [
     {
-      "id": "anthropic-claude-tag-slack-ambient-agent",
-      "title": "Anthropic put an AI teammate in Slack that anyone can tag and that can act on its own",
-      "url": "https://www.anthropic.com/news/introducing-claude-tag",
-      "source": "Anthropic",
-      "summary": "Anthropic launched Claude Tag, an agent that sits in a Slack channel as a shared team member: anyone can tag it to delegate work, it remembers context from the channels it is in, and an optional ambient mode lets it flag things and chase quiet threads without being asked. It moves AI from a tool you open for one task to something always present in the space where work happens. Before a team starts tagging, decide what it is allowed to see and retain across shared channels, and where it stays reactive rather than acting on its own."
+      "id": "microsoft-365-copilot-permanent-sku-2026",
+      "title": "Microsoft 365 Copilot becomes a permanent paid plan on 1 July, with a renewal window closing 30 June",
+      "url": "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates",
+      "source": "Microsoft",
+      "summary": "Microsoft confirmed that the Copilot add-ons for Microsoft 365 Business Standard and Business Premium become permanent paid plans on 1 July, with the standalone Copilot Business add-on moving to a higher list price at the same time. Customers who renew before 1 July can hold current pricing until their next renewal. Check when your contract renews and what you pay for Copilot, and decide before the deadline rather than letting it roll over."
+    },
+    {
+      "id": "openai-anthropic-ai-consultant-certification-2026",
+      "title": "The big AI labs are certifying hundreds of thousands of consultants who will soon pitch your firm",
+      "url": "https://openai.com/index/introducing-openai-partner-network/",
+      "source": "OpenAI",
+      "summary": "OpenAI's Partner Network, launched on 14 June, states an aim to train and certify 300,000 AI consultants by the end of 2026, and Anthropic runs a parallel Services Track for certified partners. Before long, someone holding an OpenAI-certified or Claude-certified badge will pitch your firm for AI help. The badge proves training on a vendor's tools, not that the holder understands your sector's judgement calls or how your people will actually adopt a new way of working, so vet for business judgement, not just tool fluency."
     },
     {
       "id": "openai-codex-agentic-work-evidence-2026",
@@ -17,25 +24,18 @@
       "summary": "A new OpenAI Economic Research paper tracking a year of Codex use finds the shift from chatbots to agents is moving fastest among non-technical teams, with legal, finance and recruiting at OpenAI making agents their main AI tool and non-developer adoption growing far quicker than developer adoption. The work itself is changing shape, from short questions to delegated tasks that would take a person an hour or more. The prompt for a leader is to look past the engineers and ask which fee-earning and back-office tasks your own people could now hand to an agent, while keeping a human accountable for checking the output."
     },
     {
-      "id": "microsoft-365-copilot-permanent-sku-2026",
-      "title": "Microsoft 365 Copilot becomes a permanent paid plan on 1 July, with a renewal window closing 30 June",
-      "url": "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates",
-      "source": "Microsoft",
-      "summary": "Microsoft confirmed that the Copilot add-ons for Microsoft 365 Business Standard and Business Premium become permanent paid plans on 1 July, with the standalone Copilot Business add-on moving to a higher list price at the same time. Customers who renew before 1 July can hold current pricing until their next renewal. Check when your contract renews and what you pay for Copilot, and decide before the deadline rather than letting it roll over."
+      "id": "anthropic-claude-tag-slack-ambient-agent",
+      "title": "Anthropic put an AI teammate in Slack that anyone can tag and that can act on its own",
+      "url": "https://www.anthropic.com/news/introducing-claude-tag",
+      "source": "Anthropic",
+      "summary": "Anthropic launched Claude Tag, an agent that sits in a Slack channel as a shared team member: anyone can tag it to delegate work, it remembers context from the channels it is in, and an optional ambient mode lets it flag things and chase quiet threads without being asked. It moves AI from a tool you open for one task to something always present in the space where work happens. Before a team starts tagging, decide what it is allowed to see and retain across shared channels, and where it stays reactive rather than acting on its own."
     },
     {
-      "id": "ai-enabled-fraud-uk-finance-2026",
-      "title": "AI has removed the tells that used to help staff spot a scam",
-      "url": "https://www.ukfinance.org.uk/news-and-insight/press-release/fraud-report-2026-press-release",
-      "source": "UK Finance",
-      "summary": "The UK Finance Annual Fraud Report 2026 reports authorised push payment fraud up 19% to 576.4 million pounds last year, with criminals using AI for cloned voices, deepfakes and clean, personalised scam messages. The old signals staff relied on, poor grammar and a generic greeting, are gone, and a convincing fake of a director now costs a few thousand pounds. Decide that money moving and sensitive data leaving the firm are confirmed through a second channel on a known number, never on the strength of the message that asked."
-    },
-    {
-      "id": "thomson-reuters-ai-professional-services-2026",
-      "title": "AI adoption has hit critical mass in professional services, but value tracking lags",
-      "url": "https://www.thomsonreuters.com/en-us/posts/technology/ai-in-professional-services-report-2026/",
-      "source": "Thomson Reuters Institute",
-      "summary": "Thomson Reuters' 2026 report finds most professional-services firms now use AI, while only 18% track the business value it returns and many receive conflicting instructions from clients on whether to use it. The practical moves are to set a clear position with clients on when the firm uses AI, and to measure a pilot or two on quality and time rather than on how much the tool gets used. For most leaders the harder work now is proving each use earns its place."
+      "id": "anthropic-alibaba-distillation-attack-2026",
+      "title": "Anthropic accuses Alibaba of copying Claude's abilities at scale, a reminder that cheap models can carry weaker safeguards",
+      "url": "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html",
+      "source": "CNBC",
+      "summary": "Anthropic has told a US Senate committee that operators linked to Alibaba's Qwen lab ran the largest known distillation attack on Claude, generating about 28.8 million exchanges through roughly 25,000 fake accounts to train a rival on Claude's outputs. The point for a leader is not the politics, it is what distillation produces: a cheaper model that mimics a stronger one's answers without necessarily inheriting its safety and accuracy controls. When you pick a model for confidential or client-facing work, weigh who stands behind it and what safeguards it carries, not just the price per token."
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-26",
+  "generatedAt": "2026-06-27",
   "cadence": "daily",
   "stories": [
     {
-      "id": "openai-anthropic-ai-consultant-certification-2026",
-      "title": "The big AI labs are certifying hundreds of thousands of consultants who will soon pitch your firm",
-      "url": "https://openai.com/index/introducing-openai-partner-network/",
-      "source": "OpenAI",
-      "summary": "OpenAI's Partner Network, launched on 14 June, states an aim to train and certify 300,000 AI consultants by the end of 2026, and Anthropic runs a parallel Services Track for certified partners. Before long, someone holding an OpenAI-certified or Claude-certified badge will pitch your firm for AI help. The badge proves training on a vendor's tools, not that the holder understands your sector's judgement calls or how your people will actually adopt a new way of working, so vet for business judgement, not just tool fluency."
+      "id": "anthropic-alibaba-distillation-attack-2026",
+      "title": "Anthropic accuses Alibaba of copying Claude's abilities at scale, a reminder that cheap models can carry weaker safeguards",
+      "url": "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html",
+      "source": "CNBC",
+      "summary": "Anthropic has told a US Senate committee that operators linked to Alibaba's Qwen lab ran the largest known distillation attack on Claude, generating about 28.8 million exchanges through roughly 25,000 fake accounts to train a rival on Claude's outputs. The point for a leader is not the politics, it is what distillation produces: a cheaper model that mimics a stronger one's answers without necessarily inheriting its safety and accuracy controls. When you pick a model for confidential or client-facing work, weigh who stands behind it and what safeguards it carries, not just the price per token."
     }
   ]
 }
