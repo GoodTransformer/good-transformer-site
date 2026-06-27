@@ -1,6 +1,6 @@
 ---
 title: "How to stop AI mistakes reaching your clients"
-description: "Two respected firms let AI-invented facts reach a court and a client. The verification step that would have caught them had quietly stopped. How to put it back."
+description: "Two respected firms let AI-invented facts reach a court and a client. The verification step that should have caught them failed, was not followed, or was never clearly attached to the AI-assisted work."
 date: 2026-06-27
 type: post
 voice: brand
@@ -11,17 +11,17 @@ featured: false
 draft: false
 ---
 
-In April 2026 Sullivan & Cromwell, one of the most respected law firms in the world, [apologised to a US bankruptcy judge](https://www.cnn.com/2026/04/23/business/ai-hallucination-sullivan-cromwell-nightcap) after a motion it filed cited cases that did not exist. The fabricated citations had come from AI, and they were spotted not by the firm but by the lawyers on the other side. Two things are worth separating here. Models invent facts, confidently and in the right format; that much is known. What failed was the step that used to catch it before anything left the building. As more of your firm's work passes through AI, the most useful move a leader can make is to find where AI output now reaches a client, and put a deliberate human read back in front of it.
+In April 2026 Sullivan & Cromwell, one of the most respected law firms in the world, [apologised to a US bankruptcy judge](https://www.cnn.com/2026/04/23/business/ai-hallucination-sullivan-cromwell-nightcap) after a motion it filed cited cases that did not exist. The fabricated citations had come from AI, and they were spotted not by the firm but by the lawyers on the other side. Two things are worth separating here. Models invent facts, confidently and in the right format; that much is known. What mattered was the verification step that should have caught the error before anything left the building. As more of your firm's work passes through AI, the most useful move a leader can make is to find where AI output now reaches a client, and put a deliberate human read back in front of it.
 
 This is general guidance on process, not legal or compliance advice. Where a duty in your field genuinely bites, take proper advice on it.
 
 ## Two firms, the same failure
 
-The Sullivan & Cromwell filing is not an isolated lapse by a careless firm. It is the opposite: a careful, elite firm caught out by exactly the failure that is now within reach of every firm using AI for real work.
+The Sullivan & Cromwell filing is not an isolated lapse by a fringe operator. It is the opposite: an elite firm caught out by exactly the failure that is now within reach of every firm using AI for real work.
 
 The pattern repeats outside the law. In 2025 Deloitte's Australian arm delivered a report to a government department that [contained fabricated academic references and a made-up quote from a federal court judgment](https://fortune.com/2025/10/07/deloitte-ai-australia-government-report-hallucinations-technology-290000-refund/), and issued a partial refund once the errors came to light. As with the law firm, the mistakes were found by an outside reader, an academic who recognised that a book the report cited did not exist. The revised version added a line disclosing that a generative AI system had been used.
 
-In both cases the work went out the door with invented facts in it because the check that would once have caught them was not run. That is the part worth a leader's attention. The model doing something unreliable is a given. The verification step being quietly dropped is a choice, usually one nobody made on purpose.
+In both cases, invented facts left the organisation because the verification process either failed, was not followed, or did not reach the facts AI had inserted. That is the part worth a leader's attention. The model doing something unreliable is a given. The verification step that should have caught the errors either failed, was not followed, or was never clearly attached to the AI-assisted work.
 
 ## Why the check disappears
 
@@ -31,7 +31,7 @@ The first is that AI output looks finished. A fabricated citation is formatted e
 
 The second is that you cannot tell from the quality of the writing whether the facts underneath it hold. Ethan Mollick's phrase for this is the [jagged frontier](/insights/map-your-jagged-frontier/): AI is brilliant at some tasks and confidently wrong on others, with no clean line between the two that a user can see. A model that drafts a flawless paragraph of analysis may invent the case it cites two sentences later, and nothing in the tone warns you which is which.
 
-The third is the most ordinary, and the most preventable. The old check was attached to slow human work, and it was removed along with the slowness. When a trainee spent a day finding the relevant cases, a partner read them before the document went out, because the trainee might have missed something. When AI produces the same list in seconds, the reading step quietly drops out with the labour it used to accompany. The work feels done, so the check feels redundant. McKinsey's [2026 survey of people responsible for AI governance](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era) found inaccuracy the most cited AI risk, named by 74% of them, and in the same survey active mitigation lagged behind awareness across nearly every risk. Almost everyone knows the model can be wrong. Far fewer have put anything in place to catch it.
+The third is the most ordinary, and the most preventable. The old check was attached to slow human work, and it was removed along with the slowness. When a trainee spent a day finding the relevant cases, a partner read them before the document went out, because the trainee might have missed something. When AI produces the same list in seconds, the reading step quietly drops out with the labour it used to accompany. The work feels done, so the check feels redundant. Awareness is high. McKinsey's [2026 survey of people responsible for AI governance](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era) found inaccuracy was the most frequently cited AI risk, named by 74% of respondents responsible for AI governance, risk or investment decisions. Far fewer have put anything in place to catch it.
 
 ## Put the human check back in
 
@@ -47,11 +47,11 @@ Make it proportional. A client-facing filing or a board report earns a full chec
 
 ## This is not a case against using AI
 
-None of this argues for keeping AI away from skilled work. AI did the research and the drafting at both firms quickly and, in most of the document, well. Used on the right tasks it earns its place easily, and a firm that refuses it on the grounds that it can err will simply be slower than the one that uses it and checks it. The discipline here is narrow and specific: decide which AI output carries real consequences if it is wrong, and make sure a person has verified that part before it leaves. It sits alongside the wider judgement of [what a firm should never hand to AI in the first place](/insights/what-not-to-delegate-to-ai/), and it is cheaper than either of the apologies above.
+None of this argues for keeping AI away from skilled work. The point is narrower: when AI contributes to research, drafting or factual material, the checkable parts still need human verification before they leave the firm. Used on the right tasks AI earns its place easily, and a firm that refuses it on the grounds that it can err will simply be slower than the one that uses it and checks it. The discipline here is narrow and specific: decide which AI output carries real consequences if it is wrong, and make sure a person has verified that part before it leaves. It sits alongside the wider judgement of [what a firm should never hand to AI in the first place](/insights/what-not-to-delegate-to-ai/), and it is cheaper than either of the apologies above.
 
 Building that check into how a team actually works, so it holds under deadline pressure rather than living in a policy nobody reads, is the kind of practical problem our [AI Lessons for Leaders](/services/ai-lessons-for-leaders/) sessions are built around. If it would help to work through where the last read belongs in your firm, [book a discovery call](/book/personal/).
 
-The next step is small. Pick the one or two places this week where AI-drafted work reaches a client, and decide, out loud, who checks what before it goes. The firms that learned this the hard way were not careless. They simply never named the read that used to happen on its own, and found out it had stopped only when someone outside the firm did the checking for them.
+The next step is small. Pick the one or two places this week where AI-drafted work reaches a client, and decide, out loud, who checks what before it goes. These were not fringe operators using AI casually. They were serious firms with reputations to protect, which is exactly why the failures matter. The lesson is to name the read that might otherwise be assumed, skipped or left outside the AI-assisted part of the work.
 
 ## FAQ
 
@@ -69,7 +69,7 @@ By being selective. Run a full verification only on the outputs where an error i
 
 ### Does a firm have to tell clients it used AI?
 
-There is no blanket UK rule requiring it, so the answer depends on your professional obligations, your client agreements and what your clients reasonably expect. Some clients now ask directly, and some sectors are moving towards expecting disclosure on certain work. The practical move is to agree a clear, consistent position on when and how the firm tells clients it uses AI, rather than deciding case by case, and to take advice where a specific duty in your field applies.
+There is no single blanket UK rule that every firm must disclose every use of generative AI in every piece of work. But that does not mean silence is always safe. Professional duties, client terms, confidentiality, data protection and the client's reasonable expectations may all require disclosure or prior agreement. The practical move is to agree a clear, consistent position on when and how the firm tells clients it uses AI, rather than deciding case by case, and to take advice where a specific duty in your field applies.
 
 ## Sources and further reading
 
